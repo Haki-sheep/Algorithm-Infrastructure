@@ -98190,6 +98190,9 @@ MonoBehaviour:
   grid: {fileID: 6492628038782091572}
   bfsToggle: {fileID: 8792621903885462858}
   dfsToggle: {fileID: 3129171541360018005}
+  dlsToggle: {fileID: 532619965752572999}
+  iddfsToggle: {fileID: 73480610439075562}
+  dlsLimit: 24
   statusText: {fileID: 6405883590347503509}
   stepInterval: 0.02
 --- !u!114 &695244340051889307
