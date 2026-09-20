@@ -182,8 +182,9 @@ namespace PathfindingAlgorithm.Visualization
             if (eventData.button == PointerEventData.InputButton.Middle)
                 return;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(gridRect, eventData.position, eventData.pressEventCamera, out var point);
-            int x = Mathf.FloorToInt(point.x / cellSize);
-            int y = Mathf.FloorToInt(-point.y / cellSize);
+            Rect rect = gridRect.rect;
+            int x = Mathf.FloorToInt((point.x - rect.xMin) / cellSize);
+            int y = Mathf.FloorToInt((rect.yMax - point.y) / cellSize);
             if (x < 0 || x >= columns || y < 0 || y >= rows)
                 return;
             var position = new Vector2Int(x, y);

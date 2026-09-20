@@ -168,14 +168,21 @@ namespace PathfindingAlgorithm.Visualization.Editor
             var subtitle = ui.Label("SEARCH LAB   /   网格实验台", root, 16);
             ui.Place(subtitle.rectTransform, 34f, 76f, 600f, 30f);
             subtitle.color = new Color32(170, 187, 204, 255);
-            var badge = ui.Label("无信息搜索  ·  勾选 BFS 后开始", root, 17);
+            var badge = ui.Label("无信息搜索", root, 17);
             badge.color = subtitle.color;
             ui.TopStretch(badge.rectTransform, 32f, 30f, 32f, 40f);
             badge.alignment = TextAnchor.MiddleRight;
 
             var board = ui.Rect("GridPanel", root);
             ui.Stretch(board, 32f, 188f, 392f, 88f);
-            var scroll = ui.Scroll(board, true);
+            var scroll = ui.Scroll(board, false);
+            scroll.horizontal = false;
+            scroll.vertical = false;
+            scroll.verticalScrollbar = null;
+            var verticalBar = scroll.transform.Find("VerticalScrollbar");
+            verticalBar.gameObject.SetActive(false);
+            var viewport = (RectTransform)scroll.transform.Find("Viewport");
+            ui.Stretch(viewport);
             ui.Fill(scroll.content, new Color32(204, 218, 226, 255), true);
             var grid = scroll.content.gameObject.AddComponent<SearchGridView>();
             ui.Bind(grid, "cellPrefab", cell);
@@ -186,7 +193,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
             ui.Place(info.rectTransform, 32f, 942f, 330f, 32f);
             info.rectTransform.anchorMin = info.rectTransform.anchorMax = Vector2.zero;
             info.rectTransform.anchoredPosition = new Vector2(32f, 52f);
-            var hint = ui.Label("左键绘制  /  右键擦除  /  滚轮与滚动条移动视图", root, 16);
+            var hint = ui.Label("左键绘制  /  右键擦除", root, 16);
             hint.color = subtitle.color;
             ui.Place(hint.rectTransform, 330f, 0f, 610f, 32f);
             hint.rectTransform.anchorMin = hint.rectTransform.anchorMax = Vector2.zero;
@@ -250,47 +257,65 @@ namespace PathfindingAlgorithm.Visualization.Editor
             ui.Fill(panel, Color.white);
             var heading = ui.Label("算法分类", panel, 23);
             ui.Place(heading.rectTransform, 20f, 16f, 290f, 40f);
-            var note = ui.Label("勾选 BFS 后点开始搜索或单步", panel, 15);
-            ui.Place(note.rectTransform, 20f, 59f, 292f, 30f);
             var area = ui.Rect("Categories", panel);
-            ui.Stretch(area, 12f, 104f, 12f, 188f);
+            ui.Stretch(area, 12f, 70f, 12f, 236f);
             var scroll = ui.Scroll(area, false);
             scroll.content.anchorMax = Vector2.one;
             scroll.content.anchorMin = new Vector2(0f, 1f);
             scroll.content.sizeDelta = Vector2.zero;
             ui.Vertical(scroll.content, 10f);
             Toggle bfsToggle = null;
+            Toggle dfsToggle = null;
             for (int index = 0; index < categoryNameList.Length; index++)
             {
                 var category = BuildCategory(ui, scroll.content, index);
                 if (index == 0)
+                {
                     bfsToggle = category.Options[0];
+                    dfsToggle = category.Options[1];
+                }
             }
             var arrows = ui.Toggle("显示方向箭头", panel);
             ui.Place((RectTransform)arrows.transform, 12f, 0f, 292f, 38f);
             var arrowRect = (RectTransform)arrows.transform;
+            arrowRect.pivot = Vector2.zero;
             arrowRect.anchorMin = arrowRect.anchorMax = Vector2.zero;
-            arrowRect.anchoredPosition = new Vector2(12f, 176f);
+            arrowRect.anchoredPosition = new Vector2(12f, 190f);
+            arrowRect.sizeDelta = new Vector2(292f, 38f);
             UnityEventTools.AddPersistentListener(arrows.onValueChanged, grid.SetArrowsVisible);
-            var footnote = ui.Label("勾选 BFS 后点开始搜索", panel, 14);
+            var footnote = ui.Label("", panel, 14);
             footnote.alignment = TextAnchor.UpperLeft;
             footnote.verticalOverflow = VerticalWrapMode.Overflow;
-            ui.Place(footnote.rectTransform, 20f, 0f, 290f, 58f);
             footnote.rectTransform.anchorMin = footnote.rectTransform.anchorMax = Vector2.zero;
-            footnote.rectTransform.anchoredPosition = new Vector2(20f, 122f);
+            footnote.rectTransform.pivot = Vector2.zero;
+            footnote.rectTransform.anchoredPosition = new Vector2(20f, 102f);
+            footnote.rectTransform.sizeDelta = new Vector2(292f, 80f);
             var play = ui.Button("开始搜索", panel);
-            ui.Place((RectTransform)play.transform, 12f, 0f, 160f, 38f);
             var playRect = (RectTransform)play.transform;
-            playRect.anchorMin = playRect.anchorMax = Vector2.zero;
-            playRect.anchoredPosition = new Vector2(12f, 48f);
+            playRect.anchorMin = playRect.anchorMax = playRect.pivot = Vector2.zero;
+            playRect.anchoredPosition = new Vector2(12f, 56f);
+            playRect.sizeDelta = new Vector2(160f, 38f);
             UnityEventTools.AddPersistentListener(play.onClick, controller.PlaySearch);
+            var pause = ui.Button("暂停", panel);
+            var pauseRect = (RectTransform)pause.transform;
+            pauseRect.anchorMin = pauseRect.anchorMax = pauseRect.pivot = Vector2.zero;
+            pauseRect.anchoredPosition = new Vector2(180f, 56f);
+            pauseRect.sizeDelta = new Vector2(136f, 38f);
+            UnityEventTools.AddPersistentListener(pause.onClick, controller.PauseSearch);
             var step = ui.Button("单步", panel);
-            ui.Place((RectTransform)step.transform, 180f, 0f, 136f, 38f);
             var stepRect = (RectTransform)step.transform;
-            stepRect.anchorMin = stepRect.anchorMax = Vector2.zero;
-            stepRect.anchoredPosition = new Vector2(180f, 48f);
+            stepRect.anchorMin = stepRect.anchorMax = stepRect.pivot = Vector2.zero;
+            stepRect.anchoredPosition = new Vector2(12f, 12f);
+            stepRect.sizeDelta = new Vector2(160f, 38f);
             UnityEventTools.AddPersistentListener(step.onClick, controller.StepSearch);
+            var undo = ui.Button("上一步", panel);
+            var undoRect = (RectTransform)undo.transform;
+            undoRect.anchorMin = undoRect.anchorMax = undoRect.pivot = Vector2.zero;
+            undoRect.anchoredPosition = new Vector2(180f, 12f);
+            undoRect.sizeDelta = new Vector2(136f, 38f);
+            UnityEventTools.AddPersistentListener(undo.onClick, controller.UndoStep);
             ui.Bind(controller, "bfsToggle", bfsToggle);
+            ui.Bind(controller, "dfsToggle", dfsToggle);
             ui.Bind(controller, "statusText", footnote);
         }
 
@@ -317,11 +342,14 @@ namespace PathfindingAlgorithm.Visualization.Editor
             var options = ui.Rect("Options", category);
             ui.Vertical(options, 2f);
             Object.DestroyImmediate(options.GetComponent<ContentSizeFitter>());
+            var group = options.gameObject.AddComponent<ToggleGroup>();
+            group.allowSwitchOff = true;
             var toggleList = new Toggle[algorithmNameList[categoryIndex].Length];
             for (int index = 0; index < toggleList.Length; index++)
             {
                 var toggle = ui.Toggle(algorithmNameList[categoryIndex][index], options);
                 ui.Height(toggle.gameObject, 38f);
+                toggle.group = group;
                 toggleList[index] = toggle;
                 UnityEventTools.AddPersistentListener(toggle.onValueChanged, view.RefreshSelection);
             }

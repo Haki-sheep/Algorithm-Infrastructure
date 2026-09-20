@@ -4,7 +4,7 @@ using UnityEngine.UI;
 namespace PathfindingAlgorithm.Visualization
 {
     /// <summary>
-    /// 把网格画笔状态译成寻路输入 逐步调用 BFS 再写回格子颜色与箭头
+    /// 把网格画笔状态译成寻路输入 逐步调用当前算法再写回格子颜色与箭头
     /// </summary>
     [DefaultExecutionOrder(-50)]
     public sealed class GridSearchController : MonoBehaviour
@@ -16,6 +16,10 @@ namespace PathfindingAlgorithm.Visualization
         /// <summary> 无信息搜索里的 BFS 勾选项 </summary>
         [SerializeField]
         private Toggle bfsToggle;
+
+        /// <summary> 无信息搜索里的 DFS 勾选项 </summary>
+        [SerializeField]
+        private Toggle dfsToggle;
 
         /// <summary> 搜索状态说明 </summary>
         [SerializeField]
@@ -31,14 +35,42 @@ namespace PathfindingAlgorithm.Visualization
         /// <summary> BFS 步进器 </summary>
         private BFSCore bfsCore;
 
+        /// <summary> DFS 地图与搜索状态 </summary>
+        private DFSData dfsData;
+
+        /// <summary> DFS 步进器 </summary>
+        private DFSCore dfsCore;
+
+        /// <summary> 本轮实际在跑的算法 </summary>
+        private eSearchKind eKind;
+
         /// <summary> 是否正在自动逐步搜索 </summary>
         private bool playing;
 
         /// <summary> 自动播放累计时间 </summary>
         private float elapsed;
 
-        /// <summary> 当前网格是否已灌进 BFS </summary>
+        /// <summary> 当前网格是否已灌进搜索器 </summary>
         private bool prepared;
+
+        /// <summary> 本轮地图可行走表 </summary>
+        private bool[] walkableList;
+
+        /// <summary> 本轮起点 </summary>
+        private Vector2Int mapStart;
+
+        /// <summary> 本轮终点 </summary>
+        private Vector2Int mapGoal;
+
+        /// <summary> 本轮已弹出步数 </summary>
+        private int stepCount;
+
+        private enum eSearchKind
+        {
+            None,
+            BFS,
+            DFS,
+        }
 
         /// <summary>
         /// 唯一生命周期入口
@@ -55,14 +87,23 @@ namespace PathfindingAlgorithm.Visualization
         {
             bfsData = new BFSData();
             bfsCore = new BFSCore();
+            dfsData = new DFSData();
+            dfsCore = new DFSCore();
         }
 
+        #region 播放控制
+
         /// <summary>
-        /// 按当前网格启动 BFS 间隔为 0 时一次跑完
+        /// 按当前网格启动或继续搜索 间隔为 0 时一次跑完
         /// </summary>
         public void PlaySearch()
         {
-            if (!PrepareSearch())
+            if (playing)
+            {
+                return;
+            }
+
+            if (!CanResume() && !PrepareSearch())
             {
                 return;
             }
@@ -81,12 +122,36 @@ namespace PathfindingAlgorithm.Visualization
         }
 
         /// <summary>
+        /// 暂停自动播放 保留当前搜索进度
+        /// </summary>
+        public void PauseSearch()
+        {
+            playing = false;
+        }
+
+        /// <summary>
+        /// 退回上一步弹出 保留墙与起终点
+        /// </summary>
+        public void UndoStep()
+        {
+            if (!prepared || stepCount <= 0)
+            {
+                return;
+            }
+
+            playing = false;
+            stepCount--;
+            ReplayVisible();
+        }
+
+        /// <summary>
         /// 停止自动播放 下次开始会重新读网格
         /// </summary>
         public void StopSearch()
         {
             playing = false;
             prepared = false;
+            stepCount = 0;
         }
 
         /// <summary>
@@ -96,7 +161,7 @@ namespace PathfindingAlgorithm.Visualization
         {
             StopSearch();
             ClearSearchOverlay();
-            statusText.text = "勾选 BFS 后点开始搜索";
+            statusText.text = "";
         }
 
         /// <summary>
@@ -105,7 +170,7 @@ namespace PathfindingAlgorithm.Visualization
         public void StepSearch()
         {
             playing = false;
-            if (!prepared || bfsData.Found || bfsData.Queue.Count == 0)
+            if (!prepared || IsFound() || IsOpenEmpty())
             {
                 if (!PrepareSearch())
                 {
@@ -115,6 +180,10 @@ namespace PathfindingAlgorithm.Visualization
 
             Advance();
         }
+
+        #endregion
+
+        #region 搜索推进
 
         /// <summary>
         /// 自动播放时按间隔调用 Advance
@@ -137,15 +206,15 @@ namespace PathfindingAlgorithm.Visualization
         }
 
         /// <summary>
-        /// 从网格重建 BFS 输入 失败时写入状态并停止
+        /// 从网格重建当前算法输入 失败时写入状态并停止
         /// </summary>
         private bool PrepareSearch()
         {
             playing = false;
             prepared = false;
-            if (!bfsToggle.isOn)
+            eKind = ResolveKind();
+            if (eKind == eSearchKind.None)
             {
-                statusText.text = "请勾选 BFS";
                 return false;
             }
 
@@ -155,11 +224,101 @@ namespace PathfindingAlgorithm.Visualization
                 return false;
             }
 
-            bfsData.Init(grid.Columns, grid.Rows, WalkableList, start, goal);
-            bfsCore.Init(bfsData);
+            walkableList = WalkableList;
+            mapStart = start;
+            mapGoal = goal;
+            stepCount = 0;
+            InitCurrentSearch();
             prepared = true;
             RefreshStatus("搜索中");
             return true;
+        }
+
+        /// <summary>
+        /// 暂停后仍有未完成步骤则可继续
+        /// </summary>
+        private bool CanResume()
+        {
+            return prepared && !IsFound() && !IsOpenEmpty();
+        }
+
+        /// <summary>
+        /// 用本轮地图重新初始化当前算法
+        /// </summary>
+        private void InitCurrentSearch()
+        {
+            if (eKind == eSearchKind.DFS)
+            {
+                dfsData.Init(grid.Columns, grid.Rows, walkableList, mapStart, mapGoal);
+                dfsCore.Init(dfsData);
+            }
+            else
+            {
+                bfsData.Init(grid.Columns, grid.Rows, walkableList, mapStart, mapGoal);
+                bfsCore.Init(bfsData);
+            }
+        }
+
+        /// <summary>
+        /// 按已记录步数重跑并重绘探索层
+        /// </summary>
+        private void ReplayVisible()
+        {
+            ClearSearchOverlay();
+            InitCurrentSearch();
+            for (int i = 0; i < stepCount; i++)
+            {
+                bool more = eKind == eSearchKind.DFS ? dfsCore.Step() : bfsCore.Step();
+                PaintExplored(CurrentCell());
+                if (!more)
+                {
+                    if (IsFound())
+                    {
+                        PaintPath();
+                    }
+
+                    break;
+                }
+            }
+
+            if (stepCount == 0)
+            {
+                RefreshStatus("搜索中");
+                return;
+            }
+
+            if (IsFound())
+            {
+                RefreshStatus($"已找到路径  {PathCount()} 格");
+                return;
+            }
+
+            if (IsOpenEmpty())
+            {
+                RefreshStatus("不可达");
+                return;
+            }
+
+            RefreshStatus("搜索中");
+        }
+
+        /// <summary>
+        /// 按勾选决定本轮算法 多选或未选则失败
+        /// </summary>
+        private eSearchKind ResolveKind()
+        {
+            bool bfsOn = bfsToggle.isOn;
+            bool dfsOn = dfsToggle.isOn;
+            if (bfsOn && dfsOn)
+                return eSearchKind.None;
+
+            if (dfsOn)
+                return eSearchKind.DFS;
+
+            if (bfsOn)
+                return eSearchKind.BFS;
+
+            return eSearchKind.None;
         }
 
         /// <summary>
@@ -167,8 +326,9 @@ namespace PathfindingAlgorithm.Visualization
         /// </summary>
         private bool Advance()
         {
-            bool more = bfsCore.Step();
-            PaintExplored(bfsData.Current);
+            bool more = eKind == eSearchKind.DFS ? dfsCore.Step() : bfsCore.Step();
+            stepCount++;
+            PaintExplored(CurrentCell());
             if (more)
             {
                 RefreshStatus("搜索中");
@@ -176,10 +336,10 @@ namespace PathfindingAlgorithm.Visualization
             }
 
             playing = false;
-            if (bfsData.Found)
+            if (IsFound())
             {
                 PaintPath();
-                RefreshStatus($"已找到路径  {bfsData.PathList.Count} 格");
+                RefreshStatus($"已找到路径  {PathCount()} 格");
             }
             else
             {
@@ -190,12 +350,19 @@ namespace PathfindingAlgorithm.Visualization
         }
 
         /// <summary>
-        /// 写入本轮标题与 BFS 时空复杂度
+        /// 写入本轮标题与时空复杂度
         /// </summary>
         private void RefreshStatus(string headline)
         {
-            statusText.text = $"{headline}\n公式  时间 O(V+E)  空间 O(V)\n本轮  已看 {bfsData.PopCount} 格  排队最多 {bfsData.PeakOpenCount} 格";
+            string openWord = eKind == eSearchKind.DFS ? "栈最多" : "排队最多";
+            int popCount = eKind == eSearchKind.DFS ? dfsData.PopCount : bfsData.PopCount;
+            int peakOpenCount = eKind == eSearchKind.DFS ? dfsData.PeakOpenCount : bfsData.PeakOpenCount;
+            statusText.text = $"{headline}\n公式  时间 O(V+E)  空间 O(V)\n本轮  已看 {popCount} 格  {openWord} {peakOpenCount} 格";
         }
+
+        #endregion
+
+        #region 网格读写
 
         /// <summary>
         /// 读网格障碍与起终点 输出可行走表
@@ -279,14 +446,14 @@ namespace PathfindingAlgorithm.Visualization
         }
 
         /// <summary>
-        /// 把最短路标成路径色
+        /// 把已找到的路径标成路径色
         /// </summary>
         private void PaintPath()
         {
-            int pathCount = bfsData.PathList.Count;
+            int pathCount = PathCount();
             for (int i = 0; i < pathCount; i++)
             {
-                Vector2Int cell = bfsData.PathList[i];
+                Vector2Int cell = PathCell(i);
                 eCellState eState = grid.GetCellState(cell);
                 if (eState == eCellState.Explored || eState == eCellState.Empty)
                 {
@@ -302,14 +469,53 @@ namespace PathfindingAlgorithm.Visualization
         /// </summary>
         private void PaintArrow(Vector2Int cell)
         {
-            int parentIndex = bfsData.ParentIndexList[bfsData.ToIndex(cell)];
+            int parentIndex = ParentIndex(cell);
             if (parentIndex < 0)
             {
                 return;
             }
 
-            Vector2Int parent = bfsData.ToCell(parentIndex);
+            Vector2Int parent = ToCell(parentIndex);
             grid.SetCellArrow(cell, new Vector2(cell.x - parent.x, cell.y - parent.y));
+        }
+
+        #endregion
+
+        private Vector2Int CurrentCell()
+        {
+            return eKind == eSearchKind.DFS ? dfsData.Current : bfsData.Current;
+        }
+
+        private bool IsFound()
+        {
+            return eKind == eSearchKind.DFS ? dfsData.Found : bfsData.Found;
+        }
+
+        private bool IsOpenEmpty()
+        {
+            return eKind == eSearchKind.DFS ? dfsData.Stack.Count == 0 : bfsData.Queue.Count == 0;
+        }
+
+        private int PathCount()
+        {
+            return eKind == eSearchKind.DFS ? dfsData.PathList.Count : bfsData.PathList.Count;
+        }
+
+        private Vector2Int PathCell(int index)
+        {
+            return eKind == eSearchKind.DFS ? dfsData.PathList[index] : bfsData.PathList[index];
+        }
+
+        private int ParentIndex(Vector2Int cell)
+        {
+            return eKind == eSearchKind.DFS
+                ? dfsData.ParentIndexList[dfsData.ToIndex(cell)]
+                : bfsData.ParentIndexList[bfsData.ToIndex(cell)];
+        }
+
+        private Vector2Int ToCell(int index)
+        {
+            return eKind == eSearchKind.DFS ? dfsData.ToCell(index) : bfsData.ToCell(index);
         }
     }
 }

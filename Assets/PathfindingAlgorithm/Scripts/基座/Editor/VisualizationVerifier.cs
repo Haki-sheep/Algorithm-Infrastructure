@@ -34,7 +34,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
                 var view = instance.GetComponent<SearchVisualization>();
                 var grid = view.Grid;
                 view.RefreshInterface();
-                Require(grid.Columns == 40 && grid.Rows == 26 && grid.CellCount == 1040, "默认尺寸与格子数量");
+                Require(grid.Columns == 40 && grid.Rows == 24 && grid.CellCount == 960, "默认尺寸与格子数量");
                 foreach (var text in instance.GetComponentsInChildren<Text>(true))
                     Require(text.font != null, "中文字体引用");
                 foreach (var cell in instance.GetComponentsInChildren<GridCellView>(true))
@@ -50,7 +50,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
                 grid.SetCellState(second, eCellState.End);
                 Require(grid.GetCellState(first) == eCellState.Empty && grid.GetCellState(second) == eCellState.End, "唯一终点");
                 grid.SetCellState(first, eCellState.Obstacle);
-                grid.Rebuild(40, 26, 32f);
+                grid.Rebuild(40, 24, 32f);
                 Require(grid.GetCellState(first) == eCellState.Obstacle, "调整边长保留状态");
                 grid.SetCellArrow(first, Vector2.right);
                 var arrow = grid.transform.GetChild(41).GetChild(0).GetComponent<Image>();
