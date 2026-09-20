@@ -27,9 +27,9 @@ namespace PathfindingAlgorithm.Visualization.Editor
         private static readonly string[] spriteNameList = { "White", "Red", "Yellow", "Green", "Black", "Blue" };
 
         /// <summary>
-        /// 五大分类名称
+        /// 学习范围内的分类名称
         /// </summary>
-        private static readonly string[] categoryNameList = { "无信息搜索", "有信息搜索", "路径规划优化", "局部搜索与元启发式", "对抗搜索" };
+        private static readonly string[] categoryNameList = { "无信息搜索", "有信息搜索", "路径规划优化" };
 
         /// <summary>
         /// 分类对应的算法目录与界面标签
@@ -37,10 +37,8 @@ namespace PathfindingAlgorithm.Visualization.Editor
         private static readonly string[][] algorithmNameList =
         {
             new[] { "BFS", "DFS", "DLS", "IDDFS", "UCS · Dijkstra" },
-            new[] { "GBFS", "A*", "IDA*", "RBFS", "SMA*", "MA*", "Weighted A*", "Anytime A* · ARA*", "Beam Search", "Bidirectional A*" },
-            new[] { "JPS · JPS+", "Theta*", "D*", "D* Lite", "LPA*", "HPA*" },
-            new[] { "Hill Climbing", "Simulated Annealing", "Genetic Algorithm" },
-            new[] { "Minimax", "Alpha-Beta", "Expectimax", "MCTS", "Negamax" }
+            new[] { "GBFS", "A*", "Weighted A*" },
+            new[] { "JPS · JPS+", "Theta*", "HPA*" }
         };
 
         #region 构建入口
@@ -219,25 +217,59 @@ namespace PathfindingAlgorithm.Visualization.Editor
             var toolbar = ui.Rect("BrushToolbar", root);
             ui.TopStretch(toolbar, 32f, 122f, 392f, 48f);
             var group = toolbar.gameObject.AddComponent<ToggleGroup>();
-            var nameList = new[] { "空白", "障碍", "已探索", "最佳路径", "起点", "终点" };
-            for (int index = 0; index < nameList.Length; index++)
+            var brushNameList = new[] { "空白", "障碍", "贵1.5", "贵2", "贵3", "起点", "终点" };
+            var brushStateList = new[]
             {
-                var toggle = ui.Toggle(nameList[index], toolbar, spriteList[index]);
-                ui.Place((RectTransform)toggle.transform, index * 140f, 4f, 134f, 38f);
+                eCellState.Empty,
+                eCellState.Obstacle,
+                eCellState.Cost15,
+                eCellState.Cost2,
+                eCellState.Cost3,
+                eCellState.Start,
+                eCellState.End
+            };
+            var brushSpriteList = new[]
+            {
+                spriteList[0],
+                spriteList[1],
+                spriteList[0],
+                spriteList[0],
+                spriteList[0],
+                spriteList[4],
+                spriteList[5]
+            };
+            var brushTintList = new Color[]
+            {
+                Color.white,
+                Color.white,
+                new Color32(255, 186, 73, 255),
+                new Color32(232, 120, 48, 255),
+                new Color32(176, 64, 32, 255),
+                Color.white,
+                Color.white
+            };
+            float slot = 118f;
+            for (int index = 0; index < brushNameList.Length; index++)
+            {
+                var toggle = ui.Toggle(brushNameList[index], toolbar, brushSpriteList[index]);
+                ui.Place((RectTransform)toggle.transform, index * slot, 4f, slot - 6f, 38f);
                 toggle.group = group;
-                toggle.isOn = index == (int)eCellState.Obstacle;
+                toggle.isOn = brushStateList[index] == eCellState.Obstacle;
+                var swatch = toggle.transform.Find("Swatch");
+                if (swatch != null)
+                    swatch.GetComponent<Image>().color = brushTintList[index];
                 var brush = toggle.gameObject.AddComponent<GridBrushOption>();
                 ui.Bind(brush, "grid", grid);
                 var serialized = new SerializedObject(brush);
-                serialized.FindProperty("eState").enumValueIndex = index;
+                serialized.FindProperty("eState").enumValueIndex = (int)brushStateList[index];
                 serialized.ApplyModifiedPropertiesWithoutUndo();
                 UnityEventTools.AddPersistentListener(toggle.onValueChanged, brush.Select);
             }
             var clear = ui.Button("清空网格", toolbar);
-            ui.Place((RectTransform)clear.transform, 856f, 4f, 120f, 38f);
+            ui.Place((RectTransform)clear.transform, brushNameList.Length * slot + 8f, 4f, 120f, 38f);
             UnityEventTools.AddPersistentListener(clear.onClick, grid.Clear);
             var reset = ui.Button("重置", toolbar);
-            ui.Place((RectTransform)reset.transform, 984f, 4f, 88f, 38f);
+            ui.Place((RectTransform)reset.transform, brushNameList.Length * slot + 136f, 4f, 88f, 38f);
             UnityEventTools.AddPersistentListener(reset.onClick, controller.ResetRound);
         }
 
@@ -268,6 +300,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
             Toggle dfsToggle = null;
             Toggle dlsToggle = null;
             Toggle iddfsToggle = null;
+            Toggle ucsToggle = null;
             for (int index = 0; index < categoryNameList.Length; index++)
             {
                 var category = BuildCategory(ui, scroll.content, index);
@@ -277,6 +310,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
                     dfsToggle = category.Options[1];
                     dlsToggle = category.Options[2];
                     iddfsToggle = category.Options[3];
+                    ucsToggle = category.Options[4];
                 }
             }
             var arrows = ui.Toggle("显示方向箭头", panel);
@@ -322,6 +356,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
             ui.Bind(controller, "dfsToggle", dfsToggle);
             ui.Bind(controller, "dlsToggle", dlsToggle);
             ui.Bind(controller, "iddfsToggle", iddfsToggle);
+            ui.Bind(controller, "ucsToggle", ucsToggle);
             ui.Bind(controller, "statusText", footnote);
         }
 

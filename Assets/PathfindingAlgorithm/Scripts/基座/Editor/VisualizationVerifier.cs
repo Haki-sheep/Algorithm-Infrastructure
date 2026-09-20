@@ -52,6 +52,8 @@ namespace PathfindingAlgorithm.Visualization.Editor
                 grid.SetCellState(first, eCellState.Obstacle);
                 grid.Rebuild(40, 24, 32f);
                 Require(grid.GetCellState(first) == eCellState.Obstacle, "调整边长保留状态");
+                grid.SetCellState(first, eCellState.Cost15);
+                Require(grid.GetCellState(first) == eCellState.Cost15, "贵地1.5");
                 grid.SetCellArrow(first, Vector2.right);
                 var arrow = grid.transform.GetChild(41).GetChild(0).GetComponent<Image>();
                 Require(!arrow.enabled, "默认隐藏箭头");
@@ -66,7 +68,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
                 view.RefreshInterface();
 
                 var categoryList = instance.GetComponentsInChildren<AlgorithmCategoryView>(true);
-                Require(categoryList.Length == 5, "五大分类");
+                Require(categoryList.Length == 3, "三类学习范围");
                 int optionCount = 0;
                 foreach (var category in categoryList)
                 {
@@ -78,16 +80,20 @@ namespace PathfindingAlgorithm.Visualization.Editor
                     Require(category.Options[0].isOn, "折叠保留选择");
                     category.Options[0].isOn = false;
                 }
-                Require(optionCount == 29, "算法选项总数");
+                Require(optionCount == 11, "算法选项总数");
                 var eventSystem = new GameObject("VerificationEventSystem", typeof(EventSystem)).GetComponent<EventSystem>();
                 var gridRect = (RectTransform)grid.transform;
                 Canvas.ForceUpdateCanvases();
-                var screenPoint = RectTransformUtility.WorldToScreenPoint(instance.GetComponent<Canvas>().worldCamera, gridRect.TransformPoint(new Vector3(42f, -42f, 0f)));
-                var pointer = new PointerEventData(eventSystem) { position = screenPoint, button = PointerEventData.InputButton.Left };
-                // 验证鼠标路径前恢复覆盖画布 使屏幕坐标转换不依赖事件相机
+                float cellSize = gridRect.rect.width / grid.Columns;
+                Vector3 localPoint = new Vector3(gridRect.rect.xMin + 1.5f * cellSize, gridRect.rect.yMax - 1.5f * cellSize, 0f);
+                var pointer = new PointerEventData(eventSystem)
+                {
+                    position = RectTransformUtility.WorldToScreenPoint(instance.GetComponent<Canvas>().worldCamera, gridRect.TransformPoint(localPoint)),
+                    button = PointerEventData.InputButton.Left
+                };
                 instance.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
                 Canvas.ForceUpdateCanvases();
-                pointer.position = RectTransformUtility.WorldToScreenPoint(null, gridRect.TransformPoint(new Vector3(42f, -42f, 0f)));
+                pointer.position = RectTransformUtility.WorldToScreenPoint(null, gridRect.TransformPoint(localPoint));
                 grid.OnPointerDown(pointer);
                 Require(grid.GetCellState(first) == eCellState.Obstacle, "左键绘制");
                 pointer.button = PointerEventData.InputButton.Right;

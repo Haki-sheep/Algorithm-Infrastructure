@@ -29,6 +29,10 @@ namespace PathfindingAlgorithm.Visualization
         [SerializeField]
         private Toggle iddfsToggle;
 
+        /// <summary> 无信息搜索里的 UCS 勾选项 </summary>
+        [SerializeField]
+        private Toggle ucsToggle;
+
         /// <summary> DLS 深度上限 从起点沿当前枝最多走几步 </summary>
         [SerializeField, Min(0)]
         private int dlsLimit = 24;
@@ -65,6 +69,12 @@ namespace PathfindingAlgorithm.Visualization
         /// <summary> IDDFS 步进器 </summary>
         private IDDFSCore iddfsCore;
 
+        /// <summary> UCS 地图与搜索状态 </summary>
+        private UCSData ucsData;
+
+        /// <summary> UCS 步进器 </summary>
+        private UCSCore ucsCore;
+
         /// <summary> 本轮实际在跑的算法 </summary>
         private eSearchKind eKind;
 
@@ -83,6 +93,9 @@ namespace PathfindingAlgorithm.Visualization
         /// <summary> 本轮地图可行走表 </summary>
         private bool[] walkableList;
 
+        /// <summary> 本轮格子地形权重 普通1 贵地1.5/2/3 </summary>
+        private float[] costList;
+
         /// <summary> 本轮起点 </summary>
         private Vector2Int mapStart;
 
@@ -99,6 +112,7 @@ namespace PathfindingAlgorithm.Visualization
             DFS,
             DLS,
             IDDFS,
+            UCS,
         }
 
         /// <summary>
@@ -122,6 +136,8 @@ namespace PathfindingAlgorithm.Visualization
             dlsCore = new DLSCore();
             iddfsData = new IDDFSData();
             iddfsCore = new IDDFSCore();
+            ucsData = new UCSData();
+            ucsCore = new UCSCore();
         }
 
         #region 播放控制
@@ -252,12 +268,13 @@ namespace PathfindingAlgorithm.Visualization
             }
 
             ClearSearchOverlay();
-            if (!TryBuildMap(out bool[] WalkableList, out Vector2Int start, out Vector2Int goal))
+            if (!TryBuildMap(out bool[] WalkableList, out float[] CostList, out Vector2Int start, out Vector2Int goal))
             {
                 return false;
             }
 
             walkableList = WalkableList;
+            costList = CostList;
             mapStart = start;
             mapGoal = goal;
             stepCount = 0;
@@ -299,6 +316,13 @@ namespace PathfindingAlgorithm.Visualization
             {
                 iddfsData.Init(grid.Columns, grid.Rows, walkableList, mapStart, mapGoal);
                 iddfsCore.Init(iddfsData);
+                return;
+            }
+
+            if (eKind == eSearchKind.UCS)
+            {
+                ucsData.Init(grid.Columns, grid.Rows, walkableList, costList, mapStart, mapGoal);
+                ucsCore.Init(ucsData);
                 return;
             }
 
@@ -381,6 +405,12 @@ namespace PathfindingAlgorithm.Visualization
                 eResolved = eSearchKind.IDDFS;
             }
 
+            if (ucsToggle != null && ucsToggle.isOn)
+            {
+                onCount++;
+                eResolved = eSearchKind.UCS;
+            }
+
             if (onCount != 1)
                 return eSearchKind.None;
 
@@ -420,7 +450,11 @@ namespace PathfindingAlgorithm.Visualization
         /// </summary>
         private void RefreshStatus(string headline)
         {
-            string openWord = eKind == eSearchKind.BFS ? "排队最多" : "栈最多";
+            string openWord = "开集最多";
+            if (eKind == eSearchKind.BFS)
+                openWord = "排队最多";
+            else if (eKind != eSearchKind.UCS)
+                openWord = "栈最多";
             int popCount = PopCount();
             int peakOpenCount = PeakOpenCount();
             string limitWord = "";
@@ -438,6 +472,8 @@ namespace PathfindingAlgorithm.Visualization
         {
             if (eKind == eSearchKind.IDDFS)
                 return "时间 O(dCN)  空间 O(C)";
+            if (eKind == eSearchKind.UCS)
+                return "时间 O(C(C+N))  空间 O(C)";
             return "时间 O(CN)  空间 O(C)";
         }
 
@@ -460,14 +496,15 @@ namespace PathfindingAlgorithm.Visualization
         #region 网格读写
 
         /// <summary>
-        /// 读网格障碍与起终点 输出可行走表
+        /// 读网格障碍贵地与起终点 输出可行走表和地形权重
         /// </summary>
-        private bool TryBuildMap(out bool[] WalkableList, out Vector2Int start, out Vector2Int goal)
+        private bool TryBuildMap(out bool[] WalkableList, out float[] CostList, out Vector2Int start, out Vector2Int goal)
         {
             int width = grid.Columns;
             int height = grid.Rows;
             int cellCount = width * height;
             WalkableList = new bool[cellCount];
+            CostList = new float[cellCount];
             start = Vector2Int.zero;
             goal = Vector2Int.zero;
             bool hasStart = false;
@@ -481,6 +518,7 @@ namespace PathfindingAlgorithm.Visualization
                     eCellState eState = grid.GetCellState(position);
                     int index = y * width + x;
                     WalkableList[index] = eState != eCellState.Obstacle;
+                    CostList[index] = TerrainCost(eState);
                     if (eState == eCellState.Start)
                     {
                         start = position;
@@ -501,6 +539,20 @@ namespace PathfindingAlgorithm.Visualization
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// 贵地权重 其余可走格为1
+        /// </summary>
+        private static float TerrainCost(eCellState eState)
+        {
+            if (eState == eCellState.Cost15)
+                return 1.5f;
+            if (eState == eCellState.Cost2)
+                return 2f;
+            if (eState == eCellState.Cost3)
+                return 3f;
+            return 1f;
         }
 
         /// <summary>
@@ -587,6 +639,8 @@ namespace PathfindingAlgorithm.Visualization
                 return dlsCore.Step();
             if (eKind == eSearchKind.IDDFS)
                 return iddfsCore.Step();
+            if (eKind == eSearchKind.UCS)
+                return ucsCore.Step();
             return bfsCore.Step();
         }
 
@@ -598,6 +652,8 @@ namespace PathfindingAlgorithm.Visualization
                 return dlsData.CurrentCell;
             if (eKind == eSearchKind.IDDFS)
                 return iddfsData.CurrentCell;
+            if (eKind == eSearchKind.UCS)
+                return ucsData.Current;
             return bfsData.Current;
         }
 
@@ -609,6 +665,8 @@ namespace PathfindingAlgorithm.Visualization
                 return dlsData.Found;
             if (eKind == eSearchKind.IDDFS)
                 return iddfsData.Found;
+            if (eKind == eSearchKind.UCS)
+                return ucsData.Found;
             return bfsData.Found;
         }
 
@@ -620,6 +678,8 @@ namespace PathfindingAlgorithm.Visualization
                 return dlsData.Stack.Count == 0;
             if (eKind == eSearchKind.IDDFS)
                 return iddfsData.Stack.Count == 0 && !iddfsData.HitLimit;
+            if (eKind == eSearchKind.UCS)
+                return ucsData.OpenList.Count == 0;
             return bfsData.Queue.Count == 0;
         }
 
@@ -631,6 +691,8 @@ namespace PathfindingAlgorithm.Visualization
                 return dlsData.PathList.Count;
             if (eKind == eSearchKind.IDDFS)
                 return iddfsData.PathList.Count;
+            if (eKind == eSearchKind.UCS)
+                return ucsData.PathList.Count;
             return bfsData.PathList.Count;
         }
 
@@ -642,6 +704,8 @@ namespace PathfindingAlgorithm.Visualization
                 return dlsData.PathList[index];
             if (eKind == eSearchKind.IDDFS)
                 return iddfsData.PathList[index];
+            if (eKind == eSearchKind.UCS)
+                return ucsData.PathList[index];
             return bfsData.PathList[index];
         }
 
@@ -653,6 +717,8 @@ namespace PathfindingAlgorithm.Visualization
                 return dlsData.ParentIndexList[dlsData.ToIndex(cell)];
             if (eKind == eSearchKind.IDDFS)
                 return iddfsData.ParentIndexList[iddfsData.ToIndex(cell)];
+            if (eKind == eSearchKind.UCS)
+                return ucsData.ParentIndexList[ucsData.ToIndex(cell)];
             return bfsData.ParentIndexList[bfsData.ToIndex(cell)];
         }
 
@@ -664,6 +730,8 @@ namespace PathfindingAlgorithm.Visualization
                 return dlsData.ToCell(index);
             if (eKind == eSearchKind.IDDFS)
                 return iddfsData.ToCell(index);
+            if (eKind == eSearchKind.UCS)
+                return ucsData.ToCell(index);
             return bfsData.ToCell(index);
         }
 
@@ -675,6 +743,8 @@ namespace PathfindingAlgorithm.Visualization
                 return dlsData.PopCount;
             if (eKind == eSearchKind.IDDFS)
                 return iddfsData.PopCount;
+            if (eKind == eSearchKind.UCS)
+                return ucsData.PopCount;
             return bfsData.PopCount;
         }
 
@@ -686,6 +756,8 @@ namespace PathfindingAlgorithm.Visualization
                 return dlsData.PeakOpenCount;
             if (eKind == eSearchKind.IDDFS)
                 return iddfsData.PeakOpenCount;
+            if (eKind == eSearchKind.UCS)
+                return ucsData.PeakOpenCount;
             return bfsData.PeakOpenCount;
         }
     }

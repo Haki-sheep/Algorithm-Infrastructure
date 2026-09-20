@@ -10,7 +10,10 @@ namespace PathfindingAlgorithm.Visualization
         Explored,
         Path,
         Start,
-        End
+        End,
+        Cost15,
+        Cost2,
+        Cost3
     }
 
     public sealed class GridCellView : MonoBehaviour
@@ -28,7 +31,7 @@ namespace PathfindingAlgorithm.Visualization
         private Image arrow;
 
         /// <summary>
-        /// 六种状态对应的素材
+        /// 状态对应的素材 贵地复用空白格再着色
         /// </summary>
         [SerializeField]
         private Sprite[] stateSpriteList;
@@ -54,8 +57,26 @@ namespace PathfindingAlgorithm.Visualization
         public void SetState(eCellState eValue)
         {
             eState = eValue;
-            background.sprite = stateSpriteList[(int)eValue];
+            int spriteIndex = (int)eValue;
+            if (spriteIndex >= stateSpriteList.Length)
+                spriteIndex = 0;
+            background.sprite = stateSpriteList[spriteIndex];
+            background.color = ColorOf(eValue);
             arrow.color = eValue == eCellState.Start ? Color.white : new Color32(30, 43, 62, 255);
+        }
+
+        /// <summary>
+        /// 贵地用空白格加色 其余素材保持原色
+        /// </summary>
+        private static Color ColorOf(eCellState eValue)
+        {
+            if (eValue == eCellState.Cost15)
+                return new Color32(255, 186, 73, 255);
+            if (eValue == eCellState.Cost2)
+                return new Color32(232, 120, 48, 255);
+            if (eValue == eCellState.Cost3)
+                return new Color32(176, 64, 32, 255);
+            return Color.white;
         }
 
         /// <summary>
