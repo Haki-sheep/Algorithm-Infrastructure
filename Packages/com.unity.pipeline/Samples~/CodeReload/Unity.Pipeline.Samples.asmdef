@@ -1,0 +1,17 @@
+{
+    "name": "Unity.Pipeline.Samples",
+    "rootNamespace": "Unity.Pipeline.Samples.CodeReload",
+    "references": [
+        "Unity.Pipeline",
+        "Unity.Pipeline.Attributes"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Unity.Pipeline.IlInterpreter",
+    "rootNamespace": "",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_EDITOR || DEVELOPMENT_BUILD || ENABLE_RUNTIME_PIPELINE"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

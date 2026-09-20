@@ -1,0 +1,33 @@
+{
+    "name": "Unity.Pipeline",
+    "rootNamespace": "Unity.Pipeline",
+    "references": [
+        "Unity.InputSystem",
+        "Unity.Pipeline.Attributes",
+        "Unity.Pipeline.IlInterpreter"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "UnityPipeline.Microsoft.CodeAnalysis.dll",
+        "UnityPipeline.Microsoft.CodeAnalysis.CSharp.dll",
+        "UnityPipeline.System.Collections.Immutable.dll",
+        "UnityPipeline.System.Runtime.CompilerServices.Unsafe.dll",
+        "UnityPipeline.System.Reflection.Metadata.dll",
+        "Newtonsoft.Json.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_EDITOR || DEVELOPMENT_BUILD || ENABLE_RUNTIME_PIPELINE"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.modules.unitywebrequest",
+            "expression": "1.0.0",
+            "define": "UNITY_2022_3_OR_NEWER"
+        }
+    ],
+    "noEngineReferences": false
+}

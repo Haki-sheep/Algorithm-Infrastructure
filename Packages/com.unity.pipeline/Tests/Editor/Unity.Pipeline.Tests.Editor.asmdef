@@ -1,0 +1,36 @@
+{
+    "name": "Unity.Pipeline.Tests.Editor",
+    "rootNamespace": "Unity.Pipeline.Tests.Editor",
+    "references": [
+        "UnityEditor.TestRunner",
+        "Unity.Pipeline.Editor",
+        "Unity.Pipeline",
+        "Unity.Pipeline.Attributes",
+        "Unity.Pipeline.IlInterpreter",
+        "UnityEngine.TestRunner",
+        "Unity.Pipeline.Tests.Runtime",
+        "Unity.InputSystem",
+        "Unity.InputSystem.TestFramework"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "Newtonsoft.Json.dll",
+        "UnityPipeline.Microsoft.CodeAnalysis.dll",
+        "UnityPipeline.Microsoft.CodeAnalysis.CSharp.dll",
+        "UnityPipeline.System.Reflection.Metadata.dll",
+        "UnityPipeline.System.Collections.Immutable.dll",
+        "UnityPipeline.System.Runtime.CompilerServices.Unsafe.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
