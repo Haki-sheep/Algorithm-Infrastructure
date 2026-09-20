@@ -21,6 +21,14 @@ namespace PathfindingAlgorithm.Visualization
         [SerializeField]
         private Toggle dfsToggle;
 
+        /// <summary> 无信息搜索里的 DLS 勾选项 </summary>
+        [SerializeField]
+        private Toggle dlsToggle;
+
+        /// <summary> DLS 深度上限 从起点沿当前枝最多走几步 </summary>
+        [SerializeField, Min(0)]
+        private int dlsLimit = 24;
+
         /// <summary> 搜索状态说明 </summary>
         [SerializeField]
         private Text statusText;
@@ -40,6 +48,12 @@ namespace PathfindingAlgorithm.Visualization
 
         /// <summary> DFS 步进器 </summary>
         private DFSCore dfsCore;
+
+        /// <summary> DLS 地图与搜索状态 </summary>
+        private DLSData dlsData;
+
+        /// <summary> DLS 步进器 </summary>
+        private DLSCore dlsCore;
 
         /// <summary> 本轮实际在跑的算法 </summary>
         private eSearchKind eKind;
@@ -70,6 +84,7 @@ namespace PathfindingAlgorithm.Visualization
             None,
             BFS,
             DFS,
+            DLS,
         }
 
         /// <summary>
@@ -89,6 +104,8 @@ namespace PathfindingAlgorithm.Visualization
             bfsCore = new BFSCore();
             dfsData = new DFSData();
             dfsCore = new DFSCore();
+            dlsData = new DLSData();
+            dlsCore = new DLSCore();
         }
 
         #region 播放控制
@@ -251,12 +268,18 @@ namespace PathfindingAlgorithm.Visualization
             {
                 dfsData.Init(grid.Columns, grid.Rows, walkableList, mapStart, mapGoal);
                 dfsCore.Init(dfsData);
+                return;
             }
-            else
+
+            if (eKind == eSearchKind.DLS)
             {
-                bfsData.Init(grid.Columns, grid.Rows, walkableList, mapStart, mapGoal);
-                bfsCore.Init(bfsData);
+                dlsData.Init(grid.Columns, grid.Rows, walkableList, mapStart, mapGoal, dlsLimit);
+                dlsCore.Init(dlsData);
+                return;
             }
+
+            bfsData.Init(grid.Columns, grid.Rows, walkableList, mapStart, mapGoal);
+            bfsCore.Init(bfsData);
         }
 
         /// <summary>
@@ -268,7 +291,7 @@ namespace PathfindingAlgorithm.Visualization
             InitCurrentSearch();
             for (int i = 0; i < stepCount; i++)
             {
-                bool more = eKind == eSearchKind.DFS ? dfsCore.Step() : bfsCore.Step();
+                bool more = StepCurrent();
                 PaintExplored(CurrentCell());
                 if (!more)
                 {
@@ -295,7 +318,7 @@ namespace PathfindingAlgorithm.Visualization
 
             if (IsOpenEmpty())
             {
-                RefreshStatus("不可达");
+                RefreshStatus(eKind == eSearchKind.DLS ? "上限内不可达" : "不可达");
                 return;
             }
 
@@ -307,18 +330,30 @@ namespace PathfindingAlgorithm.Visualization
         /// </summary>
         private eSearchKind ResolveKind()
         {
-            bool bfsOn = bfsToggle.isOn;
-            bool dfsOn = dfsToggle.isOn;
-            if (bfsOn && dfsOn)
+            int onCount = 0;
+            var eResolved = eSearchKind.None;
+            if (bfsToggle.isOn)
+            {
+                onCount++;
+                eResolved = eSearchKind.BFS;
+            }
+
+            if (dfsToggle.isOn)
+            {
+                onCount++;
+                eResolved = eSearchKind.DFS;
+            }
+
+            if (dlsToggle != null && dlsToggle.isOn)
+            {
+                onCount++;
+                eResolved = eSearchKind.DLS;
+            }
+
+            if (onCount != 1)
                 return eSearchKind.None;
 
-            if (dfsOn)
-                return eSearchKind.DFS;
-
-            if (bfsOn)
-                return eSearchKind.BFS;
-
-            return eSearchKind.None;
+            return eResolved;
         }
 
         /// <summary>
@@ -326,7 +361,7 @@ namespace PathfindingAlgorithm.Visualization
         /// </summary>
         private bool Advance()
         {
-            bool more = eKind == eSearchKind.DFS ? dfsCore.Step() : bfsCore.Step();
+            bool more = StepCurrent();
             stepCount++;
             PaintExplored(CurrentCell());
             if (more)
@@ -343,7 +378,7 @@ namespace PathfindingAlgorithm.Visualization
             }
             else
             {
-                RefreshStatus("不可达");
+                RefreshStatus(eKind == eSearchKind.DLS ? "上限内不可达" : "不可达");
             }
 
             return false;
@@ -354,10 +389,11 @@ namespace PathfindingAlgorithm.Visualization
         /// </summary>
         private void RefreshStatus(string headline)
         {
-            string openWord = eKind == eSearchKind.DFS ? "栈最多" : "排队最多";
-            int popCount = eKind == eSearchKind.DFS ? dfsData.PopCount : bfsData.PopCount;
-            int peakOpenCount = eKind == eSearchKind.DFS ? dfsData.PeakOpenCount : bfsData.PeakOpenCount;
-            statusText.text = $"{headline}\n公式  时间 O(V+E)  空间 O(V)\n本轮  已看 {popCount} 格  {openWord} {peakOpenCount} 格";
+            string openWord = eKind == eSearchKind.BFS ? "排队最多" : "栈最多";
+            int popCount = PopCount();
+            int peakOpenCount = PeakOpenCount();
+            string limitWord = eKind == eSearchKind.DLS ? $"  上限 {dlsLimit}" : "";
+            statusText.text = $"{headline}\n公式  时间 O(V+E)  空间 O(V)\n本轮  已看 {popCount} 格  {openWord} {peakOpenCount} 格{limitWord}";
         }
 
         #endregion
@@ -481,41 +517,97 @@ namespace PathfindingAlgorithm.Visualization
 
         #endregion
 
+        /// <summary>
+        /// 推进当前算法一步
+        /// </summary>
+        private bool StepCurrent()
+        {
+            if (eKind == eSearchKind.DFS)
+                return dfsCore.Step();
+            if (eKind == eSearchKind.DLS)
+                return dlsCore.Step();
+            return bfsCore.Step();
+        }
+
         private Vector2Int CurrentCell()
         {
-            return eKind == eSearchKind.DFS ? dfsData.Current : bfsData.Current;
+            if (eKind == eSearchKind.DFS)
+                return dfsData.Current;
+            if (eKind == eSearchKind.DLS)
+                return dlsData.CurrentCell;
+            return bfsData.Current;
         }
 
         private bool IsFound()
         {
-            return eKind == eSearchKind.DFS ? dfsData.Found : bfsData.Found;
+            if (eKind == eSearchKind.DFS)
+                return dfsData.Found;
+            if (eKind == eSearchKind.DLS)
+                return dlsData.Found;
+            return bfsData.Found;
         }
 
         private bool IsOpenEmpty()
         {
-            return eKind == eSearchKind.DFS ? dfsData.Stack.Count == 0 : bfsData.Queue.Count == 0;
+            if (eKind == eSearchKind.DFS)
+                return dfsData.Stack.Count == 0;
+            if (eKind == eSearchKind.DLS)
+                return dlsData.Stack.Count == 0;
+            return bfsData.Queue.Count == 0;
         }
 
         private int PathCount()
         {
-            return eKind == eSearchKind.DFS ? dfsData.PathList.Count : bfsData.PathList.Count;
+            if (eKind == eSearchKind.DFS)
+                return dfsData.PathList.Count;
+            if (eKind == eSearchKind.DLS)
+                return dlsData.PathList.Count;
+            return bfsData.PathList.Count;
         }
 
         private Vector2Int PathCell(int index)
         {
-            return eKind == eSearchKind.DFS ? dfsData.PathList[index] : bfsData.PathList[index];
+            if (eKind == eSearchKind.DFS)
+                return dfsData.PathList[index];
+            if (eKind == eSearchKind.DLS)
+                return dlsData.PathList[index];
+            return bfsData.PathList[index];
         }
 
         private int ParentIndex(Vector2Int cell)
         {
-            return eKind == eSearchKind.DFS
-                ? dfsData.ParentIndexList[dfsData.ToIndex(cell)]
-                : bfsData.ParentIndexList[bfsData.ToIndex(cell)];
+            if (eKind == eSearchKind.DFS)
+                return dfsData.ParentIndexList[dfsData.ToIndex(cell)];
+            if (eKind == eSearchKind.DLS)
+                return dlsData.ParentIndexList[dlsData.ToIndex(cell)];
+            return bfsData.ParentIndexList[bfsData.ToIndex(cell)];
         }
 
         private Vector2Int ToCell(int index)
         {
-            return eKind == eSearchKind.DFS ? dfsData.ToCell(index) : bfsData.ToCell(index);
+            if (eKind == eSearchKind.DFS)
+                return dfsData.ToCell(index);
+            if (eKind == eSearchKind.DLS)
+                return dlsData.ToCell(index);
+            return bfsData.ToCell(index);
+        }
+
+        private int PopCount()
+        {
+            if (eKind == eSearchKind.DFS)
+                return dfsData.PopCount;
+            if (eKind == eSearchKind.DLS)
+                return dlsData.PopCount;
+            return bfsData.PopCount;
+        }
+
+        private int PeakOpenCount()
+        {
+            if (eKind == eSearchKind.DFS)
+                return dfsData.PeakOpenCount;
+            if (eKind == eSearchKind.DLS)
+                return dlsData.PeakOpenCount;
+            return bfsData.PeakOpenCount;
         }
     }
 }

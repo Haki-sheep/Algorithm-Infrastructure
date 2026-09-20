@@ -266,6 +266,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
             ui.Vertical(scroll.content, 10f);
             Toggle bfsToggle = null;
             Toggle dfsToggle = null;
+            Toggle dlsToggle = null;
             for (int index = 0; index < categoryNameList.Length; index++)
             {
                 var category = BuildCategory(ui, scroll.content, index);
@@ -273,6 +274,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
                 {
                     bfsToggle = category.Options[0];
                     dfsToggle = category.Options[1];
+                    dlsToggle = category.Options[2];
                 }
             }
             var arrows = ui.Toggle("显示方向箭头", panel);
@@ -316,6 +318,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
             UnityEventTools.AddPersistentListener(undo.onClick, controller.UndoStep);
             ui.Bind(controller, "bfsToggle", bfsToggle);
             ui.Bind(controller, "dfsToggle", dfsToggle);
+            ui.Bind(controller, "dlsToggle", dlsToggle);
             ui.Bind(controller, "statusText", footnote);
         }
 
