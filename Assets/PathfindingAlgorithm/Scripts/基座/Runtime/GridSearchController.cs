@@ -428,7 +428,17 @@ namespace PathfindingAlgorithm.Visualization
                 limitWord = $"  上限 {dlsLimit}";
             else if (eKind == eSearchKind.IDDFS)
                 limitWord = $"  当前上限 {iddfsData.Limit}";
-            statusText.text = $"{headline}\n公式  时间 O(V+E)  空间 O(V)\n本轮  已看 {popCount} 格  {openWord} {peakOpenCount} 格{limitWord}";
+            statusText.text = $"{headline}\n公式  {ComplexityFormula()}\n本轮  已看 {popCount} 格  {openWord} {peakOpenCount} 格{limitWord}";
+        }
+
+        /// <summary>
+        /// 当前算法按格子C和邻居N算的复杂度
+        /// </summary>
+        private string ComplexityFormula()
+        {
+            if (eKind == eSearchKind.IDDFS)
+                return "时间 O(dCN)  空间 O(C)";
+            return "时间 O(CN)  空间 O(C)";
         }
 
         /// <summary>

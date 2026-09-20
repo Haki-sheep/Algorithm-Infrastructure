@@ -35,6 +35,7 @@ public class IDDFSCore
         data.CurrentCell = node.Cell;
         data.CurrentDepth = node.Depth;
         data.PopCount++;
+        
         // 同格已被更浅的枝更新过 这次弹出作废
         if (node.Depth > data.DepthList[data.ToIndex(node.Cell)])
             return data.Stack.Count > 0 || data.HitLimit;
