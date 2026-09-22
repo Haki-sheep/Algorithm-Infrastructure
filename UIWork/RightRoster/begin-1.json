@@ -1,0 +1,8 @@
+{
+  "status": "working",
+  "created": "01-composition/step.json",
+  "sha256": "1b230014c9cf69cc8156d635bbc306f208ee70a5cfc27eea6c04956b5c9c1f6e",
+  "completionClaim": false,
+  "designValueReference": "references/six-stage-execution.md#design-value-carryover",
+  "guidance": []
+}

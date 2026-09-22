@@ -1,0 +1,9 @@
+{
+  "previous": null,
+  "candidate": {
+    "path": "05-material/submissions/001.bin",
+    "sha256": "90ba50971de69f7524d9ea611f4ab67ab47167969278d2461faa63ec2298da1a"
+  },
+  "result": "accepted",
+  "reason": "bound-record-checks-only"
+}

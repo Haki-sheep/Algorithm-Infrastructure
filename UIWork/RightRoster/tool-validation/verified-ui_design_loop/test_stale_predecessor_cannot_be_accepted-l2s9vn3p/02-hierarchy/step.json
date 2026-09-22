@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 2,
+  "mode": "full",
+  "stage": 2,
+  "status": "reviewed",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "b81d932e4a13079c26320d23ad3a3fb6ab583fc7ba656fe08c576ab076cee7b5"
+  },
+  "predecessor": {
+    "path": "01-composition/step.json",
+    "sha256": "a2f3ea773ca73fdb261ffbbb898eb5c74f1ae334550e37dfd7a813fc2470862f"
+  },
+  "input": {
+    "path": "01-composition/evidence/03.svg",
+    "sha256": "8e4307e68fc847f9b5b6d3b9894713e4ccde7b994526569458a16663026ed4fc"
+  },
+  "narrative": {
+    "path": "02-hierarchy/step.md",
+    "sha256": "3c1540412be3ad08a029fcdf4db7c58dba259c9324af07ada8912b3e170c3336"
+  },
+  "protected": [
+    {
+      "id": "p2",
+      "decision": "Synthetic retained decision 2",
+      "group": "screen"
+    }
+  ],
+  "divergenceRequired": false,
+  "reuseReason": "Deterministic protocol fixture; no aesthetic claim.",
+  "alternatives": [],
+  "findings": [
+    {
+      "id": "2-1",
+      "rootCause": "Synthetic root 2-1",
+      "kind": "design-gap",
+      "observation": "Fixture observation 2-1",
+      "location": "rectangle 1",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed"
+    },
+    {
+      "id": "2-2",
+      "rootCause": "Synthetic root 2-2",
+      "kind": "design-gap",
+      "observation": "Fixture observation 2-2",
+      "location": "rectangle 2",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed"
+    },
+    {
+      "id": "2-3",
+      "rootCause": "Synthetic root 2-3",
+      "kind": "design-gap",
+      "observation": "Fixture observation 2-3",
+      "location": "rectangle 3",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed"
+    }
+  ],
+  "attempts": [
+    {
+      "sequence": 1,
+      "findingId": "2-1",
+      "before": {
+        "path": "01-composition/evidence/03.svg",
+        "sha256": "8e4307e68fc847f9b5b6d3b9894713e4ccde7b994526569458a16663026ed4fc"
+      },
+      "after": {
+        "path": "02-hierarchy/evidence/01.svg",
+        "sha256": "1259eb5f995dc120ab5e435fb1236cf8571ee45f4edb674afd8fa41493426616"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ]
+    },
+    {
+      "sequence": 2,
+      "findingId": "2-2",
+      "before": {
+        "path": "02-hierarchy/evidence/01.svg",
+        "sha256": "1259eb5f995dc120ab5e435fb1236cf8571ee45f4edb674afd8fa41493426616"
+      },
+      "after": {
+        "path": "02-hierarchy/evidence/02.svg",
+        "sha256": "fffaf314836eb68b5bb9f7d1b72a9f20d93354905ce4cc2fad132573aa72bdd7"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ]
+    },
+    {
+      "sequence": 3,
+      "findingId": "2-3",
+      "before": {
+        "path": "02-hierarchy/evidence/02.svg",
+        "sha256": "fffaf314836eb68b5bb9f7d1b72a9f20d93354905ce4cc2fad132573aa72bdd7"
+      },
+      "after": {
+        "path": "02-hierarchy/evidence/03.svg",
+        "sha256": "65d37be58a5de315390fe447b37ad1018cad7b84e5b7e0ca350270b428935fbc"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ]
+    }
+  ],
+  "unresolvedRegressions": [],
+  "output": {
+    "path": "02-hierarchy/evidence/03.svg",
+    "sha256": "65d37be58a5de315390fe447b37ad1018cad7b84e5b7e0ca350270b428935fbc"
+  },
+  "review": {
+    "reviewer": "synthetic-test",
+    "observation": "Fixture only",
+    "evidence": {
+      "path": "02-hierarchy/evidence/03.svg",
+      "sha256": "65d37be58a5de315390fe447b37ad1018cad7b84e5b7e0ca350270b428935fbc"
+    },
+    "result": "reviewed"
+  }
+}

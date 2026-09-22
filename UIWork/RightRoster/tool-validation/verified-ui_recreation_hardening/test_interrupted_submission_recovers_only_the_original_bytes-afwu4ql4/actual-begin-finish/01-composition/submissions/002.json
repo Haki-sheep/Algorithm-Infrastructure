@@ -1,0 +1,12 @@
+{
+  "previous": {
+    "path": "01-composition/submissions/001.json",
+    "sha256": "8ca0e1a9109e49936031d18bc6a110039ab27696431d3e9da1b40bc9e0e2603e"
+  },
+  "candidate": {
+    "path": "01-composition/submissions/002.bin",
+    "sha256": "b3bedad51bdfde2a6b4f446f66f92c8116a4f6373c6b6c2d52f103157b3213d0"
+  },
+  "result": "rejected",
+  "reason": "REVIEW_NOT_FINISHED"
+}

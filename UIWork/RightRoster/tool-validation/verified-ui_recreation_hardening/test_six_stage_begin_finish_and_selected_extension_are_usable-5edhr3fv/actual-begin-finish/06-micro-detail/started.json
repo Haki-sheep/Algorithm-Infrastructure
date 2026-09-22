@@ -1,0 +1,17 @@
+{
+  "brief": {
+    "path": "brief.json",
+    "sha256": "632544a539841ebcc92961c88bb3603c04e5fcf906c9d5ac13a319841f02f625"
+  },
+  "stage": 6,
+  "round": 1,
+  "predecessor": {
+    "path": "05-material/step.json",
+    "sha256": "032c9376b772004a29f4a2efafdb89848322ac3efd9eaba55a25212d41bde0e4"
+  },
+  "createdAtUnix": 1790068580.7810423,
+  "latestSubmission": {
+    "path": "06-micro-detail/submissions/001.json",
+    "sha256": "fe69de63689417289dad7f0f59308e94c75de1962d278af5d4647c9fd9038f2e"
+  }
+}

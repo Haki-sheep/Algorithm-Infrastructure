@@ -1,0 +1,29 @@
+{
+  "schema": "portable.resource-take.v1",
+  "status": "bytes-verified-review-pending",
+  "resourceType": "ui",
+  "purpose": "右侧角色选择界面复刻依据",
+  "source": {
+    "kind": "local-file",
+    "path": "Assets/TestImgae/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+    "url": "",
+    "bytes": 267043,
+    "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+  },
+  "licenseNote": "用户提供的项目内参考图",
+  "licenseAssessment": "unverified",
+  "file": {
+    "path": "files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+    "bytes": 267043,
+    "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+  },
+  "reviewPending": [
+    "license-and-redistribution",
+    "format-and-dependencies",
+    "visual-or-audio-quality",
+    "intended-use-and-style",
+    "Unity-import-and-live-references"
+  ],
+  "unity": "not-run",
+  "originalSourcePreserved": true
+}

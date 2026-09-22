@@ -1,0 +1,3 @@
+Create an original settings UI.
+Show the Synthetic row.
+Use amber text.

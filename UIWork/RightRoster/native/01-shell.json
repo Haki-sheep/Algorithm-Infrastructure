@@ -1,0 +1,72 @@
+{
+  "prefabPath": "Assets/TestImgae/RightRoster/RightRoster.prefab",
+  "prefabHash": "74fa7ba39055670f2561ece3b94d722f0219f6f64f645c65ff860acab0a1f7d0",
+  "pngSha256": "ba5dbc4bfd9b3bc14cab4c0807456a25f2d540dab8273737d42dd95328c9af20",
+  "width": 1540,
+  "height": 928,
+  "observationScope": "isolated-explicit-settings",
+  "settings": {
+    "safeArea": [
+      0,
+      0,
+      1540,
+      928
+    ],
+    "referenceWidth": 1540,
+    "referenceHeight": 928,
+    "matchWidthOrHeight": 1
+  },
+  "nodes": [
+    {
+      "path": "RightRoster",
+      "active": true,
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1540.0,
+      "height": 928.0,
+      "screenRect": [
+        0.0,
+        0.0,
+        1540.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/PreviewBackground",
+      "active": true,
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1540.0,
+      "height": 928.0,
+      "screenRect": [
+        0.0,
+        0.0,
+        1540.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel",
+      "active": true,
+      "x": 780.0,
+      "y": 0.0,
+      "width": 760.0,
+      "height": 928.0,
+      "screenRect": [
+        780.0,
+        0.0,
+        760.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    }
+  ],
+  "observedAtUtc": "2026-09-22T09:42:59.0283033Z",
+  "sourceDesignHash": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9",
+  "inputAcceptance": "visual-only no Selectable or business input"
+}

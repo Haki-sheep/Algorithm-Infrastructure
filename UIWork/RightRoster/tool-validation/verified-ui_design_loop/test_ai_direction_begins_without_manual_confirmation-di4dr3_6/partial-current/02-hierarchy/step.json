@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 2,
+  "mode": "full",
+  "stage": 2,
+  "status": "working",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "5a0c6a42b914b96ea8f8172aef279f7dedd861166416ad7cb16f7e0eba78ba9d"
+  },
+  "predecessor": {
+    "path": "01-composition/step.json",
+    "sha256": "8bc67e584ef2ddfd6ff3ddeec47e1837541aab4ee492d0b257f16695861fbab5"
+  },
+  "input": {
+    "path": "01-composition/evidence/03.svg",
+    "sha256": "8e4307e68fc847f9b5b6d3b9894713e4ccde7b994526569458a16663026ed4fc"
+  },
+  "protected": [],
+  "divergenceRequired": null,
+  "alternatives": [],
+  "findings": [],
+  "questions": [],
+  "attempts": [],
+  "output": null,
+  "review": {
+    "reviewer": "",
+    "observation": "",
+    "evidence": null,
+    "result": "pending",
+    "dimensions": [
+      {
+        "page": "display",
+        "id": "reading-order",
+        "group": "",
+        "observation": "",
+        "result": "pending"
+      },
+      {
+        "page": "display",
+        "id": "type-hierarchy",
+        "group": "",
+        "observation": "",
+        "result": "pending"
+      },
+      {
+        "page": "display",
+        "id": "action-priority",
+        "group": "",
+        "observation": "",
+        "result": "pending"
+      }
+    ]
+  },
+  "unresolvedRegressions": []
+}

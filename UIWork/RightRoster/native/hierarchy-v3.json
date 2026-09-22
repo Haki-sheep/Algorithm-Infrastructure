@@ -1,0 +1,2681 @@
+{
+  "sourcePrefabSha256": "1c97c1be151f94186a5aa8c2fb471011f3c672309f914498391a518bca49c7e0",
+  "nodes": [
+    {
+      "path": "RightRoster",
+      "localId": 3755103753674306470,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.Canvas"
+        },
+        {
+          "type": "UnityEngine.UI.CanvasScaler"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        0.0,
+        0.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/PreviewBackground",
+      "localId": 3723464194284288370,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        0.0,
+        0.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel",
+      "localId": 7705879150178365382,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs",
+      "localId": 3447735381122293691,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/BasicTab",
+      "localId": 933077817620400566,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        70.0,
+        -657.0
+      ],
+      "sizeDelta": [
+        153.0,
+        51.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/BasicTab/Label",
+      "localId": 3835718754579666326,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "基础",
+      "anchoredPosition": [
+        60.0,
+        -13.0
+      ],
+      "sizeDelta": [
+        52.0,
+        26.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/SkillTab",
+      "localId": 1020404035738975801,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        89.0,
+        -721.0
+      ],
+      "sizeDelta": [
+        153.0,
+        47.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/SkillTab/Label",
+      "localId": 2553844128687355774,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "技能",
+      "anchoredPosition": [
+        60.0,
+        -13.0
+      ],
+      "sizeDelta": [
+        52.0,
+        26.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/EquipmentTab",
+      "localId": 286186752400088339,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        108.0,
+        -785.0
+      ],
+      "sizeDelta": [
+        152.0,
+        47.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/EquipmentTab/Label",
+      "localId": 43861566231762205,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "装备",
+      "anchoredPosition": [
+        60.0,
+        -13.0
+      ],
+      "sizeDelta": [
+        52.0,
+        26.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards",
+      "localId": 5488038671403551510,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left01",
+      "localId": 1758162569527149227,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left01/Left01_Portrait",
+      "localId": 4657187980407029230,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        43.0,
+        -47.0
+      ],
+      "sizeDelta": [
+        195.0,
+        170.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left01/Left01_Footer",
+      "localId": 7437808064243040216,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        91.0,
+        -217.0
+      ],
+      "sizeDelta": [
+        158.0,
+        38.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left01/Left01_Rank",
+      "localId": 3417823565924993770,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        92.0,
+        -210.0
+      ],
+      "sizeDelta": [
+        38.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left01/Left01_Element",
+      "localId": 7380322645227916125,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        215.0,
+        -219.0
+      ],
+      "sizeDelta": [
+        26.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left01/Level",
+      "localId": 6394822345403765625,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "等级60",
+      "anchoredPosition": [
+        148.0,
+        -221.0
+      ],
+      "sizeDelta": [
+        76.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left02",
+      "localId": 2416634845769507340,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left02/Left02_Portrait",
+      "localId": 7403033580780939592,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        103.0,
+        -258.0
+      ],
+      "sizeDelta": [
+        200.0,
+        165.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left02/Left02_Footer",
+      "localId": 8084095471707225328,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        151.0,
+        -423.0
+      ],
+      "sizeDelta": [
+        163.0,
+        41.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left02/Left02_Rank",
+      "localId": 2634428769243846866,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        152.0,
+        -416.0
+      ],
+      "sizeDelta": [
+        38.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left02/Left02_Element",
+      "localId": 95623124294599593,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        280.0,
+        -425.0
+      ],
+      "sizeDelta": [
+        26.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left02/Level",
+      "localId": 5887336816434595033,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "等级60",
+      "anchoredPosition": [
+        208.0,
+        -427.0
+      ],
+      "sizeDelta": [
+        76.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left03",
+      "localId": 6688957636426335778,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left03/Left03_Portrait",
+      "localId": 1713327024566637589,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        163.0,
+        -468.0
+      ],
+      "sizeDelta": [
+        197.0,
+        165.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left03/Left03_Footer",
+      "localId": 3792803371989906340,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        212.0,
+        -633.0
+      ],
+      "sizeDelta": [
+        159.0,
+        41.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left03/Left03_Rank",
+      "localId": 1205336026725010472,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        213.0,
+        -626.0
+      ],
+      "sizeDelta": [
+        38.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left03/Left03_Element",
+      "localId": 392212488992441788,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        337.0,
+        -635.0
+      ],
+      "sizeDelta": [
+        26.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left03/Level",
+      "localId": 907176150702656977,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "等级60",
+      "anchoredPosition": [
+        269.0,
+        -637.0
+      ],
+      "sizeDelta": [
+        76.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left04",
+      "localId": 8239883178088462045,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left04/Left04_Portrait",
+      "localId": 8350144529372395402,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        225.0,
+        -679.0
+      ],
+      "sizeDelta": [
+        199.0,
+        166.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left04/Left04_Footer",
+      "localId": 1262552955374193943,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        274.0,
+        -845.0
+      ],
+      "sizeDelta": [
+        163.0,
+        45.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left04/Left04_Rank",
+      "localId": 5636010931030712521,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        275.0,
+        -838.0
+      ],
+      "sizeDelta": [
+        38.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left04/Left04_Element",
+      "localId": 1847220395347404629,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        401.0,
+        -847.0
+      ],
+      "sizeDelta": [
+        26.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left04/Level",
+      "localId": 6412237386206510297,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "等级60",
+      "anchoredPosition": [
+        331.0,
+        -849.0
+      ],
+      "sizeDelta": [
+        76.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards",
+      "localId": 7382474469736321789,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle00",
+      "localId": 2016306871330550802,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Portrait",
+      "localId": 6210311473865932050,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        201.0,
+        -38.0
+      ],
+      "sizeDelta": [
+        165.0,
+        57.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Footer",
+      "localId": 9114794721343043979,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        217.0,
+        -95.0
+      ],
+      "sizeDelta": [
+        160.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Rank",
+      "localId": 8716254179715865179,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        218.0,
+        -88.0
+      ],
+      "sizeDelta": [
+        38.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Element",
+      "localId": 1781002944478600207,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        343.0,
+        -97.0
+      ],
+      "sizeDelta": [
+        26.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle00/Level",
+      "localId": 1747084930379944274,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "等级60",
+      "anchoredPosition": [
+        274.0,
+        -99.0
+      ],
+      "sizeDelta": [
+        76.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle01",
+      "localId": 12312554671270696,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Portrait",
+      "localId": 7025188242559230032,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        233.0,
+        -141.0
+      ],
+      "sizeDelta": [
+        180.0,
+        164.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Footer",
+      "localId": 9116416411370288517,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        281.0,
+        -305.0
+      ],
+      "sizeDelta": [
+        156.0,
+        42.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Rank",
+      "localId": 5846752178952738418,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        282.0,
+        -298.0
+      ],
+      "sizeDelta": [
+        38.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Element",
+      "localId": 5802203498834889490,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        402.0,
+        -307.0
+      ],
+      "sizeDelta": [
+        26.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle01/Level",
+      "localId": 2515331272170663004,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "等级60",
+      "anchoredPosition": [
+        338.0,
+        -309.0
+      ],
+      "sizeDelta": [
+        76.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle02",
+      "localId": 647814689904807732,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Portrait",
+      "localId": 784822750930393509,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        294.0,
+        -354.0
+      ],
+      "sizeDelta": [
+        195.0,
+        161.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Footer",
+      "localId": 2705142263137019513,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        344.0,
+        -515.0
+      ],
+      "sizeDelta": [
+        157.0,
+        42.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Rank",
+      "localId": 6681765855474491410,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        345.0,
+        -508.0
+      ],
+      "sizeDelta": [
+        38.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Element",
+      "localId": 1869756600439199406,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        466.0,
+        -517.0
+      ],
+      "sizeDelta": [
+        26.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle02/Level",
+      "localId": 2481361837032378369,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "等级60",
+      "anchoredPosition": [
+        401.0,
+        -519.0
+      ],
+      "sizeDelta": [
+        76.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle03",
+      "localId": 1853034749175793867,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Portrait",
+      "localId": 6281982380894916047,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        358.0,
+        -562.0
+      ],
+      "sizeDelta": [
+        196.0,
+        164.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Footer",
+      "localId": 1774147186704799361,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        407.0,
+        -726.0
+      ],
+      "sizeDelta": [
+        158.0,
+        40.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Rank",
+      "localId": 6489746963512652063,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        408.0,
+        -719.0
+      ],
+      "sizeDelta": [
+        38.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Element",
+      "localId": 7522237344217428530,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        531.0,
+        -728.0
+      ],
+      "sizeDelta": [
+        26.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle03/Level",
+      "localId": 4528372399105540726,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "等级60",
+      "anchoredPosition": [
+        464.0,
+        -730.0
+      ],
+      "sizeDelta": [
+        76.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle04",
+      "localId": 5885691439330638316,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle04/Middle04_Portrait",
+      "localId": 7026769105606434752,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        419.0,
+        -773.0
+      ],
+      "sizeDelta": [
+        181.0,
+        117.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards",
+      "localId": 5233649085717863373,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right01",
+      "localId": 8864286767646733767,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right01/Right01_Portrait",
+      "localId": 8818698830507959322,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        360.0,
+        -48.0
+      ],
+      "sizeDelta": [
+        193.0,
+        164.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right01/Right01_Footer",
+      "localId": 2503251930696309287,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        407.0,
+        -212.0
+      ],
+      "sizeDelta": [
+        157.0,
+        38.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right01/Right01_Rank",
+      "localId": 2170259207499209367,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        408.0,
+        -205.0
+      ],
+      "sizeDelta": [
+        38.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right01/Right01_Element",
+      "localId": 5574219517381603234,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        530.0,
+        -214.0
+      ],
+      "sizeDelta": [
+        26.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right01/Level",
+      "localId": 3237317737869365266,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "等级60",
+      "anchoredPosition": [
+        464.0,
+        -216.0
+      ],
+      "sizeDelta": [
+        76.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right02",
+      "localId": 3685581035068942793,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right02/Right02_Portrait",
+      "localId": 7608419834758617181,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        415.0,
+        -257.0
+      ],
+      "sizeDelta": [
+        192.0,
+        165.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right02/Right02_Footer",
+      "localId": 1585959472464626377,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        463.0,
+        -422.0
+      ],
+      "sizeDelta": [
+        154.0,
+        36.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right02/Right02_Rank",
+      "localId": 1134197177511967469,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        464.0,
+        -415.0
+      ],
+      "sizeDelta": [
+        38.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right02/Right02_Element",
+      "localId": 6477182590571669713,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        584.0,
+        -424.0
+      ],
+      "sizeDelta": [
+        26.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right02/Level",
+      "localId": 3219057735352801727,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "等级60",
+      "anchoredPosition": [
+        520.0,
+        -426.0
+      ],
+      "sizeDelta": [
+        76.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right03",
+      "localId": 3284492796012447007,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right03/Right03_Portrait",
+      "localId": 7153002800349789548,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        482.0,
+        -470.0
+      ],
+      "sizeDelta": [
+        196.0,
+        165.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right03/Right03_Footer",
+      "localId": 5645168205273850482,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        531.0,
+        -635.0
+      ],
+      "sizeDelta": [
+        158.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right03/Right03_Rank",
+      "localId": 3307070948973963087,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        532.0,
+        -628.0
+      ],
+      "sizeDelta": [
+        38.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right03/Right03_Element",
+      "localId": 2352164465864871339,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        655.0,
+        -637.0
+      ],
+      "sizeDelta": [
+        26.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right03/Level",
+      "localId": 96179149560873280,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "等级60",
+      "anchoredPosition": [
+        588.0,
+        -639.0
+      ],
+      "sizeDelta": [
+        76.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right04",
+      "localId": 2947419862897890340,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right04/Right04_Portrait",
+      "localId": 5236784241762578944,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        544.0,
+        -680.0
+      ],
+      "sizeDelta": [
+        199.0,
+        167.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right04/Right04_Footer",
+      "localId": 3071109278770823554,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        593.0,
+        -847.0
+      ],
+      "sizeDelta": [
+        162.0,
+        42.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right04/Right04_Rank",
+      "localId": 5938514020296521876,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        594.0,
+        -840.0
+      ],
+      "sizeDelta": [
+        38.0,
+        39.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right04/Right04_Element",
+      "localId": 2316413341078976805,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        720.0,
+        -849.0
+      ],
+      "sizeDelta": [
+        26.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right04/Level",
+      "localId": 5568297590236503924,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "等级40",
+      "anchoredPosition": [
+        650.0,
+        -851.0
+      ],
+      "sizeDelta": [
+        76.0,
+        28.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Decorations",
+      "localId": 4807607756300718749,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Decorations/SelectionFrame",
+      "localId": 3941684236535854044,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        398.0,
+        -248.0
+      ],
+      "sizeDelta": [
+        232.0,
+        219.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Decorations/FilterButton",
+      "localId": 5372671332933198569,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        528.0,
+        -54.0
+      ],
+      "sizeDelta": [
+        51.0,
+        51.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Decorations/FavoriteButton",
+      "localId": 7538809921353664474,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        596.0,
+        -54.0
+      ],
+      "sizeDelta": [
+        52.0,
+        52.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Decorations/SelectRibbon",
+      "localId": 4874251809824795993,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        640.0,
+        -39.0
+      ],
+      "sizeDelta": [
+        117.0,
+        851.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Footer",
+      "localId": 6466469426855075273,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        0.0,
+        0.0
+      ],
+      "sizeDelta": [
+        760.0,
+        928.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Footer/UID",
+      "localId": 3080636239717887570,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "TMPro.TextMeshProUGUI"
+        }
+      ],
+      "text": "UID: 21781313",
+      "anchoredPosition": [
+        650.0,
+        -874.0
+      ],
+      "sizeDelta": [
+        84.0,
+        14.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Footer/Signal",
+      "localId": 3525216714341083022,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        735.0,
+        -872.0
+      ],
+      "sizeDelta": [
+        18.0,
+        15.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "path": "RightRoster/RightPanel/Footer/BottomEdge",
+      "localId": 2486899754666810841,
+      "active": true,
+      "components": [
+        {
+          "type": "UnityEngine.RectTransform"
+        },
+        {
+          "type": "UnityEngine.CanvasRenderer"
+        },
+        {
+          "type": "UnityEngine.UI.Image"
+        }
+      ],
+      "text": null,
+      "anchoredPosition": [
+        280.0,
+        -886.0
+      ],
+      "sizeDelta": [
+        475.0,
+        4.0
+      ],
+      "nestedPrefab": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    }
+  ],
+  "resources": [
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left01_Footer.png",
+      "sha256": "c0aa5d674969e1cf18a265157b29347cce250d51d094e9aa109613a067bb6883"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/SelectRibbon.png",
+      "sha256": "90a03f391693691cfa9bece1f194a16df9b05d82ec9c2614827de3ba6fbf603b"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/EquipmentTab.png",
+      "sha256": "55e5908754b35e10089c67b8d488c37f89cac79df9e2575e1955a83c66bd0eb1"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Fonts/ReferenceBitmap.asset",
+      "sha256": "59c8b9965be1ba051a4b885b54de86d1e6337dd96c208008ed8fc7881dfea9f4"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right01_Portrait.png",
+      "sha256": "95d05ed62933b6cad7aea2789ecfce394f8afa9c0bdbb249e55663fbc76dfa22"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle03_Rank.png",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left02_Footer.png",
+      "sha256": "0bdc2dc2de8a6da9fc399656a5e2d5dc9e4af3536e43a13d7a5b5d575929ff18"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right03_Rank.png",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle01_Element.png",
+      "sha256": "d97837e0e2b108a9cad85069d198b075fd814be9ec0731c7f6612d632046ba89"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle01_Rank.png",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle01_Footer.png",
+      "sha256": "aa9359d1b0d86615c58e3125f0f16fcab0d078fcaca3f3756c7a474c897b1fe4"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right01_Footer.png",
+      "sha256": "32bd1dafed450acf4c88eedafb26ba0e9705fb3f3ae8b784db6078fed06a5a80"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/FilterButton.png",
+      "sha256": "22c2444e148ea59a529cf2771fd51a5d8827a9d211c123c20c2e9bfad71f4100"
+    },
+    {
+      "path": "Packages/com.unity.textmeshpro/Scripts/Runtime/TextMeshProUGUI.cs",
+      "sha256": "f25b03386b3b6eaef0f6f164ae0230b74f09ea53145fdf8bcb6d4a01786af425"
+    },
+    {
+      "path": "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader",
+      "sha256": "970db4b1e73b8289c1dd56cff60877f426b49c9682620b2d14da6cd70b64cb9c"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left03_Footer.png",
+      "sha256": "3f9e5d46dcbb143547d1addc0b090ed9ba4d45e95c737044996f932fa31c44d5"
+    },
+    {
+      "path": "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component Icon.psd",
+      "sha256": "0aa474cb54380b566a43360ddae3b42ca8c08d195f0590a03999396f5b667830"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right03_Portrait.png",
+      "sha256": "2f56b5388d2550893d8ce46b051e5fd197cfa5a2b97d26baad2c4828421e790f"
+    },
+    {
+      "path": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset",
+      "sha256": "6f33cdcd6d203e175a012087a4209442c2b6811baeebce6c875bb8c8d7c64e51"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right01_Element.png",
+      "sha256": "d97837e0e2b108a9cad85069d198b075fd814be9ec0731c7f6612d632046ba89"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/BasicTab.png",
+      "sha256": "44ee03f67c46c229e965573365ddccbc75830d02cae72691e656286d8fdfe803"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right04_Portrait.png",
+      "sha256": "6c03bddff4075358b6d1f2938a340f1cc2bda349b87cf90d062944172b32e78f"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left03_Element.png",
+      "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left01_Portrait.png",
+      "sha256": "c7c99cfaee32086ee69ffb1a15aa78d9b6027a6aa1667b7f92026e4af8d4e849"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left02_Element.png",
+      "sha256": "d97837e0e2b108a9cad85069d198b075fd814be9ec0731c7f6612d632046ba89"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left04_Rank.png",
+      "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+    },
+    {
+      "path": "Packages/com.unity.ugui/Runtime/UI/Core/Image.cs",
+      "sha256": "351dd72516d240f5722c55f72f8e95a0a92cf71e83358bbc922eee47bdb78502"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left04_Portrait.png",
+      "sha256": "9161fdaee22aad0eb24ca91dda4d11c479ce3a402f299f389ef67a74c05bf301"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left02_Portrait.png",
+      "sha256": "31174acf1ca4a360d4bb4b9ccaa73402718a8d80c9ff482093c50a91c0266ec5"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/BottomEdge.png",
+      "sha256": "b9e46dabe01b0e222621eaacda237d39d77bef98f6a9d2bd7d120d0e64dc148d"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left04_Element.png",
+      "sha256": "19c2277ec1429f27336423c6de73ee1d72e35fc01661762b46016c472fa91a87"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right03_Footer.png",
+      "sha256": "94298889bb27c42dfa4af21a5063c0c4d51d72ce438e88c824d062eceaf2c9d2"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right02_Rank.png",
+      "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left03_Portrait.png",
+      "sha256": "4de839c6740856b1054c0c8d9275763c6fe1c5cc629e5cc5f881993369cc0dcf"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right04_Element.png",
+      "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/SelectionFrame.png",
+      "sha256": "3e058eadf9d70d8c2b75220b13cee313a24e1366ef7189ad36544a331ed33463"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/FavoriteButton.png",
+      "sha256": "e2dd68e1a52216fb53f2891b41cb2dfbc0d12788c0c0f14b79a1a81b47245299"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/RightRoster.prefab",
+      "sha256": "1c97c1be151f94186a5aa8c2fb471011f3c672309f914498391a518bca49c7e0"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle00_Rank.png",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "path": "Assets/PathfindingAlgorithm/Arts/Fonts/NotoSansSC-Regular.ttf",
+      "sha256": "a998618c538d50d7d259e8f1b169756637c9a15288137f4aad720c9d884596e1"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle01_Portrait.png",
+      "sha256": "34f388c24f136a8f25c3c879adc0414464281b3d0d81c3186caa8583eca741d5"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/SkillTab.png",
+      "sha256": "c349c21f1fa644a03ec95bdc5a3c71245308ebe45a8080ff69bd2971dcf83aa8"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right02_Footer.png",
+      "sha256": "ee276228c6982d85c5bd84e3d1d09d934d99baddb3b09d062cf598e534f8a16f"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left01_Rank.png",
+      "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle03_Footer.png",
+      "sha256": "6250abbde75c14c5193db5dead98afed33c2f1935828e5e1f378ee0d72677599"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right01_Rank.png",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left01_Element.png",
+      "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+    },
+    {
+      "path": "Packages/com.unity.ugui/Runtime/UI/Core/Layout/CanvasScaler.cs",
+      "sha256": "c98311dbbec32228456e5f18cdf5682bdb84d21592244476b8be205cb40ab612"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle04_Portrait.png",
+      "sha256": "7060ac5db22daf56bf2e3c6dc717231a8bc8045b66dccdd0080ebf81423535f5"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle03_Portrait.png",
+      "sha256": "3a2214fa5cf9f4ec43b9e55d1eb4c78f01ccf5c92157f7a6608863950fe22dd9"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle02_Footer.png",
+      "sha256": "977ff384c42d55ae4ca90018eeb8f5c95301898d1c8346f89f314bdfb1717ffb"
+    },
+    {
+      "path": "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+      "sha256": "e79176d735f6e37846def5d709da60a2866af7c70576fa32d4cca2b81015a187"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle02_Element.png",
+      "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right04_Rank.png",
+      "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right02_Element.png",
+      "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right03_Element.png",
+      "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle02_Rank.png",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right02_Portrait.png",
+      "sha256": "c2f82feb8de5147b3c7d1e548f36e5cd0e42aab66e781118aa2d3bdbb9c7c812"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle00_Portrait.png",
+      "sha256": "488005498dccdff5e5a1d2fd641f3dea18d111849e94c71cb64736e43060b54f"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle03_Element.png",
+      "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Signal.png",
+      "sha256": "4f1aa05a7732a0ca953131ac6603e0ececc676440e012e9b756c13e98934b6dc"
+    },
+    {
+      "path": "Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_FontAsset.cs",
+      "sha256": "4944761e316e6c3e6053507283f4c1b310dd47312830346ef7efc4715ac403af"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle02_Portrait.png",
+      "sha256": "6999a56e46311652f803efd540a2c6bd3d3e818f8bf8b211d39a35e02310bdbd"
+    },
+    {
+      "path": "Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader",
+      "sha256": "86216818723945b88960d3958e744cf7a2433eb306f4f6bfba84f1f09320a25e"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left04_Footer.png",
+      "sha256": "739c28d0461f2b69941dc8ce63bb5ce607b7a03365f14791a464ab2da1c819f2"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Right04_Footer.png",
+      "sha256": "dd2e5de1583a5b3b8ce003ab7df2db7b95ffc1c210ce20244dd93f8763a7977f"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle00_Element.png",
+      "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Middle00_Footer.png",
+      "sha256": "0a4721c8ead2f89154c9d8be0ec4e93bffce0de3216e10fe91bf54988f1f72cd"
+    },
+    {
+      "path": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset",
+      "sha256": "c3ff50e3133d989180b187748ffc67903f1fede099a5b85b4fcbd8cb6e8be958"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Fonts/ReferenceGlyphsV2.png",
+      "sha256": "e62a82c0a830248dee0cc391927fa7720fe045b4df8939467eef356f8c39b4d8"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left02_Rank.png",
+      "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+    },
+    {
+      "path": "Assets/TestImgae/RightRoster/Sprites/Left03_Rank.png",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "path": "Assets/TextMesh Pro/Fonts/LiberationSans.ttf",
+      "sha256": "e5b0af421ea2bfbc1ac8d251d647268087ae82786234c57f757d1f0b90fa8b49"
+    }
+  ]
+}

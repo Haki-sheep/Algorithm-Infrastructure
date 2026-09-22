@@ -1,0 +1,21 @@
+{
+  "brief": {
+    "path": "brief.json",
+    "sha256": "632544a539841ebcc92961c88bb3603c04e5fcf906c9d5ac13a319841f02f625"
+  },
+  "source": {
+    "path": "user-request.txt",
+    "sha256": "65bfa23ee4407f8f0bf78f840f03e41ec49792088dc4d57efdd86b452b048a60"
+  },
+  "startedStages": [
+    "01-composition/step.json",
+    "02-hierarchy/step.json",
+    "03-geometry/step.json",
+    "04-state-parity/step.json",
+    "05-material/step.json",
+    "06-micro-detail/step.json",
+    "rounds/002/03-geometry/step.json",
+    "rounds/002/04-state-parity/step.json",
+    "rounds/003/06-micro-detail/step.json"
+  ]
+}

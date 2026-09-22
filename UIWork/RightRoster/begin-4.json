@@ -1,0 +1,8 @@
+{
+  "status": "working",
+  "created": "04-state-parity/step.json",
+  "sha256": "650e059efac47813c4819e9d338d7cf5c79c59bd86bd51691e677410fd7a8245",
+  "completionClaim": false,
+  "designValueReference": "references/six-stage-execution.md#design-value-carryover",
+  "guidance": []
+}

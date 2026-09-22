@@ -1,0 +1,9 @@
+{
+  "previous": null,
+  "candidate": {
+    "path": "02-hierarchy/submissions/001.bin",
+    "sha256": "a7e6ad89170e82ae04c6479658fd182032dd26ed3ddc6cc27b5c71ba2d08ea7c"
+  },
+  "result": "accepted",
+  "reason": "bound-record-checks-only"
+}

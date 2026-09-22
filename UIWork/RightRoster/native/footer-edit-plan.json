@@ -1,0 +1,22 @@
+{
+  "problem": "最终原图对照发现右下UID与信号和底边缺失",
+  "responsibleStage": "06-micro-detail",
+  "beforeAsset": {
+    "path": "native/before-footer.prefab.snapshot",
+    "sha256": "f75e336de0cb92749bf721d79cc81843e587202514b73b11d0fa30c549d13f2f"
+  },
+  "beforeImage": {
+    "path": "native/final-primary.png",
+    "sha256": "b740142edef8cc54b6bcf16fa0322b89e9b010f71554f1548b0af10185347782"
+  },
+  "allowedChanges": [
+    "仅向RightPanel追加Footer组及UID文字 信号 底边"
+  ],
+  "preserved": "已有92节点的localId与全部组件属性和引用",
+  "source": {
+    "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+    "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+  },
+  "verification": "真实Unity保存重开 三视口截图 原区域前后及卡片页签回归",
+  "staticLocalCheck": "新增节点不属于check-local标量编辑覆盖 改用原生作者差异审查"
+}

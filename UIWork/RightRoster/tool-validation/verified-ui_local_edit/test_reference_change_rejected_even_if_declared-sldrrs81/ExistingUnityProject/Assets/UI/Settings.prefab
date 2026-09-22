@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1
+GameObject:
+  m_Component:
+  - component: {fileID: 2}
+  - component: {fileID: 3}
+  - component: {fileID: 4}
+  m_Layer: 5
+  m_Name: SettingsTitle
+  m_IsActive: 1
+--- !u!224 &2
+RectTransform:
+  m_GameObject: {fileID: 1}
+  m_Father: {fileID: 0}
+  m_Children: []
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 12, y: -20}
+  m_SizeDelta: {x: 200, y: 40}
+--- !u!114 &3
+MonoBehaviour:
+  m_GameObject: {fileID: 1}
+  m_Enabled: 1
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_text: 声音设置
+  m_fontSize: 28
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontAsset: {fileID: 11400000, guid: caaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, type: 2}
+--- !u!114 &4
+MonoBehaviour:
+  m_GameObject: {fileID: 1}
+  m_Enabled: 1
+  m_Script: {fileID: 11500000, guid: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb, type: 3}
+  savedAudioLevel: 0.5

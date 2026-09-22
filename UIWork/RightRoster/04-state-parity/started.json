@@ -1,0 +1,17 @@
+{
+  "brief": {
+    "path": "brief.json",
+    "sha256": "e3e33bee83eb96f285696b77c281f634e357a56a00fb7f9d8333ebe362c213e3"
+  },
+  "stage": 4,
+  "round": 1,
+  "predecessor": {
+    "path": "03-geometry/step.json",
+    "sha256": "7233683513c528263496406fd3d0008bc005cdca28f1d1cf611715df35e032c7"
+  },
+  "createdAtUnix": 1790068860.362813,
+  "latestSubmission": {
+    "path": "04-state-parity/submissions/001.json",
+    "sha256": "dfe13379a4bd7e357c8bd823d848b435970188ffce9e202f5e5c5905d3424a8b"
+  }
+}

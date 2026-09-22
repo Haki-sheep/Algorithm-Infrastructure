@@ -1,0 +1,9 @@
+{
+  "previous": null,
+  "candidate": {
+    "path": "01-composition/submissions/001.bin",
+    "sha256": "b3bedad51bdfde2a6b4f446f66f92c8116a4f6373c6b6c2d52f103157b3213d0"
+  },
+  "result": "rejected",
+  "reason": "REVIEW_NOT_FINISHED"
+}

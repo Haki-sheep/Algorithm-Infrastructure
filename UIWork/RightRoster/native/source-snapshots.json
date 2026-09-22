@@ -1,0 +1,370 @@
+{
+  "resources": [
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left01_Footer.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left01_Footer.png.snapshot",
+      "sha256": "c0aa5d674969e1cf18a265157b29347cce250d51d094e9aa109613a067bb6883"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/SelectRibbon.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/SelectRibbon.png.snapshot",
+      "sha256": "90a03f391693691cfa9bece1f194a16df9b05d82ec9c2614827de3ba6fbf603b"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/EquipmentTab.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/EquipmentTab.png.snapshot",
+      "sha256": "55e5908754b35e10089c67b8d488c37f89cac79df9e2575e1955a83c66bd0eb1"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Fonts/ReferenceBitmap.asset",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Fonts/ReferenceBitmap.asset.snapshot",
+      "sha256": "59c8b9965be1ba051a4b885b54de86d1e6337dd96c208008ed8fc7881dfea9f4"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right01_Portrait.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right01_Portrait.png.snapshot",
+      "sha256": "95d05ed62933b6cad7aea2789ecfce394f8afa9c0bdbb249e55663fbc76dfa22"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle03_Rank.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle03_Rank.png.snapshot",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left02_Footer.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left02_Footer.png.snapshot",
+      "sha256": "0bdc2dc2de8a6da9fc399656a5e2d5dc9e4af3536e43a13d7a5b5d575929ff18"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right03_Rank.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right03_Rank.png.snapshot",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle01_Element.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle01_Element.png.snapshot",
+      "sha256": "d97837e0e2b108a9cad85069d198b075fd814be9ec0731c7f6612d632046ba89"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle01_Rank.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle01_Rank.png.snapshot",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle01_Footer.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle01_Footer.png.snapshot",
+      "sha256": "aa9359d1b0d86615c58e3125f0f16fcab0d078fcaca3f3756c7a474c897b1fe4"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right01_Footer.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right01_Footer.png.snapshot",
+      "sha256": "32bd1dafed450acf4c88eedafb26ba0e9705fb3f3ae8b784db6078fed06a5a80"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/FilterButton.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/FilterButton.png.snapshot",
+      "sha256": "22c2444e148ea59a529cf2771fd51a5d8827a9d211c123c20c2e9bfad71f4100"
+    },
+    {
+      "source": "Packages/com.unity.textmeshpro/Scripts/Runtime/TextMeshProUGUI.cs",
+      "path": "native/source-snapshots/Packages/com.unity.textmeshpro/Scripts/Runtime/TextMeshProUGUI.cs.snapshot",
+      "sha256": "f25b03386b3b6eaef0f6f164ae0230b74f09ea53145fdf8bcb6d4a01786af425"
+    },
+    {
+      "source": "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader",
+      "path": "native/source-snapshots/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.snapshot",
+      "sha256": "970db4b1e73b8289c1dd56cff60877f426b49c9682620b2d14da6cd70b64cb9c"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left03_Footer.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left03_Footer.png.snapshot",
+      "sha256": "3f9e5d46dcbb143547d1addc0b090ed9ba4d45e95c737044996f932fa31c44d5"
+    },
+    {
+      "source": "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component Icon.psd",
+      "path": "native/source-snapshots/Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component Icon.psd.snapshot",
+      "sha256": "0aa474cb54380b566a43360ddae3b42ca8c08d195f0590a03999396f5b667830"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right03_Portrait.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right03_Portrait.png.snapshot",
+      "sha256": "2f56b5388d2550893d8ce46b051e5fd197cfa5a2b97d26baad2c4828421e790f"
+    },
+    {
+      "source": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset",
+      "path": "native/source-snapshots/Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset.snapshot",
+      "sha256": "6f33cdcd6d203e175a012087a4209442c2b6811baeebce6c875bb8c8d7c64e51"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right01_Element.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right01_Element.png.snapshot",
+      "sha256": "d97837e0e2b108a9cad85069d198b075fd814be9ec0731c7f6612d632046ba89"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/BasicTab.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/BasicTab.png.snapshot",
+      "sha256": "44ee03f67c46c229e965573365ddccbc75830d02cae72691e656286d8fdfe803"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right04_Portrait.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right04_Portrait.png.snapshot",
+      "sha256": "6c03bddff4075358b6d1f2938a340f1cc2bda349b87cf90d062944172b32e78f"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left03_Element.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left03_Element.png.snapshot",
+      "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left01_Portrait.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left01_Portrait.png.snapshot",
+      "sha256": "c7c99cfaee32086ee69ffb1a15aa78d9b6027a6aa1667b7f92026e4af8d4e849"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left02_Element.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left02_Element.png.snapshot",
+      "sha256": "d97837e0e2b108a9cad85069d198b075fd814be9ec0731c7f6612d632046ba89"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left04_Rank.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left04_Rank.png.snapshot",
+      "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+    },
+    {
+      "source": "Packages/com.unity.ugui/Runtime/UI/Core/Image.cs",
+      "path": "native/source-snapshots/Packages/com.unity.ugui/Runtime/UI/Core/Image.cs.snapshot",
+      "sha256": "351dd72516d240f5722c55f72f8e95a0a92cf71e83358bbc922eee47bdb78502"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left04_Portrait.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left04_Portrait.png.snapshot",
+      "sha256": "9161fdaee22aad0eb24ca91dda4d11c479ce3a402f299f389ef67a74c05bf301"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left02_Portrait.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left02_Portrait.png.snapshot",
+      "sha256": "31174acf1ca4a360d4bb4b9ccaa73402718a8d80c9ff482093c50a91c0266ec5"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/BottomEdge.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/BottomEdge.png.snapshot",
+      "sha256": "b9e46dabe01b0e222621eaacda237d39d77bef98f6a9d2bd7d120d0e64dc148d"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left04_Element.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left04_Element.png.snapshot",
+      "sha256": "19c2277ec1429f27336423c6de73ee1d72e35fc01661762b46016c472fa91a87"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right03_Footer.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right03_Footer.png.snapshot",
+      "sha256": "94298889bb27c42dfa4af21a5063c0c4d51d72ce438e88c824d062eceaf2c9d2"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right02_Rank.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right02_Rank.png.snapshot",
+      "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left03_Portrait.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left03_Portrait.png.snapshot",
+      "sha256": "4de839c6740856b1054c0c8d9275763c6fe1c5cc629e5cc5f881993369cc0dcf"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right04_Element.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right04_Element.png.snapshot",
+      "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/SelectionFrame.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/SelectionFrame.png.snapshot",
+      "sha256": "3e058eadf9d70d8c2b75220b13cee313a24e1366ef7189ad36544a331ed33463"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/FavoriteButton.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/FavoriteButton.png.snapshot",
+      "sha256": "e2dd68e1a52216fb53f2891b41cb2dfbc0d12788c0c0f14b79a1a81b47245299"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/RightRoster.prefab",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/RightRoster.prefab.snapshot",
+      "sha256": "1c97c1be151f94186a5aa8c2fb471011f3c672309f914498391a518bca49c7e0"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle00_Rank.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle00_Rank.png.snapshot",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "source": "Assets/PathfindingAlgorithm/Arts/Fonts/NotoSansSC-Regular.ttf",
+      "path": "native/source-snapshots/Assets/PathfindingAlgorithm/Arts/Fonts/NotoSansSC-Regular.ttf.snapshot",
+      "sha256": "a998618c538d50d7d259e8f1b169756637c9a15288137f4aad720c9d884596e1"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle01_Portrait.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle01_Portrait.png.snapshot",
+      "sha256": "34f388c24f136a8f25c3c879adc0414464281b3d0d81c3186caa8583eca741d5"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/SkillTab.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/SkillTab.png.snapshot",
+      "sha256": "c349c21f1fa644a03ec95bdc5a3c71245308ebe45a8080ff69bd2971dcf83aa8"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right02_Footer.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right02_Footer.png.snapshot",
+      "sha256": "ee276228c6982d85c5bd84e3d1d09d934d99baddb3b09d062cf598e534f8a16f"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left01_Rank.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left01_Rank.png.snapshot",
+      "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle03_Footer.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle03_Footer.png.snapshot",
+      "sha256": "6250abbde75c14c5193db5dead98afed33c2f1935828e5e1f378ee0d72677599"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right01_Rank.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right01_Rank.png.snapshot",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left01_Element.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left01_Element.png.snapshot",
+      "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+    },
+    {
+      "source": "Packages/com.unity.ugui/Runtime/UI/Core/Layout/CanvasScaler.cs",
+      "path": "native/source-snapshots/Packages/com.unity.ugui/Runtime/UI/Core/Layout/CanvasScaler.cs.snapshot",
+      "sha256": "c98311dbbec32228456e5f18cdf5682bdb84d21592244476b8be205cb40ab612"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle04_Portrait.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle04_Portrait.png.snapshot",
+      "sha256": "7060ac5db22daf56bf2e3c6dc717231a8bc8045b66dccdd0080ebf81423535f5"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle03_Portrait.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle03_Portrait.png.snapshot",
+      "sha256": "3a2214fa5cf9f4ec43b9e55d1eb4c78f01ccf5c92157f7a6608863950fe22dd9"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle02_Footer.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle02_Footer.png.snapshot",
+      "sha256": "977ff384c42d55ae4ca90018eeb8f5c95301898d1c8346f89f314bdfb1717ffb"
+    },
+    {
+      "source": "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+      "path": "native/source-snapshots/Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd.snapshot",
+      "sha256": "e79176d735f6e37846def5d709da60a2866af7c70576fa32d4cca2b81015a187"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle02_Element.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle02_Element.png.snapshot",
+      "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right04_Rank.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right04_Rank.png.snapshot",
+      "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right02_Element.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right02_Element.png.snapshot",
+      "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right03_Element.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right03_Element.png.snapshot",
+      "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle02_Rank.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle02_Rank.png.snapshot",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right02_Portrait.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right02_Portrait.png.snapshot",
+      "sha256": "c2f82feb8de5147b3c7d1e548f36e5cd0e42aab66e781118aa2d3bdbb9c7c812"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle00_Portrait.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle00_Portrait.png.snapshot",
+      "sha256": "488005498dccdff5e5a1d2fd641f3dea18d111849e94c71cb64736e43060b54f"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle03_Element.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle03_Element.png.snapshot",
+      "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Signal.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Signal.png.snapshot",
+      "sha256": "4f1aa05a7732a0ca953131ac6603e0ececc676440e012e9b756c13e98934b6dc"
+    },
+    {
+      "source": "Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_FontAsset.cs",
+      "path": "native/source-snapshots/Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_FontAsset.cs.snapshot",
+      "sha256": "4944761e316e6c3e6053507283f4c1b310dd47312830346ef7efc4715ac403af"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle02_Portrait.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle02_Portrait.png.snapshot",
+      "sha256": "6999a56e46311652f803efd540a2c6bd3d3e818f8bf8b211d39a35e02310bdbd"
+    },
+    {
+      "source": "Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader",
+      "path": "native/source-snapshots/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.snapshot",
+      "sha256": "86216818723945b88960d3958e744cf7a2433eb306f4f6bfba84f1f09320a25e"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left04_Footer.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left04_Footer.png.snapshot",
+      "sha256": "739c28d0461f2b69941dc8ce63bb5ce607b7a03365f14791a464ab2da1c819f2"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Right04_Footer.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right04_Footer.png.snapshot",
+      "sha256": "dd2e5de1583a5b3b8ce003ab7df2db7b95ffc1c210ce20244dd93f8763a7977f"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle00_Element.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle00_Element.png.snapshot",
+      "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Middle00_Footer.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle00_Footer.png.snapshot",
+      "sha256": "0a4721c8ead2f89154c9d8be0ec4e93bffce0de3216e10fe91bf54988f1f72cd"
+    },
+    {
+      "source": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset",
+      "path": "native/source-snapshots/Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset.snapshot",
+      "sha256": "c3ff50e3133d989180b187748ffc67903f1fede099a5b85b4fcbd8cb6e8be958"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Fonts/ReferenceGlyphsV2.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Fonts/ReferenceGlyphsV2.png.snapshot",
+      "sha256": "e62a82c0a830248dee0cc391927fa7720fe045b4df8939467eef356f8c39b4d8"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left02_Rank.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left02_Rank.png.snapshot",
+      "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+    },
+    {
+      "source": "Assets/TestImgae/RightRoster/Sprites/Left03_Rank.png",
+      "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left03_Rank.png.snapshot",
+      "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+    },
+    {
+      "source": "Assets/TextMesh Pro/Fonts/LiberationSans.ttf",
+      "path": "native/source-snapshots/Assets/TextMesh Pro/Fonts/LiberationSans.ttf.snapshot",
+      "sha256": "e5b0af421ea2bfbc1ac8d251d647268087ae82786234c57f757d1f0b90fa8b49"
+    }
+  ],
+  "exportedAtUtc": "2026-09-22T10:57:03.0892522Z"
+}

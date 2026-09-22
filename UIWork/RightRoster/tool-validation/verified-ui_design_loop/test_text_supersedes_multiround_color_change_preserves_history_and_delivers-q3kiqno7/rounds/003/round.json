@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "round": 3,
+  "goal": "Synthetic round change",
+  "stageSelectionReason": "Synthetic affected stages only",
+  "base": {
+    "path": "rounds/002/05-material/step.json",
+    "sha256": "f98e928d12fae134341b466b22410e990e1156d0dc9102180826829f0667ffa7"
+  },
+  "brief": {
+    "path": "brief-green.json",
+    "sha256": "2e8cecdd20687d7438aec8063faafbd08249b8d566c4e96e1a392a9a76884d91"
+  },
+  "stages": [
+    6
+  ],
+  "changedGroups": [
+    "row"
+  ]
+}

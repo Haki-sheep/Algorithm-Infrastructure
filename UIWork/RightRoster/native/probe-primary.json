@@ -1,0 +1,288 @@
+{
+  "prefabPath": "Assets/TestImgae/RightRoster/Validation/ComponentProbe.prefab",
+  "prefabHash": "b856fed6bf1b8938154b5e78f70b54468819c6d743dff07b91b82977e6135559",
+  "pngSha256": "e27b498a266c93536b7517d97990011f247e83ee14fcb2594d5dfe31a6246585",
+  "width": 1540,
+  "height": 928,
+  "observationScope": "isolated-explicit-settings",
+  "settings": {
+    "safeArea": [
+      0,
+      0,
+      1540,
+      928
+    ],
+    "referenceWidth": 1540,
+    "referenceHeight": 928,
+    "matchWidthOrHeight": 1
+  },
+  "nodes": [
+    {
+      "path": "ComponentProbe",
+      "activeInHierarchy": true,
+      "screenRect": [
+        0.0,
+        0.0,
+        1540.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/PreviewBackground",
+      "activeInHierarchy": true,
+      "screenRect": [
+        0.0,
+        0.0,
+        1540.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel",
+      "activeInHierarchy": true,
+      "screenRect": [
+        780.0,
+        0.0,
+        760.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Tabs",
+      "activeInHierarchy": true,
+      "screenRect": [
+        780.0,
+        0.0,
+        760.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Tabs/BasicTab",
+      "activeInHierarchy": true,
+      "screenRect": [
+        850.0,
+        220.000015,
+        153.0,
+        50.9999847
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Tabs/BasicTab/Label",
+      "activeInHierarchy": true,
+      "screenRect": [
+        909.999939,
+        232.0,
+        52.00006,
+        25.99997
+      ],
+      "text": "基础",
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Tabs/SkillTab",
+      "activeInHierarchy": true,
+      "screenRect": [
+        869.0,
+        160.0,
+        152.999939,
+        47.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Tabs/SkillTab/Label",
+      "activeInHierarchy": true,
+      "screenRect": [
+        929.0,
+        168.0,
+        51.99994,
+        26.0
+      ],
+      "text": "技能",
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Tabs/EquipmentTab",
+      "activeInHierarchy": true,
+      "screenRect": [
+        888.0,
+        96.0,
+        152.0,
+        46.9999847
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Tabs/EquipmentTab/Label",
+      "activeInHierarchy": true,
+      "screenRect": [
+        948.0,
+        104.000015,
+        52.0,
+        25.9999847
+      ],
+      "text": "装备",
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Right02Cards",
+      "activeInHierarchy": true,
+      "screenRect": [
+        780.0,
+        0.0,
+        760.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Right02Cards/Right02",
+      "activeInHierarchy": true,
+      "screenRect": [
+        780.0,
+        0.0,
+        760.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Right02Cards/Right02/Right02_Portrait",
+      "activeInHierarchy": true,
+      "screenRect": [
+        1195.0,
+        506.000031,
+        191.999878,
+        164.999969
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Right02Cards/Right02/Right02_Footer",
+      "activeInHierarchy": true,
+      "screenRect": [
+        1243.0,
+        469.999969,
+        154.0,
+        36.00006
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Right02Cards/Right02/Right02_Rank",
+      "activeInHierarchy": true,
+      "screenRect": [
+        1244.0,
+        474.0,
+        38.0,
+        39.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Right02Cards/Right02/Right02_Element",
+      "activeInHierarchy": true,
+      "screenRect": [
+        1364.0,
+        476.0,
+        26.0,
+        28.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Right02Cards/Right02/Level",
+      "activeInHierarchy": true,
+      "screenRect": [
+        1300.0,
+        474.0,
+        76.0,
+        28.0
+      ],
+      "text": "等级60",
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Decorations",
+      "activeInHierarchy": true,
+      "screenRect": [
+        780.0,
+        0.0,
+        760.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Decorations/SelectionFrame",
+      "activeInHierarchy": true,
+      "screenRect": [
+        1177.99988,
+        461.0,
+        232.000122,
+        219.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Decorations/FilterButton",
+      "activeInHierarchy": true,
+      "screenRect": [
+        1308.0,
+        823.0,
+        51.0,
+        51.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Decorations/FavoriteButton",
+      "activeInHierarchy": true,
+      "screenRect": [
+        1376.0,
+        822.0,
+        51.9998779,
+        52.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "ComponentProbe/RightPanel/Decorations/SelectRibbon",
+      "activeInHierarchy": true,
+      "screenRect": [
+        1420.0,
+        37.9999962,
+        117.0,
+        851.0
+      ],
+      "text": null,
+      "textOverflow": false
+    }
+  ],
+  "observedAtUtc": "2026-09-22T09:41:15.1893184Z",
+  "sourceDesignHash": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9",
+  "inputAcceptance": "visual-only no Selectable or business input"
+}

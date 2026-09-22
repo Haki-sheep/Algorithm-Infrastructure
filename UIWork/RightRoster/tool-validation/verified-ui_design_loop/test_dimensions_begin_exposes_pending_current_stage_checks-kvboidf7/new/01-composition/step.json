@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "mode": "full",
+  "stage": 1,
+  "status": "working",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "203c90705f4e1343bdd1099593801462b79c9014ecbe743f1cf414a6eef83062"
+  },
+  "predecessor": null,
+  "input": null,
+  "protected": [],
+  "divergenceRequired": null,
+  "alternatives": [],
+  "findings": [],
+  "questions": [],
+  "attempts": [],
+  "output": null,
+  "review": {
+    "reviewer": "",
+    "observation": "",
+    "evidence": null,
+    "result": "pending",
+    "dimensions": [
+      {
+        "page": "display",
+        "id": "player-focus",
+        "group": "",
+        "observation": "",
+        "result": "pending"
+      },
+      {
+        "page": "display",
+        "id": "composition-shape",
+        "group": "",
+        "observation": "",
+        "result": "pending"
+      },
+      {
+        "page": "display",
+        "id": "world-context",
+        "group": "",
+        "observation": "",
+        "result": "pending"
+      }
+    ]
+  },
+  "unresolvedRegressions": []
+}

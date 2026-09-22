@@ -1,0 +1,18 @@
+{
+  "brief": {
+    "path": "brief.json",
+    "sha256": "e3e33bee83eb96f285696b77c281f634e357a56a00fb7f9d8333ebe362c213e3"
+  },
+  "source": {
+    "path": "request.txt",
+    "sha256": "c512c853476679f0dc7b131f98f2dca2bae9076dd660bc55c656cefeb29fe15c"
+  },
+  "startedStages": [
+    "01-composition/step.json",
+    "02-hierarchy/step.json",
+    "03-geometry/step.json",
+    "04-state-parity/step.json",
+    "05-material/step.json",
+    "06-micro-detail/step.json"
+  ]
+}

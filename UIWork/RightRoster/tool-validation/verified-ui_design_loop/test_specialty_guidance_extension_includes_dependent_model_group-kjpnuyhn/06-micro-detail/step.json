@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 2,
+  "mode": "full",
+  "stage": 6,
+  "status": "reviewed",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "86f1f11bcaeba708a18cabbe88d029b5e42d2a09b4bfc09ab98915d9fc1976e5"
+  },
+  "predecessor": {
+    "path": "05-material/step.json",
+    "sha256": "b4ad5819ba50bcb3e7e5d73758e18073b2c9dee2ed47445f1c1638d865936b10"
+  },
+  "input": {
+    "path": "05-material/evidence/03.svg",
+    "sha256": "200857d88b387a6c2bac8a7c07b876ec4904a82657b30c493d3657e56aa45338"
+  },
+  "narrative": {
+    "path": "06-micro-detail/step.md",
+    "sha256": "6b8e8d35b644a7e32b86e437cfdc7eb66e5baa15eda15dccbf42e2e5d83badc9"
+  },
+  "protected": [
+    {
+      "id": "p6",
+      "decision": "Synthetic retained decision 6",
+      "group": "row",
+      "check": "Slider label remains inside its declared row bounds",
+      "establishedAt": 1
+    }
+  ],
+  "divergenceRequired": false,
+  "reuseReason": "Deterministic protocol fixture; no aesthetic claim.",
+  "alternatives": [],
+  "findings": [
+    {
+      "id": "6-1",
+      "rootCause": "Synthetic root 6-1",
+      "kind": "design-gap",
+      "observation": "Fixture observation 6-1",
+      "location": "rectangle 1",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed",
+      "decisionIds": [
+        "p6"
+      ],
+      "pages": [
+        "display"
+      ]
+    },
+    {
+      "id": "6-2",
+      "rootCause": "Synthetic root 6-2",
+      "kind": "design-gap",
+      "observation": "Fixture observation 6-2",
+      "location": "rectangle 2",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed",
+      "decisionIds": [
+        "p6"
+      ],
+      "pages": [
+        "display"
+      ]
+    },
+    {
+      "id": "6-3",
+      "rootCause": "Synthetic root 6-3",
+      "kind": "design-gap",
+      "observation": "Fixture observation 6-3",
+      "location": "rectangle 3",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed",
+      "decisionIds": [
+        "p6"
+      ],
+      "pages": [
+        "display"
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "sequence": 1,
+      "findingId": "6-1",
+      "before": {
+        "path": "05-material/evidence/03.svg",
+        "sha256": "200857d88b387a6c2bac8a7c07b876ec4904a82657b30c493d3657e56aa45338"
+      },
+      "after": {
+        "path": "06-micro-detail/evidence/01.svg",
+        "sha256": "0f2e3fb9ad79ab0ba38e930e24401796db9c74215a87dce0611671902bfd32f4"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ],
+      "checkObservations": {
+        "p1": "Synthetic inspected rectangle",
+        "p2": "Synthetic inspected rectangle",
+        "p3": "Synthetic inspected rectangle",
+        "p4": "Synthetic inspected rectangle",
+        "p5": "Synthetic inspected rectangle",
+        "p6": "Synthetic inspected rectangle"
+      }
+    },
+    {
+      "sequence": 2,
+      "findingId": "6-2",
+      "before": {
+        "path": "06-micro-detail/evidence/01.svg",
+        "sha256": "0f2e3fb9ad79ab0ba38e930e24401796db9c74215a87dce0611671902bfd32f4"
+      },
+      "after": {
+        "path": "06-micro-detail/evidence/02.svg",
+        "sha256": "813cd5bdede14eb0d280d75710bfa68078b6163cc7697dab8ea55bebee63d103"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ],
+      "checkObservations": {
+        "p1": "Synthetic inspected rectangle",
+        "p2": "Synthetic inspected rectangle",
+        "p3": "Synthetic inspected rectangle",
+        "p4": "Synthetic inspected rectangle",
+        "p5": "Synthetic inspected rectangle",
+        "p6": "Synthetic inspected rectangle"
+      }
+    },
+    {
+      "sequence": 3,
+      "findingId": "6-3",
+      "before": {
+        "path": "06-micro-detail/evidence/02.svg",
+        "sha256": "813cd5bdede14eb0d280d75710bfa68078b6163cc7697dab8ea55bebee63d103"
+      },
+      "after": {
+        "path": "06-micro-detail/evidence/03.svg",
+        "sha256": "627e375fda74b8d97c3b099a3e94c7dd269c18c4a77d2dc8e0f035056887d06b"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ],
+      "checkObservations": {
+        "p1": "Synthetic inspected rectangle",
+        "p2": "Synthetic inspected rectangle",
+        "p3": "Synthetic inspected rectangle",
+        "p4": "Synthetic inspected rectangle",
+        "p5": "Synthetic inspected rectangle",
+        "p6": "Synthetic inspected rectangle"
+      }
+    }
+  ],
+  "unresolvedRegressions": [],
+  "output": {
+    "path": "06-micro-detail/evidence/03.svg",
+    "sha256": "627e375fda74b8d97c3b099a3e94c7dd269c18c4a77d2dc8e0f035056887d06b"
+  },
+  "review": {
+    "reviewer": "synthetic-test",
+    "observation": "Fixture only",
+    "evidence": {
+      "path": "06-micro-detail/evidence/03.svg",
+      "sha256": "627e375fda74b8d97c3b099a3e94c7dd269c18c4a77d2dc8e0f035056887d06b"
+    },
+    "result": "reviewed",
+    "visualComparisons": [
+      {
+        "targetId": "row-type",
+        "reference": {
+          "path": "input.svg",
+          "sha256": "18eb09db6161b94c6f003180eaa798889fafbd6bf23c8a4526a1a2fcbcff9b5c"
+        },
+        "current": {
+          "path": "06-micro-detail/evidence/03.svg",
+          "sha256": "627e375fda74b8d97c3b099a3e94c7dd269c18c4a77d2dc8e0f035056887d06b"
+        },
+        "observation": "Synthetic row comparison",
+        "remaining": "Synthetic only; aesthetics unproven",
+        "verdict": "approximation"
+      }
+    ],
+    "dimensions": [
+      {
+        "page": "display",
+        "id": "typography-icons",
+        "group": "row",
+        "observation": "Synthetic observed row condition: typography-icons",
+        "result": "observed"
+      },
+      {
+        "page": "display",
+        "id": "pixel-edges",
+        "group": "row",
+        "observation": "Synthetic observed row condition: pixel-edges",
+        "result": "observed"
+      },
+      {
+        "page": "display",
+        "id": "final-consistency",
+        "group": "row",
+        "observation": "Synthetic observed row condition: final-consistency",
+        "result": "observed"
+      }
+    ]
+  },
+  "reuseEvidence": {
+    "path": "05-material/evidence/03.svg",
+    "sha256": "200857d88b387a6c2bac8a7c07b876ec4904a82657b30c493d3657e56aa45338"
+  },
+  "pageCoverage": {
+    "display": "Synthetic page inspection"
+  }
+}

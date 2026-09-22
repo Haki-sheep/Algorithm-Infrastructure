@@ -1,0 +1,73 @@
+{
+  "status": "evidence-consistent",
+  "scope": "declared-six-stage-file-relations-only",
+  "through": 6,
+  "orientation": "landscape",
+  "viewport": {
+    "width": 1540,
+    "height": 928
+  },
+  "steps": [
+    {
+      "stage": 1,
+      "gaps": 1,
+      "repairs": 1,
+      "protectedDecisions": 1,
+      "output": "01-composition/evidence/design-1.png"
+    },
+    {
+      "stage": 2,
+      "gaps": 1,
+      "repairs": 1,
+      "protectedDecisions": 2,
+      "output": "02-hierarchy/evidence/design-2.png"
+    },
+    {
+      "stage": 3,
+      "gaps": 1,
+      "repairs": 1,
+      "protectedDecisions": 3,
+      "output": "03-geometry/evidence/design-3.png"
+    },
+    {
+      "stage": 4,
+      "gaps": 1,
+      "repairs": 1,
+      "protectedDecisions": 4,
+      "output": "04-state-parity/evidence/design-4.png"
+    },
+    {
+      "stage": 5,
+      "gaps": 1,
+      "repairs": 1,
+      "protectedDecisions": 5,
+      "output": "05-material/evidence/design-5.png"
+    },
+    {
+      "stage": 6,
+      "gaps": 1,
+      "repairs": 1,
+      "protectedDecisions": 6,
+      "output": "06-micro-detail/evidence/design-6.png"
+    }
+  ],
+  "qualityGuarantees": {
+    "contract": "design-quality-v1",
+    "executionContract": "ui-visual-production-v2",
+    "referenceContract": "screen-reference-v1",
+    "capabilityBaseline": "declared-plan-checked",
+    "dimensionCoverage": "declared-observations-checked",
+    "textRequirements": "not-applicable",
+    "status": "declared-relations-checked",
+    "scope": "current-baseline-only",
+    "inheritedUncheckedDecisionIds": [],
+    "aesthetics": "unproven",
+    "productionRisks": "not-checked"
+  },
+  "nonClaims": [
+    "Does not prove observations are truthful or gaps are distinct in meaning",
+    "Does not approve aesthetics, high fidelity, Unity, input, or business behavior",
+    "Text bindings do not prove requirements exhaust the source or match the user intent",
+    "Changed image bytes do not prove meaningful design progress"
+  ]
+}

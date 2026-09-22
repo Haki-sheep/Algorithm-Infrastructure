@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 2,
+  "mode": "full",
+  "stage": 1,
+  "status": "reviewed",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "e3e33bee83eb96f285696b77c281f634e357a56a00fb7f9d8333ebe362c213e3"
+  },
+  "predecessor": null,
+  "input": {
+    "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+    "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+  },
+  "protected": [
+    {
+      "id": "composition",
+      "group": "screen",
+      "decision": "右侧三列卡片保留原坐标 主体模型范围排除",
+      "check": "右侧卡列和三项页签处于源图相同区域",
+      "establishedAt": 1
+    }
+  ],
+  "divergenceRequired": false,
+  "alternatives": [],
+  "findings": [
+    {
+      "id": "stage-1",
+      "kind": "design-gap",
+      "rootCause": "完整原图尚未区分本次右侧UI与排除的模型区域",
+      "observation": "完整原图尚未区分本次右侧UI与排除的模型区域",
+      "location": "screen",
+      "impact": "下游无法据此还原相应区域",
+      "acceptance": "右侧卡列和三项页签处于源图相同区域",
+      "status": "fixed",
+      "pages": [
+        "roster"
+      ],
+      "decisionIds": [
+        "composition"
+      ]
+    }
+  ],
+  "questions": [],
+  "attempts": [
+    {
+      "sequence": 1,
+      "findingId": "stage-1",
+      "before": {
+        "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+        "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+      },
+      "after": {
+        "path": "01-composition/evidence/design-1.png",
+        "sha256": "317019237af9b52d728130cf7bb6d0f23a7dfa1e2659040475534ec7b87f9e34"
+      },
+      "change": "右侧三列卡片保留原坐标 主体模型范围排除",
+      "inspection": "已实际查看构图稿 三列位置和交错行偏移对应原图 页签位于左下侧 工具位于右上方 绿色楔形靠右 原图模型区域明确排除 后续补信息条与状态",
+      "result": "fixed",
+      "changedGroups": [
+        "screen",
+        "roster",
+        "selection",
+        "toolbar",
+        "tabs",
+        "ribbon"
+      ],
+      "auditedGroups": [
+        "ribbon",
+        "roster",
+        "screen",
+        "selection",
+        "tabs",
+        "toolbar"
+      ],
+      "checked": [
+        "composition"
+      ],
+      "checkObservations": {
+        "composition": "已实际查看构图稿 三列位置和交错行偏移对应原图 页签位于左下侧 工具位于右上方 绿色楔形靠右 原图模型区域明确排除 后续补信息条与状态 复核 右侧卡列和三项页签处于源图相同区域"
+      }
+    }
+  ],
+  "output": {
+    "path": "01-composition/evidence/design-1.png",
+    "sha256": "317019237af9b52d728130cf7bb6d0f23a7dfa1e2659040475534ec7b87f9e34"
+  },
+  "review": {
+    "reviewer": "Codex 实际图片观察",
+    "observation": "已实际查看构图稿 三列位置和交错行偏移对应原图 页签位于左下侧 工具位于右上方 绿色楔形靠右 原图模型区域明确排除 后续补信息条与状态",
+    "evidence": {
+      "path": "01-composition/evidence/design-1.png",
+      "sha256": "317019237af9b52d728130cf7bb6d0f23a7dfa1e2659040475534ec7b87f9e34"
+    },
+    "result": "reviewed",
+    "dimensions": [
+      {
+        "page": "roster",
+        "id": "player-focus",
+        "group": "screen",
+        "observation": "已实际查看构图稿 三列位置和交错行偏移对应原图 页签位于左下侧 工具位于右上方 绿色楔形靠右 原图模型区域明确排除 后续补信息条与状态 本阶段维度 player-focus",
+        "result": "observed"
+      },
+      {
+        "page": "roster",
+        "id": "composition-shape",
+        "group": "screen",
+        "observation": "已实际查看构图稿 三列位置和交错行偏移对应原图 页签位于左下侧 工具位于右上方 绿色楔形靠右 原图模型区域明确排除 后续补信息条与状态 本阶段维度 composition-shape",
+        "result": "observed"
+      },
+      {
+        "page": "roster",
+        "id": "world-context",
+        "group": "screen",
+        "observation": "已实际查看构图稿 三列位置和交错行偏移对应原图 页签位于左下侧 工具位于右上方 绿色楔形靠右 原图模型区域明确排除 后续补信息条与状态 本阶段维度 world-context",
+        "result": "observed"
+      }
+    ]
+  },
+  "unresolvedRegressions": [],
+  "reuseReason": "原图已锁定本阶段外观与次序 只实施拆分和版式映射 无需制造改变参考的候选",
+  "reuseEvidence": {
+    "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+    "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+  },
+  "pageCoverage": {
+    "roster": "已实际查看构图稿 三列位置和交错行偏移对应原图 页签位于左下侧 工具位于右上方 绿色楔形靠右 原图模型区域明确排除 后续补信息条与状态"
+  }
+}

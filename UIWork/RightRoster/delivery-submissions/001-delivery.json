@@ -1,0 +1,2106 @@
+{
+  "brief": {
+    "path": "brief.json",
+    "sha256": "e3e33bee83eb96f285696b77c281f634e357a56a00fb7f9d8333ebe362c213e3"
+  },
+  "finalStep": {
+    "path": "06-micro-detail/step.json",
+    "sha256": "3bf02bb75d36c77f7f72165b2a55b943999a7159c6df6a312733c9f88c732ce4"
+  },
+  "pages": [
+    {
+      "id": "roster",
+      "prefab": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/RightRoster.prefab.snapshot",
+        "sha256": "1c97c1be151f94186a5aa8c2fb471011f3c672309f914498391a518bca49c7e0"
+      },
+      "hierarchy": {
+        "path": "native/hierarchy-v3.json",
+        "sha256": "b41904c35665d9a814782b59c1acc3ee26d193e8f09d88ec8851cef291c4d5cf"
+      },
+      "screenshot": {
+        "path": "native/final-primary-v3.png",
+        "sha256": "799a01ea6df2980b34c34dd1a1d3d42cfbea601149a1593ba56c45d73b717350"
+      },
+      "comparison": "右侧三列卡片 静态选择和导航状态匹配原图 布局按原尺寸建立 头像沿原图自然裁切 字体和网点为加工重建 不主张逐像素一致 左侧模型省略",
+      "assetIds": [
+        "asset-000",
+        "asset-001",
+        "asset-002",
+        "asset-003",
+        "asset-004",
+        "asset-005",
+        "asset-006",
+        "asset-007",
+        "asset-008",
+        "asset-009",
+        "asset-010",
+        "asset-011",
+        "asset-012",
+        "asset-013",
+        "asset-014",
+        "asset-015",
+        "asset-016",
+        "asset-017",
+        "asset-018",
+        "asset-019",
+        "asset-020",
+        "asset-021",
+        "asset-022",
+        "asset-023",
+        "asset-024",
+        "asset-025",
+        "asset-026",
+        "asset-027",
+        "asset-028",
+        "asset-029",
+        "asset-030",
+        "asset-031",
+        "asset-032",
+        "asset-033",
+        "asset-034",
+        "asset-035",
+        "asset-036",
+        "asset-037",
+        "asset-038",
+        "asset-039",
+        "asset-040",
+        "asset-041",
+        "asset-042",
+        "asset-043",
+        "asset-044",
+        "asset-045",
+        "asset-046",
+        "asset-047",
+        "asset-048",
+        "asset-049",
+        "asset-050",
+        "asset-051",
+        "asset-052",
+        "asset-053",
+        "asset-054",
+        "asset-055",
+        "asset-056",
+        "asset-057",
+        "asset-058",
+        "asset-059",
+        "asset-060",
+        "asset-061",
+        "asset-062",
+        "asset-063",
+        "asset-064",
+        "asset-065",
+        "asset-066",
+        "asset-067",
+        "asset-068",
+        "asset-069",
+        "asset-070",
+        "asset-071",
+        "asset-072"
+      ],
+      "visualComparisons": [
+        {
+          "targetId": "diagonal-roster",
+          "reference": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "current": {
+            "path": "native/final-primary-v3.png",
+            "sha256": "799a01ea6df2980b34c34dd1a1d3d42cfbea601149a1593ba56c45d73b717350"
+          },
+          "design": {
+            "path": "06-micro-detail/evidence/design-6.png",
+            "sha256": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9"
+          },
+          "nativePaths": [
+            "RightRoster/RightPanel/LeftCards/Left01/Left01_Portrait",
+            "RightRoster/RightPanel/LeftCards/Left02/Left02_Portrait",
+            "RightRoster/RightPanel/LeftCards/Left03/Left03_Portrait",
+            "RightRoster/RightPanel/LeftCards/Left04/Left04_Portrait",
+            "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Portrait",
+            "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Portrait",
+            "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Portrait",
+            "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Portrait",
+            "RightRoster/RightPanel/MiddleCards/Middle04/Middle04_Portrait",
+            "RightRoster/RightPanel/RightCards/Right01/Right01_Portrait",
+            "RightRoster/RightPanel/RightCards/Right02/Right02_Portrait",
+            "RightRoster/RightPanel/RightCards/Right03/Right03_Portrait",
+            "RightRoster/RightPanel/RightCards/Right04/Right04_Portrait",
+            "RightRoster/RightPanel/LeftCards/Left01/Left01_Footer",
+            "RightRoster/RightPanel/LeftCards/Left01/Left01_Rank",
+            "RightRoster/RightPanel/LeftCards/Left01/Left01_Element",
+            "RightRoster/RightPanel/LeftCards/Left01/Level",
+            "RightRoster/RightPanel/LeftCards/Left02/Left02_Footer",
+            "RightRoster/RightPanel/LeftCards/Left02/Left02_Rank",
+            "RightRoster/RightPanel/LeftCards/Left02/Left02_Element",
+            "RightRoster/RightPanel/LeftCards/Left02/Level",
+            "RightRoster/RightPanel/LeftCards/Left03/Left03_Footer",
+            "RightRoster/RightPanel/LeftCards/Left03/Left03_Rank",
+            "RightRoster/RightPanel/LeftCards/Left03/Left03_Element",
+            "RightRoster/RightPanel/LeftCards/Left03/Level",
+            "RightRoster/RightPanel/LeftCards/Left04/Left04_Footer",
+            "RightRoster/RightPanel/LeftCards/Left04/Left04_Rank",
+            "RightRoster/RightPanel/LeftCards/Left04/Left04_Element",
+            "RightRoster/RightPanel/LeftCards/Left04/Level",
+            "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Footer",
+            "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Rank",
+            "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Element",
+            "RightRoster/RightPanel/MiddleCards/Middle00/Level",
+            "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Footer",
+            "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Rank",
+            "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Element",
+            "RightRoster/RightPanel/MiddleCards/Middle01/Level",
+            "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Footer",
+            "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Rank",
+            "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Element",
+            "RightRoster/RightPanel/MiddleCards/Middle02/Level",
+            "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Footer",
+            "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Rank",
+            "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Element",
+            "RightRoster/RightPanel/MiddleCards/Middle03/Level",
+            "RightRoster/RightPanel/RightCards/Right01/Right01_Footer",
+            "RightRoster/RightPanel/RightCards/Right01/Right01_Rank",
+            "RightRoster/RightPanel/RightCards/Right01/Right01_Element",
+            "RightRoster/RightPanel/RightCards/Right01/Level",
+            "RightRoster/RightPanel/RightCards/Right02/Right02_Footer",
+            "RightRoster/RightPanel/RightCards/Right02/Right02_Rank",
+            "RightRoster/RightPanel/RightCards/Right02/Right02_Element",
+            "RightRoster/RightPanel/RightCards/Right02/Level",
+            "RightRoster/RightPanel/RightCards/Right03/Right03_Footer",
+            "RightRoster/RightPanel/RightCards/Right03/Right03_Rank",
+            "RightRoster/RightPanel/RightCards/Right03/Right03_Element",
+            "RightRoster/RightPanel/RightCards/Right03/Level",
+            "RightRoster/RightPanel/RightCards/Right04/Right04_Footer",
+            "RightRoster/RightPanel/RightCards/Right04/Right04_Rank",
+            "RightRoster/RightPanel/RightCards/Right04/Right04_Element",
+            "RightRoster/RightPanel/RightCards/Right04/Level"
+          ],
+          "observation": "同尺寸对照三列共13张头像与部分可见首尾卡片保持原顺序 独立等级文字显示60与40 品质及属性对应原图 黑色信息条网点纹理经过重建",
+          "remaining": "当前核心布局 内容与状态已实现 微小抗锯齿和重建网点不主张逐像素一致 左侧模型按用户要求省略",
+          "verdict": "matched",
+          "constraintReviews": [
+            {
+              "constraintId": "roster-layout",
+              "result": "matched",
+              "observed": "三列交错倾斜布局 按原图保留13张可见卡片",
+              "observation": "同尺寸对照三列共13张头像与部分可见首尾卡片保持原顺序 独立等级文字显示60与40 品质及属性对应原图 黑色信息条网点纹理经过重建"
+            },
+            {
+              "constraintId": "roster-content",
+              "result": "matched",
+              "observed": "原图头像 品质标记 属性图标与可见等级保持对应",
+              "observation": "同尺寸对照三列共13张头像与部分可见首尾卡片保持原顺序 独立等级文字显示60与40 品质及属性对应原图 黑色信息条网点纹理经过重建"
+            },
+            {
+              "constraintId": "roster-text",
+              "result": "matched",
+              "observed": "简体中文等级文案和原有数字",
+              "observation": "同尺寸对照三列共13张头像与部分可见首尾卡片保持原顺序 独立等级文字显示60与40 品质及属性对应原图 黑色信息条网点纹理经过重建",
+              "textSamples": [
+                {
+                  "expected": "等级60",
+                  "observed": "等级60",
+                  "nativePath": "RightRoster/RightPanel/LeftCards/Left01/Level"
+                },
+                {
+                  "expected": "等级40",
+                  "observed": "等级40",
+                  "nativePath": "RightRoster/RightPanel/RightCards/Right04/Level"
+                }
+              ]
+            }
+          ],
+          "coreFeatureReview": {
+            "criterion": "13张可见角色头像保持三列次序 斜边下移右倾 黑色信息条中可读等级60与等级40",
+            "result": "met",
+            "observation": "同尺寸对照三列共13张头像与部分可见首尾卡片保持原顺序 独立等级文字显示60与40 品质及属性对应原图 黑色信息条网点纹理经过重建"
+          }
+        },
+        {
+          "targetId": "yellow-selection",
+          "reference": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "current": {
+            "path": "native/final-primary-v3.png",
+            "sha256": "799a01ea6df2980b34c34dd1a1d3d42cfbea601149a1593ba56c45d73b717350"
+          },
+          "design": {
+            "path": "06-micro-detail/evidence/design-6.png",
+            "sha256": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9"
+          },
+          "nativePaths": [
+            "RightRoster/RightPanel/Decorations/SelectionFrame"
+          ],
+          "observation": "黄色框位于安比卡外侧并连续包围头像和黑色信息条 斜边无矩形底色 选中状态保持原图",
+          "remaining": "当前核心布局 内容与状态已实现 微小抗锯齿和重建网点不主张逐像素一致 左侧模型按用户要求省略",
+          "verdict": "matched",
+          "constraintReviews": [
+            {
+              "constraintId": "selection-style",
+              "result": "matched",
+              "observed": "右列第二张安比卡以黄色边框高亮",
+              "observation": "黄色框位于安比卡外侧并连续包围头像和黑色信息条 斜边无矩形底色 选中状态保持原图"
+            }
+          ],
+          "coreFeatureReview": {
+            "criterion": "右列第二张卡保持黄色连续外框 内部头像与等级独立于外框",
+            "result": "met",
+            "observation": "黄色框位于安比卡外侧并连续包围头像和黑色信息条 斜边无矩形底色 选中状态保持原图"
+          }
+        },
+        {
+          "targetId": "navigation",
+          "reference": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "current": {
+            "path": "native/final-primary-v3.png",
+            "sha256": "799a01ea6df2980b34c34dd1a1d3d42cfbea601149a1593ba56c45d73b717350"
+          },
+          "design": {
+            "path": "06-micro-detail/evidence/design-6.png",
+            "sha256": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9"
+          },
+          "nativePaths": [
+            "RightRoster/RightPanel/Tabs/BasicTab",
+            "RightRoster/RightPanel/Tabs/BasicTab/Label",
+            "RightRoster/RightPanel/Tabs/SkillTab",
+            "RightRoster/RightPanel/Tabs/SkillTab/Label",
+            "RightRoster/RightPanel/Tabs/EquipmentTab",
+            "RightRoster/RightPanel/Tabs/EquipmentTab/Label"
+          ],
+          "observation": "基础黄底黑字 技能和装备为暗底白字 三项逐行右移 原图鼠标指针已清除 页签底板为独立Sprite 文字为TMP",
+          "remaining": "当前核心布局 内容与状态已实现 微小抗锯齿和重建网点不主张逐像素一致 左侧模型按用户要求省略",
+          "verdict": "matched",
+          "constraintReviews": [
+            {
+              "constraintId": "tabs-text",
+              "result": "matched",
+              "observed": "原图三级中文页签",
+              "observation": "基础黄底黑字 技能和装备为暗底白字 三项逐行右移 原图鼠标指针已清除 页签底板为独立Sprite 文字为TMP",
+              "textSamples": [
+                {
+                  "expected": "基础",
+                  "observed": "基础",
+                  "nativePath": "RightRoster/RightPanel/Tabs/BasicTab/Label"
+                },
+                {
+                  "expected": "技能",
+                  "observed": "技能",
+                  "nativePath": "RightRoster/RightPanel/Tabs/SkillTab/Label"
+                },
+                {
+                  "expected": "装备",
+                  "observed": "装备",
+                  "nativePath": "RightRoster/RightPanel/Tabs/EquipmentTab/Label"
+                }
+              ]
+            }
+          ],
+          "coreFeatureReview": {
+            "criterion": "基础为黄底黑字 技能装备为暗底白字 三项左缘逐行右移",
+            "result": "met",
+            "observation": "基础黄底黑字 技能和装备为暗底白字 三项逐行右移 原图鼠标指针已清除 页签底板为独立Sprite 文字为TMP"
+          }
+        },
+        {
+          "targetId": "utilities",
+          "reference": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "current": {
+            "path": "native/final-primary-v3.png",
+            "sha256": "799a01ea6df2980b34c34dd1a1d3d42cfbea601149a1593ba56c45d73b717350"
+          },
+          "design": {
+            "path": "06-micro-detail/evidence/design-6.png",
+            "sha256": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9"
+          },
+          "nativePaths": [
+            "RightRoster/RightPanel/Decorations/FilterButton",
+            "RightRoster/RightPanel/Decorations/FavoriteButton",
+            "RightRoster/RightPanel/Decorations/SelectRibbon",
+            "RightRoster/RightPanel/Footer/UID",
+            "RightRoster/RightPanel/Footer/Signal",
+            "RightRoster/RightPanel/Footer/BottomEdge"
+          ],
+          "observation": "筛选和收藏为右上两个圆形图标 绿色SELECT飘带方向一致 追加右下UID21781313和三格信号及底部细边",
+          "remaining": "当前核心布局 内容与状态已实现 微小抗锯齿和重建网点不主张逐像素一致 左侧模型按用户要求省略",
+          "verdict": "matched",
+          "constraintReviews": [
+            {
+              "constraintId": "utilities-content",
+              "result": "matched",
+              "observed": "筛选 收藏 SELECT绿色飘带",
+              "observation": "筛选和收藏为右上两个圆形图标 绿色SELECT飘带方向一致 追加右下UID21781313和三格信号及底部细边"
+            }
+          ],
+          "coreFeatureReview": {
+            "criterion": "右上筛选白图标与收藏黄星保持圆形 右缘绿色SELECT楔形保留原方向",
+            "result": "met",
+            "observation": "筛选和收藏为右上两个圆形图标 绿色SELECT飘带方向一致 追加右下UID21781313和三格信号及底部细边"
+          }
+        }
+      ],
+      "layoutTargets": [
+        "RightRoster/RightPanel/Tabs/BasicTab",
+        "RightRoster/RightPanel/Tabs/BasicTab/Label",
+        "RightRoster/RightPanel/Tabs/SkillTab",
+        "RightRoster/RightPanel/Tabs/SkillTab/Label",
+        "RightRoster/RightPanel/Tabs/EquipmentTab",
+        "RightRoster/RightPanel/Tabs/EquipmentTab/Label",
+        "RightRoster/RightPanel/LeftCards/Left01/Left01_Portrait",
+        "RightRoster/RightPanel/LeftCards/Left01/Left01_Footer",
+        "RightRoster/RightPanel/LeftCards/Left01/Left01_Rank",
+        "RightRoster/RightPanel/LeftCards/Left01/Left01_Element",
+        "RightRoster/RightPanel/LeftCards/Left01/Level",
+        "RightRoster/RightPanel/LeftCards/Left02/Left02_Portrait",
+        "RightRoster/RightPanel/LeftCards/Left02/Left02_Footer",
+        "RightRoster/RightPanel/LeftCards/Left02/Left02_Rank",
+        "RightRoster/RightPanel/LeftCards/Left02/Left02_Element",
+        "RightRoster/RightPanel/LeftCards/Left02/Level",
+        "RightRoster/RightPanel/LeftCards/Left03/Left03_Portrait",
+        "RightRoster/RightPanel/LeftCards/Left03/Left03_Footer",
+        "RightRoster/RightPanel/LeftCards/Left03/Left03_Rank",
+        "RightRoster/RightPanel/LeftCards/Left03/Left03_Element",
+        "RightRoster/RightPanel/LeftCards/Left03/Level",
+        "RightRoster/RightPanel/LeftCards/Left04/Left04_Portrait",
+        "RightRoster/RightPanel/LeftCards/Left04/Left04_Footer",
+        "RightRoster/RightPanel/LeftCards/Left04/Left04_Rank",
+        "RightRoster/RightPanel/LeftCards/Left04/Left04_Element",
+        "RightRoster/RightPanel/LeftCards/Left04/Level",
+        "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Portrait",
+        "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Footer",
+        "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Rank",
+        "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Element",
+        "RightRoster/RightPanel/MiddleCards/Middle00/Level",
+        "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Portrait",
+        "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Footer",
+        "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Rank",
+        "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Element",
+        "RightRoster/RightPanel/MiddleCards/Middle01/Level",
+        "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Portrait",
+        "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Footer",
+        "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Rank",
+        "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Element",
+        "RightRoster/RightPanel/MiddleCards/Middle02/Level",
+        "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Portrait",
+        "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Footer",
+        "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Rank",
+        "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Element",
+        "RightRoster/RightPanel/MiddleCards/Middle03/Level",
+        "RightRoster/RightPanel/MiddleCards/Middle04/Middle04_Portrait",
+        "RightRoster/RightPanel/RightCards/Right01/Right01_Portrait",
+        "RightRoster/RightPanel/RightCards/Right01/Right01_Footer",
+        "RightRoster/RightPanel/RightCards/Right01/Right01_Rank",
+        "RightRoster/RightPanel/RightCards/Right01/Right01_Element",
+        "RightRoster/RightPanel/RightCards/Right01/Level",
+        "RightRoster/RightPanel/RightCards/Right02/Right02_Portrait",
+        "RightRoster/RightPanel/RightCards/Right02/Right02_Footer",
+        "RightRoster/RightPanel/RightCards/Right02/Right02_Rank",
+        "RightRoster/RightPanel/RightCards/Right02/Right02_Element",
+        "RightRoster/RightPanel/RightCards/Right02/Level",
+        "RightRoster/RightPanel/RightCards/Right03/Right03_Portrait",
+        "RightRoster/RightPanel/RightCards/Right03/Right03_Footer",
+        "RightRoster/RightPanel/RightCards/Right03/Right03_Rank",
+        "RightRoster/RightPanel/RightCards/Right03/Right03_Element",
+        "RightRoster/RightPanel/RightCards/Right03/Level",
+        "RightRoster/RightPanel/RightCards/Right04/Right04_Portrait",
+        "RightRoster/RightPanel/RightCards/Right04/Right04_Footer",
+        "RightRoster/RightPanel/RightCards/Right04/Right04_Rank",
+        "RightRoster/RightPanel/RightCards/Right04/Right04_Element",
+        "RightRoster/RightPanel/RightCards/Right04/Level",
+        "RightRoster/RightPanel/Decorations/SelectionFrame",
+        "RightRoster/RightPanel/Decorations/FilterButton",
+        "RightRoster/RightPanel/Decorations/FavoriteButton",
+        "RightRoster/RightPanel/Decorations/SelectRibbon",
+        "RightRoster/RightPanel/Footer/UID",
+        "RightRoster/RightPanel/Footer/Signal",
+        "RightRoster/RightPanel/Footer/BottomEdge"
+      ],
+      "contentBindings": [
+        {
+          "content": "角色卡列",
+          "nativePaths": [
+            "RightRoster/RightPanel/LeftCards/Left01/Left01_Portrait",
+            "RightRoster/RightPanel/LeftCards/Left02/Left02_Portrait",
+            "RightRoster/RightPanel/LeftCards/Left03/Left03_Portrait",
+            "RightRoster/RightPanel/LeftCards/Left04/Left04_Portrait",
+            "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Portrait",
+            "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Portrait",
+            "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Portrait",
+            "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Portrait",
+            "RightRoster/RightPanel/MiddleCards/Middle04/Middle04_Portrait",
+            "RightRoster/RightPanel/RightCards/Right01/Right01_Portrait",
+            "RightRoster/RightPanel/RightCards/Right02/Right02_Portrait",
+            "RightRoster/RightPanel/RightCards/Right03/Right03_Portrait",
+            "RightRoster/RightPanel/RightCards/Right04/Right04_Portrait"
+          ],
+          "layoutPolicy": "safe-visible"
+        },
+        {
+          "content": "选中边框",
+          "nativePaths": [
+            "RightRoster/RightPanel/Decorations/SelectionFrame"
+          ],
+          "layoutPolicy": "safe-visible"
+        },
+        {
+          "content": "等级品质属性",
+          "nativePaths": [
+            "RightRoster/RightPanel/LeftCards/Left01/Left01_Footer",
+            "RightRoster/RightPanel/LeftCards/Left01/Left01_Rank",
+            "RightRoster/RightPanel/LeftCards/Left01/Left01_Element",
+            "RightRoster/RightPanel/LeftCards/Left01/Level",
+            "RightRoster/RightPanel/LeftCards/Left02/Left02_Footer",
+            "RightRoster/RightPanel/LeftCards/Left02/Left02_Rank",
+            "RightRoster/RightPanel/LeftCards/Left02/Left02_Element",
+            "RightRoster/RightPanel/LeftCards/Left02/Level",
+            "RightRoster/RightPanel/LeftCards/Left03/Left03_Footer",
+            "RightRoster/RightPanel/LeftCards/Left03/Left03_Rank",
+            "RightRoster/RightPanel/LeftCards/Left03/Left03_Element",
+            "RightRoster/RightPanel/LeftCards/Left03/Level",
+            "RightRoster/RightPanel/LeftCards/Left04/Left04_Footer",
+            "RightRoster/RightPanel/LeftCards/Left04/Left04_Rank",
+            "RightRoster/RightPanel/LeftCards/Left04/Left04_Element",
+            "RightRoster/RightPanel/LeftCards/Left04/Level",
+            "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Footer",
+            "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Rank",
+            "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Element",
+            "RightRoster/RightPanel/MiddleCards/Middle00/Level",
+            "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Footer",
+            "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Rank",
+            "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Element",
+            "RightRoster/RightPanel/MiddleCards/Middle01/Level",
+            "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Footer",
+            "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Rank",
+            "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Element",
+            "RightRoster/RightPanel/MiddleCards/Middle02/Level",
+            "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Footer",
+            "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Rank",
+            "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Element",
+            "RightRoster/RightPanel/MiddleCards/Middle03/Level",
+            "RightRoster/RightPanel/RightCards/Right01/Right01_Footer",
+            "RightRoster/RightPanel/RightCards/Right01/Right01_Rank",
+            "RightRoster/RightPanel/RightCards/Right01/Right01_Element",
+            "RightRoster/RightPanel/RightCards/Right01/Level",
+            "RightRoster/RightPanel/RightCards/Right02/Right02_Footer",
+            "RightRoster/RightPanel/RightCards/Right02/Right02_Rank",
+            "RightRoster/RightPanel/RightCards/Right02/Right02_Element",
+            "RightRoster/RightPanel/RightCards/Right02/Level",
+            "RightRoster/RightPanel/RightCards/Right03/Right03_Footer",
+            "RightRoster/RightPanel/RightCards/Right03/Right03_Rank",
+            "RightRoster/RightPanel/RightCards/Right03/Right03_Element",
+            "RightRoster/RightPanel/RightCards/Right03/Level",
+            "RightRoster/RightPanel/RightCards/Right04/Right04_Footer",
+            "RightRoster/RightPanel/RightCards/Right04/Right04_Rank",
+            "RightRoster/RightPanel/RightCards/Right04/Right04_Element",
+            "RightRoster/RightPanel/RightCards/Right04/Level"
+          ],
+          "layoutPolicy": "safe-visible"
+        },
+        {
+          "content": "筛选收藏",
+          "nativePaths": [
+            "RightRoster/RightPanel/Decorations/FilterButton",
+            "RightRoster/RightPanel/Decorations/FavoriteButton"
+          ],
+          "layoutPolicy": "safe-visible"
+        },
+        {
+          "content": "基础技能装备",
+          "nativePaths": [
+            "RightRoster/RightPanel/Tabs/BasicTab",
+            "RightRoster/RightPanel/Tabs/BasicTab/Label",
+            "RightRoster/RightPanel/Tabs/SkillTab",
+            "RightRoster/RightPanel/Tabs/SkillTab/Label",
+            "RightRoster/RightPanel/Tabs/EquipmentTab",
+            "RightRoster/RightPanel/Tabs/EquipmentTab/Label"
+          ],
+          "layoutPolicy": "safe-visible"
+        },
+        {
+          "content": "SELECT飘带",
+          "nativePaths": [
+            "RightRoster/RightPanel/Decorations/SelectRibbon"
+          ],
+          "layoutPolicy": "safe-visible"
+        }
+      ],
+      "viewportEvidence": [
+        {
+          "id": "narrow",
+          "screenshot": {
+            "path": "native/final-narrow-v3.png",
+            "sha256": "4171e9c8b33f402e4b5ffff048889103a0e32990d256fc966681dcb7836ddbca"
+          },
+          "layoutEvidence": {
+            "path": "native/final-narrow-v3.json",
+            "sha256": "4f14642e6c71c0009263d8947e76bdc758c0f3a8254497df1ab49ea122946205"
+          },
+          "observation": "实际Unity独立相机按该尺寸渲染 右侧组固定比例和右边距 页签与UID均在安全区域 无文字溢出 左侧留白随宽度改变",
+          "result": "passed"
+        },
+        {
+          "id": "primary",
+          "screenshot": {
+            "path": "native/final-primary-v3.png",
+            "sha256": "799a01ea6df2980b34c34dd1a1d3d42cfbea601149a1593ba56c45d73b717350"
+          },
+          "layoutEvidence": {
+            "path": "native/final-primary-v3.json",
+            "sha256": "671ae6cad37074df58841b8f37966cb4901bc4df36b15e0c43ea22614b3854e4"
+          },
+          "observation": "实际Unity独立相机按该尺寸渲染 右侧组固定比例和右边距 页签与UID均在安全区域 无文字溢出 左侧留白随宽度改变",
+          "result": "passed"
+        },
+        {
+          "id": "wide",
+          "screenshot": {
+            "path": "native/final-wide-v3.png",
+            "sha256": "7da40f3b76055073f8b0ab02a74ff5467dbbceaac5557085e73632dc1b71992b"
+          },
+          "layoutEvidence": {
+            "path": "native/final-wide-v3.json",
+            "sha256": "315c8af6d6df028e30605366af056d7aea8e897d5df79da8fb3f4fd09b2386bb"
+          },
+          "observation": "实际Unity独立相机按该尺寸渲染 右侧组固定比例和右边距 页签与UID均在安全区域 无文字溢出 左侧留白随宽度改变",
+          "result": "passed"
+        }
+      ],
+      "fullFrameComparison": {
+        "reference": {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        "current": {
+          "path": "native/final-primary-v3.png",
+          "sha256": "799a01ea6df2980b34c34dd1a1d3d42cfbea601149a1593ba56c45d73b717350"
+        },
+        "observation": "逐区对照右侧可见内容无遗漏 最后补齐UID信号和细边 左侧原图模型与场景纹理处于排除范围 当前静态视觉用途不增加输入行为",
+        "result": "no-unresolved-differences"
+      },
+      "engineeringChecks": [
+        {
+          "id": "required-content",
+          "result": "passed",
+          "evidence": {
+            "path": "native/hierarchy-v3.json",
+            "sha256": "b41904c35665d9a814782b59c1acc3ee26d193e8f09d88ec8851cef291c4d5cf"
+          },
+          "observation": "13张角色头像 三页签 筛选收藏 选中框 SELECT与右下信息均有实际原生节点"
+        },
+        {
+          "id": "layout",
+          "result": "passed",
+          "evidence": {
+            "path": "native/final-primary-v3.json",
+            "sha256": "671ae6cad37074df58841b8f37966cb4901bc4df36b15e0c43ea22614b3854e4"
+          },
+          "observation": "三个真实尺寸逐节点验证活动状态 安全边界与文字溢出 右侧位置和比例稳定"
+        },
+        {
+          "id": "resources",
+          "result": "passed",
+          "evidence": {
+            "path": "native/engineering-audit.json",
+            "sha256": "d682acbe8bfb5b0b2afa3bbd122e92f9265cb0c795d1d54c722c53b1e523160f"
+          },
+          "observation": "58张切片与字体均有引用 无MissingScript或丢失Sprite和字体"
+        },
+        {
+          "id": "save-reopen",
+          "result": "passed",
+          "evidence": {
+            "path": "native/engineering-audit.json",
+            "sha256": "d682acbe8bfb5b0b2afa3bbd122e92f9265cb0c795d1d54c722c53b1e523160f"
+          },
+          "observation": "预览场景已保存并实际重开 Prefab连接有效 原VisualizationDemo保持未修改"
+        },
+        {
+          "id": "visual-integrity",
+          "result": "passed",
+          "evidence": {
+            "path": "native/comparison.png",
+            "sha256": "e16dba135f4918ee3b44160e2746e1b1357a8c894e92534cd9ec1366794ad5d9"
+          },
+          "observation": "已按先实际层级后画面展示并逐区对照 字体内部修复前后三视口像素一致"
+        },
+        {
+          "id": "input-feedback",
+          "result": "not-applicable",
+          "observation": "本次仅静态视觉还原 真实层级没有Selectable或业务输入 不宣称交互和角色切换完成"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "asset-000",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left01_Footer.png.snapshot",
+        "sha256": "c0aa5d674969e1cf18a265157b29347cce250d51d094e9aa109613a067bb6883"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left01_Footer.png"
+    },
+    {
+      "id": "asset-001",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/SelectRibbon.png.snapshot",
+        "sha256": "90a03f391693691cfa9bece1f194a16df9b05d82ec9c2614827de3ba6fbf603b"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/SelectRibbon.png"
+    },
+    {
+      "id": "asset-002",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/EquipmentTab.png.snapshot",
+        "sha256": "55e5908754b35e10089c67b8d488c37f89cac79df9e2575e1955a83c66bd0eb1"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/EquipmentTab.png"
+    },
+    {
+      "id": "asset-003",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Fonts/ReferenceBitmap.asset.snapshot",
+        "sha256": "59c8b9965be1ba051a4b885b54de86d1e6337dd96c208008ed8fc7881dfea9f4"
+      },
+      "usage": "production",
+      "processing": "原图Unicode字形转换为TMP静态位图字体 追加内部下划线字形",
+      "sources": [
+        {
+          "path": "resources/glyphs.json",
+          "sha256": "9b0b38f13a5a1c8e61452374fb05d21740651b93ec8eee69e1a93de5d21f8432"
+        },
+        {
+          "path": "native/font-patch-plan.json",
+          "sha256": "6e366ba3cc4a2b5a70e47781bd38222c06e385539e48b16d4d1a157d8018ae7c"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Fonts/ReferenceBitmap.asset"
+    },
+    {
+      "id": "asset-004",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right01_Portrait.png.snapshot",
+        "sha256": "95d05ed62933b6cad7aea2789ecfce394f8afa9c0bdbb249e55663fbc76dfa22"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right01_Portrait.png"
+    },
+    {
+      "id": "asset-005",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle03_Rank.png.snapshot",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle03_Rank.png"
+    },
+    {
+      "id": "asset-006",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left02_Footer.png.snapshot",
+        "sha256": "0bdc2dc2de8a6da9fc399656a5e2d5dc9e4af3536e43a13d7a5b5d575929ff18"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left02_Footer.png"
+    },
+    {
+      "id": "asset-007",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right03_Rank.png.snapshot",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right03_Rank.png"
+    },
+    {
+      "id": "asset-008",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle01_Element.png.snapshot",
+        "sha256": "d97837e0e2b108a9cad85069d198b075fd814be9ec0731c7f6612d632046ba89"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle01_Element.png"
+    },
+    {
+      "id": "asset-009",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle01_Rank.png.snapshot",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle01_Rank.png"
+    },
+    {
+      "id": "asset-010",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle01_Footer.png.snapshot",
+        "sha256": "aa9359d1b0d86615c58e3125f0f16fcab0d078fcaca3f3756c7a474c897b1fe4"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle01_Footer.png"
+    },
+    {
+      "id": "asset-011",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right01_Footer.png.snapshot",
+        "sha256": "32bd1dafed450acf4c88eedafb26ba0e9705fb3f3ae8b784db6078fed06a5a80"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right01_Footer.png"
+    },
+    {
+      "id": "asset-012",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/FilterButton.png.snapshot",
+        "sha256": "22c2444e148ea59a529cf2771fd51a5d8827a9d211c123c20c2e9bfad71f4100"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/FilterButton.png"
+    },
+    {
+      "id": "asset-013",
+      "artifact": {
+        "path": "native/source-snapshots/Packages/com.unity.textmeshpro/Scripts/Runtime/TextMeshProUGUI.cs.snapshot",
+        "sha256": "f25b03386b3b6eaef0f6f164ae0230b74f09ea53145fdf8bcb6d4a01786af425"
+      },
+      "usage": "production",
+      "processing": "项目已有Unity UGUI或TextMeshPro包及字体依赖 原文件只读快照 未修改",
+      "sources": [
+        {
+          "path": "native/source-snapshots.json",
+          "sha256": "19ded5321daef560d177536ada6f73c36c640f6fe89900b449a6e813cfa63438"
+        }
+      ],
+      "originalProjectPath": "Packages/com.unity.textmeshpro/Scripts/Runtime/TextMeshProUGUI.cs"
+    },
+    {
+      "id": "asset-014",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.snapshot",
+        "sha256": "970db4b1e73b8289c1dd56cff60877f426b49c9682620b2d14da6cd70b64cb9c"
+      },
+      "usage": "production",
+      "processing": "项目已有Unity UGUI或TextMeshPro包及字体依赖 原文件只读快照 未修改",
+      "sources": [
+        {
+          "path": "native/source-snapshots.json",
+          "sha256": "19ded5321daef560d177536ada6f73c36c640f6fe89900b449a6e813cfa63438"
+        }
+      ],
+      "originalProjectPath": "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader"
+    },
+    {
+      "id": "asset-015",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left03_Footer.png.snapshot",
+        "sha256": "3f9e5d46dcbb143547d1addc0b090ed9ba4d45e95c737044996f932fa31c44d5"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left03_Footer.png"
+    },
+    {
+      "id": "asset-016",
+      "artifact": {
+        "path": "native/source-snapshots/Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component Icon.psd.snapshot",
+        "sha256": "0aa474cb54380b566a43360ddae3b42ca8c08d195f0590a03999396f5b667830"
+      },
+      "usage": "production",
+      "processing": "项目已有Unity UGUI或TextMeshPro包及字体依赖 原文件只读快照 未修改",
+      "sources": [
+        {
+          "path": "native/source-snapshots.json",
+          "sha256": "19ded5321daef560d177536ada6f73c36c640f6fe89900b449a6e813cfa63438"
+        }
+      ],
+      "originalProjectPath": "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component Icon.psd"
+    },
+    {
+      "id": "asset-017",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right03_Portrait.png.snapshot",
+        "sha256": "2f56b5388d2550893d8ce46b051e5fd197cfa5a2b97d26baad2c4828421e790f"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right03_Portrait.png"
+    },
+    {
+      "id": "asset-018",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset.snapshot",
+        "sha256": "6f33cdcd6d203e175a012087a4209442c2b6811baeebce6c875bb8c8d7c64e51"
+      },
+      "usage": "production",
+      "processing": "项目已有Unity UGUI或TextMeshPro包及字体依赖 原文件只读快照 未修改",
+      "sources": [
+        {
+          "path": "native/source-snapshots.json",
+          "sha256": "19ded5321daef560d177536ada6f73c36c640f6fe89900b449a6e813cfa63438"
+        }
+      ],
+      "originalProjectPath": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset"
+    },
+    {
+      "id": "asset-019",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right01_Element.png.snapshot",
+        "sha256": "d97837e0e2b108a9cad85069d198b075fd814be9ec0731c7f6612d632046ba89"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right01_Element.png"
+    },
+    {
+      "id": "asset-020",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/BasicTab.png.snapshot",
+        "sha256": "44ee03f67c46c229e965573365ddccbc75830d02cae72691e656286d8fdfe803"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/BasicTab.png"
+    },
+    {
+      "id": "asset-021",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right04_Portrait.png.snapshot",
+        "sha256": "6c03bddff4075358b6d1f2938a340f1cc2bda349b87cf90d062944172b32e78f"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right04_Portrait.png"
+    },
+    {
+      "id": "asset-022",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left03_Element.png.snapshot",
+        "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left03_Element.png"
+    },
+    {
+      "id": "asset-023",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left01_Portrait.png.snapshot",
+        "sha256": "c7c99cfaee32086ee69ffb1a15aa78d9b6027a6aa1667b7f92026e4af8d4e849"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left01_Portrait.png"
+    },
+    {
+      "id": "asset-024",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left02_Element.png.snapshot",
+        "sha256": "d97837e0e2b108a9cad85069d198b075fd814be9ec0731c7f6612d632046ba89"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left02_Element.png"
+    },
+    {
+      "id": "asset-025",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left04_Rank.png.snapshot",
+        "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left04_Rank.png"
+    },
+    {
+      "id": "asset-026",
+      "artifact": {
+        "path": "native/source-snapshots/Packages/com.unity.ugui/Runtime/UI/Core/Image.cs.snapshot",
+        "sha256": "351dd72516d240f5722c55f72f8e95a0a92cf71e83358bbc922eee47bdb78502"
+      },
+      "usage": "production",
+      "processing": "项目已有Unity UGUI或TextMeshPro包及字体依赖 原文件只读快照 未修改",
+      "sources": [
+        {
+          "path": "native/source-snapshots.json",
+          "sha256": "19ded5321daef560d177536ada6f73c36c640f6fe89900b449a6e813cfa63438"
+        }
+      ],
+      "originalProjectPath": "Packages/com.unity.ugui/Runtime/UI/Core/Image.cs"
+    },
+    {
+      "id": "asset-027",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left04_Portrait.png.snapshot",
+        "sha256": "9161fdaee22aad0eb24ca91dda4d11c479ce3a402f299f389ef67a74c05bf301"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left04_Portrait.png"
+    },
+    {
+      "id": "asset-028",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left02_Portrait.png.snapshot",
+        "sha256": "31174acf1ca4a360d4bb4b9ccaa73402718a8d80c9ff482093c50a91c0266ec5"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left02_Portrait.png"
+    },
+    {
+      "id": "asset-029",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/BottomEdge.png.snapshot",
+        "sha256": "b9e46dabe01b0e222621eaacda237d39d77bef98f6a9d2bd7d120d0e64dc148d"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "native/footer-edit-plan.json",
+          "sha256": "7f630704d60535e733d118e432fbceebe2b5da5c86c84e4f75a5490600066b3d"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/BottomEdge.png"
+    },
+    {
+      "id": "asset-030",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left04_Element.png.snapshot",
+        "sha256": "19c2277ec1429f27336423c6de73ee1d72e35fc01661762b46016c472fa91a87"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left04_Element.png"
+    },
+    {
+      "id": "asset-031",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right03_Footer.png.snapshot",
+        "sha256": "94298889bb27c42dfa4af21a5063c0c4d51d72ce438e88c824d062eceaf2c9d2"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right03_Footer.png"
+    },
+    {
+      "id": "asset-032",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right02_Rank.png.snapshot",
+        "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right02_Rank.png"
+    },
+    {
+      "id": "asset-033",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left03_Portrait.png.snapshot",
+        "sha256": "4de839c6740856b1054c0c8d9275763c6fe1c5cc629e5cc5f881993369cc0dcf"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left03_Portrait.png"
+    },
+    {
+      "id": "asset-034",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right04_Element.png.snapshot",
+        "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right04_Element.png"
+    },
+    {
+      "id": "asset-035",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/SelectionFrame.png.snapshot",
+        "sha256": "3e058eadf9d70d8c2b75220b13cee313a24e1366ef7189ad36544a331ed33463"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/SelectionFrame.png"
+    },
+    {
+      "id": "asset-036",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/FavoriteButton.png.snapshot",
+        "sha256": "e2dd68e1a52216fb53f2891b41cb2dfbc0d12788c0c0f14b79a1a81b47245299"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/FavoriteButton.png"
+    },
+    {
+      "id": "asset-037",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/RightRoster.prefab.snapshot",
+        "sha256": "1c97c1be151f94186a5aa8c2fb471011f3c672309f914498391a518bca49c7e0"
+      },
+      "usage": "production",
+      "processing": "经六阶段设计与Unity原生分区编辑保存的Prefab快照",
+      "sources": [
+        {
+          "path": "NativeAuthor.cs",
+          "sha256": "74c8c70d13a61bdb7d24f94d49c755f58952e8c90461274f9ac7ab235e24ba88"
+        },
+        {
+          "path": "06-micro-detail/evidence/design-6.png",
+          "sha256": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/RightRoster.prefab"
+    },
+    {
+      "id": "asset-038",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle00_Rank.png.snapshot",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle00_Rank.png"
+    },
+    {
+      "id": "asset-039",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/PathfindingAlgorithm/Arts/Fonts/NotoSansSC-Regular.ttf.snapshot",
+        "sha256": "a998618c538d50d7d259e8f1b169756637c9a15288137f4aad720c9d884596e1"
+      },
+      "usage": "production",
+      "processing": "项目已有Unity UGUI或TextMeshPro包及字体依赖 原文件只读快照 未修改",
+      "sources": [
+        {
+          "path": "native/source-snapshots.json",
+          "sha256": "19ded5321daef560d177536ada6f73c36c640f6fe89900b449a6e813cfa63438"
+        }
+      ],
+      "originalProjectPath": "Assets/PathfindingAlgorithm/Arts/Fonts/NotoSansSC-Regular.ttf"
+    },
+    {
+      "id": "asset-040",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle01_Portrait.png.snapshot",
+        "sha256": "34f388c24f136a8f25c3c879adc0414464281b3d0d81c3186caa8583eca741d5"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle01_Portrait.png"
+    },
+    {
+      "id": "asset-041",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/SkillTab.png.snapshot",
+        "sha256": "c349c21f1fa644a03ec95bdc5a3c71245308ebe45a8080ff69bd2971dcf83aa8"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/SkillTab.png"
+    },
+    {
+      "id": "asset-042",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right02_Footer.png.snapshot",
+        "sha256": "ee276228c6982d85c5bd84e3d1d09d934d99baddb3b09d062cf598e534f8a16f"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right02_Footer.png"
+    },
+    {
+      "id": "asset-043",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left01_Rank.png.snapshot",
+        "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left01_Rank.png"
+    },
+    {
+      "id": "asset-044",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle03_Footer.png.snapshot",
+        "sha256": "6250abbde75c14c5193db5dead98afed33c2f1935828e5e1f378ee0d72677599"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle03_Footer.png"
+    },
+    {
+      "id": "asset-045",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right01_Rank.png.snapshot",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right01_Rank.png"
+    },
+    {
+      "id": "asset-046",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left01_Element.png.snapshot",
+        "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left01_Element.png"
+    },
+    {
+      "id": "asset-047",
+      "artifact": {
+        "path": "native/source-snapshots/Packages/com.unity.ugui/Runtime/UI/Core/Layout/CanvasScaler.cs.snapshot",
+        "sha256": "c98311dbbec32228456e5f18cdf5682bdb84d21592244476b8be205cb40ab612"
+      },
+      "usage": "production",
+      "processing": "项目已有Unity UGUI或TextMeshPro包及字体依赖 原文件只读快照 未修改",
+      "sources": [
+        {
+          "path": "native/source-snapshots.json",
+          "sha256": "19ded5321daef560d177536ada6f73c36c640f6fe89900b449a6e813cfa63438"
+        }
+      ],
+      "originalProjectPath": "Packages/com.unity.ugui/Runtime/UI/Core/Layout/CanvasScaler.cs"
+    },
+    {
+      "id": "asset-048",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle04_Portrait.png.snapshot",
+        "sha256": "7060ac5db22daf56bf2e3c6dc717231a8bc8045b66dccdd0080ebf81423535f5"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle04_Portrait.png"
+    },
+    {
+      "id": "asset-049",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle03_Portrait.png.snapshot",
+        "sha256": "3a2214fa5cf9f4ec43b9e55d1eb4c78f01ccf5c92157f7a6608863950fe22dd9"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle03_Portrait.png"
+    },
+    {
+      "id": "asset-050",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle02_Footer.png.snapshot",
+        "sha256": "977ff384c42d55ae4ca90018eeb8f5c95301898d1c8346f89f314bdfb1717ffb"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle02_Footer.png"
+    },
+    {
+      "id": "asset-051",
+      "artifact": {
+        "path": "native/source-snapshots/Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd.snapshot",
+        "sha256": "e79176d735f6e37846def5d709da60a2866af7c70576fa32d4cca2b81015a187"
+      },
+      "usage": "production",
+      "processing": "项目已有Unity UGUI或TextMeshPro包及字体依赖 原文件只读快照 未修改",
+      "sources": [
+        {
+          "path": "native/source-snapshots.json",
+          "sha256": "19ded5321daef560d177536ada6f73c36c640f6fe89900b449a6e813cfa63438"
+        }
+      ],
+      "originalProjectPath": "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd"
+    },
+    {
+      "id": "asset-052",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle02_Element.png.snapshot",
+        "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle02_Element.png"
+    },
+    {
+      "id": "asset-053",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right04_Rank.png.snapshot",
+        "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right04_Rank.png"
+    },
+    {
+      "id": "asset-054",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right02_Element.png.snapshot",
+        "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right02_Element.png"
+    },
+    {
+      "id": "asset-055",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right03_Element.png.snapshot",
+        "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right03_Element.png"
+    },
+    {
+      "id": "asset-056",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle02_Rank.png.snapshot",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle02_Rank.png"
+    },
+    {
+      "id": "asset-057",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right02_Portrait.png.snapshot",
+        "sha256": "c2f82feb8de5147b3c7d1e548f36e5cd0e42aab66e781118aa2d3bdbb9c7c812"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right02_Portrait.png"
+    },
+    {
+      "id": "asset-058",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle00_Portrait.png.snapshot",
+        "sha256": "488005498dccdff5e5a1d2fd641f3dea18d111849e94c71cb64736e43060b54f"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle00_Portrait.png"
+    },
+    {
+      "id": "asset-059",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle03_Element.png.snapshot",
+        "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle03_Element.png"
+    },
+    {
+      "id": "asset-060",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Signal.png.snapshot",
+        "sha256": "4f1aa05a7732a0ca953131ac6603e0ececc676440e012e9b756c13e98934b6dc"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "native/footer-edit-plan.json",
+          "sha256": "7f630704d60535e733d118e432fbceebe2b5da5c86c84e4f75a5490600066b3d"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Signal.png"
+    },
+    {
+      "id": "asset-061",
+      "artifact": {
+        "path": "native/source-snapshots/Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_FontAsset.cs.snapshot",
+        "sha256": "4944761e316e6c3e6053507283f4c1b310dd47312830346ef7efc4715ac403af"
+      },
+      "usage": "production",
+      "processing": "项目已有Unity UGUI或TextMeshPro包及字体依赖 原文件只读快照 未修改",
+      "sources": [
+        {
+          "path": "native/source-snapshots.json",
+          "sha256": "19ded5321daef560d177536ada6f73c36c640f6fe89900b449a6e813cfa63438"
+        }
+      ],
+      "originalProjectPath": "Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_FontAsset.cs"
+    },
+    {
+      "id": "asset-062",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle02_Portrait.png.snapshot",
+        "sha256": "6999a56e46311652f803efd540a2c6bd3d3e818f8bf8b211d39a35e02310bdbd"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle02_Portrait.png"
+    },
+    {
+      "id": "asset-063",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.snapshot",
+        "sha256": "86216818723945b88960d3958e744cf7a2433eb306f4f6bfba84f1f09320a25e"
+      },
+      "usage": "production",
+      "processing": "项目已有Unity UGUI或TextMeshPro包及字体依赖 原文件只读快照 未修改",
+      "sources": [
+        {
+          "path": "native/source-snapshots.json",
+          "sha256": "19ded5321daef560d177536ada6f73c36c640f6fe89900b449a6e813cfa63438"
+        }
+      ],
+      "originalProjectPath": "Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader"
+    },
+    {
+      "id": "asset-064",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left04_Footer.png.snapshot",
+        "sha256": "739c28d0461f2b69941dc8ce63bb5ce607b7a03365f14791a464ab2da1c819f2"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left04_Footer.png"
+    },
+    {
+      "id": "asset-065",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Right04_Footer.png.snapshot",
+        "sha256": "dd2e5de1583a5b3b8ce003ab7df2db7b95ffc1c210ce20244dd93f8763a7977f"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Right04_Footer.png"
+    },
+    {
+      "id": "asset-066",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle00_Element.png.snapshot",
+        "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle00_Element.png"
+    },
+    {
+      "id": "asset-067",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Middle00_Footer.png.snapshot",
+        "sha256": "0a4721c8ead2f89154c9d8be0ec4e93bffce0de3216e10fe91bf54988f1f72cd"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Middle00_Footer.png"
+    },
+    {
+      "id": "asset-068",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset.snapshot",
+        "sha256": "c3ff50e3133d989180b187748ffc67903f1fede099a5b85b4fcbd8cb6e8be958"
+      },
+      "usage": "production",
+      "processing": "项目已有Unity UGUI或TextMeshPro包及字体依赖 原文件只读快照 未修改",
+      "sources": [
+        {
+          "path": "native/source-snapshots.json",
+          "sha256": "19ded5321daef560d177536ada6f73c36c640f6fe89900b449a6e813cfa63438"
+        }
+      ],
+      "originalProjectPath": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset"
+    },
+    {
+      "id": "asset-069",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Fonts/ReferenceGlyphsV2.png.snapshot",
+        "sha256": "e62a82c0a830248dee0cc391927fa7720fe045b4df8939467eef356f8c39b4d8"
+      },
+      "usage": "production",
+      "processing": "原图Unicode字形转换为TMP静态位图字体 追加内部下划线字形",
+      "sources": [
+        {
+          "path": "resources/glyphs.json",
+          "sha256": "9b0b38f13a5a1c8e61452374fb05d21740651b93ec8eee69e1a93de5d21f8432"
+        },
+        {
+          "path": "native/font-patch-plan.json",
+          "sha256": "6e366ba3cc4a2b5a70e47781bd38222c06e385539e48b16d4d1a157d8018ae7c"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Fonts/ReferenceGlyphsV2.png"
+    },
+    {
+      "id": "asset-070",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left02_Rank.png.snapshot",
+        "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left02_Rank.png"
+    },
+    {
+      "id": "asset-071",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TestImgae/RightRoster/Sprites/Left03_Rank.png.snapshot",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      },
+      "usage": "production",
+      "processing": "从原图按透明轮廓加工头像或图标 文字与底板分离 具体坐标见资源清单",
+      "sources": [
+        {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        {
+          "path": "resources/slices-manifest-v2.json",
+          "sha256": "1758c66e90656004c9f903c9d33c7e6f80f47882332151c7e9a0ce11b6c261be"
+        }
+      ],
+      "originalProjectPath": "Assets/TestImgae/RightRoster/Sprites/Left03_Rank.png"
+    },
+    {
+      "id": "asset-072",
+      "artifact": {
+        "path": "native/source-snapshots/Assets/TextMesh Pro/Fonts/LiberationSans.ttf.snapshot",
+        "sha256": "e5b0af421ea2bfbc1ac8d251d647268087ae82786234c57f757d1f0b90fa8b49"
+      },
+      "usage": "production",
+      "processing": "项目已有Unity UGUI或TextMeshPro包及字体依赖 原文件只读快照 未修改",
+      "sources": [
+        {
+          "path": "native/source-snapshots.json",
+          "sha256": "19ded5321daef560d177536ada6f73c36c640f6fe89900b449a6e813cfa63438"
+        }
+      ],
+      "originalProjectPath": "Assets/TextMesh Pro/Fonts/LiberationSans.ttf"
+    }
+  ],
+  "presentation": [
+    {
+      "kind": "hierarchy",
+      "pageIds": [
+        "roster"
+      ],
+      "evidence": {
+        "path": "native/presentation-hierarchy.txt",
+        "sha256": "6f91b72e37a1bb8522ee376069823b3fc6d25fda7056377b5f684417d44cfbce"
+      }
+    },
+    {
+      "kind": "screenshots",
+      "pageIds": [
+        "roster"
+      ],
+      "evidence": {
+        "path": "native/presentation-images.txt",
+        "sha256": "5d9f2b3c0ff92c777af0d8f9c11b06ced0a3d10c6790c41958e397afc57c539a"
+      }
+    }
+  ],
+  "iterationReview": {
+    "outcome": "deliverable",
+    "usage": {
+      "elapsedMinutes": 127.82,
+      "searchMinutes": 0,
+      "polishMinutes": 12
+    },
+    "timingObservation": "按08:51:48UTC开始到本记录UTC真实墙钟耗时 包含约59分钟单次工具等待 超出原90分钟预算 不改预算或伪造通过 仅收尾必要资源修复和证据核验",
+    "nextTargets": []
+  },
+  "localRepairs": [
+    {
+      "path": "native/footer-edit-plan.json",
+      "sha256": "7f630704d60535e733d118e432fbceebe2b5da5c86c84e4f75a5490600066b3d"
+    },
+    {
+      "path": "native/footer-edit-result.json",
+      "sha256": "98c494a67f56da87a7356fe0955aec45c20bd52768300cac47d8ba32af2d3e12"
+    },
+    {
+      "path": "native/font-patch-plan.json",
+      "sha256": "6e366ba3cc4a2b5a70e47781bd38222c06e385539e48b16d4d1a157d8018ae7c"
+    },
+    {
+      "path": "native/font-patch-regression.json",
+      "sha256": "4ec02213958f9621dbce9e19ee7c756bccb13cbca610d077c15597963514d7a5"
+    }
+  ]
+}

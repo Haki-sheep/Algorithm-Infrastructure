@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "brief": {
+    "path": "brief.json",
+    "sha256": "e3e33bee83eb96f285696b77c281f634e357a56a00fb7f9d8333ebe362c213e3"
+  },
+  "finalStep": {
+    "path": "06-micro-detail/step.json",
+    "sha256": "3bf02bb75d36c77f7f72165b2a55b943999a7159c6df6a312733c9f88c732ce4"
+  },
+  "risks": [
+    {
+      "id": "native-font-shape-layout",
+      "condition": "TMP位图字形和透明斜边在匹配的Unity版本下导入与显示",
+      "observation": "已通过三个实际宽度的小样捕获并实际看图 小样保存重开成功 所有字形和透明边界存在",
+      "status": "verified",
+      "evidence": {
+        "path": "native/probe-primary.png",
+        "sha256": "e27b498a266c93536b7517d97990011f247e83ee14fcb2594d5dfe31a6246585"
+      },
+      "capabilities": [
+        "adaptive-layout",
+        "distinctive-shape",
+        "production-detail"
+      ],
+      "checks": [
+        {
+          "page": "roster",
+          "capability": "adaptive-layout",
+          "condition": "Unity2022.3 ScreenSpaceCamera RenderTexture 原生Prefab保存重开",
+          "observation": "已查看1280与1920宽度实际Unity小样 右侧边距不变 头像没有横向拉伸 三项页签都在视口内",
+          "targetIds": [
+            "diagonal-roster",
+            "yellow-selection",
+            "navigation",
+            "utilities"
+          ],
+          "evidence": {
+            "path": "native/probe-primary.json",
+            "sha256": "6545b9b0dc02812167e68356ecf1061e4820ff3bd9707f3388156b726bf60aff"
+          }
+        },
+        {
+          "page": "roster",
+          "capability": "distinctive-shape",
+          "condition": "Unity2022.3 ScreenSpaceCamera RenderTexture 原生Prefab保存重开",
+          "observation": "已查看原生安比卡 小样透明斜角没有黑色矩形 且独立黄色边框在正确外侧",
+          "targetIds": [
+            "diagonal-roster",
+            "yellow-selection",
+            "navigation",
+            "utilities"
+          ],
+          "evidence": {
+            "path": "native/probe-primary.json",
+            "sha256": "6545b9b0dc02812167e68356ecf1061e4820ff3bd9707f3388156b726bf60aff"
+          }
+        },
+        {
+          "page": "roster",
+          "capability": "production-detail",
+          "condition": "Unity2022.3 ScreenSpaceCamera RenderTexture 原生Prefab保存重开",
+          "observation": "已查看原生TMP字体 中文基础技能装备与等级60全部出现 两个圆工具图标和SELECT纹理可辨认",
+          "targetIds": [
+            "diagonal-roster",
+            "yellow-selection",
+            "navigation",
+            "utilities"
+          ],
+          "evidence": {
+            "path": "native/probe-primary.json",
+            "sha256": "6545b9b0dc02812167e68356ecf1061e4820ff3bd9707f3388156b726bf60aff"
+          }
+        }
+      ]
+    }
+  ],
+  "resourceGaps": []
+}

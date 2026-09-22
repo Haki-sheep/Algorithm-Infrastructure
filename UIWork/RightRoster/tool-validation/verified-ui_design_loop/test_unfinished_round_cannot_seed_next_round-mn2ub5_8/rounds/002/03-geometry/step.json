@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "mode": "extension",
+  "stage": 3,
+  "status": "working",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "203c90705f4e1343bdd1099593801462b79c9014ecbe743f1cf414a6eef83062"
+  },
+  "predecessor": {
+    "path": "06-micro-detail/step.json",
+    "sha256": "39824294a7ebe899cb155101bbba09656f77021fef52de5c822177d1315acad2"
+  },
+  "input": {
+    "path": "06-micro-detail/evidence/03.svg",
+    "sha256": "627e375fda74b8d97c3b099a3e94c7dd269c18c4a77d2dc8e0f035056887d06b"
+  },
+  "protected": [],
+  "divergenceRequired": null,
+  "alternatives": [],
+  "findings": [],
+  "questions": [],
+  "attempts": [],
+  "output": null,
+  "review": {
+    "reviewer": "",
+    "observation": "",
+    "evidence": null,
+    "result": "pending",
+    "dimensions": [
+      {
+        "page": "display",
+        "id": "adaptive-layout",
+        "group": "",
+        "observation": "",
+        "result": "pending"
+      },
+      {
+        "page": "display",
+        "id": "text-extremes",
+        "group": "",
+        "observation": "",
+        "result": "pending"
+      },
+      {
+        "page": "display",
+        "id": "bounds-overflow",
+        "group": "",
+        "observation": "",
+        "result": "pending"
+      }
+    ]
+  },
+  "unresolvedRegressions": [],
+  "roundPlan": {
+    "path": "rounds/002/round.json",
+    "sha256": "4ce1c2eb4e662a558188b0f5e832f642a16e037f3091007e6b6411a299e8daf0"
+  }
+}

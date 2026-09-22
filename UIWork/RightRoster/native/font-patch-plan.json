@@ -1,0 +1,20 @@
+{
+  "problem": "实际Unity日志重复报告ReferenceBitmap缺少TMP加载必须查询的下划线",
+  "scope": "仅在未使用的图集区域增加下划线字形 保留原11字形像素和布局",
+  "before": {
+    "path": "resources/glyph-atlas.png",
+    "sha256": "1517f02fd44db20aeb271d4c2e336eb2005539f0f07e7bce2fc406c4cd5b0f30"
+  },
+  "after": {
+    "path": "resources/glyph-atlas-v2.png",
+    "sha256": "e62a82c0a830248dee0cc391927fa7720fe045b4df8939467eef356f8c39b4d8"
+  },
+  "glyph": {
+    "unicode": 95,
+    "x": 486,
+    "y": 52,
+    "width": 12,
+    "height": 2
+  },
+  "verification": "三视口重新保存重开 画面逐像素与v2比较 日志cursor393之后检查"
+}

@@ -1,0 +1,2 @@
+帮在项目调用"C:\Users\fmz\Desktop\30-integrated"这个sikll去切Assets/TestImgae下的图 就是不需模型可以不用还原 但是右侧的UI需要还原 如果skill需要安装则安装到项目中 如果不需要就直接调用即可
+按照skill要求的步骤一步步去做 不是简单地去

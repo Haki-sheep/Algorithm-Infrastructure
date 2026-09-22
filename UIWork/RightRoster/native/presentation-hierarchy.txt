@@ -1,0 +1,2 @@
+先展示保存Prefab导出的92节点层级 后展示追加Footer的96节点层级 全部原生RectTransform Image Canvas TMP 节点均活动 无自定义脚本 无嵌套外部Prefab
+完整字段见hierarchy-v3.json

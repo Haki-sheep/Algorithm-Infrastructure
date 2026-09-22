@@ -1,0 +1,8 @@
+{
+  "status": "working",
+  "created": "03-geometry/step.json",
+  "sha256": "dc64d7980512398854eac0623c46c2aa3b904e5cfab509341ce4350431e4bcce",
+  "completionClaim": false,
+  "designValueReference": "references/six-stage-execution.md#design-value-carryover",
+  "guidance": []
+}

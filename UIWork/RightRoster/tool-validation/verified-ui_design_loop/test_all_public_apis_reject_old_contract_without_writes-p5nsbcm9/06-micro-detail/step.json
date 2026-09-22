@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 2,
+  "mode": "full",
+  "stage": 6,
+  "status": "reviewed",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "b81d932e4a13079c26320d23ad3a3fb6ab583fc7ba656fe08c576ab076cee7b5"
+  },
+  "predecessor": {
+    "path": "05-material/step.json",
+    "sha256": "e8228449c28524ae47f754647c41c5e8930ecacb67b3f73f582e2ae827c2c20d"
+  },
+  "input": {
+    "path": "05-material/evidence/03.svg",
+    "sha256": "200857d88b387a6c2bac8a7c07b876ec4904a82657b30c493d3657e56aa45338"
+  },
+  "narrative": {
+    "path": "06-micro-detail/step.md",
+    "sha256": "6b8e8d35b644a7e32b86e437cfdc7eb66e5baa15eda15dccbf42e2e5d83badc9"
+  },
+  "protected": [
+    {
+      "id": "p6",
+      "decision": "Synthetic retained decision 6",
+      "group": "screen"
+    }
+  ],
+  "divergenceRequired": false,
+  "reuseReason": "Deterministic protocol fixture; no aesthetic claim.",
+  "alternatives": [],
+  "findings": [
+    {
+      "id": "6-1",
+      "rootCause": "Synthetic root 6-1",
+      "kind": "design-gap",
+      "observation": "Fixture observation 6-1",
+      "location": "rectangle 1",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed"
+    },
+    {
+      "id": "6-2",
+      "rootCause": "Synthetic root 6-2",
+      "kind": "design-gap",
+      "observation": "Fixture observation 6-2",
+      "location": "rectangle 2",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed"
+    },
+    {
+      "id": "6-3",
+      "rootCause": "Synthetic root 6-3",
+      "kind": "design-gap",
+      "observation": "Fixture observation 6-3",
+      "location": "rectangle 3",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed"
+    }
+  ],
+  "attempts": [
+    {
+      "sequence": 1,
+      "findingId": "6-1",
+      "before": {
+        "path": "05-material/evidence/03.svg",
+        "sha256": "200857d88b387a6c2bac8a7c07b876ec4904a82657b30c493d3657e56aa45338"
+      },
+      "after": {
+        "path": "06-micro-detail/evidence/01.svg",
+        "sha256": "0f2e3fb9ad79ab0ba38e930e24401796db9c74215a87dce0611671902bfd32f4"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ]
+    },
+    {
+      "sequence": 2,
+      "findingId": "6-2",
+      "before": {
+        "path": "06-micro-detail/evidence/01.svg",
+        "sha256": "0f2e3fb9ad79ab0ba38e930e24401796db9c74215a87dce0611671902bfd32f4"
+      },
+      "after": {
+        "path": "06-micro-detail/evidence/02.svg",
+        "sha256": "813cd5bdede14eb0d280d75710bfa68078b6163cc7697dab8ea55bebee63d103"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ]
+    },
+    {
+      "sequence": 3,
+      "findingId": "6-3",
+      "before": {
+        "path": "06-micro-detail/evidence/02.svg",
+        "sha256": "813cd5bdede14eb0d280d75710bfa68078b6163cc7697dab8ea55bebee63d103"
+      },
+      "after": {
+        "path": "06-micro-detail/evidence/03.svg",
+        "sha256": "627e375fda74b8d97c3b099a3e94c7dd269c18c4a77d2dc8e0f035056887d06b"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ]
+    }
+  ],
+  "unresolvedRegressions": [],
+  "output": {
+    "path": "06-micro-detail/evidence/03.svg",
+    "sha256": "627e375fda74b8d97c3b099a3e94c7dd269c18c4a77d2dc8e0f035056887d06b"
+  },
+  "review": {
+    "reviewer": "synthetic-test",
+    "observation": "Fixture only",
+    "evidence": {
+      "path": "06-micro-detail/evidence/03.svg",
+      "sha256": "627e375fda74b8d97c3b099a3e94c7dd269c18c4a77d2dc8e0f035056887d06b"
+    },
+    "result": "reviewed"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "mode": "full",
+  "stage": 5,
+  "status": "reviewed",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "203c90705f4e1343bdd1099593801462b79c9014ecbe743f1cf414a6eef83062"
+  },
+  "predecessor": {
+    "path": "04-state-parity/step.json",
+    "sha256": "a5ea6dc1cb42fa8babaa3634d69ab5dad622ac6d6d13a6a2c81f011ef6442076"
+  },
+  "input": {
+    "path": "04-state-parity/evidence/03.svg",
+    "sha256": "7ed9d69a2adda83c86709ba6bb6670d4b0e44573fa3d1782e18c50815c3ae513"
+  },
+  "narrative": {
+    "path": "05-material/step.md",
+    "sha256": "4ccdbd261e8437feba5b31e2f4dcf33a574685f9e8e641f2058181fb35e75730"
+  },
+  "protected": [
+    {
+      "id": "p5",
+      "decision": "Synthetic retained decision 5",
+      "group": "row",
+      "check": "Slider label remains inside its declared row bounds",
+      "establishedAt": 0
+    }
+  ],
+  "divergenceRequired": false,
+  "reuseReason": "Deterministic protocol fixture; no aesthetic claim.",
+  "alternatives": [],
+  "findings": [],
+  "attempts": [],
+  "unresolvedRegressions": [],
+  "output": {
+    "path": "04-state-parity/evidence/03.svg",
+    "sha256": "7ed9d69a2adda83c86709ba6bb6670d4b0e44573fa3d1782e18c50815c3ae513"
+  },
+  "review": {
+    "reviewer": "synthetic-test",
+    "observation": "Fixture only",
+    "evidence": {
+      "path": "04-state-parity/evidence/03.svg",
+      "sha256": "7ed9d69a2adda83c86709ba6bb6670d4b0e44573fa3d1782e18c50815c3ae513"
+    },
+    "result": "reviewed",
+    "visualComparisons": [
+      {
+        "targetId": "row-type",
+        "reference": {
+          "path": "input.svg",
+          "sha256": "18eb09db6161b94c6f003180eaa798889fafbd6bf23c8a4526a1a2fcbcff9b5c"
+        },
+        "current": {
+          "path": "04-state-parity/evidence/03.svg",
+          "sha256": "7ed9d69a2adda83c86709ba6bb6670d4b0e44573fa3d1782e18c50815c3ae513"
+        },
+        "observation": "Synthetic row comparison",
+        "remaining": "Synthetic only; aesthetics unproven",
+        "verdict": "approximation"
+      }
+    ],
+    "representativeSample": {
+      "attempt": 0,
+      "visualComparisons": [
+        {
+          "targetId": "row-type",
+          "reference": {
+            "path": "input.svg",
+            "sha256": "18eb09db6161b94c6f003180eaa798889fafbd6bf23c8a4526a1a2fcbcff9b5c"
+          },
+          "current": {
+            "path": "04-state-parity/evidence/03.svg",
+            "sha256": "7ed9d69a2adda83c86709ba6bb6670d4b0e44573fa3d1782e18c50815c3ae513"
+          },
+          "observation": "Synthetic row comparison",
+          "remaining": "Synthetic only; aesthetics unproven",
+          "verdict": "approximation"
+        }
+      ]
+    },
+    "dimensions": [
+      {
+        "page": "display",
+        "id": "material-language",
+        "group": "row",
+        "observation": "Synthetic observed row condition: material-language",
+        "result": "observed"
+      },
+      {
+        "page": "display",
+        "id": "asset-treatment",
+        "group": "row",
+        "observation": "Synthetic observed row condition: asset-treatment",
+        "result": "observed"
+      },
+      {
+        "page": "display",
+        "id": "slice-mask",
+        "group": "row",
+        "observation": "Synthetic observed row condition: slice-mask",
+        "result": "observed"
+      }
+    ]
+  },
+  "reuseEvidence": {
+    "path": "04-state-parity/evidence/03.svg",
+    "sha256": "7ed9d69a2adda83c86709ba6bb6670d4b0e44573fa3d1782e18c50815c3ae513"
+  },
+  "pageCoverage": {
+    "display": "Synthetic page inspection"
+  },
+  "noGapObservation": "Synthetic material samples already satisfy the inspected target"
+}

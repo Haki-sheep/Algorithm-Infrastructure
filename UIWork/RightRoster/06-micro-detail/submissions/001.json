@@ -1,0 +1,9 @@
+{
+  "previous": null,
+  "candidate": {
+    "path": "06-micro-detail/submissions/001.bin",
+    "sha256": "3bf02bb75d36c77f7f72165b2a55b943999a7159c6df6a312733c9f88c732ce4"
+  },
+  "result": "accepted",
+  "reason": "bound-record-checks-only"
+}

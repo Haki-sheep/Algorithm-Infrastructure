@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "round": 2,
+  "goal": "Synthetic round change",
+  "stageSelectionReason": "Synthetic affected stages only",
+  "base": {
+    "path": "06-micro-detail/step.json",
+    "sha256": "8f53e1f2a65afb732b727f0fbd26e87ed095bdc7dc64181bb2f283d5df9c1c5a"
+  },
+  "brief": {
+    "path": "brief-next.json",
+    "sha256": "400be5945c61f867c01c2a0309f7d5e9f3300a3604ff9702ec12dfa3a1b98b0f"
+  },
+  "stages": [
+    3
+  ],
+  "changedGroups": [
+    "row"
+  ]
+}

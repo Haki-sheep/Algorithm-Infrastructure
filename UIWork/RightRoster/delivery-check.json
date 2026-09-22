@@ -1,0 +1,7 @@
+{
+  "status": "not-passed",
+  "reason": "ITERATION_BUDGET_EXCEEDED",
+  "elapsedMinutes": 129.7,
+  "budgetMinutes": 90,
+  "observation": "保留原始skill检查失败 不修改旧budget 本次资源和布局证据仍可查阅"
+}

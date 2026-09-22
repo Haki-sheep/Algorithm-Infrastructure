@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "round": 3,
+  "goal": "Synthetic round change",
+  "stageSelectionReason": "Synthetic affected stages only",
+  "base": {
+    "path": "rounds/002/04-state-parity/step.json",
+    "sha256": "7f088c9f522a38f6be58fc1f02532c91d48783d97170e67095fb0c8b4a911c22"
+  },
+  "brief": {
+    "path": "brief.json",
+    "sha256": "203c90705f4e1343bdd1099593801462b79c9014ecbe743f1cf414a6eef83062"
+  },
+  "stages": [
+    6
+  ],
+  "changedGroups": [
+    "row"
+  ]
+}

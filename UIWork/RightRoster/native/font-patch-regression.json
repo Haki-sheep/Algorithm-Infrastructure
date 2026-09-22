@@ -1,0 +1,14 @@
+{
+  "pixelsUnchanged": {
+    "narrow": true,
+    "primary": true,
+    "wide": true
+  },
+  "observation": "内部下划线补齐前后三个视口逐像素一致 原有11字形未改变",
+  "console": {
+    "afterCursor": 423,
+    "session": "fc49bc7d4a65433bbe9531c32e15aa73",
+    "newEntries": [],
+    "observedAtUtc": "2026-09-22T10:57:04.7730608Z"
+  }
+}

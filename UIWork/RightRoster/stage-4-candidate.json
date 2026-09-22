@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 2,
+  "mode": "full",
+  "stage": 4,
+  "status": "reviewed",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "e3e33bee83eb96f285696b77c281f634e357a56a00fb7f9d8333ebe362c213e3"
+  },
+  "predecessor": {
+    "path": "03-geometry/step.json",
+    "sha256": "7233683513c528263496406fd3d0008bc005cdca28f1d1cf611715df35e032c7"
+  },
+  "input": {
+    "path": "03-geometry/evidence/design-3.png",
+    "sha256": "583b79c7f44b6fe80be7bf7cdf0619101ef79bbe8e83f50ebfd04400701a172d"
+  },
+  "protected": [
+    {
+      "id": "state",
+      "group": "tabs",
+      "decision": "基础高亮 技能与装备暗底 选中边框独立",
+      "check": "三页签和两个顶部圆按钮保持明确视觉状态",
+      "establishedAt": 1
+    }
+  ],
+  "divergenceRequired": false,
+  "alternatives": [],
+  "findings": [
+    {
+      "id": "stage-4",
+      "kind": "design-gap",
+      "rootCause": "几何稿尚未表达原图工具按钮与三页签选中态",
+      "observation": "几何稿尚未表达原图工具按钮与三页签选中态",
+      "location": "tabs",
+      "impact": "下游无法据此还原相应区域",
+      "acceptance": "三页签和两个顶部圆按钮保持明确视觉状态",
+      "status": "fixed",
+      "pages": [
+        "roster"
+      ],
+      "decisionIds": [
+        "state"
+      ]
+    }
+  ],
+  "questions": [],
+  "attempts": [
+    {
+      "sequence": 1,
+      "findingId": "stage-4",
+      "before": {
+        "path": "03-geometry/evidence/design-3.png",
+        "sha256": "583b79c7f44b6fe80be7bf7cdf0619101ef79bbe8e83f50ebfd04400701a172d"
+      },
+      "after": {
+        "path": "04-state-parity/evidence/design-4.png",
+        "sha256": "e20674adb336d024eb13e11be151992a474ab86dcb8976fe5b834bbe9a4e94e5"
+      },
+      "change": "基础高亮 技能与装备暗底 选中边框独立",
+      "inspection": "已查看状态稿 基础页黄底黑字 技能装备白字暗底 筛选白漏斗 收藏黄星 安比外框独立保留 默认静态状态与参考一致 本次不创建交互业务或动态转场 原图未展示忙与失败态",
+      "result": "fixed",
+      "changedGroups": [
+        "screen",
+        "roster",
+        "selection",
+        "toolbar",
+        "tabs",
+        "ribbon"
+      ],
+      "auditedGroups": [
+        "ribbon",
+        "roster",
+        "screen",
+        "selection",
+        "tabs",
+        "toolbar"
+      ],
+      "checked": [
+        "composition",
+        "reading",
+        "geometry",
+        "state"
+      ],
+      "checkObservations": {
+        "composition": "已查看状态稿 基础页黄底黑字 技能装备白字暗底 筛选白漏斗 收藏黄星 安比外框独立保留 默认静态状态与参考一致 本次不创建交互业务或动态转场 原图未展示忙与失败态 复核 右侧卡列和三项页签处于源图相同区域",
+        "reading": "已查看状态稿 基础页黄底黑字 技能装备白字暗底 筛选白漏斗 收藏黄星 安比外框独立保留 默认静态状态与参考一致 本次不创建交互业务或动态转场 原图未展示忙与失败态 复核 黄边只强调右列第二项 信息条不抢占头像",
+        "geometry": "已查看状态稿 基础页黄底黑字 技能装备白字暗底 筛选白漏斗 收藏黄星 安比外框独立保留 默认静态状态与参考一致 本次不创建交互业务或动态转场 原图未展示忙与失败态 复核 13张卡保留顶部底部可见裁切 文案不跨属性图标",
+        "state": "已查看状态稿 基础页黄底黑字 技能装备白字暗底 筛选白漏斗 收藏黄星 安比外框独立保留 默认静态状态与参考一致 本次不创建交互业务或动态转场 原图未展示忙与失败态 复核 三页签和两个顶部圆按钮保持明确视觉状态"
+      }
+    }
+  ],
+  "output": {
+    "path": "04-state-parity/evidence/design-4.png",
+    "sha256": "e20674adb336d024eb13e11be151992a474ab86dcb8976fe5b834bbe9a4e94e5"
+  },
+  "review": {
+    "reviewer": "Codex 实际图片观察",
+    "observation": "已查看状态稿 基础页黄底黑字 技能装备白字暗底 筛选白漏斗 收藏黄星 安比外框独立保留 默认静态状态与参考一致 本次不创建交互业务或动态转场 原图未展示忙与失败态",
+    "evidence": {
+      "path": "04-state-parity/evidence/design-4.png",
+      "sha256": "e20674adb336d024eb13e11be151992a474ab86dcb8976fe5b834bbe9a4e94e5"
+    },
+    "result": "reviewed",
+    "dimensions": [
+      {
+        "page": "roster",
+        "id": "visual-states",
+        "group": "tabs",
+        "observation": "已查看状态稿 基础页黄底黑字 技能装备白字暗底 筛选白漏斗 收藏黄星 安比外框独立保留 默认静态状态与参考一致 本次不创建交互业务或动态转场 原图未展示忙与失败态 本阶段维度 visual-states",
+        "result": "observed"
+      },
+      {
+        "page": "roster",
+        "id": "focus-hit-regions",
+        "group": "tabs",
+        "observation": "已查看状态稿 基础页黄底黑字 技能装备白字暗底 筛选白漏斗 收藏黄星 安比外框独立保留 默认静态状态与参考一致 本次不创建交互业务或动态转场 原图未展示忙与失败态 本阶段维度 focus-hit-regions",
+        "result": "observed"
+      },
+      {
+        "page": "roster",
+        "id": "transitions",
+        "group": "tabs",
+        "observation": "已查看状态稿 基础页黄底黑字 技能装备白字暗底 筛选白漏斗 收藏黄星 安比外框独立保留 默认静态状态与参考一致 本次不创建交互业务或动态转场 原图未展示忙与失败态 本阶段维度 transitions",
+        "result": "observed"
+      }
+    ]
+  },
+  "unresolvedRegressions": [],
+  "reuseReason": "原图已锁定本阶段外观与次序 只实施拆分和版式映射 无需制造改变参考的候选",
+  "reuseEvidence": {
+    "path": "03-geometry/evidence/design-3.png",
+    "sha256": "583b79c7f44b6fe80be7bf7cdf0619101ef79bbe8e83f50ebfd04400701a172d"
+  },
+  "pageCoverage": {
+    "roster": "已查看状态稿 基础页黄底黑字 技能装备白字暗底 筛选白漏斗 收藏黄星 安比外框独立保留 默认静态状态与参考一致 本次不创建交互业务或动态转场 原图未展示忙与失败态"
+  }
+}

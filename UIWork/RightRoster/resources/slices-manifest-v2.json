@@ -1,0 +1,2145 @@
+{
+  "source": {
+    "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+    "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+  },
+  "processing": "人工核对像素坐标 多边形透明裁切 信息条重建 文字交由原生TMP 鼠标指针清除",
+  "slices": [
+    {
+      "name": "Left01_Portrait",
+      "role": "portrait",
+      "rect": [
+        823,
+        47,
+        195,
+        170
+      ],
+      "polygon": [
+        [
+          823,
+          47
+        ],
+        [
+          966,
+          47
+        ],
+        [
+          1018,
+          217
+        ],
+        [
+          871,
+          217
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left01_Portrait.png",
+        "sha256": "c7c99cfaee32086ee69ffb1a15aa78d9b6027a6aa1667b7f92026e4af8d4e849"
+      }
+    },
+    {
+      "name": "Left01_Footer",
+      "role": "footer",
+      "rect": [
+        871,
+        217,
+        158,
+        38
+      ],
+      "polygon": [
+        [
+          871,
+          217
+        ],
+        [
+          1018,
+          217
+        ],
+        [
+          1029,
+          255
+        ],
+        [
+          882,
+          255
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left01_Footer.png",
+        "sha256": "c0aa5d674969e1cf18a265157b29347cce250d51d094e9aa109613a067bb6883"
+      }
+    },
+    {
+      "name": "Left01_Rank",
+      "role": "rank",
+      "rect": [
+        872,
+        210,
+        38,
+        39
+      ],
+      "polygon": [
+        [
+          872,
+          210
+        ],
+        [
+          910,
+          210
+        ],
+        [
+          910,
+          249
+        ],
+        [
+          872,
+          249
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left01_Rank.png",
+        "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+      }
+    },
+    {
+      "name": "Left01_Element",
+      "role": "element",
+      "rect": [
+        995,
+        219,
+        26,
+        28
+      ],
+      "polygon": [
+        [
+          995,
+          219
+        ],
+        [
+          1021,
+          219
+        ],
+        [
+          1021,
+          247
+        ],
+        [
+          995,
+          247
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left01_Element.png",
+        "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+      }
+    },
+    {
+      "name": "Left02_Portrait",
+      "role": "portrait",
+      "rect": [
+        883,
+        258,
+        200,
+        165
+      ],
+      "polygon": [
+        [
+          883,
+          258
+        ],
+        [
+          1036,
+          258
+        ],
+        [
+          1083,
+          423
+        ],
+        [
+          931,
+          423
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left02_Portrait.png",
+        "sha256": "31174acf1ca4a360d4bb4b9ccaa73402718a8d80c9ff482093c50a91c0266ec5"
+      }
+    },
+    {
+      "name": "Left02_Footer",
+      "role": "footer",
+      "rect": [
+        931,
+        423,
+        163,
+        41
+      ],
+      "polygon": [
+        [
+          931,
+          423
+        ],
+        [
+          1083,
+          423
+        ],
+        [
+          1094,
+          464
+        ],
+        [
+          942,
+          464
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left02_Footer.png",
+        "sha256": "0bdc2dc2de8a6da9fc399656a5e2d5dc9e4af3536e43a13d7a5b5d575929ff18"
+      }
+    },
+    {
+      "name": "Left02_Rank",
+      "role": "rank",
+      "rect": [
+        932,
+        416,
+        38,
+        39
+      ],
+      "polygon": [
+        [
+          932,
+          416
+        ],
+        [
+          970,
+          416
+        ],
+        [
+          970,
+          455
+        ],
+        [
+          932,
+          455
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left02_Rank.png",
+        "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+      }
+    },
+    {
+      "name": "Left02_Element",
+      "role": "element",
+      "rect": [
+        1060,
+        425,
+        26,
+        28
+      ],
+      "polygon": [
+        [
+          1060,
+          425
+        ],
+        [
+          1086,
+          425
+        ],
+        [
+          1086,
+          453
+        ],
+        [
+          1060,
+          453
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left02_Element.png",
+        "sha256": "d97837e0e2b108a9cad85069d198b075fd814be9ec0731c7f6612d632046ba89"
+      }
+    },
+    {
+      "name": "Left03_Portrait",
+      "role": "portrait",
+      "rect": [
+        943,
+        468,
+        197,
+        165
+      ],
+      "polygon": [
+        [
+          943,
+          468
+        ],
+        [
+          1090,
+          468
+        ],
+        [
+          1140,
+          633
+        ],
+        [
+          992,
+          633
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left03_Portrait.png",
+        "sha256": "4de839c6740856b1054c0c8d9275763c6fe1c5cc629e5cc5f881993369cc0dcf"
+      }
+    },
+    {
+      "name": "Left03_Footer",
+      "role": "footer",
+      "rect": [
+        992,
+        633,
+        159,
+        41
+      ],
+      "polygon": [
+        [
+          992,
+          633
+        ],
+        [
+          1140,
+          633
+        ],
+        [
+          1151,
+          674
+        ],
+        [
+          1003,
+          674
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left03_Footer.png",
+        "sha256": "3f9e5d46dcbb143547d1addc0b090ed9ba4d45e95c737044996f932fa31c44d5"
+      }
+    },
+    {
+      "name": "Left03_Rank",
+      "role": "rank",
+      "rect": [
+        993,
+        626,
+        38,
+        39
+      ],
+      "polygon": [
+        [
+          993,
+          626
+        ],
+        [
+          1031,
+          626
+        ],
+        [
+          1031,
+          665
+        ],
+        [
+          993,
+          665
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left03_Rank.png",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      }
+    },
+    {
+      "name": "Left03_Element",
+      "role": "element",
+      "rect": [
+        1117,
+        635,
+        26,
+        28
+      ],
+      "polygon": [
+        [
+          1117,
+          635
+        ],
+        [
+          1143,
+          635
+        ],
+        [
+          1143,
+          663
+        ],
+        [
+          1117,
+          663
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left03_Element.png",
+        "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+      }
+    },
+    {
+      "name": "Left04_Portrait",
+      "role": "portrait",
+      "rect": [
+        1005,
+        679,
+        199,
+        166
+      ],
+      "polygon": [
+        [
+          1005,
+          679
+        ],
+        [
+          1153,
+          679
+        ],
+        [
+          1204,
+          845
+        ],
+        [
+          1054,
+          845
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left04_Portrait.png",
+        "sha256": "9161fdaee22aad0eb24ca91dda4d11c479ce3a402f299f389ef67a74c05bf301"
+      }
+    },
+    {
+      "name": "Left04_Footer",
+      "role": "footer",
+      "rect": [
+        1054,
+        845,
+        163,
+        45
+      ],
+      "polygon": [
+        [
+          1054,
+          845
+        ],
+        [
+          1204,
+          845
+        ],
+        [
+          1217,
+          890
+        ],
+        [
+          1067,
+          890
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left04_Footer.png",
+        "sha256": "739c28d0461f2b69941dc8ce63bb5ce607b7a03365f14791a464ab2da1c819f2"
+      }
+    },
+    {
+      "name": "Left04_Rank",
+      "role": "rank",
+      "rect": [
+        1055,
+        838,
+        38,
+        39
+      ],
+      "polygon": [
+        [
+          1055,
+          838
+        ],
+        [
+          1093,
+          838
+        ],
+        [
+          1093,
+          877
+        ],
+        [
+          1055,
+          877
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left04_Rank.png",
+        "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+      }
+    },
+    {
+      "name": "Left04_Element",
+      "role": "element",
+      "rect": [
+        1181,
+        847,
+        26,
+        28
+      ],
+      "polygon": [
+        [
+          1181,
+          847
+        ],
+        [
+          1207,
+          847
+        ],
+        [
+          1207,
+          875
+        ],
+        [
+          1181,
+          875
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Left04_Element.png",
+        "sha256": "19c2277ec1429f27336423c6de73ee1d72e35fc01661762b46016c472fa91a87"
+      }
+    },
+    {
+      "name": "Middle00_Portrait",
+      "role": "portrait",
+      "rect": [
+        981,
+        38,
+        165,
+        57
+      ],
+      "polygon": [
+        [
+          981,
+          38
+        ],
+        [
+          1128,
+          38
+        ],
+        [
+          1146,
+          95
+        ],
+        [
+          997,
+          95
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle00_Portrait.png",
+        "sha256": "488005498dccdff5e5a1d2fd641f3dea18d111849e94c71cb64736e43060b54f"
+      }
+    },
+    {
+      "name": "Middle00_Footer",
+      "role": "footer",
+      "rect": [
+        997,
+        95,
+        160,
+        39
+      ],
+      "polygon": [
+        [
+          997,
+          95
+        ],
+        [
+          1146,
+          95
+        ],
+        [
+          1157,
+          134
+        ],
+        [
+          1008,
+          134
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle00_Footer.png",
+        "sha256": "0a4721c8ead2f89154c9d8be0ec4e93bffce0de3216e10fe91bf54988f1f72cd"
+      }
+    },
+    {
+      "name": "Middle00_Rank",
+      "role": "rank",
+      "rect": [
+        998,
+        88,
+        38,
+        39
+      ],
+      "polygon": [
+        [
+          998,
+          88
+        ],
+        [
+          1036,
+          88
+        ],
+        [
+          1036,
+          127
+        ],
+        [
+          998,
+          127
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle00_Rank.png",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      }
+    },
+    {
+      "name": "Middle00_Element",
+      "role": "element",
+      "rect": [
+        1123,
+        97,
+        26,
+        28
+      ],
+      "polygon": [
+        [
+          1123,
+          97
+        ],
+        [
+          1149,
+          97
+        ],
+        [
+          1149,
+          125
+        ],
+        [
+          1123,
+          125
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle00_Element.png",
+        "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+      }
+    },
+    {
+      "name": "Middle01_Portrait",
+      "role": "portrait",
+      "rect": [
+        1013,
+        141,
+        180,
+        164
+      ],
+      "polygon": [
+        [
+          1013,
+          141
+        ],
+        [
+          1159,
+          141
+        ],
+        [
+          1188,
+          247
+        ],
+        [
+          1177,
+          248
+        ],
+        [
+          1193,
+          305
+        ],
+        [
+          1061,
+          305
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle01_Portrait.png",
+        "sha256": "34f388c24f136a8f25c3c879adc0414464281b3d0d81c3186caa8583eca741d5"
+      }
+    },
+    {
+      "name": "Middle01_Footer",
+      "role": "footer",
+      "rect": [
+        1061,
+        305,
+        156,
+        42
+      ],
+      "polygon": [
+        [
+          1061,
+          305
+        ],
+        [
+          1205,
+          305
+        ],
+        [
+          1217,
+          347
+        ],
+        [
+          1073,
+          347
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle01_Footer.png",
+        "sha256": "aa9359d1b0d86615c58e3125f0f16fcab0d078fcaca3f3756c7a474c897b1fe4"
+      }
+    },
+    {
+      "name": "Middle01_Rank",
+      "role": "rank",
+      "rect": [
+        1062,
+        298,
+        38,
+        39
+      ],
+      "polygon": [
+        [
+          1062,
+          298
+        ],
+        [
+          1100,
+          298
+        ],
+        [
+          1100,
+          337
+        ],
+        [
+          1062,
+          337
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle01_Rank.png",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      }
+    },
+    {
+      "name": "Middle01_Element",
+      "role": "element",
+      "rect": [
+        1182,
+        307,
+        26,
+        28
+      ],
+      "polygon": [
+        [
+          1182,
+          307
+        ],
+        [
+          1208,
+          307
+        ],
+        [
+          1208,
+          335
+        ],
+        [
+          1182,
+          335
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle01_Element.png",
+        "sha256": "d97837e0e2b108a9cad85069d198b075fd814be9ec0731c7f6612d632046ba89"
+      }
+    },
+    {
+      "name": "Middle02_Portrait",
+      "role": "portrait",
+      "rect": [
+        1074,
+        354,
+        195,
+        161
+      ],
+      "polygon": [
+        [
+          1074,
+          354
+        ],
+        [
+          1206,
+          354
+        ],
+        [
+          1235,
+          451
+        ],
+        [
+          1257,
+          470
+        ],
+        [
+          1269,
+          515
+        ],
+        [
+          1124,
+          515
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle02_Portrait.png",
+        "sha256": "6999a56e46311652f803efd540a2c6bd3d3e818f8bf8b211d39a35e02310bdbd"
+      }
+    },
+    {
+      "name": "Middle02_Footer",
+      "role": "footer",
+      "rect": [
+        1124,
+        515,
+        157,
+        42
+      ],
+      "polygon": [
+        [
+          1124,
+          515
+        ],
+        [
+          1269,
+          515
+        ],
+        [
+          1281,
+          557
+        ],
+        [
+          1136,
+          557
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle02_Footer.png",
+        "sha256": "977ff384c42d55ae4ca90018eeb8f5c95301898d1c8346f89f314bdfb1717ffb"
+      }
+    },
+    {
+      "name": "Middle02_Rank",
+      "role": "rank",
+      "rect": [
+        1125,
+        508,
+        38,
+        39
+      ],
+      "polygon": [
+        [
+          1125,
+          508
+        ],
+        [
+          1163,
+          508
+        ],
+        [
+          1163,
+          547
+        ],
+        [
+          1125,
+          547
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle02_Rank.png",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      }
+    },
+    {
+      "name": "Middle02_Element",
+      "role": "element",
+      "rect": [
+        1246,
+        517,
+        26,
+        28
+      ],
+      "polygon": [
+        [
+          1246,
+          517
+        ],
+        [
+          1272,
+          517
+        ],
+        [
+          1272,
+          545
+        ],
+        [
+          1246,
+          545
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle02_Element.png",
+        "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+      }
+    },
+    {
+      "name": "Middle03_Portrait",
+      "role": "portrait",
+      "rect": [
+        1138,
+        562,
+        196,
+        164
+      ],
+      "polygon": [
+        [
+          1138,
+          562
+        ],
+        [
+          1283,
+          562
+        ],
+        [
+          1334,
+          726
+        ],
+        [
+          1187,
+          726
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle03_Portrait.png",
+        "sha256": "3a2214fa5cf9f4ec43b9e55d1eb4c78f01ccf5c92157f7a6608863950fe22dd9"
+      }
+    },
+    {
+      "name": "Middle03_Footer",
+      "role": "footer",
+      "rect": [
+        1187,
+        726,
+        158,
+        40
+      ],
+      "polygon": [
+        [
+          1187,
+          726
+        ],
+        [
+          1334,
+          726
+        ],
+        [
+          1345,
+          766
+        ],
+        [
+          1198,
+          766
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle03_Footer.png",
+        "sha256": "6250abbde75c14c5193db5dead98afed33c2f1935828e5e1f378ee0d72677599"
+      }
+    },
+    {
+      "name": "Middle03_Rank",
+      "role": "rank",
+      "rect": [
+        1188,
+        719,
+        38,
+        39
+      ],
+      "polygon": [
+        [
+          1188,
+          719
+        ],
+        [
+          1226,
+          719
+        ],
+        [
+          1226,
+          758
+        ],
+        [
+          1188,
+          758
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle03_Rank.png",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      }
+    },
+    {
+      "name": "Middle03_Element",
+      "role": "element",
+      "rect": [
+        1311,
+        728,
+        26,
+        28
+      ],
+      "polygon": [
+        [
+          1311,
+          728
+        ],
+        [
+          1337,
+          728
+        ],
+        [
+          1337,
+          756
+        ],
+        [
+          1311,
+          756
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle03_Element.png",
+        "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+      }
+    },
+    {
+      "name": "Middle04_Portrait",
+      "role": "portrait",
+      "rect": [
+        1199,
+        773,
+        181,
+        117
+      ],
+      "polygon": [
+        [
+          1199,
+          773
+        ],
+        [
+          1345,
+          773
+        ],
+        [
+          1380,
+          890
+        ],
+        [
+          1231,
+          890
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Middle04_Portrait.png",
+        "sha256": "7060ac5db22daf56bf2e3c6dc717231a8bc8045b66dccdd0080ebf81423535f5"
+      }
+    },
+    {
+      "name": "Right01_Portrait",
+      "role": "portrait",
+      "rect": [
+        1140,
+        48,
+        193,
+        164
+      ],
+      "polygon": [
+        [
+          1140,
+          48
+        ],
+        [
+          1288,
+          48
+        ],
+        [
+          1333,
+          212
+        ],
+        [
+          1187,
+          212
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right01_Portrait.png",
+        "sha256": "95d05ed62933b6cad7aea2789ecfce394f8afa9c0bdbb249e55663fbc76dfa22"
+      }
+    },
+    {
+      "name": "Right01_Footer",
+      "role": "footer",
+      "rect": [
+        1187,
+        212,
+        157,
+        38
+      ],
+      "polygon": [
+        [
+          1187,
+          212
+        ],
+        [
+          1333,
+          212
+        ],
+        [
+          1344,
+          250
+        ],
+        [
+          1198,
+          250
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right01_Footer.png",
+        "sha256": "32bd1dafed450acf4c88eedafb26ba0e9705fb3f3ae8b784db6078fed06a5a80"
+      }
+    },
+    {
+      "name": "Right01_Rank",
+      "role": "rank",
+      "rect": [
+        1188,
+        205,
+        38,
+        39
+      ],
+      "polygon": [
+        [
+          1188,
+          205
+        ],
+        [
+          1226,
+          205
+        ],
+        [
+          1226,
+          244
+        ],
+        [
+          1188,
+          244
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right01_Rank.png",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      }
+    },
+    {
+      "name": "Right01_Element",
+      "role": "element",
+      "rect": [
+        1310,
+        214,
+        26,
+        28
+      ],
+      "polygon": [
+        [
+          1310,
+          214
+        ],
+        [
+          1336,
+          214
+        ],
+        [
+          1336,
+          242
+        ],
+        [
+          1310,
+          242
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right01_Element.png",
+        "sha256": "d97837e0e2b108a9cad85069d198b075fd814be9ec0731c7f6612d632046ba89"
+      }
+    },
+    {
+      "name": "Right02_Portrait",
+      "role": "portrait",
+      "rect": [
+        1195,
+        257,
+        192,
+        165
+      ],
+      "polygon": [
+        [
+          1195,
+          257
+        ],
+        [
+          1340,
+          257
+        ],
+        [
+          1387,
+          422
+        ],
+        [
+          1243,
+          422
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right02_Portrait.png",
+        "sha256": "c2f82feb8de5147b3c7d1e548f36e5cd0e42aab66e781118aa2d3bdbb9c7c812"
+      }
+    },
+    {
+      "name": "Right02_Footer",
+      "role": "footer",
+      "rect": [
+        1243,
+        422,
+        154,
+        36
+      ],
+      "polygon": [
+        [
+          1243,
+          422
+        ],
+        [
+          1387,
+          422
+        ],
+        [
+          1397,
+          458
+        ],
+        [
+          1253,
+          458
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right02_Footer.png",
+        "sha256": "ee276228c6982d85c5bd84e3d1d09d934d99baddb3b09d062cf598e534f8a16f"
+      }
+    },
+    {
+      "name": "Right02_Rank",
+      "role": "rank",
+      "rect": [
+        1244,
+        415,
+        38,
+        39
+      ],
+      "polygon": [
+        [
+          1244,
+          415
+        ],
+        [
+          1282,
+          415
+        ],
+        [
+          1282,
+          454
+        ],
+        [
+          1244,
+          454
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right02_Rank.png",
+        "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+      }
+    },
+    {
+      "name": "Right02_Element",
+      "role": "element",
+      "rect": [
+        1364,
+        424,
+        26,
+        28
+      ],
+      "polygon": [
+        [
+          1364,
+          424
+        ],
+        [
+          1390,
+          424
+        ],
+        [
+          1390,
+          452
+        ],
+        [
+          1364,
+          452
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right02_Element.png",
+        "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+      }
+    },
+    {
+      "name": "Right03_Portrait",
+      "role": "portrait",
+      "rect": [
+        1262,
+        470,
+        196,
+        165
+      ],
+      "polygon": [
+        [
+          1262,
+          470
+        ],
+        [
+          1410,
+          470
+        ],
+        [
+          1458,
+          635
+        ],
+        [
+          1311,
+          635
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right03_Portrait.png",
+        "sha256": "2f56b5388d2550893d8ce46b051e5fd197cfa5a2b97d26baad2c4828421e790f"
+      }
+    },
+    {
+      "name": "Right03_Footer",
+      "role": "footer",
+      "rect": [
+        1311,
+        635,
+        158,
+        39
+      ],
+      "polygon": [
+        [
+          1311,
+          635
+        ],
+        [
+          1458,
+          635
+        ],
+        [
+          1469,
+          674
+        ],
+        [
+          1322,
+          674
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right03_Footer.png",
+        "sha256": "94298889bb27c42dfa4af21a5063c0c4d51d72ce438e88c824d062eceaf2c9d2"
+      }
+    },
+    {
+      "name": "Right03_Rank",
+      "role": "rank",
+      "rect": [
+        1312,
+        628,
+        38,
+        39
+      ],
+      "polygon": [
+        [
+          1312,
+          628
+        ],
+        [
+          1350,
+          628
+        ],
+        [
+          1350,
+          667
+        ],
+        [
+          1312,
+          667
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right03_Rank.png",
+        "sha256": "29df98aa9829926281e64edd77b896d913be3848de63ebc7178e3e1ecb471d0b"
+      }
+    },
+    {
+      "name": "Right03_Element",
+      "role": "element",
+      "rect": [
+        1435,
+        637,
+        26,
+        28
+      ],
+      "polygon": [
+        [
+          1435,
+          637
+        ],
+        [
+          1461,
+          637
+        ],
+        [
+          1461,
+          665
+        ],
+        [
+          1435,
+          665
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right03_Element.png",
+        "sha256": "b9ac26f55826a4033f01ae7b70b20908114dbaea89490e221695e927b880ee1a"
+      }
+    },
+    {
+      "name": "Right04_Portrait",
+      "role": "portrait",
+      "rect": [
+        1324,
+        680,
+        199,
+        167
+      ],
+      "polygon": [
+        [
+          1324,
+          680
+        ],
+        [
+          1470,
+          680
+        ],
+        [
+          1523,
+          847
+        ],
+        [
+          1373,
+          847
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right04_Portrait.png",
+        "sha256": "6c03bddff4075358b6d1f2938a340f1cc2bda349b87cf90d062944172b32e78f"
+      }
+    },
+    {
+      "name": "Right04_Footer",
+      "role": "footer",
+      "rect": [
+        1373,
+        847,
+        162,
+        42
+      ],
+      "polygon": [
+        [
+          1373,
+          847
+        ],
+        [
+          1523,
+          847
+        ],
+        [
+          1535,
+          889
+        ],
+        [
+          1385,
+          889
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right04_Footer.png",
+        "sha256": "dd2e5de1583a5b3b8ce003ab7df2db7b95ffc1c210ce20244dd93f8763a7977f"
+      }
+    },
+    {
+      "name": "Right04_Rank",
+      "role": "rank",
+      "rect": [
+        1374,
+        840,
+        38,
+        39
+      ],
+      "polygon": [
+        [
+          1374,
+          840
+        ],
+        [
+          1412,
+          840
+        ],
+        [
+          1412,
+          879
+        ],
+        [
+          1374,
+          879
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right04_Rank.png",
+        "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+      }
+    },
+    {
+      "name": "Right04_Element",
+      "role": "element",
+      "rect": [
+        1500,
+        849,
+        26,
+        28
+      ],
+      "polygon": [
+        [
+          1500,
+          849
+        ],
+        [
+          1526,
+          849
+        ],
+        [
+          1526,
+          877
+        ],
+        [
+          1500,
+          877
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/Right04_Element.png",
+        "sha256": "bcd385f1cb4bbcd0adf09c1778ec7f9dbe5fc7f3d2499ee0338a2d408a9509c7"
+      }
+    },
+    {
+      "name": "SelectionFrame",
+      "role": "selection",
+      "rect": [
+        1178,
+        248,
+        232,
+        219
+      ],
+      "polygon": [
+        [
+          1178,
+          248
+        ],
+        [
+          1337,
+          248
+        ],
+        [
+          1352,
+          257
+        ],
+        [
+          1410,
+          467
+        ],
+        [
+          1263,
+          467
+        ],
+        [
+          1245,
+          452
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/SelectionFrame.png",
+        "sha256": "3e058eadf9d70d8c2b75220b13cee313a24e1366ef7189ad36544a331ed33463"
+      }
+    },
+    {
+      "name": "FilterButton",
+      "role": "toolbar",
+      "rect": [
+        1308,
+        54,
+        51,
+        51
+      ],
+      "polygon": [
+        [
+          1308,
+          54
+        ],
+        [
+          1359,
+          54
+        ],
+        [
+          1359,
+          105
+        ],
+        [
+          1308,
+          105
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/FilterButton.png",
+        "sha256": "22c2444e148ea59a529cf2771fd51a5d8827a9d211c123c20c2e9bfad71f4100"
+      }
+    },
+    {
+      "name": "FavoriteButton",
+      "role": "toolbar",
+      "rect": [
+        1376,
+        54,
+        52,
+        52
+      ],
+      "polygon": [
+        [
+          1376,
+          54
+        ],
+        [
+          1428,
+          54
+        ],
+        [
+          1428,
+          106
+        ],
+        [
+          1376,
+          106
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/FavoriteButton.png",
+        "sha256": "e2dd68e1a52216fb53f2891b41cb2dfbc0d12788c0c0f14b79a1a81b47245299"
+      }
+    },
+    {
+      "name": "BasicTab",
+      "role": "tab",
+      "rect": [
+        850,
+        657,
+        153,
+        51
+      ],
+      "polygon": [
+        [
+          850,
+          657
+        ],
+        [
+          1003,
+          657
+        ],
+        [
+          1003,
+          708
+        ],
+        [
+          850,
+          708
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v2/BasicTab.png",
+        "sha256": "44ee03f67c46c229e965573365ddccbc75830d02cae72691e656286d8fdfe803"
+      },
+      "label": "基础"
+    },
+    {
+      "name": "SkillTab",
+      "role": "tab",
+      "rect": [
+        869,
+        721,
+        153,
+        47
+      ],
+      "polygon": [
+        [
+          869,
+          721
+        ],
+        [
+          1022,
+          721
+        ],
+        [
+          1022,
+          768
+        ],
+        [
+          869,
+          768
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/SkillTab.png",
+        "sha256": "c349c21f1fa644a03ec95bdc5a3c71245308ebe45a8080ff69bd2971dcf83aa8"
+      },
+      "label": "技能"
+    },
+    {
+      "name": "EquipmentTab",
+      "role": "tab",
+      "rect": [
+        888,
+        785,
+        152,
+        47
+      ],
+      "polygon": [
+        [
+          888,
+          785
+        ],
+        [
+          1040,
+          785
+        ],
+        [
+          1040,
+          832
+        ],
+        [
+          888,
+          832
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/EquipmentTab.png",
+        "sha256": "55e5908754b35e10089c67b8d488c37f89cac79df9e2575e1955a83c66bd0eb1"
+      },
+      "label": "装备"
+    },
+    {
+      "name": "SelectRibbon",
+      "role": "ribbon",
+      "rect": [
+        1420,
+        39,
+        117,
+        851
+      ],
+      "polygon": [
+        [
+          1537,
+          39
+        ],
+        [
+          1537,
+          890
+        ],
+        [
+          1420,
+          469
+        ]
+      ],
+      "artifact": {
+        "path": "resources/slices-v1/SelectRibbon.png",
+        "sha256": "90a03f391693691cfa9bece1f194a16df9b05d82ec9c2614827de3ba6fbf603b"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "name": "Left01",
+      "portrait": "Left01_Portrait",
+      "rect": [
+        823,
+        47,
+        195,
+        170
+      ],
+      "rank": "A",
+      "level": 60,
+      "element": "Ice",
+      "selected": false,
+      "children": [
+        "Left01_Footer",
+        "Left01_Rank",
+        "Left01_Element"
+      ],
+      "labelRect": [
+        928,
+        219,
+        66,
+        30
+      ]
+    },
+    {
+      "name": "Left02",
+      "portrait": "Left02_Portrait",
+      "rect": [
+        883,
+        258,
+        200,
+        165
+      ],
+      "rank": "A",
+      "level": 60,
+      "element": "Fire",
+      "selected": false,
+      "children": [
+        "Left02_Footer",
+        "Left02_Rank",
+        "Left02_Element"
+      ],
+      "labelRect": [
+        988,
+        425,
+        66,
+        30
+      ]
+    },
+    {
+      "name": "Left03",
+      "portrait": "Left03_Portrait",
+      "rect": [
+        943,
+        468,
+        197,
+        165
+      ],
+      "rank": "S",
+      "level": 60,
+      "element": "Electric",
+      "selected": false,
+      "children": [
+        "Left03_Footer",
+        "Left03_Rank",
+        "Left03_Element"
+      ],
+      "labelRect": [
+        1049,
+        635,
+        66,
+        30
+      ]
+    },
+    {
+      "name": "Left04",
+      "portrait": "Left04_Portrait",
+      "rect": [
+        1005,
+        679,
+        199,
+        166
+      ],
+      "rank": "A",
+      "level": 60,
+      "element": "Ether",
+      "selected": false,
+      "children": [
+        "Left04_Footer",
+        "Left04_Rank",
+        "Left04_Element"
+      ],
+      "labelRect": [
+        1111,
+        847,
+        66,
+        30
+      ]
+    },
+    {
+      "name": "Middle00",
+      "portrait": "Middle00_Portrait",
+      "rect": [
+        981,
+        38,
+        165,
+        57
+      ],
+      "rank": "S",
+      "level": 60,
+      "element": "Ice",
+      "selected": false,
+      "children": [
+        "Middle00_Footer",
+        "Middle00_Rank",
+        "Middle00_Element"
+      ],
+      "labelRect": [
+        1054,
+        97,
+        66,
+        30
+      ]
+    },
+    {
+      "name": "Middle01",
+      "portrait": "Middle01_Portrait",
+      "rect": [
+        1013,
+        141,
+        180,
+        164
+      ],
+      "rank": "S",
+      "level": 60,
+      "element": "Fire",
+      "selected": false,
+      "children": [
+        "Middle01_Footer",
+        "Middle01_Rank",
+        "Middle01_Element"
+      ],
+      "labelRect": [
+        1118,
+        307,
+        66,
+        30
+      ]
+    },
+    {
+      "name": "Middle02",
+      "portrait": "Middle02_Portrait",
+      "rect": [
+        1074,
+        354,
+        195,
+        161
+      ],
+      "rank": "S",
+      "level": 60,
+      "element": "Ice",
+      "selected": false,
+      "children": [
+        "Middle02_Footer",
+        "Middle02_Rank",
+        "Middle02_Element"
+      ],
+      "labelRect": [
+        1181,
+        517,
+        66,
+        30
+      ]
+    },
+    {
+      "name": "Middle03",
+      "portrait": "Middle03_Portrait",
+      "rect": [
+        1138,
+        562,
+        196,
+        164
+      ],
+      "rank": "S",
+      "level": 60,
+      "element": "Electric",
+      "selected": false,
+      "children": [
+        "Middle03_Footer",
+        "Middle03_Rank",
+        "Middle03_Element"
+      ],
+      "labelRect": [
+        1244,
+        728,
+        66,
+        30
+      ]
+    },
+    {
+      "name": "Middle04",
+      "portrait": "Middle04_Portrait",
+      "rect": [
+        1199,
+        773,
+        181,
+        117
+      ],
+      "rank": "",
+      "level": 0,
+      "element": "",
+      "selected": false,
+      "children": []
+    },
+    {
+      "name": "Right01",
+      "portrait": "Right01_Portrait",
+      "rect": [
+        1140,
+        48,
+        193,
+        164
+      ],
+      "rank": "S",
+      "level": 60,
+      "element": "Fire",
+      "selected": false,
+      "children": [
+        "Right01_Footer",
+        "Right01_Rank",
+        "Right01_Element"
+      ],
+      "labelRect": [
+        1244,
+        214,
+        66,
+        30
+      ]
+    },
+    {
+      "name": "Right02",
+      "portrait": "Right02_Portrait",
+      "rect": [
+        1195,
+        257,
+        192,
+        165
+      ],
+      "rank": "A",
+      "level": 60,
+      "element": "Electric",
+      "selected": true,
+      "children": [
+        "Right02_Footer",
+        "Right02_Rank",
+        "Right02_Element"
+      ],
+      "labelRect": [
+        1300,
+        424,
+        66,
+        30
+      ]
+    },
+    {
+      "name": "Right03",
+      "portrait": "Right03_Portrait",
+      "rect": [
+        1262,
+        470,
+        196,
+        165
+      ],
+      "rank": "S",
+      "level": 60,
+      "element": "Ice",
+      "selected": false,
+      "children": [
+        "Right03_Footer",
+        "Right03_Rank",
+        "Right03_Element"
+      ],
+      "labelRect": [
+        1368,
+        637,
+        66,
+        30
+      ]
+    },
+    {
+      "name": "Right04",
+      "portrait": "Right04_Portrait",
+      "rect": [
+        1324,
+        680,
+        199,
+        167
+      ],
+      "rank": "A",
+      "level": 40,
+      "element": "Electric",
+      "selected": false,
+      "children": [
+        "Right04_Footer",
+        "Right04_Rank",
+        "Right04_Element"
+      ],
+      "labelRect": [
+        1430,
+        849,
+        66,
+        30
+      ]
+    }
+  ],
+  "viewport": [
+    1540,
+    928
+  ]
+}

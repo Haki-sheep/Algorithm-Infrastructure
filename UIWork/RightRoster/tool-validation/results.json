@@ -1,0 +1,17 @@
+[
+  {
+    "name": "ui_design_loop",
+    "exitCode": 0,
+    "result": "__.EvidenceLoopTests.test_visual_region_bounds_rejected) ... ok\ntest_visual_sample_cannot_be_backfilled_from_final_attempt (__main__.EvidenceLoopTests.test_visual_sample_cannot_be_backfilled_from_final_attempt) ... ok\ntest_visual_stale_current_rejected (__main__.EvidenceLoopTests.test_visual_stale_current_rejected) ... ok\ntest_visual_unrelated_reference_rejected (__main__.EvidenceLoopTests.test_visual_unrelated_reference_rejected) ... ok\ntest_visual_wrong_design_rejected (__main__.EvidenceLoopTests.test_visual_wrong_design_rejected) ... ok\ntest_zero_gaps_require_observation_and_preserve_the_input (__main__.EvidenceLoopTests.test_zero_gaps_require_observation_and_preserve_the_input) ... ok\n\n----------------------------------------------------------------------\nRan 285 tests in 160.852s\n\nOK\n"
+  },
+  {
+    "name": "ui_local_edit",
+    "exitCode": 0,
+    "result": "th_source_identity) ... ok\ntest_undeclared_vector_leaf_fails (__main__.LocalEditTests.test_undeclared_vector_leaf_fails) ... ok\ntest_unknown_dependency_rejected (__main__.LocalEditTests.test_unknown_dependency_rejected) ... ok\ntest_unreported_reference_change_fails (__main__.LocalEditTests.test_unreported_reference_change_fails) ... ok\ntest_unsaved_edit_rejected (__main__.LocalEditTests.test_unsaved_edit_rejected) ... ok\ntest_vector_exponent_and_float32_overflow_rejected (__main__.LocalEditTests.test_vector_exponent_and_float32_overflow_rejected) ... ok\ntest_vector_nonfinite_nonnumeric_and_boolean_rejected (__main__.LocalEditTests.test_vector_nonfinite_nonnumeric_and_boolean_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 59 tests in 5.080s\n\nOK\n"
+  },
+  {
+    "name": "ui_recreation_hardening",
+    "exitCode": 0,
+    "result": "tage_begin_finish_and_selected_extension_are_usable) ... ok\ntest_static_subject_needs_saved_presentation_but_no_animation (__main__.RecreationHardeningTests.test_static_subject_needs_saved_presentation_but_no_animation) ... ok\ntest_user_instruction_and_permissions_need_literal_source (__main__.RecreationHardeningTests.test_user_instruction_and_permissions_need_literal_source) ... ok\ntest_utf8_actual_bytes_and_escaped_replacement_rejected (__main__.RecreationHardeningTests.test_utf8_actual_bytes_and_escaped_replacement_rejected) ... ok\ntest_valid_chinese_bom_punctuation_and_coalescing_survive (__main__.RecreationHardeningTests.test_valid_chinese_bom_punctuation_and_coalescing_survive) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 20.558s\n\nOK\n"
+  }
+]

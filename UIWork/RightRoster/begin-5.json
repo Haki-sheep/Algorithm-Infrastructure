@@ -1,0 +1,8 @@
+{
+  "status": "working",
+  "created": "05-material/step.json",
+  "sha256": "42ed3b22c8218baa21797cb9fdbf71e808fe4045b1934a75c661de9f0df336c9",
+  "completionClaim": false,
+  "designValueReference": "references/six-stage-execution.md#design-value-carryover",
+  "guidance": []
+}

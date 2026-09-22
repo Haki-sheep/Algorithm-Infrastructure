@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "analyzer": "es-ui-prefab-authoring/ingest_ui_reference",
+  "analyzerVersion": 1,
+  "source": {
+    "path": "E:/AAAA学习资料/Demo/顶点数/Assets/TestImgae/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+    "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d",
+    "width": 1540,
+    "height": 928,
+    "mode": "RGBA"
+  },
+  "method": {
+    "background": "border-median",
+    "maskThresholdRgbDistance": 18.0,
+    "maxAnalysisSide": 256,
+    "semanticModel": "none"
+  },
+  "backgroundEstimate": {
+    "rgb": [
+      0,
+      0,
+      0
+    ],
+    "hex": "#000000"
+  },
+  "regions": [
+    {
+      "id": "reference-region-001",
+      "role": "background-candidate",
+      "pixelBounds": [
+        24,
+        36,
+        1540,
+        892
+      ],
+      "normalizedBounds": [
+        0.015584415584415584,
+        0.03879310344827586,
+        1.0,
+        0.9612068965517241
+      ],
+      "areaRatio": 0.908039,
+      "componentPixelCount": 27231,
+      "confidence": "low",
+      "observations": [
+        "connected non-background pixel region"
+      ],
+      "assumptions": [
+        "semantic type, parent and interaction are not recoverable from pixels alone"
+      ],
+      "anchorHint": "stretch-x",
+      "anchorHintReason": "candidate-from-edge-contact",
+      "reviewRequired": true
+    },
+    {
+      "id": "reference-region-002",
+      "role": "icon-or-control-candidate",
+      "pixelBounds": [
+        1305,
+        54,
+        1360,
+        102
+      ],
+      "normalizedBounds": [
+        0.8474025974025974,
+        0.05818965517241379,
+        0.8831168831168831,
+        0.10991379310344827
+      ],
+      "areaRatio": 0.001847,
+      "componentPixelCount": 55,
+      "confidence": "low",
+      "observations": [
+        "connected non-background pixel region"
+      ],
+      "assumptions": [
+        "semantic type, parent and interaction are not recoverable from pixels alone"
+      ],
+      "anchorHint": "content-relative",
+      "anchorHintReason": "candidate-only",
+      "reviewRequired": true
+    },
+    {
+      "id": "reference-region-003",
+      "role": "icon-or-control-candidate",
+      "pixelBounds": [
+        1378,
+        54,
+        1426,
+        102
+      ],
+      "normalizedBounds": [
+        0.8948051948051948,
+        0.05818965517241379,
+        0.925974025974026,
+        0.10991379310344827
+      ],
+      "areaRatio": 0.001612,
+      "componentPixelCount": 52,
+      "confidence": "low",
+      "observations": [
+        "connected non-background pixel region"
+      ],
+      "assumptions": [
+        "semantic type, parent and interaction are not recoverable from pixels alone"
+      ],
+      "anchorHint": "content-relative",
+      "anchorHintReason": "candidate-only",
+      "reviewRequired": true
+    },
+    {
+      "id": "reference-region-004",
+      "role": "icon-or-control-candidate",
+      "pixelBounds": [
+        758,
+        139,
+        806,
+        229
+      ],
+      "normalizedBounds": [
+        0.4922077922077922,
+        0.1497844827586207,
+        0.5233766233766234,
+        0.24676724137931033
+      ],
+      "areaRatio": 0.003023,
+      "componentPixelCount": 73,
+      "confidence": "low",
+      "observations": [
+        "connected non-background pixel region"
+      ],
+      "assumptions": [
+        "semantic type, parent and interaction are not recoverable from pixels alone"
+      ],
+      "anchorHint": "content-relative",
+      "anchorHintReason": "candidate-only",
+      "reviewRequired": true
+    },
+    {
+      "id": "reference-region-005",
+      "role": "icon-or-control-candidate",
+      "pixelBounds": [
+        710,
+        151,
+        764,
+        235
+      ],
+      "normalizedBounds": [
+        0.461038961038961,
+        0.1627155172413793,
+        0.4961038961038961,
+        0.25323275862068967
+      ],
+      "areaRatio": 0.003174,
+      "componentPixelCount": 73,
+      "confidence": "low",
+      "observations": [
+        "connected non-background pixel region"
+      ],
+      "assumptions": [
+        "semantic type, parent and interaction are not recoverable from pixels alone"
+      ],
+      "anchorHint": "content-relative",
+      "anchorHintReason": "candidate-only",
+      "reviewRequired": true
+    },
+    {
+      "id": "reference-region-006",
+      "role": "icon-or-control-candidate",
+      "pixelBounds": [
+        24,
+        337,
+        102,
+        416
+      ],
+      "normalizedBounds": [
+        0.015584415584415584,
+        0.36314655172413796,
+        0.06623376623376623,
+        0.4482758620689655
+      ],
+      "areaRatio": 0.004312,
+      "componentPixelCount": 114,
+      "confidence": "low",
+      "observations": [
+        "connected non-background pixel region"
+      ],
+      "assumptions": [
+        "semantic type, parent and interaction are not recoverable from pixels alone"
+      ],
+      "anchorHint": "left-docked",
+      "anchorHintReason": "candidate-from-edge-contact",
+      "reviewRequired": true
+    },
+    {
+      "id": "reference-region-007",
+      "role": "icon-or-control-candidate",
+      "pixelBounds": [
+        180,
+        428,
+        217,
+        446
+      ],
+      "normalizedBounds": [
+        0.11688311688311688,
+        0.46120689655172414,
+        0.1409090909090909,
+        0.48060344827586204
+      ],
+      "areaRatio": 0.000466,
+      "componentPixelCount": 9,
+      "confidence": "low",
+      "observations": [
+        "connected non-background pixel region"
+      ],
+      "assumptions": [
+        "semantic type, parent and interaction are not recoverable from pixels alone"
+      ],
+      "anchorHint": "content-relative",
+      "anchorHintReason": "candidate-only",
+      "reviewRequired": true
+    },
+    {
+      "id": "reference-region-008",
+      "role": "icon-or-control-candidate",
+      "pixelBounds": [
+        866,
+        717,
+        1017,
+        771
+      ],
+      "normalizedBounds": [
+        0.5623376623376624,
+        0.7726293103448276,
+        0.6603896103896104,
+        0.8308189655172413
+      ],
+      "areaRatio": 0.005706,
+      "componentPixelCount": 147,
+      "confidence": "low",
+      "observations": [
+        "connected non-background pixel region"
+      ],
+      "assumptions": [
+        "semantic type, parent and interaction are not recoverable from pixels alone"
+      ],
+      "anchorHint": "content-relative",
+      "anchorHintReason": "candidate-only",
+      "reviewRequired": true
+    },
+    {
+      "id": "reference-region-009",
+      "role": "icon-or-control-candidate",
+      "pixelBounds": [
+        884,
+        783,
+        1041,
+        832
+      ],
+      "normalizedBounds": [
+        0.574025974025974,
+        0.84375,
+        0.675974025974026,
+        0.896551724137931
+      ],
+      "areaRatio": 0.005383,
+      "componentPixelCount": 135,
+      "confidence": "low",
+      "observations": [
+        "connected non-background pixel region"
+      ],
+      "assumptions": [
+        "semantic type, parent and interaction are not recoverable from pixels alone"
+      ],
+      "anchorHint": "content-relative",
+      "anchorHintReason": "candidate-only",
+      "reviewRequired": true
+    },
+    {
+      "id": "reference-region-010",
+      "role": "strip-or-divider-candidate",
+      "pixelBounds": [
+        24,
+        862,
+        180,
+        892
+      ],
+      "normalizedBounds": [
+        0.015584415584415584,
+        0.9288793103448276,
+        0.11688311688311688,
+        0.9612068965517241
+      ],
+      "areaRatio": 0.003275,
+      "componentPixelCount": 96,
+      "confidence": "low",
+      "observations": [
+        "connected non-background pixel region"
+      ],
+      "assumptions": [
+        "semantic type, parent and interaction are not recoverable from pixels alone"
+      ],
+      "anchorHint": "left-docked",
+      "anchorHintReason": "candidate-from-edge-contact",
+      "reviewRequired": true
+    }
+  ],
+  "regionCount": 10,
+  "status": "candidate",
+  "confidencePolicy": "candidate geometry only; semantic labels, anchors, parent ownership, OCR and responsive behavior require review or an explicit design IR",
+  "nonClaims": [
+    "OCR/text identity",
+    "Unity RectTransform or Canvas ownership",
+    "responsive layout",
+    "interaction behavior",
+    "visual acceptance",
+    "commercial asset provenance"
+  ]
+}

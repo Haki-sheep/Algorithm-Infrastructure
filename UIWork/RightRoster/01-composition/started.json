@@ -1,0 +1,14 @@
+{
+  "brief": {
+    "path": "brief.json",
+    "sha256": "e3e33bee83eb96f285696b77c281f634e357a56a00fb7f9d8333ebe362c213e3"
+  },
+  "stage": 1,
+  "round": 1,
+  "predecessor": null,
+  "createdAtUnix": 1790068763.6435978,
+  "latestSubmission": {
+    "path": "01-composition/submissions/001.json",
+    "sha256": "1b64b70c07588afc618d80f03fa974fe58dc295efb02fc45fcb6dff1963e794b"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "round": 2,
+  "goal": "Change row geometry",
+  "stageSelectionReason": "Dependent preview is affected",
+  "base": {
+    "path": "06-micro-detail/step.json",
+    "sha256": "d3f509d65943f9face2c515791acc1f78377e037506a48fac5f152b1ed4ab88e"
+  },
+  "brief": {
+    "path": "brief.json",
+    "sha256": "86f1f11bcaeba708a18cabbe88d029b5e42d2a09b4bfc09ab98915d9fc1976e5"
+  },
+  "stages": [
+    3
+  ],
+  "changedGroups": [
+    "row"
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "atlasWidth": 512,
+  "atlasHeight": 64,
+  "pointSize": 24,
+  "glyphs": [
+    {
+      "character": "等",
+      "unicode": 31561,
+      "x": 4,
+      "y": 36,
+      "width": 24,
+      "height": 24,
+      "advance": 19,
+      "sourceRect": [
+        928,
+        221,
+        952,
+        245
+      ]
+    },
+    {
+      "character": "级",
+      "unicode": 32423,
+      "x": 48,
+      "y": 36,
+      "width": 24,
+      "height": 24,
+      "advance": 19,
+      "sourceRect": [
+        947,
+        221,
+        971,
+        245
+      ]
+    },
+    {
+      "character": "6",
+      "unicode": 54,
+      "x": 92,
+      "y": 36,
+      "width": 18,
+      "height": 24,
+      "advance": 14,
+      "sourceRect": [
+        967,
+        221,
+        985,
+        245
+      ]
+    },
+    {
+      "character": "0",
+      "unicode": 48,
+      "x": 136,
+      "y": 36,
+      "width": 19,
+      "height": 24,
+      "advance": 14,
+      "sourceRect": [
+        980,
+        221,
+        999,
+        245
+      ]
+    },
+    {
+      "character": "4",
+      "unicode": 52,
+      "x": 180,
+      "y": 37,
+      "width": 19,
+      "height": 23,
+      "advance": 14,
+      "sourceRect": [
+        1463,
+        851,
+        1482,
+        874
+      ]
+    },
+    {
+      "character": "基",
+      "unicode": 22522,
+      "x": 224,
+      "y": 38,
+      "width": 24,
+      "height": 22,
+      "advance": 19,
+      "sourceRect": [
+        911,
+        671,
+        935,
+        693
+      ]
+    },
+    {
+      "character": "础",
+      "unicode": 30784,
+      "x": 268,
+      "y": 38,
+      "width": 25,
+      "height": 22,
+      "advance": 19,
+      "sourceRect": [
+        930,
+        671,
+        955,
+        693
+      ]
+    },
+    {
+      "character": "技",
+      "unicode": 25216,
+      "x": 312,
+      "y": 37,
+      "width": 24,
+      "height": 23,
+      "advance": 19,
+      "sourceRect": [
+        926,
+        734,
+        950,
+        757
+      ]
+    },
+    {
+      "character": "能",
+      "unicode": 33021,
+      "x": 356,
+      "y": 37,
+      "width": 26,
+      "height": 23,
+      "advance": 19,
+      "sourceRect": [
+        946,
+        734,
+        972,
+        757
+      ]
+    },
+    {
+      "character": "装",
+      "unicode": 35013,
+      "x": 400,
+      "y": 35,
+      "width": 24,
+      "height": 25,
+      "advance": 19,
+      "sourceRect": [
+        944,
+        797,
+        968,
+        822
+      ]
+    },
+    {
+      "character": "备",
+      "unicode": 22791,
+      "x": 444,
+      "y": 35,
+      "width": 26,
+      "height": 25,
+      "advance": 19,
+      "sourceRect": [
+        964,
+        797,
+        990,
+        822
+      ]
+    }
+  ],
+  "source": {
+    "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+    "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+  }
+}

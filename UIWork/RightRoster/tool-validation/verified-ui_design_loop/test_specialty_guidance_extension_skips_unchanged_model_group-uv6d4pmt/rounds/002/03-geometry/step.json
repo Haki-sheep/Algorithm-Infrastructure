@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "mode": "extension",
+  "stage": 3,
+  "status": "working",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "6a956fa376a83934c92ba271b08e7e9b12d6b9a92f381c05fcc280b130ca438c"
+  },
+  "predecessor": {
+    "path": "06-micro-detail/step.json",
+    "sha256": "51acdf53e3d7207d1b5230cbb6c564651e0249c1fab7cf5c351fe1e83132ccb0"
+  },
+  "input": {
+    "path": "06-micro-detail/evidence/03.svg",
+    "sha256": "627e375fda74b8d97c3b099a3e94c7dd269c18c4a77d2dc8e0f035056887d06b"
+  },
+  "protected": [],
+  "divergenceRequired": null,
+  "alternatives": [],
+  "findings": [],
+  "questions": [],
+  "attempts": [],
+  "output": null,
+  "review": {
+    "reviewer": "",
+    "observation": "",
+    "evidence": null,
+    "result": "pending",
+    "dimensions": [
+      {
+        "page": "display",
+        "id": "adaptive-layout",
+        "group": "",
+        "observation": "",
+        "result": "pending"
+      },
+      {
+        "page": "display",
+        "id": "text-extremes",
+        "group": "",
+        "observation": "",
+        "result": "pending"
+      },
+      {
+        "page": "display",
+        "id": "bounds-overflow",
+        "group": "",
+        "observation": "",
+        "result": "pending"
+      }
+    ]
+  },
+  "unresolvedRegressions": [],
+  "roundPlan": {
+    "path": "rounds/002/round.json",
+    "sha256": "428b62f0773cce2754173cbaf34ae0de0dd9d36bedd1d39a106a09148b5545ea"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "mode": "full",
+  "stage": 3,
+  "status": "reviewed",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "e3e33bee83eb96f285696b77c281f634e357a56a00fb7f9d8333ebe362c213e3"
+  },
+  "predecessor": {
+    "path": "02-hierarchy/step.json",
+    "sha256": "6c4bbb57370958d50b73c79ba9e1a87beb5abec77715e1827ad6685404ca33fc"
+  },
+  "input": {
+    "path": "02-hierarchy/evidence/design-2.png",
+    "sha256": "9cca28c18fa597ba90d3523eab1406d83a291432f53ad580fd4d56046a4b7c79"
+  },
+  "protected": [
+    {
+      "id": "geometry",
+      "group": "roster",
+      "decision": "逐张独立斜切轮廓 字段边界和卡列次序锁定",
+      "check": "13张卡保留顶部底部可见裁切 文案不跨属性图标",
+      "establishedAt": 1
+    }
+  ],
+  "divergenceRequired": false,
+  "alternatives": [],
+  "findings": [
+    {
+      "id": "stage-3",
+      "kind": "design-gap",
+      "rootCause": "结构轮廓尚无等级文本和分区标签的精确占位",
+      "observation": "结构轮廓尚无等级文本和分区标签的精确占位",
+      "location": "roster",
+      "impact": "下游无法据此还原相应区域",
+      "acceptance": "13张卡保留顶部底部可见裁切 文案不跨属性图标",
+      "status": "fixed",
+      "pages": [
+        "roster"
+      ],
+      "decisionIds": [
+        "geometry"
+      ]
+    }
+  ],
+  "questions": [],
+  "attempts": [
+    {
+      "sequence": 1,
+      "findingId": "stage-3",
+      "before": {
+        "path": "02-hierarchy/evidence/design-2.png",
+        "sha256": "9cca28c18fa597ba90d3523eab1406d83a291432f53ad580fd4d56046a4b7c79"
+      },
+      "after": {
+        "path": "03-geometry/evidence/design-3.png",
+        "sha256": "583b79c7f44b6fe80be7bf7cdf0619101ef79bbe8e83f50ebfd04400701a172d"
+      },
+      "change": "逐张独立斜切轮廓 字段边界和卡列次序锁定",
+      "inspection": "已查看几何稿 等级60与等级40保持水平排版 13张斜卡各自边界明确 页签文字位于左圆角与右斜端之间 后续以右锚点保持卡列宽度 由左侧空白承接1280与1920宽度变化 字形本步仅作占位 材质阶段替换",
+      "result": "fixed",
+      "changedGroups": [
+        "screen",
+        "roster",
+        "selection",
+        "toolbar",
+        "tabs",
+        "ribbon"
+      ],
+      "auditedGroups": [
+        "ribbon",
+        "roster",
+        "screen",
+        "selection",
+        "tabs",
+        "toolbar"
+      ],
+      "checked": [
+        "composition",
+        "reading",
+        "geometry"
+      ],
+      "checkObservations": {
+        "composition": "已查看几何稿 等级60与等级40保持水平排版 13张斜卡各自边界明确 页签文字位于左圆角与右斜端之间 后续以右锚点保持卡列宽度 由左侧空白承接1280与1920宽度变化 字形本步仅作占位 材质阶段替换 复核 右侧卡列和三项页签处于源图相同区域",
+        "reading": "已查看几何稿 等级60与等级40保持水平排版 13张斜卡各自边界明确 页签文字位于左圆角与右斜端之间 后续以右锚点保持卡列宽度 由左侧空白承接1280与1920宽度变化 字形本步仅作占位 材质阶段替换 复核 黄边只强调右列第二项 信息条不抢占头像",
+        "geometry": "已查看几何稿 等级60与等级40保持水平排版 13张斜卡各自边界明确 页签文字位于左圆角与右斜端之间 后续以右锚点保持卡列宽度 由左侧空白承接1280与1920宽度变化 字形本步仅作占位 材质阶段替换 复核 13张卡保留顶部底部可见裁切 文案不跨属性图标"
+      }
+    }
+  ],
+  "output": {
+    "path": "03-geometry/evidence/design-3.png",
+    "sha256": "583b79c7f44b6fe80be7bf7cdf0619101ef79bbe8e83f50ebfd04400701a172d"
+  },
+  "review": {
+    "reviewer": "Codex 实际图片观察",
+    "observation": "已查看几何稿 等级60与等级40保持水平排版 13张斜卡各自边界明确 页签文字位于左圆角与右斜端之间 后续以右锚点保持卡列宽度 由左侧空白承接1280与1920宽度变化 字形本步仅作占位 材质阶段替换",
+    "evidence": {
+      "path": "03-geometry/evidence/design-3.png",
+      "sha256": "583b79c7f44b6fe80be7bf7cdf0619101ef79bbe8e83f50ebfd04400701a172d"
+    },
+    "result": "reviewed",
+    "dimensions": [
+      {
+        "page": "roster",
+        "id": "adaptive-layout",
+        "group": "roster",
+        "observation": "已查看几何稿 等级60与等级40保持水平排版 13张斜卡各自边界明确 页签文字位于左圆角与右斜端之间 后续以右锚点保持卡列宽度 由左侧空白承接1280与1920宽度变化 字形本步仅作占位 材质阶段替换 本阶段维度 adaptive-layout",
+        "result": "observed"
+      },
+      {
+        "page": "roster",
+        "id": "text-extremes",
+        "group": "roster",
+        "observation": "已查看几何稿 等级60与等级40保持水平排版 13张斜卡各自边界明确 页签文字位于左圆角与右斜端之间 后续以右锚点保持卡列宽度 由左侧空白承接1280与1920宽度变化 字形本步仅作占位 材质阶段替换 本阶段维度 text-extremes",
+        "result": "observed"
+      },
+      {
+        "page": "roster",
+        "id": "bounds-overflow",
+        "group": "roster",
+        "observation": "已查看几何稿 等级60与等级40保持水平排版 13张斜卡各自边界明确 页签文字位于左圆角与右斜端之间 后续以右锚点保持卡列宽度 由左侧空白承接1280与1920宽度变化 字形本步仅作占位 材质阶段替换 本阶段维度 bounds-overflow",
+        "result": "observed"
+      }
+    ]
+  },
+  "unresolvedRegressions": [],
+  "reuseReason": "原图已锁定本阶段外观与次序 只实施拆分和版式映射 无需制造改变参考的候选",
+  "reuseEvidence": {
+    "path": "02-hierarchy/evidence/design-2.png",
+    "sha256": "9cca28c18fa597ba90d3523eab1406d83a291432f53ad580fd4d56046a4b7c79"
+  },
+  "pageCoverage": {
+    "roster": "已查看几何稿 等级60与等级40保持水平排版 13张斜卡各自边界明确 页签文字位于左圆角与右斜端之间 后续以右锚点保持卡列宽度 由左侧空白承接1280与1920宽度变化 字形本步仅作占位 材质阶段替换"
+  }
+}

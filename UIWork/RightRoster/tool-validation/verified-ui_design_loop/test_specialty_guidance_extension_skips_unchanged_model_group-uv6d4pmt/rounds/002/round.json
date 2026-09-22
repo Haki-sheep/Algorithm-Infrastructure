@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "round": 2,
+  "goal": "Change row label",
+  "stageSelectionReason": "Only row text changes",
+  "base": {
+    "path": "06-micro-detail/step.json",
+    "sha256": "51acdf53e3d7207d1b5230cbb6c564651e0249c1fab7cf5c351fe1e83132ccb0"
+  },
+  "brief": {
+    "path": "brief.json",
+    "sha256": "6a956fa376a83934c92ba271b08e7e9b12d6b9a92f381c05fcc280b130ca438c"
+  },
+  "stages": [
+    3
+  ],
+  "changedGroups": [
+    "row"
+  ]
+}

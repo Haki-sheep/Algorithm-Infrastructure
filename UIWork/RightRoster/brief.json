@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 2,
+  "qualityContract": "design-quality-v1",
+  "executionContract": "ui-visual-production-v2",
+  "referenceContract": "screen-reference-v1",
+  "resourcePreparation": {
+    "path": "resource-preparation.json",
+    "sha256": "3f3437fb1fa6819ae8e669a3b766852326cdba45e36b2b21ca081e1252d7d161"
+  },
+  "intent": {
+    "kind": "recreation",
+    "userInstruction": "帮在项目调用\"C:\\Users\\fmz\\Desktop\\30-integrated\"这个sikll去切Assets/TestImgae下的图 就是不需模型可以不用还原 但是右侧的UI需要还原 如果skill需要安装则安装到项目中 如果不需要就直接调用即可"
+  },
+  "productionScope": {
+    "mode": "visual-only"
+  },
+  "aiSuggestions": [],
+  "iterationPolicy": {
+    "version": 1,
+    "mode": "strict-reference",
+    "budgetBasis": "已告知本轮90分钟工作预算 15分钟保留Unity验证 不改变严格参考目标",
+    "coreTargetIds": [
+      "diagonal-roster",
+      "yellow-selection",
+      "navigation",
+      "utilities"
+    ],
+    "budget": {
+      "totalMinutes": 90,
+      "searchMinutes": 10,
+      "polishMinutes": 15,
+      "validationReserveMinutes": 15
+    },
+    "maxLowGainAttempts": 2
+  },
+  "capabilityBaseline": {
+    "version": 2,
+    "layoutPolicy": "右侧UI高度固定适配并锚定右边 画布宽度变化由左侧模型留白区承担 不对卡片列横向拉伸 原图顶部底部部分头像自然裁切不补造",
+    "viewports": [
+      {
+        "id": "narrow",
+        "width": 1280,
+        "height": 928,
+        "safeArea": [
+          0,
+          0,
+          1280,
+          928
+        ]
+      },
+      {
+        "id": "primary",
+        "width": 1540,
+        "height": 928,
+        "safeArea": [
+          0,
+          0,
+          1540,
+          928
+        ]
+      },
+      {
+        "id": "wide",
+        "width": 1920,
+        "height": 928,
+        "safeArea": [
+          0,
+          0,
+          1920,
+          928
+        ]
+      }
+    ],
+    "shapeTargets": [
+      "diagonal-roster",
+      "yellow-selection"
+    ],
+    "detailTargets": [
+      "navigation",
+      "utilities"
+    ]
+  },
+  "visualReview": {
+    "version": 1,
+    "targets": [
+      {
+        "id": "diagonal-roster",
+        "page": "roster",
+        "group": "roster",
+        "region": [
+          0.53,
+          0.04,
+          0.46,
+          0.92
+        ],
+        "content": [
+          "角色卡列",
+          "等级品质属性"
+        ],
+        "feature": "三列交错斜卡与黑色信息条",
+        "acceptance": "13张可见角色头像保持三列次序 斜边下移右倾 黑色信息条中可读等级60与等级40"
+      },
+      {
+        "id": "yellow-selection",
+        "page": "roster",
+        "group": "selection",
+        "region": [
+          0.76,
+          0.26,
+          0.16,
+          0.25
+        ],
+        "content": [
+          "选中边框"
+        ],
+        "feature": "安比黄色外框",
+        "acceptance": "右列第二张卡保持黄色连续外框 内部头像与等级独立于外框"
+      },
+      {
+        "id": "navigation",
+        "page": "roster",
+        "group": "tabs",
+        "region": [
+          0.55,
+          0.7,
+          0.14,
+          0.2
+        ],
+        "content": [
+          "基础技能装备"
+        ],
+        "feature": "黄底当前页与灰框次级页",
+        "acceptance": "基础为黄底黑字 技能装备为暗底白字 三项左缘逐行右移"
+      },
+      {
+        "id": "utilities",
+        "page": "roster",
+        "group": "toolbar",
+        "region": [
+          0.84,
+          0.04,
+          0.16,
+          0.92
+        ],
+        "content": [
+          "筛选收藏",
+          "SELECT飘带"
+        ],
+        "feature": "圆形工具与右缘绿色楔形",
+        "acceptance": "右上筛选白图标与收藏黄星保持圆形 右缘绿色SELECT楔形保留原方向"
+      }
+    ]
+  },
+  "pages": [
+    {
+      "id": "roster",
+      "requiredContent": [
+        "角色卡列",
+        "选中边框",
+        "等级品质属性",
+        "筛选收藏",
+        "基础技能装备",
+        "SELECT飘带"
+      ],
+      "reference": {
+        "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+        "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+      },
+      "adaptation": "用户指定模型可以不用还原 仅还原右侧UI 不制作左侧模型和左侧标题角色信息",
+      "characterPresentation": {
+        "mode": "none",
+        "observation": "用户排除左侧3D模型 右侧头像为UI插画切片",
+        "referenceEvidence": {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        }
+      },
+      "referenceReview": {
+        "role": "target-screen",
+        "fullFrame": true,
+        "targetMatch": "matched",
+        "inspectedImage": {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        "source": "用户项目 Assets/TestImgae 内JPG",
+        "observation": "已观察整张1540×928角色选择截图 右侧三列角色卡和导航齐全",
+        "limitations": "JPG有压缩与录屏缩放痕迹 仅一张静态参考 原始字体文件未知",
+        "context": {
+          "game": "绝区零",
+          "screen": "角色选择与特训方案",
+          "version": "原图未标注",
+          "platform": "原图未标注 横屏界面",
+          "input": "原图显示鼠标指针",
+          "language": "简体中文",
+          "state": "安比选中 基础页签高亮"
+        },
+        "presentationEvidence": {
+          "path": "resources/presentation.txt",
+          "sha256": "dba8d3145b4fcd99b108eb269c5163449d48e3b3866fece8e2debfdad3f40cb4"
+        }
+      }
+    }
+  ],
+  "recreation": {
+    "version": 2,
+    "source": {
+      "path": "request.txt",
+      "sha256": "c512c853476679f0dc7b131f98f2dca2bae9076dd660bc55c656cefeb29fe15c"
+    },
+    "constraints": [
+      {
+        "id": "roster-layout",
+        "targetId": "diagonal-roster",
+        "aspect": "layout",
+        "expected": "三列交错倾斜布局 按原图保留13张可见卡片",
+        "basis": {
+          "kind": "reference",
+          "source": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "observation": "三列交错倾斜布局 按原图保留13张可见卡片 已在完整原图对应位置查看"
+        }
+      },
+      {
+        "id": "roster-content",
+        "targetId": "diagonal-roster",
+        "aspect": "content",
+        "expected": "原图头像 品质标记 属性图标与可见等级保持对应",
+        "basis": {
+          "kind": "reference",
+          "source": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "observation": "原图头像 品质标记 属性图标与可见等级保持对应 已在完整原图对应位置查看"
+        }
+      },
+      {
+        "id": "roster-text",
+        "targetId": "diagonal-roster",
+        "aspect": "language",
+        "expected": "简体中文等级文案和原有数字",
+        "basis": {
+          "kind": "reference",
+          "source": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "observation": "简体中文等级文案和原有数字 已在完整原图对应位置查看"
+        },
+        "expectedTexts": [
+          "等级60",
+          "等级40"
+        ]
+      },
+      {
+        "id": "selection-style",
+        "targetId": "yellow-selection",
+        "aspect": "style",
+        "expected": "右列第二张安比卡以黄色边框高亮",
+        "basis": {
+          "kind": "reference",
+          "source": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "observation": "右列第二张安比卡以黄色边框高亮 已在完整原图对应位置查看"
+        }
+      },
+      {
+        "id": "tabs-text",
+        "targetId": "navigation",
+        "aspect": "language",
+        "expected": "原图三级中文页签",
+        "basis": {
+          "kind": "reference",
+          "source": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "observation": "原图三级中文页签 已在完整原图对应位置查看"
+        },
+        "expectedTexts": [
+          "基础",
+          "技能",
+          "装备"
+        ]
+      },
+      {
+        "id": "utilities-content",
+        "targetId": "utilities",
+        "aspect": "content",
+        "expected": "筛选 收藏 SELECT绿色飘带",
+        "basis": {
+          "kind": "reference",
+          "source": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "observation": "筛选 收藏 SELECT绿色飘带 已在完整原图对应位置查看"
+        }
+      }
+    ],
+    "permissions": []
+  },
+  "orientation": "landscape",
+  "viewport": {
+    "width": 1540,
+    "height": 928
+  },
+  "artDirection": {
+    "userDirection": "按完整原图还原右侧UI 模型可以省略",
+    "definition": {
+      "path": "brief.md",
+      "sha256": "151ac5d294836bb444363d650029670863fb12468a0950f54917fe12a67365f7"
+    },
+    "directionSource": {
+      "kind": "reference",
+      "detail": "用户给定本地完整截图"
+    }
+  },
+  "groups": [
+    {
+      "id": "screen",
+      "parent": null,
+      "controls": "画布与右侧安全边界",
+      "dependsOn": []
+    },
+    {
+      "id": "roster",
+      "parent": "screen",
+      "controls": "三列13张可见角色卡及信息条",
+      "dependsOn": []
+    },
+    {
+      "id": "selection",
+      "parent": "screen",
+      "controls": "右列第二项黄色选中边框",
+      "dependsOn": [
+        "roster"
+      ]
+    },
+    {
+      "id": "toolbar",
+      "parent": "screen",
+      "controls": "筛选收藏图标",
+      "dependsOn": []
+    },
+    {
+      "id": "tabs",
+      "parent": "screen",
+      "controls": "基础技能装备页签",
+      "dependsOn": []
+    },
+    {
+      "id": "ribbon",
+      "parent": "screen",
+      "controls": "右缘SELECT飘带",
+      "dependsOn": []
+    }
+  ]
+}

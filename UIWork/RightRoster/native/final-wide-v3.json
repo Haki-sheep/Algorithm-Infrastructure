@@ -1,0 +1,1560 @@
+{
+  "prefabPath": "Assets/TestImgae/RightRoster/RightRoster.prefab",
+  "prefabHash": "1c97c1be151f94186a5aa8c2fb471011f3c672309f914498391a518bca49c7e0",
+  "pngSha256": "7da40f3b76055073f8b0ab02a74ff5467dbbceaac5557085e73632dc1b71992b",
+  "width": 1920,
+  "height": 928,
+  "observationScope": "isolated-explicit-settings",
+  "settings": {
+    "safeArea": [
+      0,
+      0,
+      1920,
+      928
+    ],
+    "referenceWidth": 1540,
+    "referenceHeight": 928,
+    "matchWidthOrHeight": 1
+  },
+  "nodes": [
+    {
+      "path": "RightRoster",
+      "active": true,
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1920.0,
+      "height": 928.0,
+      "screenRect": [
+        0.0,
+        0.0,
+        1920.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/PreviewBackground",
+      "active": true,
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1920.0,
+      "height": 928.0,
+      "screenRect": [
+        0.0,
+        0.0,
+        1920.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/BasicTab",
+      "active": true,
+      "x": 1230.0,
+      "y": 220.000015,
+      "width": 153.0,
+      "height": 50.9999847,
+      "screenRect": [
+        1230.0,
+        220.000015,
+        153.0,
+        50.9999847
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/BasicTab/Label",
+      "active": true,
+      "x": 1290.0,
+      "y": 232.0,
+      "width": 51.9998779,
+      "height": 25.99997,
+      "screenRect": [
+        1290.0,
+        232.0,
+        51.9998779,
+        25.99997
+      ],
+      "text": "基础",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/SkillTab",
+      "active": true,
+      "x": 1249.0,
+      "y": 160.0,
+      "width": 152.999878,
+      "height": 47.0,
+      "screenRect": [
+        1249.0,
+        160.0,
+        152.999878,
+        47.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/SkillTab/Label",
+      "active": true,
+      "x": 1309.0,
+      "y": 168.0,
+      "width": 52.0,
+      "height": 26.0,
+      "screenRect": [
+        1309.0,
+        168.0,
+        52.0,
+        26.0
+      ],
+      "text": "技能",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/EquipmentTab",
+      "active": true,
+      "x": 1268.0,
+      "y": 96.0,
+      "width": 152.0,
+      "height": 46.9999847,
+      "screenRect": [
+        1268.0,
+        96.0,
+        152.0,
+        46.9999847
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/EquipmentTab/Label",
+      "active": true,
+      "x": 1328.0,
+      "y": 104.000015,
+      "width": 52.0,
+      "height": 25.9999847,
+      "screenRect": [
+        1328.0,
+        104.000015,
+        52.0,
+        25.9999847
+      ],
+      "text": "装备",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left01",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left01/Left01_Portrait",
+      "active": true,
+      "x": 1203.0,
+      "y": 711.0,
+      "width": 195.0,
+      "height": 170.0,
+      "screenRect": [
+        1203.0,
+        711.0,
+        195.0,
+        170.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left01/Left01_Footer",
+      "active": true,
+      "x": 1250.99988,
+      "y": 673.0,
+      "width": 158.000122,
+      "height": 38.0,
+      "screenRect": [
+        1250.99988,
+        673.0,
+        158.000122,
+        38.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left01/Left01_Rank",
+      "active": true,
+      "x": 1251.99988,
+      "y": 679.0,
+      "width": 38.0001221,
+      "height": 39.0,
+      "screenRect": [
+        1251.99988,
+        679.0,
+        38.0001221,
+        39.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left01/Left01_Element",
+      "active": true,
+      "x": 1375.0,
+      "y": 681.0,
+      "width": 25.9998779,
+      "height": 28.0,
+      "screenRect": [
+        1375.0,
+        681.0,
+        25.9998779,
+        28.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left01/Level",
+      "active": true,
+      "x": 1308.0,
+      "y": 679.0,
+      "width": 76.0,
+      "height": 28.0,
+      "screenRect": [
+        1308.0,
+        679.0,
+        76.0,
+        28.0
+      ],
+      "text": "等级60",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left02",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left02/Left02_Portrait",
+      "active": true,
+      "x": 1263.0,
+      "y": 505.0,
+      "width": 200.0,
+      "height": 165.0,
+      "screenRect": [
+        1263.0,
+        505.0,
+        200.0,
+        165.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left02/Left02_Footer",
+      "active": true,
+      "x": 1310.99988,
+      "y": 464.0,
+      "width": 163.000122,
+      "height": 41.0,
+      "screenRect": [
+        1310.99988,
+        464.0,
+        163.000122,
+        41.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left02/Left02_Rank",
+      "active": true,
+      "x": 1311.99988,
+      "y": 473.0,
+      "width": 38.0001221,
+      "height": 39.0,
+      "screenRect": [
+        1311.99988,
+        473.0,
+        38.0001221,
+        39.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left02/Left02_Element",
+      "active": true,
+      "x": 1440.0,
+      "y": 475.0,
+      "width": 26.0,
+      "height": 28.0,
+      "screenRect": [
+        1440.0,
+        475.0,
+        26.0,
+        28.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left02/Level",
+      "active": true,
+      "x": 1368.0,
+      "y": 473.0,
+      "width": 76.0,
+      "height": 28.0,
+      "screenRect": [
+        1368.0,
+        473.0,
+        76.0,
+        28.0
+      ],
+      "text": "等级60",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left03",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left03/Left03_Portrait",
+      "active": true,
+      "x": 1323.0,
+      "y": 295.0,
+      "width": 196.999878,
+      "height": 165.0,
+      "screenRect": [
+        1323.0,
+        295.0,
+        196.999878,
+        165.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left03/Left03_Footer",
+      "active": true,
+      "x": 1371.99988,
+      "y": 254.000015,
+      "width": 159.000122,
+      "height": 40.9999847,
+      "screenRect": [
+        1371.99988,
+        254.000015,
+        159.000122,
+        40.9999847
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left03/Left03_Rank",
+      "active": true,
+      "x": 1373.0,
+      "y": 263.0,
+      "width": 38.0,
+      "height": 39.0,
+      "screenRect": [
+        1373.0,
+        263.0,
+        38.0,
+        39.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left03/Left03_Element",
+      "active": true,
+      "x": 1497.0,
+      "y": 265.0,
+      "width": 26.0,
+      "height": 28.00003,
+      "screenRect": [
+        1497.0,
+        265.0,
+        26.0,
+        28.00003
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left03/Level",
+      "active": true,
+      "x": 1429.0,
+      "y": 263.0,
+      "width": 75.99988,
+      "height": 28.0,
+      "screenRect": [
+        1429.0,
+        263.0,
+        75.99988,
+        28.0
+      ],
+      "text": "等级60",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left04",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left04/Left04_Portrait",
+      "active": true,
+      "x": 1384.99988,
+      "y": 83.00001,
+      "width": 199.000122,
+      "height": 165.999969,
+      "screenRect": [
+        1384.99988,
+        83.00001,
+        199.000122,
+        165.999969
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left04/Left04_Footer",
+      "active": true,
+      "x": 1434.0,
+      "y": 37.9999962,
+      "width": 162.999878,
+      "height": 45.00001,
+      "screenRect": [
+        1434.0,
+        37.9999962,
+        162.999878,
+        45.00001
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left04/Left04_Rank",
+      "active": true,
+      "x": 1435.0,
+      "y": 51.0000153,
+      "width": 38.0,
+      "height": 38.9999771,
+      "screenRect": [
+        1435.0,
+        51.0000153,
+        38.0,
+        38.9999771
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left04/Left04_Element",
+      "active": true,
+      "x": 1561.0,
+      "y": 53.0,
+      "width": 26.0,
+      "height": 27.9999924,
+      "screenRect": [
+        1561.0,
+        53.0,
+        26.0,
+        27.9999924
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left04/Level",
+      "active": true,
+      "x": 1490.99988,
+      "y": 51.0000153,
+      "width": 76.0,
+      "height": 27.9999924,
+      "screenRect": [
+        1490.99988,
+        51.0000153,
+        76.0,
+        27.9999924
+      ],
+      "text": "等级60",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle00",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Portrait",
+      "active": true,
+      "x": 1361.0,
+      "y": 833.0,
+      "width": 165.0,
+      "height": 57.0,
+      "screenRect": [
+        1361.0,
+        833.0,
+        165.0,
+        57.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Footer",
+      "active": true,
+      "x": 1376.99988,
+      "y": 794.0,
+      "width": 160.0,
+      "height": 39.0,
+      "screenRect": [
+        1376.99988,
+        794.0,
+        160.0,
+        39.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Rank",
+      "active": true,
+      "x": 1378.0,
+      "y": 801.0,
+      "width": 37.9998779,
+      "height": 39.0,
+      "screenRect": [
+        1378.0,
+        801.0,
+        37.9998779,
+        39.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle00/Middle00_Element",
+      "active": true,
+      "x": 1503.0,
+      "y": 803.0,
+      "width": 26.0,
+      "height": 28.0,
+      "screenRect": [
+        1503.0,
+        803.0,
+        26.0,
+        28.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle00/Level",
+      "active": true,
+      "x": 1434.0,
+      "y": 801.0,
+      "width": 76.0,
+      "height": 28.0,
+      "screenRect": [
+        1434.0,
+        801.0,
+        76.0,
+        28.0
+      ],
+      "text": "等级60",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle01",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Portrait",
+      "active": true,
+      "x": 1393.0,
+      "y": 623.0,
+      "width": 180.0,
+      "height": 164.0,
+      "screenRect": [
+        1393.0,
+        623.0,
+        180.0,
+        164.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Footer",
+      "active": true,
+      "x": 1441.0,
+      "y": 581.0,
+      "width": 155.999878,
+      "height": 42.0,
+      "screenRect": [
+        1441.0,
+        581.0,
+        155.999878,
+        42.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Rank",
+      "active": true,
+      "x": 1442.0,
+      "y": 591.0,
+      "width": 38.0,
+      "height": 39.0,
+      "screenRect": [
+        1442.0,
+        591.0,
+        38.0,
+        39.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle01/Middle01_Element",
+      "active": true,
+      "x": 1562.0,
+      "y": 593.0,
+      "width": 26.0,
+      "height": 28.0,
+      "screenRect": [
+        1562.0,
+        593.0,
+        26.0,
+        28.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle01/Level",
+      "active": true,
+      "x": 1498.0,
+      "y": 591.0,
+      "width": 76.0,
+      "height": 28.0,
+      "screenRect": [
+        1498.0,
+        591.0,
+        76.0,
+        28.0
+      ],
+      "text": "等级60",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle02",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Portrait",
+      "active": true,
+      "x": 1454.0,
+      "y": 413.0,
+      "width": 195.0,
+      "height": 161.0,
+      "screenRect": [
+        1454.0,
+        413.0,
+        195.0,
+        161.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Footer",
+      "active": true,
+      "x": 1504.0,
+      "y": 371.0,
+      "width": 157.0,
+      "height": 42.0,
+      "screenRect": [
+        1504.0,
+        371.0,
+        157.0,
+        42.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Rank",
+      "active": true,
+      "x": 1504.99988,
+      "y": 381.0,
+      "width": 38.0001221,
+      "height": 39.0,
+      "screenRect": [
+        1504.99988,
+        381.0,
+        38.0001221,
+        39.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle02/Middle02_Element",
+      "active": true,
+      "x": 1625.99988,
+      "y": 383.0,
+      "width": 26.0001221,
+      "height": 28.0,
+      "screenRect": [
+        1625.99988,
+        383.0,
+        26.0001221,
+        28.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle02/Level",
+      "active": true,
+      "x": 1561.0,
+      "y": 381.0,
+      "width": 76.0,
+      "height": 28.0,
+      "screenRect": [
+        1561.0,
+        381.0,
+        76.0,
+        28.0
+      ],
+      "text": "等级60",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle03",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Portrait",
+      "active": true,
+      "x": 1518.0,
+      "y": 202.0,
+      "width": 196.0,
+      "height": 164.0,
+      "screenRect": [
+        1518.0,
+        202.0,
+        196.0,
+        164.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Footer",
+      "active": true,
+      "x": 1566.99988,
+      "y": 162.000015,
+      "width": 158.000122,
+      "height": 39.9999847,
+      "screenRect": [
+        1566.99988,
+        162.000015,
+        158.000122,
+        39.9999847
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Rank",
+      "active": true,
+      "x": 1568.0,
+      "y": 170.0,
+      "width": 38.0,
+      "height": 39.0,
+      "screenRect": [
+        1568.0,
+        170.0,
+        38.0,
+        39.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle03/Middle03_Element",
+      "active": true,
+      "x": 1691.0,
+      "y": 171.999985,
+      "width": 25.9998779,
+      "height": 28.00003,
+      "screenRect": [
+        1691.0,
+        171.999985,
+        25.9998779,
+        28.00003
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle03/Level",
+      "active": true,
+      "x": 1624.0,
+      "y": 170.0,
+      "width": 75.99988,
+      "height": 28.0,
+      "screenRect": [
+        1624.0,
+        170.0,
+        75.99988,
+        28.0
+      ],
+      "text": "等级60",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle04",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle04/Middle04_Portrait",
+      "active": true,
+      "x": 1579.0,
+      "y": 37.9999962,
+      "width": 180.999878,
+      "height": 117.0,
+      "screenRect": [
+        1579.0,
+        37.9999962,
+        180.999878,
+        117.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right01",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right01/Right01_Portrait",
+      "active": true,
+      "x": 1519.99988,
+      "y": 716.0,
+      "width": 193.000122,
+      "height": 164.0,
+      "screenRect": [
+        1519.99988,
+        716.0,
+        193.000122,
+        164.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right01/Right01_Footer",
+      "active": true,
+      "x": 1566.99988,
+      "y": 678.0,
+      "width": 157.000122,
+      "height": 38.0,
+      "screenRect": [
+        1566.99988,
+        678.0,
+        157.000122,
+        38.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right01/Right01_Rank",
+      "active": true,
+      "x": 1568.0,
+      "y": 684.0,
+      "width": 38.0,
+      "height": 39.0,
+      "screenRect": [
+        1568.0,
+        684.0,
+        38.0,
+        39.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right01/Right01_Element",
+      "active": true,
+      "x": 1690.0,
+      "y": 686.0,
+      "width": 25.9998779,
+      "height": 28.0,
+      "screenRect": [
+        1690.0,
+        686.0,
+        25.9998779,
+        28.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right01/Level",
+      "active": true,
+      "x": 1624.0,
+      "y": 684.0,
+      "width": 75.99988,
+      "height": 28.0,
+      "screenRect": [
+        1624.0,
+        684.0,
+        75.99988,
+        28.0
+      ],
+      "text": "等级60",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right02",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right02/Right02_Portrait",
+      "active": true,
+      "x": 1575.0,
+      "y": 506.000031,
+      "width": 192.0,
+      "height": 164.999969,
+      "screenRect": [
+        1575.0,
+        506.000031,
+        192.0,
+        164.999969
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right02/Right02_Footer",
+      "active": true,
+      "x": 1623.0,
+      "y": 469.999969,
+      "width": 154.0,
+      "height": 36.00006,
+      "screenRect": [
+        1623.0,
+        469.999969,
+        154.0,
+        36.00006
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right02/Right02_Rank",
+      "active": true,
+      "x": 1624.0,
+      "y": 474.0,
+      "width": 38.0,
+      "height": 39.0,
+      "screenRect": [
+        1624.0,
+        474.0,
+        38.0,
+        39.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right02/Right02_Element",
+      "active": true,
+      "x": 1744.0,
+      "y": 476.0,
+      "width": 26.0,
+      "height": 28.0,
+      "screenRect": [
+        1744.0,
+        476.0,
+        26.0,
+        28.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right02/Level",
+      "active": true,
+      "x": 1680.0,
+      "y": 474.0,
+      "width": 76.0,
+      "height": 28.0,
+      "screenRect": [
+        1680.0,
+        474.0,
+        76.0,
+        28.0
+      ],
+      "text": "等级60",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right03",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right03/Right03_Portrait",
+      "active": true,
+      "x": 1641.99988,
+      "y": 293.000031,
+      "width": 196.000122,
+      "height": 164.999969,
+      "screenRect": [
+        1641.99988,
+        293.000031,
+        196.000122,
+        164.999969
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right03/Right03_Footer",
+      "active": true,
+      "x": 1691.0,
+      "y": 254.000015,
+      "width": 158.0,
+      "height": 39.0000153,
+      "screenRect": [
+        1691.0,
+        254.000015,
+        158.0,
+        39.0000153
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right03/Right03_Rank",
+      "active": true,
+      "x": 1692.0,
+      "y": 261.0,
+      "width": 37.9998779,
+      "height": 39.0,
+      "screenRect": [
+        1692.0,
+        261.0,
+        37.9998779,
+        39.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right03/Right03_Element",
+      "active": true,
+      "x": 1815.0,
+      "y": 263.0,
+      "width": 26.0,
+      "height": 28.0,
+      "screenRect": [
+        1815.0,
+        263.0,
+        26.0,
+        28.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right03/Level",
+      "active": true,
+      "x": 1748.0,
+      "y": 261.0,
+      "width": 76.0,
+      "height": 28.0,
+      "screenRect": [
+        1748.0,
+        261.0,
+        76.0,
+        28.0
+      ],
+      "text": "等级60",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right04",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right04/Right04_Portrait",
+      "active": true,
+      "x": 1704.0,
+      "y": 80.99999,
+      "width": 199.0,
+      "height": 167.0,
+      "screenRect": [
+        1704.0,
+        80.99999,
+        199.0,
+        167.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right04/Right04_Footer",
+      "active": true,
+      "x": 1753.0,
+      "y": 39.0,
+      "width": 162.0,
+      "height": 41.9999924,
+      "screenRect": [
+        1753.0,
+        39.0,
+        162.0,
+        41.9999924
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right04/Right04_Rank",
+      "active": true,
+      "x": 1754.0,
+      "y": 49.0000038,
+      "width": 38.0,
+      "height": 39.0000038,
+      "screenRect": [
+        1754.0,
+        49.0000038,
+        38.0,
+        39.0000038
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right04/Right04_Element",
+      "active": true,
+      "x": 1879.99988,
+      "y": 51.0000153,
+      "width": 26.0001221,
+      "height": 27.9999924,
+      "screenRect": [
+        1879.99988,
+        51.0000153,
+        26.0001221,
+        27.9999924
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right04/Level",
+      "active": true,
+      "x": 1810.0,
+      "y": 49.0000038,
+      "width": 76.0,
+      "height": 27.9999962,
+      "screenRect": [
+        1810.0,
+        49.0000038,
+        76.0,
+        27.9999962
+      ],
+      "text": "等级40",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Decorations",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Decorations/SelectionFrame",
+      "active": true,
+      "x": 1558.0,
+      "y": 461.0,
+      "width": 231.999878,
+      "height": 219.0,
+      "screenRect": [
+        1558.0,
+        461.0,
+        231.999878,
+        219.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Decorations/FilterButton",
+      "active": true,
+      "x": 1688.0,
+      "y": 823.0,
+      "width": 51.0,
+      "height": 51.0,
+      "screenRect": [
+        1688.0,
+        823.0,
+        51.0,
+        51.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Decorations/FavoriteButton",
+      "active": true,
+      "x": 1756.0,
+      "y": 822.0,
+      "width": 52.0,
+      "height": 52.0,
+      "screenRect": [
+        1756.0,
+        822.0,
+        52.0,
+        52.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Decorations/SelectRibbon",
+      "active": true,
+      "x": 1800.0,
+      "y": 37.9999962,
+      "width": 117.0,
+      "height": 851.0,
+      "screenRect": [
+        1800.0,
+        37.9999962,
+        117.0,
+        851.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Footer",
+      "active": true,
+      "x": 1159.99988,
+      "y": 0.0,
+      "width": 760.0001,
+      "height": 928.0,
+      "screenRect": [
+        1159.99988,
+        0.0,
+        760.0001,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Footer/UID",
+      "active": true,
+      "x": 1810.0,
+      "y": 40.0000076,
+      "width": 84.0,
+      "height": 13.9999962,
+      "screenRect": [
+        1810.0,
+        40.0000076,
+        84.0,
+        13.9999962
+      ],
+      "text": "UID: 21781313",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Footer/Signal",
+      "active": true,
+      "x": 1894.99988,
+      "y": 41.0000153,
+      "width": 18.0001221,
+      "height": 14.9999733,
+      "screenRect": [
+        1894.99988,
+        41.0000153,
+        18.0001221,
+        14.9999733
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Footer/BottomEdge",
+      "active": true,
+      "x": 1440.0,
+      "y": 37.9999962,
+      "width": 475.0,
+      "height": 3.99999619,
+      "screenRect": [
+        1440.0,
+        37.9999962,
+        475.0,
+        3.99999619
+      ],
+      "text": null,
+      "textOverflow": false
+    }
+  ],
+  "observedAtUtc": "2026-09-22T10:55:50.8760091Z",
+  "sourceDesignHash": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9",
+  "inputAcceptance": "visual-only no Selectable or business input"
+}

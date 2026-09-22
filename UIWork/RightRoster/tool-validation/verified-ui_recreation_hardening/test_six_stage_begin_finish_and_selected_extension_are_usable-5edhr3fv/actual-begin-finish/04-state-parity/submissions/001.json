@@ -1,0 +1,9 @@
+{
+  "previous": null,
+  "candidate": {
+    "path": "04-state-parity/submissions/001.bin",
+    "sha256": "60fd4fc2e6e2a64ee24c7caaf782516ccf0706ad7445637ea3c4b3edcbf36746"
+  },
+  "result": "accepted",
+  "reason": "bound-record-checks-only"
+}

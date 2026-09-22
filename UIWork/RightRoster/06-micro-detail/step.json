@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 2,
+  "mode": "full",
+  "stage": 6,
+  "status": "reviewed",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "e3e33bee83eb96f285696b77c281f634e357a56a00fb7f9d8333ebe362c213e3"
+  },
+  "predecessor": {
+    "path": "05-material/step.json",
+    "sha256": "90ba50971de69f7524d9ea611f4ab67ab47167969278d2461faa63ec2298da1a"
+  },
+  "input": {
+    "path": "05-material/evidence/design-5.png",
+    "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+  },
+  "protected": [
+    {
+      "id": "detail",
+      "group": "screen",
+      "decision": "核对字形基线 透明边缘与全部内容对应",
+      "check": "100%尺寸逐区检查并保留原图静态裁切",
+      "establishedAt": 1
+    }
+  ],
+  "divergenceRequired": false,
+  "alternatives": [],
+  "findings": [
+    {
+      "id": "stage-6",
+      "kind": "design-gap",
+      "rootCause": "等级字形坐标使用了重复的左移补偿 与原图相比偏左4像素",
+      "observation": "等级字形坐标使用了重复的左移补偿 与原图相比偏左4像素",
+      "location": "screen",
+      "impact": "下游无法据此还原相应区域",
+      "acceptance": "100%尺寸逐区检查并保留原图静态裁切",
+      "status": "fixed",
+      "pages": [
+        "roster"
+      ],
+      "decisionIds": [
+        "detail"
+      ]
+    }
+  ],
+  "questions": [],
+  "attempts": [
+    {
+      "sequence": 1,
+      "findingId": "stage-6",
+      "before": {
+        "path": "05-material/evidence/design-5.png",
+        "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+      },
+      "after": {
+        "path": "06-micro-detail/evidence/design-6.png",
+        "sha256": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9"
+      },
+      "change": "核对字形基线 透明边缘与全部内容对应",
+      "inspection": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态",
+      "result": "fixed",
+      "changedGroups": [
+        "screen",
+        "roster",
+        "selection",
+        "toolbar",
+        "tabs",
+        "ribbon"
+      ],
+      "auditedGroups": [
+        "ribbon",
+        "roster",
+        "screen",
+        "selection",
+        "tabs",
+        "toolbar"
+      ],
+      "checked": [
+        "composition",
+        "reading",
+        "geometry",
+        "state",
+        "material",
+        "detail"
+      ],
+      "checkObservations": {
+        "composition": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态 复核 右侧卡列和三项页签处于源图相同区域",
+        "reading": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态 复核 黄边只强调右列第二项 信息条不抢占头像",
+        "geometry": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态 复核 13张卡保留顶部底部可见裁切 文案不跨属性图标",
+        "state": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态 复核 三页签和两个顶部圆按钮保持明确视觉状态",
+        "material": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态 复核 没有用整页图片替代头像 文字 信息条与选中外框",
+        "detail": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态 复核 100%尺寸逐区检查并保留原图静态裁切"
+      }
+    }
+  ],
+  "output": {
+    "path": "06-micro-detail/evidence/design-6.png",
+    "sha256": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9"
+  },
+  "review": {
+    "reviewer": "Codex 实际图片观察",
+    "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态",
+    "evidence": {
+      "path": "06-micro-detail/evidence/design-6.png",
+      "sha256": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9"
+    },
+    "result": "reviewed",
+    "dimensions": [
+      {
+        "page": "roster",
+        "id": "typography-icons",
+        "group": "screen",
+        "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态 本阶段维度 typography-icons",
+        "result": "observed"
+      },
+      {
+        "page": "roster",
+        "id": "pixel-edges",
+        "group": "screen",
+        "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态 本阶段维度 pixel-edges",
+        "result": "observed"
+      },
+      {
+        "page": "roster",
+        "id": "final-consistency",
+        "group": "screen",
+        "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态 本阶段维度 final-consistency",
+        "result": "observed"
+      }
+    ],
+    "visualComparisons": [
+      {
+        "targetId": "diagonal-roster",
+        "reference": {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        "current": {
+          "path": "06-micro-detail/evidence/design-6.png",
+          "sha256": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9"
+        },
+        "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态",
+        "remaining": "设计布局与内容按原图落实 原生Unity渲染与字体仍需实测",
+        "verdict": "matched",
+        "constraintReviews": [
+          {
+            "constraintId": "roster-layout",
+            "result": "matched",
+            "observed": "三列交错倾斜布局 按原图保留13张可见卡片",
+            "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态"
+          },
+          {
+            "constraintId": "roster-content",
+            "result": "matched",
+            "observed": "原图头像 品质标记 属性图标与可见等级保持对应",
+            "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态"
+          },
+          {
+            "constraintId": "roster-text",
+            "result": "matched",
+            "observed": "简体中文等级文案和原有数字",
+            "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态",
+            "textSamples": [
+              {
+                "expected": "等级60",
+                "observed": "等级60"
+              },
+              {
+                "expected": "等级40",
+                "observed": "等级40"
+              }
+            ]
+          }
+        ],
+        "coreFeatureReview": {
+          "criterion": "13张可见角色头像保持三列次序 斜边下移右倾 黑色信息条中可读等级60与等级40",
+          "result": "met",
+          "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态"
+        }
+      },
+      {
+        "targetId": "yellow-selection",
+        "reference": {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        "current": {
+          "path": "06-micro-detail/evidence/design-6.png",
+          "sha256": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9"
+        },
+        "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态",
+        "remaining": "设计布局与内容按原图落实 原生Unity渲染与字体仍需实测",
+        "verdict": "matched",
+        "constraintReviews": [
+          {
+            "constraintId": "selection-style",
+            "result": "matched",
+            "observed": "右列第二张安比卡以黄色边框高亮",
+            "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态"
+          }
+        ],
+        "coreFeatureReview": {
+          "criterion": "右列第二张卡保持黄色连续外框 内部头像与等级独立于外框",
+          "result": "met",
+          "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态"
+        }
+      },
+      {
+        "targetId": "navigation",
+        "reference": {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        "current": {
+          "path": "06-micro-detail/evidence/design-6.png",
+          "sha256": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9"
+        },
+        "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态",
+        "remaining": "设计布局与内容按原图落实 原生Unity渲染与字体仍需实测",
+        "verdict": "matched",
+        "constraintReviews": [
+          {
+            "constraintId": "tabs-text",
+            "result": "matched",
+            "observed": "原图三级中文页签",
+            "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态",
+            "textSamples": [
+              {
+                "expected": "基础",
+                "observed": "基础"
+              },
+              {
+                "expected": "技能",
+                "observed": "技能"
+              },
+              {
+                "expected": "装备",
+                "observed": "装备"
+              }
+            ]
+          }
+        ],
+        "coreFeatureReview": {
+          "criterion": "基础为黄底黑字 技能装备为暗底白字 三项左缘逐行右移",
+          "result": "met",
+          "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态"
+        }
+      },
+      {
+        "targetId": "utilities",
+        "reference": {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        "current": {
+          "path": "06-micro-detail/evidence/design-6.png",
+          "sha256": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9"
+        },
+        "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态",
+        "remaining": "设计布局与内容按原图落实 原生Unity渲染与字体仍需实测",
+        "verdict": "matched",
+        "constraintReviews": [
+          {
+            "constraintId": "utilities-content",
+            "result": "matched",
+            "observed": "筛选 收藏 SELECT绿色飘带",
+            "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态"
+          }
+        ],
+        "coreFeatureReview": {
+          "criterion": "右上筛选白图标与收藏黄星保持圆形 右缘绿色SELECT楔形保留原方向",
+          "result": "met",
+          "observation": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态"
+        }
+      }
+    ]
+  },
+  "unresolvedRegressions": [],
+  "reuseReason": "原图已锁定本阶段外观与次序 只实施拆分和版式映射 无需制造改变参考的候选",
+  "reuseEvidence": {
+    "path": "05-material/evidence/design-5.png",
+    "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+  },
+  "pageCoverage": {
+    "roster": "已查看100%整屏 微调后等级字形与源图横向位置一致 基础底板文字孔洞区域渐变连续 没有鼠标指针 三列13张头像 次级标签 黄色选中框和圆按钮保持此前决定 JPG原有模糊保留 未进行超分或新增动态状态"
+  }
+}

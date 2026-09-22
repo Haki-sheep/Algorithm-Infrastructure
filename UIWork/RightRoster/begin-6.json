@@ -1,0 +1,8 @@
+{
+  "status": "working",
+  "created": "06-micro-detail/step.json",
+  "sha256": "b84ffedfab755aa52c119f01a4257817ec6a32e5918df8940f38942290d15a20",
+  "completionClaim": false,
+  "designValueReference": "references/six-stage-execution.md#design-value-carryover",
+  "guidance": []
+}

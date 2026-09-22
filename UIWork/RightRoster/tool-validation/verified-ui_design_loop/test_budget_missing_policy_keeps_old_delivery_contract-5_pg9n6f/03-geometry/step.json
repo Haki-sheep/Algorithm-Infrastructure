@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 2,
+  "mode": "full",
+  "stage": 3,
+  "status": "reviewed",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "f028b6b59f930e8ea67c82eb96f01f8eb57e3e1ab0c8f3753de883c7076994b3"
+  },
+  "predecessor": {
+    "path": "02-hierarchy/step.json",
+    "sha256": "5fc07a945cc2bbbe0110926998ee416a0a4b9ee68286ab91686a4c0d02a4090c"
+  },
+  "input": {
+    "path": "02-hierarchy/evidence/03.svg",
+    "sha256": "65d37be58a5de315390fe447b37ad1018cad7b84e5b7e0ca350270b428935fbc"
+  },
+  "narrative": {
+    "path": "03-geometry/step.md",
+    "sha256": "f51f9fcc72eb1ecad83c21f83771c18d0ef6262b8bebc4bbad02b6179be79475"
+  },
+  "protected": [
+    {
+      "id": "p3",
+      "decision": "Synthetic retained decision 3",
+      "group": "row",
+      "check": "Slider label remains inside its declared row bounds",
+      "establishedAt": 1
+    }
+  ],
+  "divergenceRequired": false,
+  "reuseReason": "Deterministic protocol fixture; no aesthetic claim.",
+  "alternatives": [],
+  "findings": [
+    {
+      "id": "3-1",
+      "rootCause": "Synthetic root 3-1",
+      "kind": "design-gap",
+      "observation": "Fixture observation 3-1",
+      "location": "rectangle 1",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed",
+      "decisionIds": [
+        "p3"
+      ],
+      "pages": [
+        "display"
+      ]
+    },
+    {
+      "id": "3-2",
+      "rootCause": "Synthetic root 3-2",
+      "kind": "design-gap",
+      "observation": "Fixture observation 3-2",
+      "location": "rectangle 2",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed",
+      "decisionIds": [
+        "p3"
+      ],
+      "pages": [
+        "display"
+      ]
+    },
+    {
+      "id": "3-3",
+      "rootCause": "Synthetic root 3-3",
+      "kind": "design-gap",
+      "observation": "Fixture observation 3-3",
+      "location": "rectangle 3",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed",
+      "decisionIds": [
+        "p3"
+      ],
+      "pages": [
+        "display"
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "sequence": 1,
+      "findingId": "3-1",
+      "before": {
+        "path": "02-hierarchy/evidence/03.svg",
+        "sha256": "65d37be58a5de315390fe447b37ad1018cad7b84e5b7e0ca350270b428935fbc"
+      },
+      "after": {
+        "path": "03-geometry/evidence/01.svg",
+        "sha256": "e11f702fad588be3859af1004918908287419dd2b5cbc4d519ac01ad34062f22"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ],
+      "checkObservations": {
+        "p1": "Synthetic inspected rectangle",
+        "p2": "Synthetic inspected rectangle",
+        "p3": "Synthetic inspected rectangle"
+      }
+    },
+    {
+      "sequence": 2,
+      "findingId": "3-2",
+      "before": {
+        "path": "03-geometry/evidence/01.svg",
+        "sha256": "e11f702fad588be3859af1004918908287419dd2b5cbc4d519ac01ad34062f22"
+      },
+      "after": {
+        "path": "03-geometry/evidence/02.svg",
+        "sha256": "8fa4508916f10b2426a17b2fdc76c365ab6c0dd84325fc69796704cb8b66ed03"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ],
+      "checkObservations": {
+        "p1": "Synthetic inspected rectangle",
+        "p2": "Synthetic inspected rectangle",
+        "p3": "Synthetic inspected rectangle"
+      }
+    },
+    {
+      "sequence": 3,
+      "findingId": "3-3",
+      "before": {
+        "path": "03-geometry/evidence/02.svg",
+        "sha256": "8fa4508916f10b2426a17b2fdc76c365ab6c0dd84325fc69796704cb8b66ed03"
+      },
+      "after": {
+        "path": "03-geometry/evidence/03.svg",
+        "sha256": "e31746aba17fbe4f8834a6105c3471d54b051dfebe552ad920f2bf4c21c77edf"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ],
+      "checkObservations": {
+        "p1": "Synthetic inspected rectangle",
+        "p2": "Synthetic inspected rectangle",
+        "p3": "Synthetic inspected rectangle"
+      }
+    }
+  ],
+  "unresolvedRegressions": [],
+  "output": {
+    "path": "03-geometry/evidence/03.svg",
+    "sha256": "e31746aba17fbe4f8834a6105c3471d54b051dfebe552ad920f2bf4c21c77edf"
+  },
+  "review": {
+    "reviewer": "synthetic-test",
+    "observation": "Fixture only",
+    "evidence": {
+      "path": "03-geometry/evidence/03.svg",
+      "sha256": "e31746aba17fbe4f8834a6105c3471d54b051dfebe552ad920f2bf4c21c77edf"
+    },
+    "result": "reviewed",
+    "dimensions": [
+      {
+        "page": "display",
+        "id": "adaptive-layout",
+        "group": "row",
+        "observation": "Synthetic observed row condition: adaptive-layout",
+        "result": "observed"
+      },
+      {
+        "page": "display",
+        "id": "text-extremes",
+        "group": "row",
+        "observation": "Synthetic observed row condition: text-extremes",
+        "result": "observed"
+      },
+      {
+        "page": "display",
+        "id": "bounds-overflow",
+        "group": "row",
+        "observation": "Synthetic observed row condition: bounds-overflow",
+        "result": "observed"
+      }
+    ]
+  },
+  "reuseEvidence": {
+    "path": "02-hierarchy/evidence/03.svg",
+    "sha256": "65d37be58a5de315390fe447b37ad1018cad7b84e5b7e0ca350270b428935fbc"
+  },
+  "pageCoverage": {
+    "display": "Synthetic page inspection"
+  }
+}

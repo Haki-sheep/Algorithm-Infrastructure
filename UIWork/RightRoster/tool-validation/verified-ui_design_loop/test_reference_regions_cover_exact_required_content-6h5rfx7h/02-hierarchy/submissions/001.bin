@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 2,
+  "mode": "full",
+  "stage": 2,
+  "status": "reviewed",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "632544a539841ebcc92961c88bb3603c04e5fcf906c9d5ac13a319841f02f625"
+  },
+  "predecessor": {
+    "path": "01-composition/step.json",
+    "sha256": "f10f420fab611071fbadcdeaa96272aeaae8ced9684bc383bf01c840ac610030"
+  },
+  "input": {
+    "path": "01-composition/evidence/03.svg",
+    "sha256": "8e4307e68fc847f9b5b6d3b9894713e4ccde7b994526569458a16663026ed4fc"
+  },
+  "narrative": {
+    "path": "02-hierarchy/step.md",
+    "sha256": "3c1540412be3ad08a029fcdf4db7c58dba259c9324af07ada8912b3e170c3336"
+  },
+  "protected": [
+    {
+      "id": "p2",
+      "decision": "Synthetic retained decision 2",
+      "group": "row",
+      "check": "Slider label remains inside its declared row bounds",
+      "establishedAt": 1
+    }
+  ],
+  "divergenceRequired": false,
+  "reuseReason": "Deterministic protocol fixture; no aesthetic claim.",
+  "alternatives": [],
+  "findings": [
+    {
+      "id": "2-1",
+      "rootCause": "Synthetic root 2-1",
+      "kind": "design-gap",
+      "observation": "Fixture observation 2-1",
+      "location": "rectangle 1",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed",
+      "decisionIds": [
+        "p2"
+      ],
+      "pages": [
+        "display"
+      ]
+    },
+    {
+      "id": "2-2",
+      "rootCause": "Synthetic root 2-2",
+      "kind": "design-gap",
+      "observation": "Fixture observation 2-2",
+      "location": "rectangle 2",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed",
+      "decisionIds": [
+        "p2"
+      ],
+      "pages": [
+        "display"
+      ]
+    },
+    {
+      "id": "2-3",
+      "rootCause": "Synthetic root 2-3",
+      "kind": "design-gap",
+      "observation": "Fixture observation 2-3",
+      "location": "rectangle 3",
+      "impact": "Synthetic impact",
+      "acceptance": "Fixture delta present",
+      "status": "fixed",
+      "decisionIds": [
+        "p2"
+      ],
+      "pages": [
+        "display"
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "sequence": 1,
+      "findingId": "2-1",
+      "before": {
+        "path": "01-composition/evidence/03.svg",
+        "sha256": "8e4307e68fc847f9b5b6d3b9894713e4ccde7b994526569458a16663026ed4fc"
+      },
+      "after": {
+        "path": "02-hierarchy/evidence/01.svg",
+        "sha256": "1259eb5f995dc120ab5e435fb1236cf8571ee45f4edb674afd8fa41493426616"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ],
+      "checkObservations": {
+        "p1": "Synthetic inspected rectangle",
+        "p2": "Synthetic inspected rectangle"
+      }
+    },
+    {
+      "sequence": 2,
+      "findingId": "2-2",
+      "before": {
+        "path": "02-hierarchy/evidence/01.svg",
+        "sha256": "1259eb5f995dc120ab5e435fb1236cf8571ee45f4edb674afd8fa41493426616"
+      },
+      "after": {
+        "path": "02-hierarchy/evidence/02.svg",
+        "sha256": "fffaf314836eb68b5bb9f7d1b72a9f20d93354905ce4cc2fad132573aa72bdd7"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ],
+      "checkObservations": {
+        "p1": "Synthetic inspected rectangle",
+        "p2": "Synthetic inspected rectangle"
+      }
+    },
+    {
+      "sequence": 3,
+      "findingId": "2-3",
+      "before": {
+        "path": "02-hierarchy/evidence/02.svg",
+        "sha256": "fffaf314836eb68b5bb9f7d1b72a9f20d93354905ce4cc2fad132573aa72bdd7"
+      },
+      "after": {
+        "path": "02-hierarchy/evidence/03.svg",
+        "sha256": "65d37be58a5de315390fe447b37ad1018cad7b84e5b7e0ca350270b428935fbc"
+      },
+      "change": "Move fixture rectangle",
+      "inspection": "Fixture only",
+      "result": "fixed",
+      "checked": [
+        "p1",
+        "p2"
+      ],
+      "resolvesAttempts": [],
+      "changedGroups": [
+        "row"
+      ],
+      "auditedGroups": [
+        "row",
+        "settings",
+        "screen",
+        "help"
+      ],
+      "checkObservations": {
+        "p1": "Synthetic inspected rectangle",
+        "p2": "Synthetic inspected rectangle"
+      }
+    }
+  ],
+  "unresolvedRegressions": [],
+  "output": {
+    "path": "02-hierarchy/evidence/03.svg",
+    "sha256": "65d37be58a5de315390fe447b37ad1018cad7b84e5b7e0ca350270b428935fbc"
+  },
+  "review": {
+    "reviewer": "synthetic-test",
+    "observation": "Fixture only",
+    "evidence": {
+      "path": "02-hierarchy/evidence/03.svg",
+      "sha256": "65d37be58a5de315390fe447b37ad1018cad7b84e5b7e0ca350270b428935fbc"
+    },
+    "result": "reviewed",
+    "dimensions": [
+      {
+        "page": "display",
+        "id": "reading-order",
+        "group": "row",
+        "observation": "Synthetic observed row condition: reading-order",
+        "result": "observed"
+      },
+      {
+        "page": "display",
+        "id": "type-hierarchy",
+        "group": "row",
+        "observation": "Synthetic observed row condition: type-hierarchy",
+        "result": "observed"
+      },
+      {
+        "page": "display",
+        "id": "action-priority",
+        "group": "row",
+        "observation": "Synthetic observed row condition: action-priority",
+        "result": "observed"
+      }
+    ]
+  },
+  "reuseEvidence": {
+    "path": "01-composition/evidence/03.svg",
+    "sha256": "8e4307e68fc847f9b5b6d3b9894713e4ccde7b994526569458a16663026ed4fc"
+  },
+  "pageCoverage": {
+    "display": "Synthetic page inspection"
+  }
+}

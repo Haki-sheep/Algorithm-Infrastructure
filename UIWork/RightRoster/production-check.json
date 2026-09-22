@@ -1,0 +1,69 @@
+{
+  "status": "evidence-consistent",
+  "round": 1,
+  "scope": "declared-production-risk-file-relations-only",
+  "resourcePreparation": "initial-inventory-bindings-checked",
+  "resourceGaps": "declared-bindings-checked",
+  "qualityGuarantees": {
+    "contract": "design-quality-v1",
+    "executionContract": "ui-visual-production-v2",
+    "referenceContract": "screen-reference-v1",
+    "capabilityBaseline": "declared-plan-checked",
+    "dimensionCoverage": "declared-observations-checked",
+    "textRequirements": "not-applicable",
+    "status": "declared-relations-checked",
+    "scope": "current-baseline-only",
+    "inheritedUncheckedDecisionIds": [],
+    "aesthetics": "unproven",
+    "productionRisks": "bound-evidence-checked"
+  },
+  "implementation": "implementation.json",
+  "risks": 1,
+  "designCarryover": {
+    "reference": "references/six-stage-execution.md#design-value-carryover",
+    "advisoryOnly": true,
+    "nativeVerification": "not-verified-by-this-check",
+    "decisions": [
+      {
+        "id": "composition",
+        "group": "screen",
+        "decision": "右侧三列卡片保留原坐标 主体模型范围排除",
+        "check": "右侧卡列和三项页签处于源图相同区域"
+      },
+      {
+        "id": "detail",
+        "group": "screen",
+        "decision": "核对字形基线 透明边缘与全部内容对应",
+        "check": "100%尺寸逐区检查并保留原图静态裁切"
+      },
+      {
+        "id": "geometry",
+        "group": "roster",
+        "decision": "逐张独立斜切轮廓 字段边界和卡列次序锁定",
+        "check": "13张卡保留顶部底部可见裁切 文案不跨属性图标"
+      },
+      {
+        "id": "material",
+        "group": "roster",
+        "decision": "原图头像和徽章以独立切片恢复 文字以字形表绘制",
+        "check": "没有用整页图片替代头像 文字 信息条与选中外框"
+      },
+      {
+        "id": "reading",
+        "group": "roster",
+        "decision": "选中安比高亮 等级黑条统一为第二阅读层",
+        "check": "黄边只强调右列第二项 信息条不抢占头像"
+      },
+      {
+        "id": "state",
+        "group": "tabs",
+        "decision": "基础高亮 技能与装备暗底 选中边框独立",
+        "check": "三页签和两个顶部圆按钮保持明确视觉状态"
+      }
+    ]
+  },
+  "nonClaims": [
+    "Does not prove risk observations are truthful, complete, or timely",
+    "Does not execute or approve Unity, input, aesthetics, or business behavior"
+  ]
+}

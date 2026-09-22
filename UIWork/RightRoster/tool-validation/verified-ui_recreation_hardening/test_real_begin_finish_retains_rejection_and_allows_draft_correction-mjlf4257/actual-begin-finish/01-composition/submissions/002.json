@@ -1,0 +1,12 @@
+{
+  "previous": {
+    "path": "01-composition/submissions/001.json",
+    "sha256": "e9d5dcbb2049d58908600dd23cb763705afb6faf1c65bf7b4be12ad976cdd052"
+  },
+  "candidate": {
+    "path": "01-composition/submissions/002.bin",
+    "sha256": "bb032ecb3dd410af0e80ccad1c76cc41f01e9e00f35e6d4dbe3aeb8775186f0c"
+  },
+  "result": "accepted",
+  "reason": "bound-record-checks-only"
+}

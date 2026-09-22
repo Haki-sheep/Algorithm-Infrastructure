@@ -1,0 +1,83 @@
+{
+  "scenePath": "Assets/TestImgae/RightRoster/RightRosterPreview.unity",
+  "sceneReopened": true,
+  "prefabInstancePath": "Assets/TestImgae/RightRoster/RightRoster.prefab",
+  "missingScripts": 0,
+  "brokenImages": 0,
+  "brokenFonts": 0,
+  "texts": [
+    {
+      "path": "RightRoster/RightPanel/Tabs/BasicTab/Label",
+      "text": "基础"
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/SkillTab/Label",
+      "text": "技能"
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/EquipmentTab/Label",
+      "text": "装备"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left01/Level",
+      "text": "等级60"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left02/Level",
+      "text": "等级60"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left03/Level",
+      "text": "等级60"
+    },
+    {
+      "path": "RightRoster/RightPanel/LeftCards/Left04/Level",
+      "text": "等级60"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle00/Level",
+      "text": "等级60"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle01/Level",
+      "text": "等级60"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle02/Level",
+      "text": "等级60"
+    },
+    {
+      "path": "RightRoster/RightPanel/MiddleCards/Middle03/Level",
+      "text": "等级60"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right01/Level",
+      "text": "等级60"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right02/Level",
+      "text": "等级60"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right03/Level",
+      "text": "等级60"
+    },
+    {
+      "path": "RightRoster/RightPanel/RightCards/Right04/Level",
+      "text": "等级40"
+    },
+    {
+      "path": "RightRoster/RightPanel/Footer/UID",
+      "text": "UID: 21781313"
+    }
+  ],
+  "selectables": 0,
+  "prefabHash": "1c97c1be151f94186a5aa8c2fb471011f3c672309f914498391a518bca49c7e0",
+  "observedAtUtc": "2026-09-22T10:57:03.1370721Z",
+  "openScenesAfter": [
+    {
+      "path": "Assets/PathfindingAlgorithm/Scenes/VisualizationDemo.unity",
+      "dirty": false
+    }
+  ]
+}

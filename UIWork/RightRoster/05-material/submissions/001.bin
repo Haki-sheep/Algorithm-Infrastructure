@@ -1,0 +1,435 @@
+{
+  "schemaVersion": 2,
+  "mode": "full",
+  "stage": 5,
+  "status": "reviewed",
+  "brief": {
+    "path": "brief.json",
+    "sha256": "e3e33bee83eb96f285696b77c281f634e357a56a00fb7f9d8333ebe362c213e3"
+  },
+  "predecessor": {
+    "path": "04-state-parity/step.json",
+    "sha256": "9878a300dc68f985085a478e664da393656c4b6dc8e036440ea915891a63ad49"
+  },
+  "input": {
+    "path": "04-state-parity/evidence/design-4.png",
+    "sha256": "e20674adb336d024eb13e11be151992a474ab86dcb8976fe5b834bbe9a4e94e5"
+  },
+  "protected": [
+    {
+      "id": "material",
+      "group": "roster",
+      "decision": "原图头像和徽章以独立切片恢复 文字以字形表绘制",
+      "check": "没有用整页图片替代头像 文字 信息条与选中外框",
+      "establishedAt": 1
+    }
+  ],
+  "divergenceRequired": false,
+  "alternatives": [],
+  "findings": [
+    {
+      "id": "stage-5",
+      "kind": "design-gap",
+      "rootCause": "状态草稿缺少原图角色纹理和独立的品质属性素材",
+      "observation": "状态草稿缺少原图角色纹理和独立的品质属性素材",
+      "location": "roster",
+      "impact": "下游无法据此还原相应区域",
+      "acceptance": "没有用整页图片替代头像 文字 信息条与选中外框",
+      "status": "fixed",
+      "pages": [
+        "roster"
+      ],
+      "decisionIds": [
+        "material"
+      ]
+    }
+  ],
+  "questions": [],
+  "attempts": [
+    {
+      "sequence": 1,
+      "findingId": "stage-5",
+      "before": {
+        "path": "04-state-parity/evidence/design-4.png",
+        "sha256": "e20674adb336d024eb13e11be151992a474ab86dcb8976fe5b834bbe9a4e94e5"
+      },
+      "after": {
+        "path": "05-material/evidence/design-5.png",
+        "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+      },
+      "change": "原图头像和徽章以独立切片恢复 文字以字形表绘制",
+      "inspection": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+      "result": "fixed",
+      "changedGroups": [
+        "screen",
+        "roster",
+        "selection",
+        "toolbar",
+        "tabs",
+        "ribbon"
+      ],
+      "auditedGroups": [
+        "ribbon",
+        "roster",
+        "screen",
+        "selection",
+        "tabs",
+        "toolbar"
+      ],
+      "checked": [
+        "composition",
+        "reading",
+        "geometry",
+        "state",
+        "material"
+      ],
+      "checkObservations": {
+        "composition": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调 复核 右侧卡列和三项页签处于源图相同区域",
+        "reading": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调 复核 黄边只强调右列第二项 信息条不抢占头像",
+        "geometry": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调 复核 13张卡保留顶部底部可见裁切 文案不跨属性图标",
+        "state": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调 复核 三页签和两个顶部圆按钮保持明确视觉状态",
+        "material": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调 复核 没有用整页图片替代头像 文字 信息条与选中外框"
+      }
+    }
+  ],
+  "output": {
+    "path": "05-material/evidence/design-5.png",
+    "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+  },
+  "review": {
+    "reviewer": "Codex 实际图片观察",
+    "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+    "evidence": {
+      "path": "05-material/evidence/design-5.png",
+      "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+    },
+    "result": "reviewed",
+    "dimensions": [
+      {
+        "page": "roster",
+        "id": "material-language",
+        "group": "roster",
+        "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调 本阶段维度 material-language",
+        "result": "observed"
+      },
+      {
+        "page": "roster",
+        "id": "asset-treatment",
+        "group": "roster",
+        "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调 本阶段维度 asset-treatment",
+        "result": "observed"
+      },
+      {
+        "page": "roster",
+        "id": "slice-mask",
+        "group": "roster",
+        "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调 本阶段维度 slice-mask",
+        "result": "observed"
+      }
+    ],
+    "visualComparisons": [
+      {
+        "targetId": "diagonal-roster",
+        "reference": {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        "current": {
+          "path": "05-material/evidence/design-5.png",
+          "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+        },
+        "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+        "remaining": "设计布局与内容按原图落实 原生Unity渲染与字体仍需实测",
+        "verdict": "matched",
+        "constraintReviews": [
+          {
+            "constraintId": "roster-layout",
+            "result": "matched",
+            "observed": "三列交错倾斜布局 按原图保留13张可见卡片",
+            "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+          },
+          {
+            "constraintId": "roster-content",
+            "result": "matched",
+            "observed": "原图头像 品质标记 属性图标与可见等级保持对应",
+            "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+          },
+          {
+            "constraintId": "roster-text",
+            "result": "matched",
+            "observed": "简体中文等级文案和原有数字",
+            "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+            "textSamples": [
+              {
+                "expected": "等级60",
+                "observed": "等级60"
+              },
+              {
+                "expected": "等级40",
+                "observed": "等级40"
+              }
+            ]
+          }
+        ],
+        "coreFeatureReview": {
+          "criterion": "13张可见角色头像保持三列次序 斜边下移右倾 黑色信息条中可读等级60与等级40",
+          "result": "met",
+          "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+        }
+      },
+      {
+        "targetId": "yellow-selection",
+        "reference": {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        "current": {
+          "path": "05-material/evidence/design-5.png",
+          "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+        },
+        "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+        "remaining": "设计布局与内容按原图落实 原生Unity渲染与字体仍需实测",
+        "verdict": "matched",
+        "constraintReviews": [
+          {
+            "constraintId": "selection-style",
+            "result": "matched",
+            "observed": "右列第二张安比卡以黄色边框高亮",
+            "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+          }
+        ],
+        "coreFeatureReview": {
+          "criterion": "右列第二张卡保持黄色连续外框 内部头像与等级独立于外框",
+          "result": "met",
+          "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+        }
+      },
+      {
+        "targetId": "navigation",
+        "reference": {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        "current": {
+          "path": "05-material/evidence/design-5.png",
+          "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+        },
+        "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+        "remaining": "设计布局与内容按原图落实 原生Unity渲染与字体仍需实测",
+        "verdict": "matched",
+        "constraintReviews": [
+          {
+            "constraintId": "tabs-text",
+            "result": "matched",
+            "observed": "原图三级中文页签",
+            "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+            "textSamples": [
+              {
+                "expected": "基础",
+                "observed": "基础"
+              },
+              {
+                "expected": "技能",
+                "observed": "技能"
+              },
+              {
+                "expected": "装备",
+                "observed": "装备"
+              }
+            ]
+          }
+        ],
+        "coreFeatureReview": {
+          "criterion": "基础为黄底黑字 技能装备为暗底白字 三项左缘逐行右移",
+          "result": "met",
+          "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+        }
+      },
+      {
+        "targetId": "utilities",
+        "reference": {
+          "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+          "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+        },
+        "current": {
+          "path": "05-material/evidence/design-5.png",
+          "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+        },
+        "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+        "remaining": "设计布局与内容按原图落实 原生Unity渲染与字体仍需实测",
+        "verdict": "matched",
+        "constraintReviews": [
+          {
+            "constraintId": "utilities-content",
+            "result": "matched",
+            "observed": "筛选 收藏 SELECT绿色飘带",
+            "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+          }
+        ],
+        "coreFeatureReview": {
+          "criterion": "右上筛选白图标与收藏黄星保持圆形 右缘绿色SELECT楔形保留原方向",
+          "result": "met",
+          "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+        }
+      }
+    ],
+    "representativeSample": {
+      "attempt": 1,
+      "visualComparisons": [
+        {
+          "targetId": "diagonal-roster",
+          "reference": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "current": {
+            "path": "05-material/evidence/design-5.png",
+            "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+          },
+          "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+          "remaining": "设计布局与内容按原图落实 原生Unity渲染与字体仍需实测",
+          "verdict": "matched",
+          "constraintReviews": [
+            {
+              "constraintId": "roster-layout",
+              "result": "matched",
+              "observed": "三列交错倾斜布局 按原图保留13张可见卡片",
+              "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+            },
+            {
+              "constraintId": "roster-content",
+              "result": "matched",
+              "observed": "原图头像 品质标记 属性图标与可见等级保持对应",
+              "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+            },
+            {
+              "constraintId": "roster-text",
+              "result": "matched",
+              "observed": "简体中文等级文案和原有数字",
+              "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+              "textSamples": [
+                {
+                  "expected": "等级60",
+                  "observed": "等级60"
+                },
+                {
+                  "expected": "等级40",
+                  "observed": "等级40"
+                }
+              ]
+            }
+          ],
+          "coreFeatureReview": {
+            "criterion": "13张可见角色头像保持三列次序 斜边下移右倾 黑色信息条中可读等级60与等级40",
+            "result": "met",
+            "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+          }
+        },
+        {
+          "targetId": "yellow-selection",
+          "reference": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "current": {
+            "path": "05-material/evidence/design-5.png",
+            "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+          },
+          "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+          "remaining": "设计布局与内容按原图落实 原生Unity渲染与字体仍需实测",
+          "verdict": "matched",
+          "constraintReviews": [
+            {
+              "constraintId": "selection-style",
+              "result": "matched",
+              "observed": "右列第二张安比卡以黄色边框高亮",
+              "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+            }
+          ],
+          "coreFeatureReview": {
+            "criterion": "右列第二张卡保持黄色连续外框 内部头像与等级独立于外框",
+            "result": "met",
+            "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+          }
+        },
+        {
+          "targetId": "navigation",
+          "reference": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "current": {
+            "path": "05-material/evidence/design-5.png",
+            "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+          },
+          "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+          "remaining": "设计布局与内容按原图落实 原生Unity渲染与字体仍需实测",
+          "verdict": "matched",
+          "constraintReviews": [
+            {
+              "constraintId": "tabs-text",
+              "result": "matched",
+              "observed": "原图三级中文页签",
+              "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+              "textSamples": [
+                {
+                  "expected": "基础",
+                  "observed": "基础"
+                },
+                {
+                  "expected": "技能",
+                  "observed": "技能"
+                },
+                {
+                  "expected": "装备",
+                  "observed": "装备"
+                }
+              ]
+            }
+          ],
+          "coreFeatureReview": {
+            "criterion": "基础为黄底黑字 技能装备为暗底白字 三项左缘逐行右移",
+            "result": "met",
+            "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+          }
+        },
+        {
+          "targetId": "utilities",
+          "reference": {
+            "path": "reference-package/files/59e9d81e53faedcd1ecc66eb2cab3e91.jpg",
+            "sha256": "61e63f2fdb187fc0cfa3bae0a4f9d96ac227c9788707793bb5638485fae4151d"
+          },
+          "current": {
+            "path": "05-material/evidence/design-5.png",
+            "sha256": "e3fa7f056326b8a9984922c00768f61422b9a4a33c9186c793675565d7ea335e"
+          },
+          "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调",
+          "remaining": "设计布局与内容按原图落实 原生Unity渲染与字体仍需实测",
+          "verdict": "matched",
+          "constraintReviews": [
+            {
+              "constraintId": "utilities-content",
+              "result": "matched",
+              "observed": "筛选 收藏 SELECT绿色飘带",
+              "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+            }
+          ],
+          "coreFeatureReview": {
+            "criterion": "右上筛选白图标与收藏黄星保持圆形 右缘绿色SELECT楔形保留原方向",
+            "result": "met",
+            "observation": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+          }
+        }
+      ]
+    }
+  },
+  "unresolvedRegressions": [],
+  "reuseReason": "原图已锁定本阶段外观与次序 只实施拆分和版式映射 无需制造改变参考的候选",
+  "reuseEvidence": {
+    "path": "04-state-parity/evidence/design-4.png",
+    "sha256": "e20674adb336d024eb13e11be151992a474ab86dcb8976fe5b834bbe9a4e94e5"
+  },
+  "pageCoverage": {
+    "roster": "已查看材质整屏稿 13张原图头像按三列次序恢复 品质属性独立显示 基础技能装备为源字形可读标签 安比黄色框和右缘SELECT纹理保持 仍观察到等级文字偏左约4像素与基础底板局部渐变接缝 留在第六步微调"
+  }
+}

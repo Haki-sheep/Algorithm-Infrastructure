@@ -1,0 +1,17 @@
+{
+  "brief": {
+    "path": "brief.json",
+    "sha256": "632544a539841ebcc92961c88bb3603c04e5fcf906c9d5ac13a319841f02f625"
+  },
+  "stage": 3,
+  "round": 1,
+  "predecessor": {
+    "path": "02-hierarchy/step.json",
+    "sha256": "a7e6ad89170e82ae04c6479658fd182032dd26ed3ddc6cc27b5c71ba2d08ea7c"
+  },
+  "createdAtUnix": 1790068579.39928,
+  "latestSubmission": {
+    "path": "03-geometry/submissions/001.json",
+    "sha256": "a92c6836b2de45f7e5671edb7b7fb52675e0a091360b0a994bbf60cc4eceb07a"
+  }
+}

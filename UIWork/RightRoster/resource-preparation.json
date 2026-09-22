@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "pages": [
+    {
+      "page": "roster",
+      "items": [
+        {
+          "id": "portrait",
+          "role": "portrait",
+          "specification": "原始像素比例 RGBA独立PNG 图集按实际斜轮廓保留透明区域",
+          "content": [
+            "角色卡列"
+          ],
+          "designCritical": true,
+          "status": "ready",
+          "artifact": {
+            "path": "resources/slices-v1/Left01_Portrait.png",
+            "sha256": "c7c99cfaee32086ee69ffb1a15aa78d9b6027a6aa1667b7f92026e4af8d4e849"
+          },
+          "source": {
+            "path": "resources/slices-manifest.json",
+            "sha256": "ececb9b43ec98c7be58325ef0ecf4f56f43a6b379af00406f1bf21197e6b5f4e"
+          },
+          "preview": {
+            "path": "resources/contact-sheet.png",
+            "sha256": "9eafd3a5076cb3f944e6bb8ac7d747c700fd13ac2286aa0e2b456f5bc6d3c5d6"
+          },
+          "inspection": "实际打开切片拼板 原图头像识别与颜色保持 去除邻卡选中条串入 文本使用项目现有中文字体"
+        },
+        {
+          "id": "selection",
+          "role": "selection",
+          "specification": "原始像素比例 RGBA独立PNG 图集按实际斜轮廓保留透明区域",
+          "content": [
+            "选中边框"
+          ],
+          "designCritical": true,
+          "status": "ready",
+          "artifact": {
+            "path": "resources/slices-v1/SelectionFrame.png",
+            "sha256": "3e058eadf9d70d8c2b75220b13cee313a24e1366ef7189ad36544a331ed33463"
+          },
+          "source": {
+            "path": "resources/slices-manifest.json",
+            "sha256": "ececb9b43ec98c7be58325ef0ecf4f56f43a6b379af00406f1bf21197e6b5f4e"
+          },
+          "preview": {
+            "path": "resources/details-and-type.png",
+            "sha256": "4f72971ba4a3e5f1db2e5c6a7fb7109103d7fac9582d143fcbc26ca973771f85"
+          },
+          "inspection": "实际打开切片拼板 原图头像识别与颜色保持 去除邻卡选中条串入 文本使用项目现有中文字体"
+        },
+        {
+          "id": "rank",
+          "role": "rank",
+          "specification": "原始像素比例 RGBA独立PNG 图集按实际斜轮廓保留透明区域",
+          "content": [
+            "等级品质属性"
+          ],
+          "designCritical": true,
+          "status": "ready",
+          "artifact": {
+            "path": "resources/slices-v1/Left01_Rank.png",
+            "sha256": "b251b6598f2bda373c0c8db3d9bd1c281019ff8b54593ae7f8b8136d8a320abc"
+          },
+          "source": {
+            "path": "resources/slices-manifest.json",
+            "sha256": "ececb9b43ec98c7be58325ef0ecf4f56f43a6b379af00406f1bf21197e6b5f4e"
+          },
+          "preview": {
+            "path": "resources/details-and-type.png",
+            "sha256": "4f72971ba4a3e5f1db2e5c6a7fb7109103d7fac9582d143fcbc26ca973771f85"
+          },
+          "inspection": "实际打开切片拼板 原图头像识别与颜色保持 去除邻卡选中条串入 文本使用项目现有中文字体"
+        },
+        {
+          "id": "toolbar",
+          "role": "toolbar",
+          "specification": "原始像素比例 RGBA独立PNG 图集按实际斜轮廓保留透明区域",
+          "content": [
+            "筛选收藏"
+          ],
+          "designCritical": true,
+          "status": "ready",
+          "artifact": {
+            "path": "resources/slices-v1/FilterButton.png",
+            "sha256": "22c2444e148ea59a529cf2771fd51a5d8827a9d211c123c20c2e9bfad71f4100"
+          },
+          "source": {
+            "path": "resources/slices-manifest.json",
+            "sha256": "ececb9b43ec98c7be58325ef0ecf4f56f43a6b379af00406f1bf21197e6b5f4e"
+          },
+          "preview": {
+            "path": "resources/details-and-type.png",
+            "sha256": "4f72971ba4a3e5f1db2e5c6a7fb7109103d7fac9582d143fcbc26ca973771f85"
+          },
+          "inspection": "实际打开切片拼板 原图头像识别与颜色保持 去除邻卡选中条串入 文本使用项目现有中文字体"
+        },
+        {
+          "id": "tab",
+          "role": "tab",
+          "specification": "原始像素比例 RGBA独立PNG 图集按实际斜轮廓保留透明区域",
+          "content": [
+            "基础技能装备"
+          ],
+          "designCritical": true,
+          "status": "ready",
+          "artifact": {
+            "path": "resources/slices-v1/BasicTab.png",
+            "sha256": "aadf5fa2cce7b2a5e3d52ce2c20212f4e76673eafd6c83f6a3b452c21fbf7632"
+          },
+          "source": {
+            "path": "resources/slices-manifest.json",
+            "sha256": "ececb9b43ec98c7be58325ef0ecf4f56f43a6b379af00406f1bf21197e6b5f4e"
+          },
+          "preview": {
+            "path": "resources/details-and-type.png",
+            "sha256": "4f72971ba4a3e5f1db2e5c6a7fb7109103d7fac9582d143fcbc26ca973771f85"
+          },
+          "inspection": "实际打开切片拼板 原图头像识别与颜色保持 去除邻卡选中条串入 文本使用项目现有中文字体"
+        },
+        {
+          "id": "ribbon",
+          "role": "ribbon",
+          "specification": "原始像素比例 RGBA独立PNG 图集按实际斜轮廓保留透明区域",
+          "content": [
+            "SELECT飘带"
+          ],
+          "designCritical": true,
+          "status": "ready",
+          "artifact": {
+            "path": "resources/slices-v1/SelectRibbon.png",
+            "sha256": "90a03f391693691cfa9bece1f194a16df9b05d82ec9c2614827de3ba6fbf603b"
+          },
+          "source": {
+            "path": "resources/slices-manifest.json",
+            "sha256": "ececb9b43ec98c7be58325ef0ecf4f56f43a6b379af00406f1bf21197e6b5f4e"
+          },
+          "preview": {
+            "path": "resources/details-and-type.png",
+            "sha256": "4f72971ba4a3e5f1db2e5c6a7fb7109103d7fac9582d143fcbc26ca973771f85"
+          },
+          "inspection": "实际打开切片拼板 原图头像识别与颜色保持 去除邻卡选中条串入 文本使用项目现有中文字体"
+        },
+        {
+          "id": "reference-font",
+          "role": "原图位图字形",
+          "specification": "512×64 RGBA atlas 原图11个Unicode字形 24像素字号供TMP静态字体使用",
+          "content": [
+            "等级品质属性",
+            "基础技能装备"
+          ],
+          "designCritical": true,
+          "status": "ready",
+          "artifact": {
+            "path": "resources/glyph-atlas.png",
+            "sha256": "1517f02fd44db20aeb271d4c2e336eb2005539f0f07e7bce2fc406c4cd5b0f30"
+          },
+          "source": {
+            "path": "resources/glyphs.json",
+            "sha256": "9b0b38f13a5a1c8e61452374fb05d21740651b93ec8eee69e1a93de5d21f8432"
+          },
+          "preview": {
+            "path": "resources/glyph-preview.png",
+            "sha256": "eb0f86a6b19a9b39ca0a20c733b8f0ba67a960747c0a8348a3294f9d37d016e1"
+          },
+          "inspection": "原字体为Thin不匹配 原图逐字切分并移除背景 原生TMP以Unicode文字使用该字形表 不将完整按钮文本烘焙到背景"
+        }
+      ],
+      "nativeContent": [
+        "等级品质属性",
+        "基础技能装备"
+      ],
+      "nativeConstruction": "等级与页签文字使用TMP 原生RectTransform组织 Image消费独立切图",
+      "contactSheet": {
+        "path": "resources/contact-sheet.png",
+        "sha256": "9eafd3a5076cb3f944e6bb8ac7d747c700fd13ac2286aa0e2b456f5bc6d3c5d6"
+      },
+      "observation": "原图不是成品背景 已拆为56张PNG 13个头像 卡片信息条和标签各自独立",
+      "presentationEvidence": {
+        "path": "resources/presentation.txt",
+        "sha256": "dba8d3145b4fcd99b108eb269c5163449d48e3b3866fece8e2debfdad3f40cb4"
+      }
+    }
+  ]
+}

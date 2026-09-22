@@ -1,0 +1,1 @@
+{"id": "second-icon", "page": "display", "group": "row", "need": "Synthetic row icon", "acceptance": "Optically centered readable silhouette", "required": true, "outputRoot": "resources/child-1", "specification": "32px transparent monochrome icon", "allowedActions": "Local reuse and crop within child directory only", "budget": "Three candidates, ten minutes"}

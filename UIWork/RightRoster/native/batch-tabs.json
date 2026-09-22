@@ -1,0 +1,184 @@
+{
+  "prefabPath": "Assets/TestImgae/RightRoster/RightRoster.prefab",
+  "prefabHash": "d5f398170e593684ca0ab70e4bc75b8c6faa7ea6a1545026547228c63bc7fbf9",
+  "pngSha256": "18c2a4ee6a78ae4b93a978b2626b2a2cb3546cc0c9688b01d4d7db66763dd72d",
+  "width": 1540,
+  "height": 928,
+  "observationScope": "isolated-explicit-settings",
+  "settings": {
+    "safeArea": [
+      0,
+      0,
+      1540,
+      928
+    ],
+    "referenceWidth": 1540,
+    "referenceHeight": 928,
+    "matchWidthOrHeight": 1
+  },
+  "nodes": [
+    {
+      "path": "RightRoster",
+      "active": true,
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1540.0,
+      "height": 928.0,
+      "screenRect": [
+        0.0,
+        0.0,
+        1540.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/PreviewBackground",
+      "active": true,
+      "x": 0.0,
+      "y": 0.0,
+      "width": 1540.0,
+      "height": 928.0,
+      "screenRect": [
+        0.0,
+        0.0,
+        1540.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel",
+      "active": true,
+      "x": 780.0,
+      "y": 0.0,
+      "width": 760.0,
+      "height": 928.0,
+      "screenRect": [
+        780.0,
+        0.0,
+        760.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs",
+      "active": true,
+      "x": 780.0,
+      "y": 0.0,
+      "width": 760.0,
+      "height": 928.0,
+      "screenRect": [
+        780.0,
+        0.0,
+        760.0,
+        928.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/BasicTab",
+      "active": true,
+      "x": 850.0,
+      "y": 220.000015,
+      "width": 153.0,
+      "height": 50.9999847,
+      "screenRect": [
+        850.0,
+        220.000015,
+        153.0,
+        50.9999847
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/BasicTab/Label",
+      "active": true,
+      "x": 909.999939,
+      "y": 232.0,
+      "width": 52.00006,
+      "height": 25.99997,
+      "screenRect": [
+        909.999939,
+        232.0,
+        52.00006,
+        25.99997
+      ],
+      "text": "基础",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/SkillTab",
+      "active": true,
+      "x": 869.0,
+      "y": 160.0,
+      "width": 152.999939,
+      "height": 47.0,
+      "screenRect": [
+        869.0,
+        160.0,
+        152.999939,
+        47.0
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/SkillTab/Label",
+      "active": true,
+      "x": 929.0,
+      "y": 168.0,
+      "width": 51.99994,
+      "height": 26.0,
+      "screenRect": [
+        929.0,
+        168.0,
+        51.99994,
+        26.0
+      ],
+      "text": "技能",
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/EquipmentTab",
+      "active": true,
+      "x": 888.0,
+      "y": 96.0,
+      "width": 152.0,
+      "height": 46.9999847,
+      "screenRect": [
+        888.0,
+        96.0,
+        152.0,
+        46.9999847
+      ],
+      "text": null,
+      "textOverflow": false
+    },
+    {
+      "path": "RightRoster/RightPanel/Tabs/EquipmentTab/Label",
+      "active": true,
+      "x": 948.0,
+      "y": 104.000015,
+      "width": 52.0,
+      "height": 25.9999847,
+      "screenRect": [
+        948.0,
+        104.000015,
+        52.0,
+        25.9999847
+      ],
+      "text": "装备",
+      "textOverflow": false
+    }
+  ],
+  "observedAtUtc": "2026-09-22T09:43:19.2954811Z",
+  "sourceDesignHash": "69c0f1feea7c82390833432d29c2e38c6284e212e4b9e933ae45f356d3ae08c9",
+  "inputAcceptance": "visual-only no Selectable or business input"
+}

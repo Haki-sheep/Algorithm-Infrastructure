@@ -1,0 +1,8 @@
+{
+  "status": "working",
+  "created": "02-hierarchy/step.json",
+  "sha256": "8292baa3358c674e0fe67a1cf47fc308c30720661033b79457abf2661c275e31",
+  "completionClaim": false,
+  "designValueReference": "references/six-stage-execution.md#design-value-carryover",
+  "guidance": []
+}

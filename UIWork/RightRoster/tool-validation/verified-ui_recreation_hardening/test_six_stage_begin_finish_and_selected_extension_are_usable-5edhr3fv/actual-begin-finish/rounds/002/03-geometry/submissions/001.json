@@ -1,0 +1,9 @@
+{
+  "previous": null,
+  "candidate": {
+    "path": "rounds/002/03-geometry/submissions/001.bin",
+    "sha256": "1ba10bb1e4b7e7b17364a63ceed6ce1476f8d310df905590fb86a1fb356bd785"
+  },
+  "result": "accepted",
+  "reason": "bound-record-checks-only"
+}
