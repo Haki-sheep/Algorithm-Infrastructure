@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70ca57af2aa9ed44bca4feec4a959af, type: 3}
   m_Name: FontProfile
   m_EditorClassIdentifier: 
-  sourceFont: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+  sourceFont: {fileID: 12800000, guid: 997a43b767814dd0a7642ec9b78cba41, type: 3}
   locale: zh-CN
   usage: "\u6B63\u6587"
   license: {fileID: 0}
@@ -24,15 +24,14 @@ MonoBehaviour:
   richText: 0
   stripPlaceholders: 0
   includeCommonCharacters: 1
-  samplingSize: 86
+  samplingSize: 90
   padding: 9
   atlasSize: 1024
-  renderMode: 4169
-  populationMode: 0
+  renderMode: 4165
+  populationMode: 1
   enableMultiAtlas: 0
-  fallbackFontAssets:
-  - {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  generatedFont: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  fallbackFontAssets: []
+  generatedFont: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   lastBakeSignature: 
   lastBakedSourceFontGuid: 
   lastBakeSummary: 

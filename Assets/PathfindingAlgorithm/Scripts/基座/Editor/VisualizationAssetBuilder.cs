@@ -301,6 +301,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
             Toggle dlsToggle = null;
             Toggle iddfsToggle = null;
             Toggle ucsToggle = null;
+            Toggle astarToggle = null;
             for (int index = 0; index < categoryNameList.Length; index++)
             {
                 var category = BuildCategory(ui, scroll.content, index);
@@ -311,6 +312,10 @@ namespace PathfindingAlgorithm.Visualization.Editor
                     dlsToggle = category.Options[2];
                     iddfsToggle = category.Options[3];
                     ucsToggle = category.Options[4];
+                }
+                else if (index == 1)
+                {
+                    astarToggle = category.Options[1];
                 }
             }
             var arrows = ui.Toggle("显示方向箭头", panel);
@@ -357,6 +362,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
             ui.Bind(controller, "dlsToggle", dlsToggle);
             ui.Bind(controller, "iddfsToggle", iddfsToggle);
             ui.Bind(controller, "ucsToggle", ucsToggle);
+            ui.Bind(controller, "astarToggle", astarToggle);
             ui.Bind(controller, "statusText", footnote);
         }
 

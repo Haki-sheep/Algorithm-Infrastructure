@@ -95278,6 +95278,7 @@ MonoBehaviour:
   dlsToggle: {fileID: 532619965752572999}
   iddfsToggle: {fileID: 73480610439075562}
   ucsToggle: {fileID: 5232908076595904483}
+  astarToggle: {fileID: 6439036414466717922}
   dlsLimit: 24
   statusText: {fileID: 947637341898885380}
   stepInterval: 0.02
