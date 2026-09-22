@@ -301,7 +301,9 @@ namespace PathfindingAlgorithm.Visualization.Editor
             Toggle dlsToggle = null;
             Toggle iddfsToggle = null;
             Toggle ucsToggle = null;
+            Toggle gbfsToggle = null;
             Toggle astarToggle = null;
+            Toggle wastarToggle = null;
             for (int index = 0; index < categoryNameList.Length; index++)
             {
                 var category = BuildCategory(ui, scroll.content, index);
@@ -315,7 +317,9 @@ namespace PathfindingAlgorithm.Visualization.Editor
                 }
                 else if (index == 1)
                 {
+                    gbfsToggle = category.Options[0];
                     astarToggle = category.Options[1];
+                    wastarToggle = category.Options[2];
                 }
             }
             var arrows = ui.Toggle("显示方向箭头", panel);
@@ -333,6 +337,20 @@ namespace PathfindingAlgorithm.Visualization.Editor
             footnote.rectTransform.pivot = Vector2.zero;
             footnote.rectTransform.anchoredPosition = new Vector2(20f, 102f);
             footnote.rectTransform.sizeDelta = new Vector2(292f, 80f);
+            var weightRow = ui.Rect("WeightRow", panel);
+            weightRow.anchorMin = weightRow.anchorMax = weightRow.pivot = Vector2.zero;
+            weightRow.anchoredPosition = new Vector2(196f, 126f);
+            weightRow.sizeDelta = new Vector2(120f, 32f);
+            var weightLabel = ui.Label("W", weightRow, 16);
+            weightLabel.alignment = TextAnchor.MiddleCenter;
+            ui.Place(weightLabel.rectTransform, 0f, 0f, 28f, 32f);
+            var weightInput = ui.NumberInput(weightRow, "2");
+            var inputRect = weightInput.GetComponent<RectTransform>();
+            inputRect.anchorMin = Vector2.zero;
+            inputRect.anchorMax = Vector2.one;
+            inputRect.offsetMin = new Vector2(28f, 0f);
+            inputRect.offsetMax = Vector2.zero;
+            weightRow.gameObject.SetActive(false);
             var play = ui.Button("开始搜索", panel);
             var playRect = (RectTransform)play.transform;
             playRect.anchorMin = playRect.anchorMax = playRect.pivot = Vector2.zero;
@@ -362,7 +380,11 @@ namespace PathfindingAlgorithm.Visualization.Editor
             ui.Bind(controller, "dlsToggle", dlsToggle);
             ui.Bind(controller, "iddfsToggle", iddfsToggle);
             ui.Bind(controller, "ucsToggle", ucsToggle);
+            ui.Bind(controller, "gbfsToggle", gbfsToggle);
             ui.Bind(controller, "astarToggle", astarToggle);
+            ui.Bind(controller, "wastarToggle", wastarToggle);
+            ui.Bind(controller, "weightRow", weightRow.gameObject);
+            ui.Bind(controller, "weightInput", weightInput);
             ui.Bind(controller, "statusText", footnote);
         }
 

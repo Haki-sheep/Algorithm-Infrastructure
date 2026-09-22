@@ -101,6 +101,30 @@ namespace PathfindingAlgorithm.Visualization.Editor
         }
 
         /// <summary>
+        /// 添加小数输入框
+        /// </summary>
+        public InputField NumberInput(Transform parent, string value)
+        {
+            var rect = Rect("WeightInput", parent);
+            var image = Fill(rect, new Color32(232, 242, 241, 255), true);
+            var input = rect.gameObject.AddComponent<InputField>();
+            var text = Label("", rect, 16);
+            text.supportRichText = false;
+            text.alignment = TextAnchor.MiddleLeft;
+            Stretch(text.rectTransform, 6f, 2f, 4f, 2f);
+            var placeholder = Label(value, rect, 16);
+            placeholder.fontStyle = FontStyle.Italic;
+            placeholder.color = new Color32(120, 140, 150, 180);
+            Stretch(placeholder.rectTransform, 6f, 2f, 4f, 2f);
+            input.targetGraphic = image;
+            input.textComponent = text;
+            input.placeholder = placeholder;
+            input.contentType = InputField.ContentType.DecimalNumber;
+            input.text = value;
+            return input;
+        }
+
+        /// <summary>
         /// 添加按钮
         /// </summary>
         public Button Button(string label, Transform parent)
