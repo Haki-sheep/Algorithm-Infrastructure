@@ -45,6 +45,10 @@ namespace PathfindingAlgorithm.Visualization
         [SerializeField]
         private Toggle wastarToggle;
 
+        /// <summary> 路径规划优化里的 HPA* 勾选项 </summary>
+        [SerializeField]
+        private Toggle hpaToggle;
+
         /// <summary> WA* 权重输入 勾选时显示在右下角 </summary>
         [SerializeField]
         private GameObject weightRow;
@@ -52,6 +56,14 @@ namespace PathfindingAlgorithm.Visualization
         /// <summary> WA* 的 W 输入框 </summary>
         [SerializeField]
         private InputField weightInput;
+
+        /// <summary> HPA* 框边长输入 勾选时显示在右下角 </summary>
+        [SerializeField]
+        private GameObject clusterRow;
+
+        /// <summary> HPA* 的框边长输入框 </summary>
+        [SerializeField]
+        private InputField clusterInput;
 
         /// <summary> DLS 深度上限 从起点沿当前枝最多走几步 </summary>
         [SerializeField, Min(0)]
@@ -113,6 +125,12 @@ namespace PathfindingAlgorithm.Visualization
         /// <summary> WA* 步进器 </summary>
         private WAStarCore wastarCore;
 
+        /// <summary> HPA* 地图与搜索状态 </summary>
+        private HPAStarData hpaData;
+
+        /// <summary> HPA* 步进器 </summary>
+        private HPAStarCore hpaCore;
+
         /// <summary> 本轮实际在跑的算法 </summary>
         private eSearchKind eKind;
 
@@ -154,6 +172,7 @@ namespace PathfindingAlgorithm.Visualization
             GBFS,
             AStar,
             WAStar,
+            HPAStar,
         }
 
         /// <summary>
@@ -162,9 +181,17 @@ namespace PathfindingAlgorithm.Visualization
         private void Start()
         {
             InitComponents();
+            BindHpaToggle();
+            EnsureClusterRow();
             if (wastarToggle != null)
-                wastarToggle.onValueChanged.AddListener(RefreshWeightRow);
-            RefreshWeightRow(wastarToggle != null && wastarToggle.isOn);
+                wastarToggle.onValueChanged.AddListener(_ => RefreshParamRows());
+            if (hpaToggle != null)
+                hpaToggle.onValueChanged.AddListener(_ => RefreshParamRows());
+            if (clusterInput != null)
+                clusterInput.onValueChanged.AddListener(_ => RefreshClusterLines());
+            if (grid != null)
+                grid.MapEdited += RefreshEntrances;
+            RefreshParamRows();
         }
 
         /// <summary>
@@ -188,20 +215,110 @@ namespace PathfindingAlgorithm.Visualization
             astarCore = new AStarCore();
             wastarData = new WAStarData();
             wastarCore = new WAStarCore();
+            hpaData = new HPAStarData();
+            hpaCore = new HPAStarCore();
         }
 
         /// <summary>
-        /// WA* 勾选时露出右下角 W 输入 并给状态文字让出右侧
+        /// 预制体未绑定时从第三类第三项取 HPA* 勾选
         /// </summary>
-        private void RefreshWeightRow(bool show)
+        private void BindHpaToggle()
         {
-            if (weightRow != null)
-                weightRow.SetActive(show);
-            if (statusText == null)
+            if (hpaToggle != null)
                 return;
-            Vector2 size = statusText.rectTransform.sizeDelta;
-            size.x = show ? 168f : 292f;
-            statusText.rectTransform.sizeDelta = size;
+            var categoryList = GetComponentsInChildren<AlgorithmCategoryView>(true);
+            if (categoryList.Length < 3 || categoryList[2].Options == null || categoryList[2].Options.Length < 3)
+                return;
+            hpaToggle = categoryList[2].Options[2];
+        }
+
+        /// <summary>
+        /// 没有框输入行时按 W 行克隆一份
+        /// </summary>
+        private void EnsureClusterRow()
+        {
+            if (clusterRow != null || weightRow == null)
+                return;
+            clusterRow = Instantiate(weightRow, weightRow.transform.parent);
+            clusterRow.name = "ClusterRow";
+            var rect = clusterRow.GetComponent<RectTransform>();
+            var src = weightRow.GetComponent<RectTransform>();
+            rect.anchorMin = src.anchorMin;
+            rect.anchorMax = src.anchorMax;
+            rect.pivot = src.pivot;
+            rect.anchoredPosition = src.anchoredPosition;
+            rect.sizeDelta = src.sizeDelta;
+            clusterInput = clusterRow.GetComponentInChildren<InputField>(true);
+            if (clusterInput != null)
+            {
+                clusterInput.contentType = InputField.ContentType.IntegerNumber;
+                clusterInput.text = "5";
+            }
+            for (int i = 0; i < clusterRow.transform.childCount; i++)
+            {
+                var text = clusterRow.transform.GetChild(i).GetComponent<Text>();
+                if (text != null)
+                    text.text = "框";
+            }
+            clusterRow.SetActive(false);
+        }
+
+        /// <summary>
+        /// WA* 露出 W HPA* 露出框 并给状态文字让出右侧
+        /// </summary>
+        private void RefreshParamRows()
+        {
+            bool showWeight = wastarToggle != null && wastarToggle.isOn;
+            bool showCluster = hpaToggle != null && hpaToggle.isOn;
+            if (weightRow != null)
+                weightRow.SetActive(showWeight);
+            if (clusterRow != null)
+                clusterRow.SetActive(showCluster);
+            if (statusText != null)
+            {
+                Vector2 size = statusText.rectTransform.sizeDelta;
+                size.x = (showWeight || showCluster) ? 168f : 292f;
+                statusText.rectTransform.sizeDelta = size;
+            }
+
+            RefreshClusterLines();
+        }
+
+        /// <summary>
+        /// HPA*勾选时按框边长画线 否则清掉
+        /// </summary>
+        public void RefreshClusterLines()
+        {
+            if (grid == null)
+                return;
+            bool show = hpaToggle != null && hpaToggle.isOn;
+            grid.SetClusterLines(show ? ReadClusterSize() : 0);
+            RefreshEntrances();
+        }
+
+        /// <summary>
+        /// HPA*勾选时标出能跨框的格子 否则清掉
+        /// </summary>
+        public void RefreshEntrances()
+        {
+            if (grid == null)
+                return;
+            if (hpaToggle == null || !hpaToggle.isOn)
+            {
+                grid.SetEntrances(null);
+                return;
+            }
+
+            int width = grid.Columns;
+            int height = grid.Rows;
+            var walkable = new bool[width * height];
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
+                    walkable[x + y * width] = grid.GetCellState(new Vector2Int(x, y)) != eCellState.Obstacle;
+            }
+
+            grid.SetEntrances(HPAStarCore.CollectEntrances(width, height, walkable, ReadClusterSize()));
         }
 
         /// <summary>
@@ -214,6 +331,19 @@ namespace PathfindingAlgorithm.Visualization
                 && float.TryParse(weightInput.text, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float parsed))
                 weight = parsed;
             return weight;
+        }
+
+        /// <summary>
+        /// 读右下角框边长 解析失败或小于1时按5跑
+        /// </summary>
+        private int ReadClusterSize()
+        {
+            int clusterSize = 5;
+            if (clusterInput != null
+                && int.TryParse(clusterInput.text, System.Globalization.NumberStyles.Integer, System.Globalization.CultureInfo.InvariantCulture, out int parsed)
+                && parsed >= 1)
+                clusterSize = parsed;
+            return clusterSize;
         }
 
         #region 播放控制
@@ -423,6 +553,13 @@ namespace PathfindingAlgorithm.Visualization
                 return;
             }
 
+            if (eKind == eSearchKind.HPAStar)
+            {
+                hpaData.Init(grid.Columns, grid.Rows, walkableList, costList, mapStart, mapGoal, ReadClusterSize());
+                hpaCore.Init(hpaData);
+                return;
+            }
+
             bfsData.Init(grid.Columns, grid.Rows, walkableList, mapStart, mapGoal);
             bfsCore.Init(bfsData);
         }
@@ -526,6 +663,12 @@ namespace PathfindingAlgorithm.Visualization
                 eResolved = eSearchKind.WAStar;
             }
 
+            if (hpaToggle != null && hpaToggle.isOn)
+            {
+                onCount++;
+                eResolved = eSearchKind.HPAStar;
+            }
+
             if (onCount != 1)
                 return eSearchKind.None;
 
@@ -568,7 +711,7 @@ namespace PathfindingAlgorithm.Visualization
             string openWord = "开集最多";
             if (eKind == eSearchKind.BFS)
                 openWord = "排队最多";
-            else if (eKind != eSearchKind.UCS && eKind != eSearchKind.GBFS && eKind != eSearchKind.AStar && eKind != eSearchKind.WAStar)
+            else if (eKind != eSearchKind.UCS && eKind != eSearchKind.GBFS && eKind != eSearchKind.AStar && eKind != eSearchKind.WAStar && eKind != eSearchKind.HPAStar)
                 openWord = "栈最多";
             int popCount = PopCount();
             int peakOpenCount = PeakOpenCount();
@@ -579,6 +722,8 @@ namespace PathfindingAlgorithm.Visualization
                 limitWord = $"  当前上限 {iddfsData.Limit}";
             else if (eKind == eSearchKind.WAStar)
                 limitWord = $"  W {wastarData.Weight}";
+            else if (eKind == eSearchKind.HPAStar)
+                limitWord = $"  框 {hpaData.ClusterSize}";
             statusText.text = $"{headline}\n公式  {ComplexityFormula()}\n本轮  已看 {popCount} 格  {openWord} {peakOpenCount} 格{limitWord}";
         }
 
@@ -589,6 +734,8 @@ namespace PathfindingAlgorithm.Visualization
         {
             if (eKind == eSearchKind.IDDFS)
                 return "时间 O(dCN)  空间 O(C)";
+            if (eKind == eSearchKind.HPAStar)
+                return "时间 O(EP(P+N)+E(E+N))  空间 O(C+E)";
             if (eKind == eSearchKind.UCS || eKind == eSearchKind.GBFS || eKind == eSearchKind.AStar || eKind == eSearchKind.WAStar)
                 return "时间 O(C(C+N))  空间 O(C)";
             return "时间 O(CN)  空间 O(C)";
@@ -603,6 +750,13 @@ namespace PathfindingAlgorithm.Visualization
             {
                 overlayLimit = iddfsData.Limit;
                 ClearSearchOverlay();
+            }
+
+            if (eKind == eSearchKind.HPAStar && hpaData.StepCellList != null)
+            {
+                for (int i = 0; i < hpaData.StepCellList.Count; i++)
+                    PaintExplored(hpaData.StepCellList[i]);
+                return;
             }
 
             PaintExplored(CurrentCell());
@@ -764,6 +918,8 @@ namespace PathfindingAlgorithm.Visualization
                 return astarCore.Step();
             if (eKind == eSearchKind.WAStar)
                 return wastarCore.Step();
+            if (eKind == eSearchKind.HPAStar)
+                return hpaCore.Step();
             return bfsCore.Step();
         }
 
@@ -783,6 +939,8 @@ namespace PathfindingAlgorithm.Visualization
                 return astarData.Current;
             if (eKind == eSearchKind.WAStar)
                 return wastarData.Current;
+            if (eKind == eSearchKind.HPAStar)
+                return hpaData.Current;
             return bfsData.Current;
         }
 
@@ -802,6 +960,8 @@ namespace PathfindingAlgorithm.Visualization
                 return astarData.Found;
             if (eKind == eSearchKind.WAStar)
                 return wastarData.Found;
+            if (eKind == eSearchKind.HPAStar)
+                return hpaData.Found;
             return bfsData.Found;
         }
 
@@ -821,6 +981,8 @@ namespace PathfindingAlgorithm.Visualization
                 return astarData.OpenList.Count == 0;
             if (eKind == eSearchKind.WAStar)
                 return wastarData.OpenList.Count == 0;
+            if (eKind == eSearchKind.HPAStar)
+                return hpaData.OpenList.Count == 0;
             return bfsData.Queue.Count == 0;
         }
 
@@ -840,6 +1002,8 @@ namespace PathfindingAlgorithm.Visualization
                 return astarData.PathList.Count;
             if (eKind == eSearchKind.WAStar)
                 return wastarData.PathList.Count;
+            if (eKind == eSearchKind.HPAStar)
+                return hpaData.PathList.Count;
             return bfsData.PathList.Count;
         }
 
@@ -859,6 +1023,8 @@ namespace PathfindingAlgorithm.Visualization
                 return astarData.PathList[index];
             if (eKind == eSearchKind.WAStar)
                 return wastarData.PathList[index];
+            if (eKind == eSearchKind.HPAStar)
+                return hpaData.PathList[index];
             return bfsData.PathList[index];
         }
 
@@ -878,6 +1044,8 @@ namespace PathfindingAlgorithm.Visualization
                 return astarData.ParentIndexList[astarData.ToIndex(cell)];
             if (eKind == eSearchKind.WAStar)
                 return wastarData.ParentIndexList[wastarData.ToIndex(cell)];
+            if (eKind == eSearchKind.HPAStar)
+                return hpaData.ParentIndexList[hpaData.ToIndex(cell)];
             return bfsData.ParentIndexList[bfsData.ToIndex(cell)];
         }
 
@@ -897,6 +1065,8 @@ namespace PathfindingAlgorithm.Visualization
                 return astarData.ToCell(index);
             if (eKind == eSearchKind.WAStar)
                 return wastarData.ToCell(index);
+            if (eKind == eSearchKind.HPAStar)
+                return hpaData.ToCell(index);
             return bfsData.ToCell(index);
         }
 
@@ -916,6 +1086,8 @@ namespace PathfindingAlgorithm.Visualization
                 return astarData.PopCount;
             if (eKind == eSearchKind.WAStar)
                 return wastarData.PopCount;
+            if (eKind == eSearchKind.HPAStar)
+                return hpaData.PopCount;
             return bfsData.PopCount;
         }
 
@@ -935,6 +1107,8 @@ namespace PathfindingAlgorithm.Visualization
                 return astarData.PeakOpenCount;
             if (eKind == eSearchKind.WAStar)
                 return wastarData.PeakOpenCount;
+            if (eKind == eSearchKind.HPAStar)
+                return hpaData.PeakOpenCount;
             return bfsData.PeakOpenCount;
         }
     }

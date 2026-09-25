@@ -69,6 +69,7 @@ namespace PathfindingAlgorithm.Visualization
             searchController.StopSearch();
             float fitSize = FitCellSize();
             grid.Rebuild(mapWidth, mapHeight, fitSize);
+            searchController.RefreshClusterLines();
             CenterGrid();
             gridInfo.text = $"{mapWidth} × {mapHeight}   /   {mapWidth * mapHeight} 格";
 #if UNITY_EDITOR
