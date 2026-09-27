@@ -1,0 +1,9 @@
+{
+    "name": "MmECS.Core",
+    "rootNamespace": "MmECS",
+    "references": [],
+    "autoReferenced": true,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "noEngineReferences": true
+}

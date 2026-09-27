@@ -1,0 +1,43 @@
+{
+  "start": "2026-09-27T01:15:04.589036+08:00",
+  "end": "2026-09-27T01:15:08.163592+08:00",
+  "elapsedSeconds": 3.5751932000002853,
+  "command": [
+    "C:\\Users\\fmz\\AppData\\Local\\Unity\\bin\\unity.exe",
+    "command",
+    "eval",
+    "--code",
+    "return MmECS.Editor.EcsAcceptanceReport.RunAll(false);",
+    "--timeout",
+    "60000",
+    "--project-path",
+    "E:\\AAAA学习资料\\Demo\\顶点数",
+    "--format",
+    "json"
+  ],
+  "exitCode": 0,
+  "stderr": "",
+  "response": {
+    "success": true,
+    "command": "command eval",
+    "data": {
+      "command": "eval",
+      "parameters": {
+        "code": "return MmECS.Editor.EcsAcceptanceReport.RunAll(false);"
+      },
+      "result": {
+        "output": null,
+        "diagnostics": [],
+        "success": true,
+        "result": "ECS acceptance 21/21 passed"
+      },
+      "target": {
+        "host": "127.0.0.1",
+        "port": 7801,
+        "projectPath": "E:\\AAAA学习资料\\Demo\\顶点数"
+      }
+    },
+    "errors": [],
+    "warnings": []
+  }
+}

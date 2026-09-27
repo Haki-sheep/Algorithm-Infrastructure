@@ -1,0 +1,8 @@
+{
+    "name": "MmECS.Samples",
+    "rootNamespace": "MmECS.Samples",
+    "references": [
+        "MmECS.Core"
+    ],
+    "noEngineReferences": true
+}

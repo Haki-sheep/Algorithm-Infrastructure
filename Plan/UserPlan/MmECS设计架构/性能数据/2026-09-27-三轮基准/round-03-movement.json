@@ -1,0 +1,49 @@
+{
+  "start": "2026-09-27T01:15:18.976956+08:00",
+  "end": "2026-09-27T01:15:27.095890+08:00",
+  "elapsedSeconds": 8.11862850000034,
+  "command": [
+    "C:\\Users\\fmz\\AppData\\Local\\Unity\\bin\\unity.exe",
+    "command",
+    "run_script",
+    "--file",
+    "AgentScripts/BenchmarkMmEcsMovement.cs",
+    "--entry",
+    "BenchmarkMmEcsMovement.Run",
+    "--timeout_ms",
+    "60000",
+    "--project-path",
+    "E:\\AAAA学习资料\\Demo\\顶点数",
+    "--format",
+    "json"
+  ],
+  "exitCode": 0,
+  "stderr": "",
+  "response": {
+    "success": true,
+    "command": "command run_script",
+    "data": {
+      "command": "run_script",
+      "parameters": {
+        "file": "AgentScripts/BenchmarkMmEcsMovement.cs",
+        "entry": "BenchmarkMmEcsMovement.Run",
+        "timeout_ms": "60000"
+      },
+      "result": {
+        "diagnostics": [],
+        "compileMs": 86,
+        "executeMs": 7026,
+        "assemblyName": "PipelineRunScript_BenchmarkMmEcsMovement_81a9e3ea85004249b0f09fb18410f826",
+        "success": true,
+        "result": "# 移动路径基准 single-pass\r\n\n时间 2026-09-27T01:15:19.1871069+08:00  Unity 2022.3.62f3  Editor Mono\r\n\nCPU 13th Gen Intel(R) Core(TM) i5-13500H  内存 32471 MB\r\n\n实体 10000  位置速度匹配率 100%  预热 30  采样 300  步长 0.125\r\n\n每项使用独立世界 位置为编号模 32 速度为编号模 7 加 1 速度按逆序添加 计时外逐实体验证结果\r\n\n旧路径固定保留优化前实现 完整 Tick 包含单个移动系统与输入处理及空结构提交 不包含 Unity 展示\r\n\n| 工作负载 | 均值 ms | P95 ms | 平均分配 B |\n|---|---:|---:|---:|\r\n| 只查询 | 0.4094 | 0.4816 | 不可用 |\r\n| 旧路径只更新 | 3.8173 | 4.1713 | 不可用 |\r\n| 独立组件池访问基线 | 0.5146 | 0.5843 | 不可用 |\r\n| 旧路径完整移动 | 4.2348 | 4.5758 | 不可用 |\r\n| 列表Lookup完整移动 | 1.9317 | 2.1234 | 不可用 |\r\n| 当前完整移动 | 0.6522 | 0.7267 | 不可用 |\r\n| 旧路径完整Tick | 4.1836 | 4.5377 | 不可用 |\r\n| 列表Lookup完整Tick | 1.8957 | 2.1031 | 不可用 |\r\n| 当前完整Tick | 0.6753 | 0.7858 | 不可用 |\r\n\n所有位置及 Tick 核验通过 组件池基线仍按实体稀疏索引取值 不承担 World 代际检查\r\n\n计时复用 EcsBenchmark.Measure 预热后强制收集 均值与 P95 不相加推导 各项独立测量 GC 计数未通过校准时不可用 编辑器数据不代表 IL2CPP 或目标设备预算\r\n"
+      },
+      "target": {
+        "host": "127.0.0.1",
+        "port": 7801,
+        "projectPath": "E:\\AAAA学习资料\\Demo\\顶点数"
+      }
+    },
+    "errors": [],
+    "warnings": []
+  }
+}

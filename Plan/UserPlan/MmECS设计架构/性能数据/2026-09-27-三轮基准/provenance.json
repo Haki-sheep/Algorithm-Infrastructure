@@ -1,0 +1,8 @@
+{
+  "gitHead": "2189e1e0b088e1a115cc2eec0828befc90544743",
+  "workingTree": "dirty with tracked and untracked changes",
+  "scope": "Three rounds in one Editor process; worlds rebuilt per suite per round; scale workloads within one entity-count case share state, as do snapshot capture and restore",
+  "rounds": 3,
+  "powerPlan": "High performance",
+  "sourceFileCount": 100
+}

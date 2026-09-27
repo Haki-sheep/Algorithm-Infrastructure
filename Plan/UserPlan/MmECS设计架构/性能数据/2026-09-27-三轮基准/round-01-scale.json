@@ -1,0 +1,271 @@
+{
+  "start": "2026-09-27T01:13:37.875488+08:00",
+  "end": "2026-09-27T01:13:53.149049+08:00",
+  "elapsedSeconds": 15.273601099999723,
+  "command": [
+    "C:\\Users\\fmz\\AppData\\Local\\Unity\\bin\\unity.exe",
+    "command",
+    "run_script",
+    "--file",
+    "AgentScripts/BenchmarkMmEcsScale.cs",
+    "--entry",
+    "BenchmarkMmEcsScale.Run",
+    "--timeout_ms",
+    "60000",
+    "--project-path",
+    "E:\\AAAA学习资料\\Demo\\顶点数",
+    "--format",
+    "json"
+  ],
+  "exitCode": 0,
+  "stderr": "",
+  "response": {
+    "success": true,
+    "command": "command run_script",
+    "data": {
+      "command": "run_script",
+      "parameters": {
+        "file": "AgentScripts/BenchmarkMmEcsScale.cs",
+        "entry": "BenchmarkMmEcsScale.Run",
+        "timeout_ms": "60000"
+      },
+      "result": {
+        "diagnostics": [],
+        "compileMs": 241,
+        "executeMs": 14151,
+        "assemblyName": "PipelineRunScript_BenchmarkMmEcsScale_107f080eb4b145aea72d34a235be7e12",
+        "success": true,
+        "result": {
+          "Warmup": 10,
+          "Samples": 60,
+          "ChangePercent": 10,
+          "Results": [
+            {
+              "Name": "创建含扩容",
+              "EntityCount": 1000,
+              "Samples": 60,
+              "AverageMs": 1.7493083333333332,
+              "P95Ms": 5.6971,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 84811776
+            },
+            {
+              "Name": "单组件查询读写",
+              "EntityCount": 1000,
+              "Samples": 60,
+              "AverageMs": 0.22414499999999998,
+              "P95Ms": 0.2388,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 68079616
+            },
+            {
+              "Name": "多组件交集",
+              "EntityCount": 1000,
+              "Samples": 60,
+              "AverageMs": 0.03466166666666668,
+              "P95Ms": 0.0354,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 68079616
+            },
+            {
+              "Name": "随机实体访问",
+              "EntityCount": 1000,
+              "Samples": 60,
+              "AverageMs": 0.20105166666666668,
+              "P95Ms": 0.25120000000000003,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 68083712
+            },
+            {
+              "Name": "结构批量Add再Remove",
+              "EntityCount": 1000,
+              "Samples": 60,
+              "AverageMs": 0.11103833333333331,
+              "P95Ms": 0.11620000000000001,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 68087808
+            },
+            {
+              "Name": "销毁创建复用",
+              "EntityCount": 1000,
+              "Samples": 60,
+              "AverageMs": 0.2163833333333334,
+              "P95Ms": 0.2821,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 68104192
+            },
+            {
+              "Name": "快照捕获",
+              "EntityCount": 1000,
+              "Samples": 60,
+              "AverageMs": 0.36885833333333334,
+              "P95Ms": 0.42360000000000003,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 72110080
+            },
+            {
+              "Name": "快照恢复",
+              "EntityCount": 1000,
+              "Samples": 60,
+              "AverageMs": 0.22476833333333338,
+              "P95Ms": 0.24280000000000002,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 68173824
+            },
+            {
+              "Name": "创建含扩容",
+              "EntityCount": 10000,
+              "Samples": 60,
+              "AverageMs": 13.170051666666668,
+              "P95Ms": 27.102700000000002,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 110837760
+            },
+            {
+              "Name": "单组件查询读写",
+              "EntityCount": 10000,
+              "Samples": 60,
+              "AverageMs": 2.3006000000000006,
+              "P95Ms": 2.5574000000000003,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 69955584
+            },
+            {
+              "Name": "多组件交集",
+              "EntityCount": 10000,
+              "Samples": 60,
+              "AverageMs": 0.39606166666666687,
+              "P95Ms": 0.5127,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 69951488
+            },
+            {
+              "Name": "随机实体访问",
+              "EntityCount": 10000,
+              "Samples": 60,
+              "AverageMs": 1.931404999999999,
+              "P95Ms": 2.2132,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 69992448
+            },
+            {
+              "Name": "结构批量Add再Remove",
+              "EntityCount": 10000,
+              "Samples": 60,
+              "AverageMs": 1.0904683333333334,
+              "P95Ms": 1.3486,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 72982528
+            },
+            {
+              "Name": "销毁创建复用",
+              "EntityCount": 10000,
+              "Samples": 60,
+              "AverageMs": 2.1100533333333336,
+              "P95Ms": 2.4347000000000003,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 73064448
+            },
+            {
+              "Name": "快照捕获",
+              "EntityCount": 10000,
+              "Samples": 60,
+              "AverageMs": 4.198926666666666,
+              "P95Ms": 4.776400000000001,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 87060480
+            },
+            {
+              "Name": "快照恢复",
+              "EntityCount": 10000,
+              "Samples": 60,
+              "AverageMs": 2.2964916666666664,
+              "P95Ms": 2.5559000000000003,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 71241728
+            },
+            {
+              "Name": "创建含扩容",
+              "EntityCount": 50000,
+              "Samples": 60,
+              "AverageMs": 62.66803833333335,
+              "P95Ms": 105.36290000000001,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 138067968
+            },
+            {
+              "Name": "单组件查询读写",
+              "EntityCount": 50000,
+              "Samples": 60,
+              "AverageMs": 11.874533333333337,
+              "P95Ms": 12.493300000000001,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 80429056
+            },
+            {
+              "Name": "多组件交集",
+              "EntityCount": 50000,
+              "Samples": 60,
+              "AverageMs": 1.9329066666666663,
+              "P95Ms": 2.2978,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 80429056
+            },
+            {
+              "Name": "随机实体访问",
+              "EntityCount": 50000,
+              "Samples": 60,
+              "AverageMs": 11.62610833333333,
+              "P95Ms": 13.618400000000001,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 80629760
+            },
+            {
+              "Name": "结构批量Add再Remove",
+              "EntityCount": 50000,
+              "Samples": 60,
+              "AverageMs": 5.75785,
+              "P95Ms": 5.962400000000001,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 93442048
+            },
+            {
+              "Name": "销毁创建复用",
+              "EntityCount": 50000,
+              "Samples": 60,
+              "AverageMs": 11.383595000000003,
+              "P95Ms": 12.414900000000001,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 93790208
+            },
+            {
+              "Name": "快照捕获",
+              "EntityCount": 50000,
+              "Samples": 60,
+              "AverageMs": 21.76375999999999,
+              "P95Ms": 35.229800000000004,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 131895296
+            },
+            {
+              "Name": "快照恢复",
+              "EntityCount": 50000,
+              "Samples": 60,
+              "AverageMs": 11.940850000000001,
+              "P95Ms": 12.5417,
+              "AllocatedBytes": -1,
+              "MaxSampledHeapBytes": 83996672
+            }
+          ]
+        }
+      },
+      "target": {
+        "host": "127.0.0.1",
+        "port": 7801,
+        "projectPath": "E:\\AAAA学习资料\\Demo\\顶点数"
+      }
+    },
+    "errors": [],
+    "warnings": []
+  }
+}

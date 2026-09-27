@@ -1,0 +1,49 @@
+{
+  "start": "2026-09-27T01:14:22.566152+08:00",
+  "end": "2026-09-27T01:14:31.975755+08:00",
+  "elapsedSeconds": 9.408950099999856,
+  "command": [
+    "C:\\Users\\fmz\\AppData\\Local\\Unity\\bin\\unity.exe",
+    "command",
+    "run_script",
+    "--file",
+    "AgentScripts/BenchmarkMmEcsSnapshot.cs",
+    "--entry",
+    "BenchmarkMmEcsSnapshot.Run",
+    "--timeout_ms",
+    "60000",
+    "--project-path",
+    "E:\\AAAA学习资料\\Demo\\顶点数",
+    "--format",
+    "json"
+  ],
+  "exitCode": 0,
+  "stderr": "",
+  "response": {
+    "success": true,
+    "command": "command run_script",
+    "data": {
+      "command": "run_script",
+      "parameters": {
+        "file": "AgentScripts/BenchmarkMmEcsSnapshot.cs",
+        "entry": "BenchmarkMmEcsSnapshot.Run",
+        "timeout_ms": "60000"
+      },
+      "result": {
+        "diagnostics": [],
+        "compileMs": 103,
+        "executeMs": 8314,
+        "assemblyName": "PipelineRunScript_BenchmarkMmEcsSnapshot_1ab4fb980df5499890be4902c5ef2728",
+        "success": true,
+        "result": "实体 10000 预热 30 采样 300 Editor Mono\r\n每种组件有效行 10000\r\n捕获 mean=4.6286ms P95=4.8726ms\r\n恢复 mean=2.6701ms P95=2.9125ms\r\n每种组件有效行 1000\r\n捕获 mean=2.4460ms P95=2.7384ms\r\n恢复 mean=0.6711ms P95=0.7758ms\r\n两种工作量的全部状态及快照隔离核验通过\r\n"
+      },
+      "target": {
+        "host": "127.0.0.1",
+        "port": 7801,
+        "projectPath": "E:\\AAAA学习资料\\Demo\\顶点数"
+      }
+    },
+    "errors": [],
+    "warnings": []
+  }
+}

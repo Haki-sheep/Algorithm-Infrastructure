@@ -1,0 +1,3702 @@
+{
+  "timings": [
+    {
+      "round": 1,
+      "suite": "movement",
+      "workload": "只查询",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.4333,
+      "p95_ms": 0.5222,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 1,
+      "suite": "movement",
+      "workload": "旧路径只更新",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 3.8009,
+      "p95_ms": 4.1603,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 1,
+      "suite": "movement",
+      "workload": "独立组件池访问基线",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.5076,
+      "p95_ms": 0.6323,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 1,
+      "suite": "movement",
+      "workload": "旧路径完整移动",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 4.2459,
+      "p95_ms": 4.6576,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 1,
+      "suite": "movement",
+      "workload": "列表Lookup完整移动",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 1.8701,
+      "p95_ms": 2.0791,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 1,
+      "suite": "movement",
+      "workload": "当前完整移动",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.6578,
+      "p95_ms": 0.7596,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 1,
+      "suite": "movement",
+      "workload": "旧路径完整Tick",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 4.3673,
+      "p95_ms": 4.8729,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 1,
+      "suite": "movement",
+      "workload": "列表Lookup完整Tick",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 1.8967,
+      "p95_ms": 2.2099,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 1,
+      "suite": "movement",
+      "workload": "当前完整Tick",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.6616,
+      "p95_ms": 0.7398,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "创建含扩容",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 1.7493083333333332,
+      "p95_ms": 5.6971,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "单组件查询读写",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.22414499999999998,
+      "p95_ms": 0.2388,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "多组件交集",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.03466166666666668,
+      "p95_ms": 0.0354,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "随机实体访问",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.20105166666666668,
+      "p95_ms": 0.25120000000000003,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "结构批量Add再Remove",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.11103833333333331,
+      "p95_ms": 0.11620000000000001,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "销毁创建复用",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.2163833333333334,
+      "p95_ms": 0.2821,
+      "change_count": 100,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "快照捕获",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.36885833333333334,
+      "p95_ms": 0.42360000000000003,
+      "change_count": 100,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "快照恢复",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.22476833333333338,
+      "p95_ms": 0.24280000000000002,
+      "change_count": 100,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "创建含扩容",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 13.170051666666668,
+      "p95_ms": 27.102700000000002,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "单组件查询读写",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 2.3006000000000006,
+      "p95_ms": 2.5574000000000003,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "多组件交集",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.39606166666666687,
+      "p95_ms": 0.5127,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "随机实体访问",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 1.931404999999999,
+      "p95_ms": 2.2132,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "结构批量Add再Remove",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 1.0904683333333334,
+      "p95_ms": 1.3486,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "销毁创建复用",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 2.1100533333333336,
+      "p95_ms": 2.4347000000000003,
+      "change_count": 1000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "快照捕获",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 4.198926666666666,
+      "p95_ms": 4.776400000000001,
+      "change_count": 1000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "快照恢复",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 2.2964916666666664,
+      "p95_ms": 2.5559000000000003,
+      "change_count": 1000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "创建含扩容",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 62.66803833333335,
+      "p95_ms": 105.36290000000001,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "单组件查询读写",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 11.874533333333337,
+      "p95_ms": 12.493300000000001,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "多组件交集",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 1.9329066666666663,
+      "p95_ms": 2.2978,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "随机实体访问",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 11.62610833333333,
+      "p95_ms": 13.618400000000001,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "结构批量Add再Remove",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 5.75785,
+      "p95_ms": 5.962400000000001,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "销毁创建复用",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 11.383595000000003,
+      "p95_ms": 12.414900000000001,
+      "change_count": 5000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "快照捕获",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 21.76375999999999,
+      "p95_ms": 35.229800000000004,
+      "change_count": 5000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 1,
+      "suite": "scale",
+      "workload": "快照恢复",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 11.940850000000001,
+      "p95_ms": 12.5417,
+      "change_count": 5000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 1,
+      "suite": "snapshot",
+      "workload": "捕获",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 5.0345,
+      "p95_ms": 8.0921,
+      "retained_per_component": 10000
+    },
+    {
+      "round": 1,
+      "suite": "snapshot",
+      "workload": "恢复",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 2.7454,
+      "p95_ms": 3.0338,
+      "retained_per_component": 10000
+    },
+    {
+      "round": 1,
+      "suite": "snapshot",
+      "workload": "捕获",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 2.6982,
+      "p95_ms": 3.0439,
+      "retained_per_component": 1000
+    },
+    {
+      "round": 1,
+      "suite": "snapshot",
+      "workload": "恢复",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.725,
+      "p95_ms": 0.85,
+      "retained_per_component": 1000
+    },
+    {
+      "round": 1,
+      "suite": "destruction",
+      "workload": "销毁提交",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.8433,
+      "p95_ms": 1.0128,
+      "registered_types": 2,
+      "owned_types": 2
+    },
+    {
+      "round": 1,
+      "suite": "destruction",
+      "workload": "销毁提交",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.8458,
+      "p95_ms": 0.9516,
+      "registered_types": 16,
+      "owned_types": 2
+    },
+    {
+      "round": 1,
+      "suite": "destruction",
+      "workload": "销毁提交",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.7743,
+      "p95_ms": 0.851,
+      "registered_types": 64,
+      "owned_types": 2
+    },
+    {
+      "round": 1,
+      "suite": "destruction",
+      "workload": "销毁提交",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.7631,
+      "p95_ms": 0.8075,
+      "registered_types": 256,
+      "owned_types": 2
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "entities": 0,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.0906,
+      "p95_ms": 0.0931,
+      "messages": 1000
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "entities": 0,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.2464,
+      "p95_ms": 0.2735,
+      "messages": 1000
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "entities": 0,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.1276,
+      "p95_ms": 0.1322,
+      "messages": 1000
+    },
+    {
+      "round": 2,
+      "suite": "movement",
+      "workload": "只查询",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.4255,
+      "p95_ms": 0.505,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 2,
+      "suite": "movement",
+      "workload": "旧路径只更新",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 3.7809,
+      "p95_ms": 4.1636,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 2,
+      "suite": "movement",
+      "workload": "独立组件池访问基线",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.5335,
+      "p95_ms": 0.5814,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 2,
+      "suite": "movement",
+      "workload": "旧路径完整移动",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 4.3216,
+      "p95_ms": 4.7277,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 2,
+      "suite": "movement",
+      "workload": "列表Lookup完整移动",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 2.0257,
+      "p95_ms": 2.6417,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 2,
+      "suite": "movement",
+      "workload": "当前完整移动",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.7014,
+      "p95_ms": 0.9234,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 2,
+      "suite": "movement",
+      "workload": "旧路径完整Tick",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 4.2868,
+      "p95_ms": 4.6423,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 2,
+      "suite": "movement",
+      "workload": "列表Lookup完整Tick",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 1.8666,
+      "p95_ms": 2.033,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 2,
+      "suite": "movement",
+      "workload": "当前完整Tick",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.6378,
+      "p95_ms": 0.7103,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "创建含扩容",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 1.269645,
+      "p95_ms": 1.2002000000000002,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "单组件查询读写",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.24785,
+      "p95_ms": 0.3111,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "多组件交集",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.0337166666666667,
+      "p95_ms": 0.0349,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "随机实体访问",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.1859283333333334,
+      "p95_ms": 0.1995,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "结构批量Add再Remove",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.10047333333333337,
+      "p95_ms": 0.10350000000000001,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "销毁创建复用",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.2176166666666667,
+      "p95_ms": 0.2882,
+      "change_count": 100,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "快照捕获",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.3601266666666667,
+      "p95_ms": 0.44010000000000005,
+      "change_count": 100,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "快照恢复",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.22824333333333333,
+      "p95_ms": 0.2543,
+      "change_count": 100,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "创建含扩容",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 12.394966666666665,
+      "p95_ms": 26.381500000000003,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "单组件查询读写",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 2.3528950000000006,
+      "p95_ms": 2.4698,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "多组件交集",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.34130833333333327,
+      "p95_ms": 0.4072,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "随机实体访问",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 1.9423983333333332,
+      "p95_ms": 2.2025,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "结构批量Add再Remove",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 1.0655416666666662,
+      "p95_ms": 1.1712,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "销毁创建复用",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 2.1175733333333326,
+      "p95_ms": 2.3587000000000002,
+      "change_count": 1000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "快照捕获",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 4.128628333333334,
+      "p95_ms": 4.5956,
+      "change_count": 1000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "快照恢复",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 2.356218333333334,
+      "p95_ms": 2.5438,
+      "change_count": 1000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "创建含扩容",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 62.76047500000002,
+      "p95_ms": 107.9713,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "单组件查询读写",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 11.925533333333334,
+      "p95_ms": 12.603800000000001,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "多组件交集",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 1.8812016666666669,
+      "p95_ms": 2.3566000000000003,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "随机实体访问",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 11.505920000000005,
+      "p95_ms": 14.762,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "结构批量Add再Remove",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 5.803568333333334,
+      "p95_ms": 6.9112,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "销毁创建复用",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 11.344808333333333,
+      "p95_ms": 12.303500000000001,
+      "change_count": 5000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "快照捕获",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 21.502816666666668,
+      "p95_ms": 35.1721,
+      "change_count": 5000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 2,
+      "suite": "scale",
+      "workload": "快照恢复",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 11.861134999999999,
+      "p95_ms": 12.4017,
+      "change_count": 5000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 2,
+      "suite": "snapshot",
+      "workload": "捕获",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 4.6286,
+      "p95_ms": 4.8726,
+      "retained_per_component": 10000
+    },
+    {
+      "round": 2,
+      "suite": "snapshot",
+      "workload": "恢复",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 2.6701,
+      "p95_ms": 2.9125,
+      "retained_per_component": 10000
+    },
+    {
+      "round": 2,
+      "suite": "snapshot",
+      "workload": "捕获",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 2.446,
+      "p95_ms": 2.7384,
+      "retained_per_component": 1000
+    },
+    {
+      "round": 2,
+      "suite": "snapshot",
+      "workload": "恢复",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.6711,
+      "p95_ms": 0.7758,
+      "retained_per_component": 1000
+    },
+    {
+      "round": 2,
+      "suite": "destruction",
+      "workload": "销毁提交",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.7518,
+      "p95_ms": 0.7888,
+      "registered_types": 2,
+      "owned_types": 2
+    },
+    {
+      "round": 2,
+      "suite": "destruction",
+      "workload": "销毁提交",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.7823,
+      "p95_ms": 0.826,
+      "registered_types": 16,
+      "owned_types": 2
+    },
+    {
+      "round": 2,
+      "suite": "destruction",
+      "workload": "销毁提交",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.7711,
+      "p95_ms": 0.8123,
+      "registered_types": 64,
+      "owned_types": 2
+    },
+    {
+      "round": 2,
+      "suite": "destruction",
+      "workload": "销毁提交",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.8137,
+      "p95_ms": 0.9234,
+      "registered_types": 256,
+      "owned_types": 2
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "entities": 0,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.0978,
+      "p95_ms": 0.105,
+      "messages": 1000
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "entities": 0,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.249,
+      "p95_ms": 0.2952,
+      "messages": 1000
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "entities": 0,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.1207,
+      "p95_ms": 0.1301,
+      "messages": 1000
+    },
+    {
+      "round": 3,
+      "suite": "movement",
+      "workload": "只查询",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.4094,
+      "p95_ms": 0.4816,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 3,
+      "suite": "movement",
+      "workload": "旧路径只更新",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 3.8173,
+      "p95_ms": 4.1713,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 3,
+      "suite": "movement",
+      "workload": "独立组件池访问基线",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.5146,
+      "p95_ms": 0.5843,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 3,
+      "suite": "movement",
+      "workload": "旧路径完整移动",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 4.2348,
+      "p95_ms": 4.5758,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 3,
+      "suite": "movement",
+      "workload": "列表Lookup完整移动",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 1.9317,
+      "p95_ms": 2.1234,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 3,
+      "suite": "movement",
+      "workload": "当前完整移动",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.6522,
+      "p95_ms": 0.7267,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 3,
+      "suite": "movement",
+      "workload": "旧路径完整Tick",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 4.1836,
+      "p95_ms": 4.5377,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 3,
+      "suite": "movement",
+      "workload": "列表Lookup完整Tick",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 1.8957,
+      "p95_ms": 2.1031,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 3,
+      "suite": "movement",
+      "workload": "当前完整Tick",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.6753,
+      "p95_ms": 0.7858,
+      "velocity_match_percent": 100
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "创建含扩容",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 1.2855300000000005,
+      "p95_ms": 2.4688000000000003,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "单组件查询读写",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.23148833333333332,
+      "p95_ms": 0.2978,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "多组件交集",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.032186666666666676,
+      "p95_ms": 0.0328,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "随机实体访问",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.19493833333333332,
+      "p95_ms": 0.2283,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "结构批量Add再Remove",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.12420833333333334,
+      "p95_ms": 0.1786,
+      "change_count": 100,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "销毁创建复用",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.22920833333333326,
+      "p95_ms": 0.2859,
+      "change_count": 100,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "快照捕获",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.37955500000000003,
+      "p95_ms": 0.42800000000000005,
+      "change_count": 100,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "快照恢复",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.23830500000000002,
+      "p95_ms": 0.29050000000000004,
+      "change_count": 100,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "创建含扩容",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 12.811303333333335,
+      "p95_ms": 26.773,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "单组件查询读写",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 2.637258333333334,
+      "p95_ms": 3.2295000000000003,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "多组件交集",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.366815,
+      "p95_ms": 0.403,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "随机实体访问",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 2.0556450000000006,
+      "p95_ms": 2.4017,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "结构批量Add再Remove",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 1.157775,
+      "p95_ms": 1.3041,
+      "change_count": 1000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "销毁创建复用",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 2.127645,
+      "p95_ms": 2.3885,
+      "change_count": 1000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "快照捕获",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 4.089434999999999,
+      "p95_ms": 4.1094,
+      "change_count": 1000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "快照恢复",
+      "entities": 10000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 2.27705,
+      "p95_ms": 2.4911000000000003,
+      "change_count": 1000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "创建含扩容",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 63.886835000000005,
+      "p95_ms": 116.2219,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "单组件查询读写",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 11.403819999999998,
+      "p95_ms": 12.0755,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "多组件交集",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 1.748301666666667,
+      "p95_ms": 2.0885000000000002,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "随机实体访问",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 11.064815000000001,
+      "p95_ms": 13.4525,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "结构批量Add再Remove",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 6.079181666666667,
+      "p95_ms": 6.2214,
+      "change_count": 5000,
+      "velocity_match_percent": 50
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "销毁创建复用",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 11.316541666666668,
+      "p95_ms": 12.532,
+      "change_count": 5000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "快照捕获",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 21.952911666666676,
+      "p95_ms": 35.0445,
+      "change_count": 5000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 3,
+      "suite": "scale",
+      "workload": "快照恢复",
+      "entities": 50000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 11.976493333333334,
+      "p95_ms": 12.7558,
+      "change_count": 5000,
+      "velocity_match_percent": 55
+    },
+    {
+      "round": 3,
+      "suite": "snapshot",
+      "workload": "捕获",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 4.7712,
+      "p95_ms": 5.0109,
+      "retained_per_component": 10000
+    },
+    {
+      "round": 3,
+      "suite": "snapshot",
+      "workload": "恢复",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 2.6972,
+      "p95_ms": 3.0057,
+      "retained_per_component": 10000
+    },
+    {
+      "round": 3,
+      "suite": "snapshot",
+      "workload": "捕获",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 2.5833,
+      "p95_ms": 3.0007,
+      "retained_per_component": 1000
+    },
+    {
+      "round": 3,
+      "suite": "snapshot",
+      "workload": "恢复",
+      "entities": 10000,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.7062,
+      "p95_ms": 0.8079,
+      "retained_per_component": 1000
+    },
+    {
+      "round": 3,
+      "suite": "destruction",
+      "workload": "销毁提交",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.7718,
+      "p95_ms": 0.87,
+      "registered_types": 2,
+      "owned_types": 2
+    },
+    {
+      "round": 3,
+      "suite": "destruction",
+      "workload": "销毁提交",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.7661,
+      "p95_ms": 0.8355,
+      "registered_types": 16,
+      "owned_types": 2
+    },
+    {
+      "round": 3,
+      "suite": "destruction",
+      "workload": "销毁提交",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.7464,
+      "p95_ms": 0.8108,
+      "registered_types": 64,
+      "owned_types": 2
+    },
+    {
+      "round": 3,
+      "suite": "destruction",
+      "workload": "销毁提交",
+      "entities": 1000,
+      "warmup": 10,
+      "samples": 60,
+      "mean_ms": 0.7448,
+      "p95_ms": 0.8125,
+      "registered_types": 256,
+      "owned_types": 2
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "entities": 0,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.0937,
+      "p95_ms": 0.0977,
+      "messages": 1000
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "entities": 0,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.2524,
+      "p95_ms": 0.3053,
+      "messages": 1000
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "entities": 0,
+      "warmup": 30,
+      "samples": 300,
+      "mean_ms": 0.1277,
+      "p95_ms": 0.1448,
+      "messages": 1000
+    }
+  ],
+  "allocations": [
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 1,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 2,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 3,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 4,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 5,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 1,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 2,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 3,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 4,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 5,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 1,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 2,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 3,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 4,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 5,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 1,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 2,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 3,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 4,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 1,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 5,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 1,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 2,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 3,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 4,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 5,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 1,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 2,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 3,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 4,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 5,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 1,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 2,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 3,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 4,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 5,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 1,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 2,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 3,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 4,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 5,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 1,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 2,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 3,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 4,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 5,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 1,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 2,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 3,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 4,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 5,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 1,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 2,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 3,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 4,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 1,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 5,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 1,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 2,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 3,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 4,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 5,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 1,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 2,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 3,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 4,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 5,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 1,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 2,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 3,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 4,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 5,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 1,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 2,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 3,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 4,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 2,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 5,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 1,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 2,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 3,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 4,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 5,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 1,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 2,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 3,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 4,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 5,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 1,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 2,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 3,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 4,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 5,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 1,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 2,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 3,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 4,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 5,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 1,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 2,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 3,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 4,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 5,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 1,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 2,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 3,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 4,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 5,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 1,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 2,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 3,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 4,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 2,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 5,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "空区间",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 1,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 2,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 3,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 4,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "byte[4096]",
+      "sample": 5,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 1,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 2,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 3,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 4,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "byte[8192]",
+      "sample": 5,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 1,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 2,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 3,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 4,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "两次 byte[4096]",
+      "sample": 5,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "直接调用含 Tick",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "Signal 派发含 Tick",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 1,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 2,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 3,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 4,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 3,
+      "suite": "communication",
+      "workload": "Event 生成发布及消费含 Tick",
+      "sample": 5,
+      "bytes": 8608,
+      "objects": 12
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "空区间",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 1,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 2,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 3,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 4,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "byte[4096]",
+      "sample": 5,
+      "bytes": 4128,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 1,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 2,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 3,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 4,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "byte[8192]",
+      "sample": 5,
+      "bytes": 8224,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 1,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 2,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 3,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 4,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "两次 byte[4096]",
+      "sample": 5,
+      "bytes": 8256,
+      "objects": 2
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "只查询 10000 实体",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "完整移动 10000 实体",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 1,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 2,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 3,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 4,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "完整 Tick 单移动系统",
+      "sample": 5,
+      "bytes": 0,
+      "objects": 0
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 1,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 2,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 3,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 4,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "恢复后首次 1000 组 Add Remove 含 Tick",
+      "sample": 5,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 1,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 2,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 3,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 4,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "连续 1000 组 Add Remove 含 Tick",
+      "sample": 5,
+      "bytes": 52000,
+      "objects": 2000
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 1,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 2,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 3,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 4,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "10000 实体快照捕获",
+      "sample": 5,
+      "bytes": 666380,
+      "objects": 24
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 1,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 2,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 3,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 4,
+      "bytes": 80,
+      "objects": 1
+    },
+    {
+      "round": 3,
+      "suite": "allocation",
+      "workload": "10000 实体快照恢复",
+      "sample": 5,
+      "bytes": 80,
+      "objects": 1
+    }
+  ]
+}

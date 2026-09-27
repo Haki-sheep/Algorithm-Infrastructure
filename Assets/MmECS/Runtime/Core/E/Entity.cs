@@ -1,5 +1,8 @@
 namespace MmECS
 {
+    /// <summary>
+    /// 用槽位编号与代际表示所属 World 内的实体身份
+    /// </summary>
     public readonly struct Entity
     {
         // 实体索引

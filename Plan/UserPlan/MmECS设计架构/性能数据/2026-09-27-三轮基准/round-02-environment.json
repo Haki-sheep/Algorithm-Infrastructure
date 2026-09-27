@@ -1,0 +1,53 @@
+{
+  "start": "2026-09-27T01:15:08.164592+08:00",
+  "end": "2026-09-27T01:15:09.276316+08:00",
+  "elapsedSeconds": 1.1118548000004012,
+  "command": [
+    "C:\\Users\\fmz\\AppData\\Local\\Unity\\bin\\unity.exe",
+    "command",
+    "eval",
+    "--code",
+    "return new { Utc = System.DateTime.UtcNow.ToString(\"O\"), Unity = UnityEngine.Application.unityVersion, CPU = UnityEngine.SystemInfo.processorType, LogicalProcessors = UnityEngine.SystemInfo.processorCount, MemoryMiB = UnityEngine.SystemInfo.systemMemorySize, OS = UnityEngine.SystemInfo.operatingSystem, Platform = UnityEngine.Application.platform.ToString(), ProcessId = System.Diagnostics.Process.GetCurrentProcess().Id, ProfilerEnabled = UnityEngine.Profiling.Profiler.enabled, ProfileEditor = UnityEditorInternal.ProfilerDriver.profileEditor, DeepProfiling = UnityEditorInternal.ProfilerDriver.deepProfiling };",
+    "--project-path",
+    "E:\\AAAA学习资料\\Demo\\顶点数",
+    "--format",
+    "json"
+  ],
+  "exitCode": 0,
+  "stderr": "",
+  "response": {
+    "success": true,
+    "command": "command eval",
+    "data": {
+      "command": "eval",
+      "parameters": {
+        "code": "return new { Utc = System.DateTime.UtcNow.ToString(\"O\"), Unity = UnityEngine.Application.unityVersion, CPU = UnityEngine.SystemInfo.processorType, LogicalProcessors = UnityEngine.SystemInfo.processorCount, MemoryMiB = UnityEngine.SystemInfo.systemMemorySize, OS = UnityEngine.SystemInfo.operatingSystem, Platform = UnityEngine.Application.platform.ToString(), ProcessId = System.Diagnostics.Process.GetCurrentProcess().Id, ProfilerEnabled = UnityEngine.Profiling.Profiler.enabled, ProfileEditor = UnityEditorInternal.ProfilerDriver.profileEditor, DeepProfiling = UnityEditorInternal.ProfilerDriver.deepProfiling };"
+      },
+      "result": {
+        "output": null,
+        "diagnostics": [],
+        "success": true,
+        "result": {
+          "Utc": "2026-09-26T17:15:08.4267598Z",
+          "Unity": "2022.3.62f3",
+          "CPU": "13th Gen Intel(R) Core(TM) i5-13500H",
+          "LogicalProcessors": 16,
+          "MemoryMiB": 32471,
+          "OS": "Windows 11  (10.0.26340) 64bit",
+          "Platform": "WindowsEditor",
+          "ProcessId": 7808,
+          "ProfilerEnabled": false,
+          "ProfileEditor": false,
+          "DeepProfiling": false
+        }
+      },
+      "target": {
+        "host": "127.0.0.1",
+        "port": 7801,
+        "projectPath": "E:\\AAAA学习资料\\Demo\\顶点数"
+      }
+    },
+    "errors": [],
+    "warnings": []
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "start": "2026-09-27T01:15:49.515763+08:00",
+  "end": "2026-09-27T01:15:54.675347+08:00",
+  "elapsedSeconds": 5.159020599999167,
+  "command": [
+    "C:\\Users\\fmz\\AppData\\Local\\Unity\\bin\\unity.exe",
+    "command",
+    "run_script",
+    "--file",
+    "AgentScripts/ProbeMmEcsAllocation.cs",
+    "--entry",
+    "ProbeMmEcsAllocation.Run",
+    "--timeout_ms",
+    "60000",
+    "--project-path",
+    "E:\\AAAA学习资料\\Demo\\顶点数",
+    "--format",
+    "json"
+  ],
+  "exitCode": 0,
+  "stderr": "",
+  "response": {
+    "success": true,
+    "command": "command run_script",
+    "data": {
+      "command": "run_script",
+      "parameters": {
+        "file": "AgentScripts/ProbeMmEcsAllocation.cs",
+        "entry": "ProbeMmEcsAllocation.Run",
+        "timeout_ms": "60000"
+      },
+      "result": {
+        "diagnostics": [],
+        "compileMs": 457,
+        "executeMs": 2871,
+        "assemblyName": "PipelineRunScript_ProbeMmEcsAllocation_41bd1718b98b4e949f1552d65cb274ba",
+        "success": true,
+        "result": "# MmECS GC 分配专项报告\n\r\n时间 2026-09-27T01:15:52.9566721+08:00  Unity 2022.3.62f3  Editor Mono\r\n\n实体 10000  预热 5  正式采样 5  单线程 位置速度匹配率 100%\r\n\n通过 RawFrameDataView 读取自定义采样区间子树中的 GC.Alloc 大小元数据 按主线程同步操作统计 含托管对象头 不包含区间外的工具 日志 等待和编辑器分配\r\n\n| 工作负载 | 每次分配 B 的全部样本 | 每次分配对象数的全部样本 |\n|---|---|---|\r\n| 空区间 | 0, 0, 0, 0, 0 | 0, 0, 0, 0, 0 |\r\n| byte[4096] | 4128, 4128, 4128, 4128, 4128 | 1, 1, 1, 1, 1 |\r\n| byte[8192] | 8224, 8224, 8224, 8224, 8224 | 1, 1, 1, 1, 1 |\r\n| 两次 byte[4096] | 8256, 8256, 8256, 8256, 8256 | 2, 2, 2, 2, 2 |\r\n| 只查询 10000 实体 | 0, 0, 0, 0, 0 | 0, 0, 0, 0, 0 |\r\n| 完整移动 10000 实体 | 0, 0, 0, 0, 0 | 0, 0, 0, 0, 0 |\r\n| 完整 Tick 单移动系统 | 0, 0, 0, 0, 0 | 0, 0, 0, 0, 0 |\r\n| 恢复后首次 1000 组 Add Remove 含 Tick | 52000, 52000, 52000, 52000, 52000 | 2000, 2000, 2000, 2000, 2000 |\r\n| 连续 1000 组 Add Remove 含 Tick | 52000, 52000, 52000, 52000, 52000 | 2000, 2000, 2000, 2000, 2000 |\r\n| 10000 实体快照捕获 | 666380, 666380, 666380, 666380, 666380 | 24, 24, 24, 24, 24 |\r\n| 10000 实体快照恢复 | 80, 80, 80, 80, 80 | 1, 1, 1, 1, 1 |\r\n\n校准通过 空操作为零 两种数组大小差值为 4096 字节 两次分配的字节数是一次的两倍 对象数为 1 1 2 所有采样区间完整且仅出现一次 最终位置 结构清理与 Tick 数核验通过\r\n\n每个结构项含 2000 条命令入队和一次 Tick 两项连续执行以区分恢复后首次添加和后续添加 快照捕获后立即恢复 相同操作循环采样 冷启动与实体创建不在测量内\r\n\n此结果补充原 06 与 09 报告的 GC 缺口 原 GC.GetAllocatedBytesForCurrentThread 接口仍不可用 不用托管堆大小变化代替分配量 不据此改写原耗时数据 开启 Profiler 的耗时不与原基准混用\r\n\n仅对表中路径及所测样本作结论 不代表整个 ECS 或 Unity 场景零分配 不统计原生内存 其他线程及实际 GC 回收停顿 不代表 IL2CPP 或目标设备 已在 finally 中恢复 Profiler 原有启用状态及 Editor 和 CPU 采集设置\r\n\n复现命令\n\n```powershell\nunity command run_script --file AgentScripts/ProbeMmEcsAllocation.cs --entry ProbeMmEcsAllocation.Run --timeout_ms 30000 --project-path 'E:\\AAAA学习资料\\Demo\\顶点数' --format json\n```\r\n"
+      },
+      "target": {
+        "host": "127.0.0.1",
+        "port": 7801,
+        "projectPath": "E:\\AAAA学习资料\\Demo\\顶点数"
+      }
+    },
+    "errors": [],
+    "warnings": []
+  }
+}

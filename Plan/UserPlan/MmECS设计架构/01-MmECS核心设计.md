@@ -22,6 +22,14 @@ MmECS 是独立于游戏引擎的 C# 模拟核心 负责实体 组件 查询 系
 
 System 的基础生命周期接口可以属于 Core 具体先运行移动还是伤害由 Game.Simulation 配置
 
+2026-09-26 实码核对 Core 类型使用 MmECS 命名空间 并已隔离到 MmECS.Core 程序集 Position Velocity MovementSystem MoveInput 以及 Simulation 的各职责 partial 使用 Game.Simulation ISimulationSystem 仍仅定义 Tick 可选 ISimulationLifecycle 提供 Init Dispose 由现有 Simulation 统一管理
+
+原 Core/S 已通过 Pipeline 整体迁至 Assets/MmECS/Samples/Movement/Runtime 保留现有类型与命名空间 迁移涉及的 9 个文件及目录 GUID 核对一致 Simulation 继续负责固定步与游戏输入 未新增 FixedTickDriver
+
+目录和命名空间不能替代程序集隔离 当前 Simulation 调用 World.BeginSimulation CommitStructural CompleteTick 三个 internal 方法 Core 通过 AssemblyInfo 的 InternalsVisibleTo 授权受信任的 Game.Simulation 程序集 Core 单向被其引用 两个 Runtime asmdef 均禁止引擎引用和自动预编译插件引用 Unity 实际程序集依赖检查显示 Core 只引用 netstandard 样例只引用 netstandard 与 Core 友元会开放 Core 的全部 internal 成员 不是逐方法权限隔离 更换宿主程序集名称时需同步调整该授权
+
+通用延迟创建协议属于 Core 组件值的具体类型由调用方提供 不把 Position Velocity 或游戏资源编号写死到结构缓冲 游戏根据创建结果执行的归属绑定和玩法规则属于 Game.Simulation
+
 Simulation 持有固定步长并接受经过的引擎时间 推进逻辑 Tick Adapter 负责采集和传入引擎帧时间 阶段 D 沿用现有 Simulation 不新增 FixedTickDriver
 
 一帧渲染可以对应零个 一个或多个逻辑 Tick 不把 Unity.Update 当作模拟时间本身
@@ -50,6 +58,10 @@ Generation 达到可表示的上限时不允许静默回绕 视为该 World 的�
 模拟内部避免传入另一个 World 的 Entity 外部句柄额外带 WorldId 与 StateEpoch 由入口验证所属世界和恢复批次
 
 WorldId 与 StateEpoch 是宿主隔离信息 不能未经处理写入要求跨实例一致的模拟校验
+
+2026-09-26 已实现 EntityHandle 与 SpawnRequestHandle World.Handles 提供身份绑定 TryResolve 与创建结果的句柄消费重载 WorldId 在世界创建时分配且保持不变 StateEpoch 每次成功恢复递增 两者不进入快照 被契约检查拒绝的恢复不改变批次
+
+GetEntityHandle 与 GetSpawnRequestHandle 只用于可信初始化或当前有效结果 原始 Entity 和 SpawnRequestId 仍属于受信任模拟接口 无法识别被重新盖章的旧身份 宿主须保存完整句柄 恢复后通过 ReadEntityHandles 与 ReadSpawnRequestHandles 重读当前身份 不复用旧原始编号重新绑定
 
 ## 4 Component 只定义数据
 
@@ -157,6 +169,8 @@ World 拥有模拟状态与可重建缓存 但应在代码职责上区分两者
 
 构造 Query 时保存类型与池的引用 执行时选择 Count 最小的必需组件池作为候选实体来源 数量相同时按已注册类型编号确定候选池
 
+当前 CreateQuery 支持任意数量 All 与 None 条件 复制并去重类型数组且按注册顺序绑定池 空 All 扫描存活槽位 包含排除冲突返回空结果 初始化注册顺序保存在 componentOrderDict 双组件便捷接口同样遵守候选池平局规则
+
 逐个候选实体检查其他必需池和排除池 命中后读取对应组件 行号不必在不同组件池之间相同
 
 如果没有必需组件 例如查询全部实体 则按 Index 递增扫描 World 的 AliveList 只处理存活槽位
@@ -174,6 +188,8 @@ World 拥有模拟状态与可重建缓存 但应在代码职责上区分两者
 ## 8 System 与调度
 
 System 保存查询描述 不可变配置引用和可重建缓存 影响未来模拟结果的可变数据放入 World
+
+当前 Simulation.Init 按注册顺序调用可选生命周期接口 首次 Tick 或 Advance 也会进入同一初始化入口 初始化开始后固定系统列表 Dispose 逆序清理已进入初始化的系统且聚合清理异常 快照恢复不重复初始化 系统私有可变业务字段不自动克隆 应迁入 World.RegisterSingleton 登记的 unmanaged 状态
 
 没有 Unity 组件的模拟对象使用 Init 有 Unity 组件的 Adapter 使用 InitComponents 获取组件 生命周期入口只调用一次
 
@@ -217,13 +233,17 @@ Add 要求目标有效且类型不存在 Remove 要求目标有效且类型存�
 
 首版用带完整初始组件数据的 SpawnRequest 排队创建 提交后才产生正式 Entity 不开放未落地 Entity 的中途引用
 
+2026-09-26 当前最小实现为 StructuralBuffer.Spawn<TFirst,TSecond> 接受两种不同且已注册的 unmanaged 组件 初始值复制到私有 SpawnCommand 后与其他结构命令共用 FIFO 未单独定义名为 SpawnRequest 的类型 当前尚不支持任意数量组件或批内新实体相互引用 此接口范围下阶段 D 验收已通过
+
 请求携带 World 分配的 SpawnRequestId 提交后生成 SpawnResult 保存请求编号与正式 Entity 下一 Tick 由约定系统消费
 
 请求编号只用于关联结果 不能用来 Get 组件或当作临时 Entity 尚未消费的 SpawnResult 及请求编号分配器属于快照状态
 
 需要同一批次新实体相互引用时 再设计明确的临时句柄与解析阶段 这不是首版前置需求
 
-提交期间不执行会递归追加结构操作的用户回调 提交结束后发布 SpawnResult 等下一 Tick 模拟结果 另行生成给表现层的只读输出 两者生命周期分别管理
+提交期间不执行会递归追加结构操作的用户回调 当前实现由 SpawnCommand 在实体及初始组件全部添加后将 SpawnResult 写入 World 结果字典 单线程提交中不运行消费者 完整 Tick 返回后结果可读取 模拟系统按约定下一 Tick 消费 另行生成给表现层的只读输出 两者生命周期分别管理
+
+结果取走只删除请求到实体的关联 不销毁实体 请求编号只在所属 World 内有效 失败提交不回滚已执行操作 整个失败 World 不作为可继续运行的有效完成状态
 
 ## 10 数学与引擎边界
 

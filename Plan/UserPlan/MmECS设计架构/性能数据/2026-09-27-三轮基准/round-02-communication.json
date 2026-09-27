@@ -1,0 +1,49 @@
+{
+  "start": "2026-09-27T01:14:55.271580+08:00",
+  "end": "2026-09-27T01:15:00.344512+08:00",
+  "elapsedSeconds": 5.072577700000693,
+  "command": [
+    "C:\\Users\\fmz\\AppData\\Local\\Unity\\bin\\unity.exe",
+    "command",
+    "run_script",
+    "--file",
+    "AgentScripts/ProbeMmEcsAllocation.cs",
+    "--entry",
+    "ProbeMmEcsAllocation.RunCommunication",
+    "--timeout_ms",
+    "60000",
+    "--project-path",
+    "E:\\AAAA学习资料\\Demo\\顶点数",
+    "--format",
+    "json"
+  ],
+  "exitCode": 0,
+  "stderr": "",
+  "response": {
+    "success": true,
+    "command": "command run_script",
+    "data": {
+      "command": "run_script",
+      "parameters": {
+        "file": "AgentScripts/ProbeMmEcsAllocation.cs",
+        "entry": "ProbeMmEcsAllocation.RunCommunication",
+        "timeout_ms": "60000"
+      },
+      "result": {
+        "diagnostics": [],
+        "compileMs": 450,
+        "executeMs": 2729,
+        "assemblyName": "PipelineRunScript_ProbeMmEcsAllocation_c30c4ccffbcf4ed4b3be6bbb65cd0555",
+        "success": true,
+        "result": "Editor Mono 每步 1000 条消息 预热 30 采样 300\r\n直接调用含 Tick mean=0.0978ms P95=0.1050ms\r\nSignal 派发含 Tick mean=0.2490ms P95=0.2952ms\r\nEvent 生成发布及消费含 Tick mean=0.1207ms P95=0.1301ms\r\n空区间 bytes=[0, 0, 0, 0, 0] objects=[0, 0, 0, 0, 0]\r\nbyte[4096] bytes=[4128, 4128, 4128, 4128, 4128] objects=[1, 1, 1, 1, 1]\r\nbyte[8192] bytes=[8224, 8224, 8224, 8224, 8224] objects=[1, 1, 1, 1, 1]\r\n两次 byte[4096] bytes=[8256, 8256, 8256, 8256, 8256] objects=[2, 2, 2, 2, 2]\r\n直接调用含 Tick bytes=[0, 0, 0, 0, 0] objects=[0, 0, 0, 0, 0]\r\nSignal 派发含 Tick bytes=[0, 0, 0, 0, 0] objects=[0, 0, 0, 0, 0]\r\nEvent 生成发布及消费含 Tick bytes=[8608, 8608, 8608, 8608, 8608] objects=[12, 12, 12, 12, 12]\r\n校准及同工作量累计结果核验通过 未写报告\r\n"
+      },
+      "target": {
+        "host": "127.0.0.1",
+        "port": 7801,
+        "projectPath": "E:\\AAAA学习资料\\Demo\\顶点数"
+      }
+    },
+    "errors": [],
+    "warnings": []
+  }
+}
