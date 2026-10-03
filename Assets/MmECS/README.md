@@ -73,7 +73,19 @@ Simulation.InspectState 与 World.InspectState 返回独立的字段路径和值
 
 Simulation.Trace 可选接收逐系统差异及新增结构请求数 默认关闭 开启时使用反射和装箱复制世界状态 仅用于诊断 回调只观察结果 不修改模拟且不抛错 LastStructuralCount 表示最近逻辑步已提交的结构请求数 不作为快照状态
 
-当前工作区不含自动化验收入口 行为与结构检查由 Samples/Basic/ApiSample.Run 与手写场景验证覆盖
+Samples/Basic/Verification/CoreVerification.Run 提供纯 C# 自动化回归入口 通过公开 API 创建独立世界 无 Unity 或测试框架依赖 首个断言失败保留原始异常并终止 仅成功用例输出 PASS
+
+当前覆盖存储填洞与查询 实体回收与世界隔离 遍历保护与结构 FIFO 逐 Tick 组件单例随机源与事件重演 创建结果恢复与重新绑定 快照边界 系统和结构提交失败终止 生命周期及失败清理 事件积压与恢复清理 回调失败不重播
+
+Unity Pipeline 编译完成后可重复执行以下命令 不修改场景或进入 Play Mode
+
+```powershell
+unity command eval --project-path "E:/AAAA学习资料/Demo/顶点数" 'return MmECS.Samples.CoreVerification.Run();'
+```
+
+每次运行应返回 14 条 PASS 该入口是行为回归 不测性能预算 不证明跨平台确定性或网络回滚 历史基准工具仍未恢复 ApiSample.Run 继续作为 API 用法示例
+
+当前性能探测入口为项目根目录 AgentScripts/MmEcsPerformanceProbe.cs 通过 Unity Pipeline run_script 执行 工具位于 Assets 外 不向 Core 或 Samples 添加 Unity 引用 覆盖三轮耗时 校准后的 Profiler GC 分配 完整快照保留成本与事件积压 复现命令和实测边界见 [2026-10-03 核心性能探测报告](../../Plan/UserPlan/MmECS设计架构/12-核心性能探测报告-2026-10-03.md)
 
 ## 宿主引用与恢复后重绑
 
