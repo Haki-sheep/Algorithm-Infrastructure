@@ -102,7 +102,6 @@ namespace MmECS
         /// 每个实体槽位是否存活
         /// </summary>
         private readonly List<bool> aliveList = new List<bool>();
-
         /// <summary>
         /// 可复用的实体编号
         /// 当实体被销毁时入这个表
