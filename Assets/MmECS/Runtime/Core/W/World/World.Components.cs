@@ -17,6 +17,9 @@ namespace MmECS
         /// <summary> 按初始化注册顺序分配的稳定类型编号 </summary>
         private readonly Dictionary<Type, int> componentOrderDict = new Dictionary<Type, int>();
 
+        /// <summary> 组件池到类型编号的反向查找 供位掩码构建 </summary>
+        private readonly Dictionary<IComponentStorage, int> storageToTypeIdDict = new Dictionary<IComponentStorage, int>();
+
         /// <summary> 实体槽位对应的组件类型列表 清空后保留容量供槽位复用 </summary>
         private readonly Dictionary<int, List<Type>> ownedTypeDict = new Dictionary<int, List<Type>>();
 
@@ -33,15 +36,47 @@ namespace MmECS
             if (storageDict.ContainsKey(componentType))
                 throw new InvalidOperationException($"Component type {componentType.Name} already registered");
 
-            storageDict.Add(componentType, new ComponentStorage<T>());
-            componentOrderDict.Add(componentType, componentOrderDict.Count);
+            var Storage = new ComponentStorage<T>();
+            int TypeId = componentOrderDict.Count;
+            storageDict.Add(componentType, Storage);
+            componentOrderDict.Add(componentType, TypeId);
+            storageToTypeIdDict.Add(Storage, TypeId);
+        }
+
+
+        /// <summary>
+        /// 获取组件池对应的类型编号 供位掩码构建
+        /// </summary>
+        internal int GetComponentTypeId(IComponentStorage Storage)
+        {
+            return storageToTypeIdDict.TryGetValue(Storage, out int TypeId) ? TypeId : -1;
+        }
+
+        /// <summary>
+        /// 获取实体的组件类型位掩码 供查询快速初筛 超过 64 种类型时返回 0
+        /// </summary>
+        internal ulong GetEntityComponentMask(int entityIndex)
+        {
+            if (!ownedTypeDict.TryGetValue(entityIndex, out var TypeList))
+                return 0;
+            if (componentOrderDict.Count > 64)
+                return 0; // 超过 64 种类型 禁用位掩码
+
+            ulong Mask = 0;
+            foreach (var ComponentType in TypeList)
+            {
+                int TypeId = componentOrderDict[ComponentType];
+                if (TypeId < 64)
+                    Mask |= 1UL << TypeId;
+            }
+            return Mask;
         }
 
 
         /// <summary>
         /// 取得已注册的指定类型组件池
         /// </summary>
-        private ComponentStorage<T> GetStorage<T>() where T : unmanaged
+        internal ComponentStorage<T> GetStorage<T>() where T : unmanaged
         {
             if (!storageDict.TryGetValue(typeof(T), out var Storage))
                 throw new InvalidOperationException("Component type is not registered");
@@ -90,6 +125,17 @@ namespace MmECS
 
             var Storage = GetStorage<T>();
             return ref Storage.Get(entity.Index);
+        }
+
+        /// <summary>
+        /// 创建带批次检测的组件引用 跨结构提交或恢复时自动失效
+        /// </summary>
+        public ComponentRef<T> GetRef<T>(Entity entity) where T : unmanaged
+        {
+            if (!IsAlive(entity))
+                throw new InvalidOperationException("Entity is not alive");
+
+            return new ComponentRef<T>(this, entity.Index, StateEpoch);
         }
 
         /// <summary>

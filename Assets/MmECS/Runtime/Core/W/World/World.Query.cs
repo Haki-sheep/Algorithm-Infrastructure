@@ -4,16 +4,109 @@ using System.Collections.Generic;
 namespace MmECS
 {
     /// <summary>
-    /// 创建固定条件查询并提供全部实体和单组件查询入口
+    /// 提供实体查询入口 支持简单查询和缓存热查询
     /// </summary>
     public sealed partial class World
     {
+        /// <summary> 需要在结构提交后失效的热查询列表 </summary>
+        private readonly List<CachedEntityQuery> cachedQueryList = new List<CachedEntityQuery>();
+
         /// <summary>
-        /// 将已注册类型条件复制为可反复执行的世界专属查询
+        /// 查询满足条件的实体 All 全部必需 None 全部排除
         /// </summary>
-        public EntityQuery CreateQuery(Type[] AllList, Type[] NoneList)
+        public void Query(Type[] AllList, Type[] NoneList, List<Entity> ResultList)
         {
-            return new EntityQuery(this, ResolveQueryStorage(AllList), ResolveQueryStorage(NoneList));
+            var allStorages = ResolveQueryStorage(AllList);
+            var noneStorages = ResolveQueryStorage(NoneList);
+            ExecuteQueryInternal(allStorages, noneStorages, ResultList);
+        }
+
+        /// <summary>
+        /// 创建缓存匹配实体的热查询 适用于每 Tick 都要执行的高频查询
+        /// </summary>
+        public CachedEntityQuery CreateCachedQuery(Type[] AllList, Type[] NoneList)
+        {
+            var Query = new CachedEntityQuery(this, ResolveQueryStorage(AllList), ResolveQueryStorage(NoneList));
+            cachedQueryList.Add(Query);
+            return Query;
+        }
+
+        /// <summary>
+        /// 标记所有热查询失效 在结构提交后调用
+        /// </summary>
+        internal void InvalidateCachedQueries()
+        {
+            foreach (var Query in cachedQueryList)
+                Query.MarkDirty();
+        }
+
+        /// <summary>
+        /// 执行查询逻辑 从最小必需池遍历并筛选匹配实体 供 CachedEntityQuery 调用
+        /// </summary>
+        internal void ExecuteQueryInternal(IComponentStorage[] allList, IComponentStorage[] noneList, List<Entity> ResultList)
+        {
+            ResultList.Clear();
+            if (allList.Length == 0)
+            {
+                Query(ResultList);
+                int count = 0;
+                for (int index = 0; index < ResultList.Count; index++)
+                    if (MatchesQuery(ResultList[index].Index, allList, noneList))
+                        ResultList[count++] = ResultList[index];
+                ResultList.RemoveRange(count, ResultList.Count - count);
+                return;
+            }
+
+            var Candidate = allList[0];
+            for (int index = 1; index < allList.Length; index++)
+                if (allList[index].Count < Candidate.Count)
+                    Candidate = allList[index];
+            for (int row = 0; row < Candidate.Count; row++)
+            {
+                int index = Candidate.EntityIndexAt(row);
+                if (MatchesQuery(index, allList, noneList))
+                    ResultList.Add(EntityAt(index));
+            }
+        }
+
+        /// <summary>
+        /// 验证实体是否包含全部必需组件且没有任何排除组件
+        /// </summary>
+        private bool MatchesQuery(int entityIndex, IComponentStorage[] allList, IComponentStorage[] noneList)
+        {
+            // 优先使用位掩码快速排除 类型数超过 64 时 mask 为 0 跳过位检查
+            ulong entityMask = GetEntityComponentMask(entityIndex);
+            ulong allMask = BuildTypeMask(allList);
+            ulong noneMask = BuildTypeMask(noneList);
+
+            if (allMask != 0 && (entityMask & allMask) != allMask)
+                return false;
+            if (noneMask != 0 && (entityMask & noneMask) != 0)
+                return false;
+
+            // 位掩码通过后再精确检查组件存在性
+            for (int type = 0; type < allList.Length; type++)
+                if (!allList[type].Has(entityIndex))
+                    return false;
+            for (int type = 0; type < noneList.Length; type++)
+                if (noneList[type].Has(entityIndex))
+                    return false;
+            return true;
+        }
+
+        /// <summary>
+        /// 根据组件池列表构建类型位掩码 超过 64 种类型时返回 0
+        /// </summary>
+        private ulong BuildTypeMask(IComponentStorage[] StorageList)
+        {
+            ulong Mask = 0;
+            foreach (var Storage in StorageList)
+            {
+                int TypeId = GetComponentTypeId(Storage);
+                if (TypeId >= 64) return 0;
+                Mask |= 1UL << TypeId;
+            }
+            return Mask;
         }
 
         /// <summary>
@@ -22,6 +115,7 @@ namespace MmECS
         private IComponentStorage[] ResolveQueryStorage(Type[] TypeList)
         {
             var OrderedList = new List<Type>();
+            // 检查组件类型是否注册
             foreach (var ComponentType in TypeList)
             {
                 if (!storageDict.ContainsKey(ComponentType))
@@ -29,7 +123,9 @@ namespace MmECS
                 if (!OrderedList.Contains(ComponentType))
                     OrderedList.Add(ComponentType);
             }
+            // 按组件注册顺序排序
             OrderedList.Sort((Left, Right) => componentOrderDict[Left].CompareTo(componentOrderDict[Right]));
+            // 创建组件池列表 填入已存储的组件池中的组件并返回
             var StorageList = new IComponentStorage[OrderedList.Count];
             for (int index = 0; index < OrderedList.Count; index++)
                 StorageList[index] = storageDict[OrderedList[index]];

@@ -73,6 +73,7 @@ namespace MmECS
             try
             {
                 Structural.Commit();
+                InvalidateCachedQueries();
             }
             finally
             {
