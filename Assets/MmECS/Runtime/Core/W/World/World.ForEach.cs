@@ -3,7 +3,8 @@ using System;
 namespace MmECS
 {
     /// <summary>
-    /// 在稳定结构内单次遍历双组件交集并直接交付当前实体的组件引用
+    /// 把筛选实体、取得组件引用、调用业务处理合在一个循环里
+    /// 在 Execute 中执行规则(Execute方法业务层调用)
     /// </summary>
     public sealed partial class World
     {

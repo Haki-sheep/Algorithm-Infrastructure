@@ -12,7 +12,7 @@ namespace MmECS
         private readonly List<CachedEntityQuery> cachedQueryList = new List<CachedEntityQuery>();
 
         /// <summary>
-        /// 查询满足条件的实体 All 全部必需 None 全部排除
+        /// 根据必需与排除组件池筛选实体 清空并填充结果列表
         /// </summary>
         public void Query(Type[] AllList, Type[] NoneList, List<Entity> ResultList)
         {
@@ -43,6 +43,9 @@ namespace MmECS
         /// <summary>
         /// 执行查询逻辑 从最小必需池遍历并筛选匹配实体 供 CachedEntityQuery 调用
         /// </summary>
+        /// <param name="allList">实体必须拥有的组件池</param>
+        /// <param name="noneList">实体不能拥有的组件池</param>
+        /// <param name="ResultList">筛选结果写入的列表</param>
         internal void ExecuteQueryInternal(IComponentStorage[] allList, IComponentStorage[] noneList, List<Entity> ResultList)
         {
             ResultList.Clear();
