@@ -38,7 +38,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
         {
             new[] { "BFS", "DFS", "DLS", "IDDFS", "UCS · Dijkstra" },
             new[] { "GBFS", "A*", "Weighted A*" },
-            new[] { "JPS · JPS+", "Theta*", "HPA*" }
+            new[] { "JPS", "JPS+", "Theta*", "HPA*" }
         };
 
         #region 构建入口
@@ -304,6 +304,9 @@ namespace PathfindingAlgorithm.Visualization.Editor
             Toggle gbfsToggle = null;
             Toggle astarToggle = null;
             Toggle wastarToggle = null;
+            Toggle jpsToggle = null;
+            Toggle jpsPlusToggle = null;
+            Toggle thetaToggle = null;
             Toggle hpaToggle = null;
             for (int index = 0; index < categoryNameList.Length; index++)
             {
@@ -324,7 +327,10 @@ namespace PathfindingAlgorithm.Visualization.Editor
                 }
                 else if (index == 2)
                 {
-                    hpaToggle = category.Options[2];
+                    jpsToggle = category.Options[0];
+                    jpsPlusToggle = category.Options[1];
+                    thetaToggle = category.Options[2];
+                    hpaToggle = category.Options[3];
                 }
             }
             var arrows = ui.Toggle("显示方向箭头", panel);
@@ -403,6 +409,9 @@ namespace PathfindingAlgorithm.Visualization.Editor
             ui.Bind(controller, "gbfsToggle", gbfsToggle);
             ui.Bind(controller, "astarToggle", astarToggle);
             ui.Bind(controller, "wastarToggle", wastarToggle);
+            ui.Bind(controller, "jpsToggle", jpsToggle);
+            ui.Bind(controller, "jpsPlusToggle", jpsPlusToggle);
+            ui.Bind(controller, "thetaToggle", thetaToggle);
             ui.Bind(controller, "hpaToggle", hpaToggle);
             ui.Bind(controller, "weightRow", weightRow.gameObject);
             ui.Bind(controller, "weightInput", weightInput);

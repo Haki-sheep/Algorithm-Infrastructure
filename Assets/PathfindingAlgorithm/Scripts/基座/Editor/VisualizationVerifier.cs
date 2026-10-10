@@ -80,7 +80,7 @@ namespace PathfindingAlgorithm.Visualization.Editor
                     Require(category.Options[0].isOn, "折叠保留选择");
                     category.Options[0].isOn = false;
                 }
-                Require(optionCount == 11, "算法选项总数");
+                Require(optionCount == 12, "算法选项总数");
                 var eventSystem = new GameObject("VerificationEventSystem", typeof(EventSystem)).GetComponent<EventSystem>();
                 var gridRect = (RectTransform)grid.transform;
                 Canvas.ForceUpdateCanvases();

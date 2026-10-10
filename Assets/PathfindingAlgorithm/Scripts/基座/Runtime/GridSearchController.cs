@@ -45,6 +45,18 @@ namespace PathfindingAlgorithm.Visualization
         [SerializeField]
         private Toggle wastarToggle;
 
+        /// <summary> 路径规划优化里的 JPS 勾选项 </summary>
+        [SerializeField]
+        private Toggle jpsToggle;
+
+        /// <summary> 路径规划优化里的 JPS+ 勾选项 </summary>
+        [SerializeField]
+        private Toggle jpsPlusToggle;
+
+        /// <summary> 路径规划优化里的 Theta* 勾选项 </summary>
+        [SerializeField]
+        private Toggle thetaToggle;
+
         /// <summary> 路径规划优化里的 HPA* 勾选项 </summary>
         [SerializeField]
         private Toggle hpaToggle;
@@ -131,6 +143,24 @@ namespace PathfindingAlgorithm.Visualization
         /// <summary> HPA* 步进器 </summary>
         private HPAStarCore hpaCore;
 
+        /// <summary> JPS / JPS+ 地图与搜索状态 </summary>
+        private JPSData jpsData;
+
+        /// <summary> JPS 步进器 </summary>
+        private JPSCore jpsCore;
+
+        /// <summary> JPS+ 地图与搜索状态 </summary>
+        private JPSPlusData jpsPlusData;
+
+        /// <summary> JPS+ 步进器 </summary>
+        private JPSPlusCore jpsPlusCore;
+
+        /// <summary> Theta* 地图与搜索状态 </summary>
+        private ThetaStarData thetaData;
+
+        /// <summary> Theta* 步进器 </summary>
+        private ThetaStarCore thetaCore;
+
         /// <summary> 本轮实际在跑的算法 </summary>
         private eSearchKind eKind;
 
@@ -173,6 +203,9 @@ namespace PathfindingAlgorithm.Visualization
             AStar,
             WAStar,
             HPAStar,
+            JPS,
+            JPSPlus,
+            ThetaStar,
         }
 
         /// <summary>
@@ -181,7 +214,7 @@ namespace PathfindingAlgorithm.Visualization
         private void Start()
         {
             InitComponents();
-            BindHpaToggle();
+            BindPathToggles();
             EnsureClusterRow();
             if (wastarToggle != null)
                 wastarToggle.onValueChanged.AddListener(_ => RefreshParamRows());
@@ -217,20 +250,37 @@ namespace PathfindingAlgorithm.Visualization
             wastarCore = new WAStarCore();
             hpaData = new HPAStarData();
             hpaCore = new HPAStarCore();
+            jpsData = new JPSData();
+            jpsCore = new JPSCore();
+            jpsPlusData = new JPSPlusData();
+            jpsPlusCore = new JPSPlusCore();
+            thetaData = new ThetaStarData();
+            thetaCore = new ThetaStarCore();
         }
 
         /// <summary>
-        /// 预制体未绑定时从第三类第三项取 HPA* 勾选
+        /// 预制体未绑定时从路径规划分类取 JPS、JPS+、Theta* 和最后一项 HPA*
+        /// 三项时中间是 Theta* 四项时倒数第二项是 Theta*
         /// </summary>
-        private void BindHpaToggle()
+        private void BindPathToggles()
         {
-            if (hpaToggle != null)
-                return;
             var categoryList = GetComponentsInChildren<AlgorithmCategoryView>(true);
-            if (categoryList.Length < 3 || categoryList[2].Options == null || categoryList[2].Options.Length < 3)
+            if (categoryList.Length < 3 || categoryList[2].Options == null || categoryList[2].Options.Length < 1)
                 return;
-            hpaToggle = categoryList[2].Options[2];
+            var options = categoryList[2].Options;
+            if (jpsToggle == null)
+                jpsToggle = options[0];
+            if (jpsPlusToggle == null && options.Length >= 4)
+                jpsPlusToggle = options[1];
+            if (thetaToggle == null && options.Length >= 3)
+                thetaToggle = options.Length >= 4 ? options[options.Length - 2] : options[1];
+            if (hpaToggle == null && options.Length >= 3)
+                hpaToggle = options[options.Length - 1];
         }
+
+        private bool IsJumpKind => eKind == eSearchKind.JPS || eKind == eSearchKind.JPSPlus;
+
+        private JPSData JumpData => eKind == eSearchKind.JPSPlus ? jpsPlusData : jpsData;
 
         /// <summary>
         /// 没有框输入行时按 W 行克隆一份
@@ -560,6 +610,27 @@ namespace PathfindingAlgorithm.Visualization
                 return;
             }
 
+            if (eKind == eSearchKind.ThetaStar)
+            {
+                thetaData.Init(grid.Columns, grid.Rows, walkableList, costList, mapStart, mapGoal);
+                thetaCore.Init(thetaData);
+                return;
+            }
+
+            if (eKind == eSearchKind.JPS)
+            {
+                jpsData.Init(grid.Columns, grid.Rows, walkableList, mapStart, mapGoal);
+                jpsCore.Init(jpsData);
+                return;
+            }
+
+            if (eKind == eSearchKind.JPSPlus)
+            {
+                jpsPlusData.Init(grid.Columns, grid.Rows, walkableList, mapStart, mapGoal);
+                jpsPlusCore.Init(jpsPlusData);
+                return;
+            }
+
             bfsData.Init(grid.Columns, grid.Rows, walkableList, mapStart, mapGoal);
             bfsCore.Init(bfsData);
         }
@@ -669,6 +740,24 @@ namespace PathfindingAlgorithm.Visualization
                 eResolved = eSearchKind.HPAStar;
             }
 
+            if (jpsToggle != null && jpsToggle.isOn)
+            {
+                onCount++;
+                eResolved = eSearchKind.JPS;
+            }
+
+            if (jpsPlusToggle != null && jpsPlusToggle.isOn)
+            {
+                onCount++;
+                eResolved = eSearchKind.JPSPlus;
+            }
+
+            if (thetaToggle != null && thetaToggle.isOn)
+            {
+                onCount++;
+                eResolved = eSearchKind.ThetaStar;
+            }
+
             if (onCount != 1)
                 return eSearchKind.None;
 
@@ -711,7 +800,7 @@ namespace PathfindingAlgorithm.Visualization
             string openWord = "开集最多";
             if (eKind == eSearchKind.BFS)
                 openWord = "排队最多";
-            else if (eKind != eSearchKind.UCS && eKind != eSearchKind.GBFS && eKind != eSearchKind.AStar && eKind != eSearchKind.WAStar && eKind != eSearchKind.HPAStar)
+            else if (!IsJumpKind && eKind != eSearchKind.UCS && eKind != eSearchKind.GBFS && eKind != eSearchKind.AStar && eKind != eSearchKind.WAStar && eKind != eSearchKind.HPAStar && eKind != eSearchKind.ThetaStar)
                 openWord = "栈最多";
             int popCount = PopCount();
             int peakOpenCount = PeakOpenCount();
@@ -724,7 +813,12 @@ namespace PathfindingAlgorithm.Visualization
                 limitWord = $"  W {wastarData.Weight}";
             else if (eKind == eSearchKind.HPAStar)
                 limitWord = $"  框 {hpaData.ClusterSize}";
-            statusText.text = $"{headline}\n公式  {ComplexityFormula()}\n本轮  已看 {popCount} 格  {openWord} {peakOpenCount} 格{limitWord}";
+            else if (eKind == eSearchKind.ThetaStar)
+                limitWord = "  Theta* 任意角";
+            else if (IsJumpKind)
+                limitWord = eKind == eSearchKind.JPSPlus ? "  JPS+ 等权" : "  JPS 等权";
+            string legend = IsJumpKind ? "\n蓝框跳点  橙点强迫邻居  数字跳距" : "";
+            statusText.text = $"{headline}\n公式  {ComplexityFormula()}\n本轮  已看 {popCount} 格  {openWord} {peakOpenCount} 格{limitWord}{legend}";
         }
 
         /// <summary>
@@ -736,6 +830,12 @@ namespace PathfindingAlgorithm.Visualization
                 return "时间 O(dCN)  空间 O(C)";
             if (eKind == eSearchKind.HPAStar)
                 return "时间 O(EP(P+N)+E(E+N))  空间 O(C+E)";
+            if (eKind == eSearchKind.JPS)
+                return "时间 O(J(J+L))  空间 O(C)";
+            if (eKind == eSearchKind.JPSPlus)
+                return "时间 O(CL+J²)  空间 O(C)";
+            if (eKind == eSearchKind.ThetaStar)
+                return "时间 O(C(C+NL))  空间 O(C)";
             if (eKind == eSearchKind.UCS || eKind == eSearchKind.GBFS || eKind == eSearchKind.AStar || eKind == eSearchKind.WAStar)
                 return "时间 O(C(C+N))  空间 O(C)";
             return "时间 O(CN)  空间 O(C)";
@@ -756,6 +856,14 @@ namespace PathfindingAlgorithm.Visualization
             {
                 for (int i = 0; i < hpaData.StepCellList.Count; i++)
                     PaintExplored(hpaData.StepCellList[i]);
+                return;
+            }
+
+            if (IsJumpKind && JumpData.StepCellList != null)
+            {
+                for (int i = 0; i < JumpData.StepCellList.Count; i++)
+                    PaintExplored(JumpData.StepCellList[i]);
+                PaintJumpMarks();
                 return;
             }
 
@@ -847,6 +955,23 @@ namespace PathfindingAlgorithm.Visualization
                     grid.SetCellArrow(position, Vector2.zero);
                 }
             }
+
+            grid.ClearJumpOverlay();
+        }
+
+        /// <summary>
+        /// 把本轮跳点 强迫邻居和跳距画到格子上
+        /// </summary>
+        private void PaintJumpMarks()
+        {
+            if (!IsJumpKind)
+            {
+                grid.ClearJumpOverlay();
+                return;
+            }
+
+            var data = JumpData;
+            grid.SetJumpOverlay(data.JumpPointList, data.ForcedCellList, data.DistanceCellList, data.DistanceValueList);
         }
 
         /// <summary>
@@ -920,6 +1045,12 @@ namespace PathfindingAlgorithm.Visualization
                 return wastarCore.Step();
             if (eKind == eSearchKind.HPAStar)
                 return hpaCore.Step();
+            if (eKind == eSearchKind.ThetaStar)
+                return thetaCore.Step();
+            if (eKind == eSearchKind.JPS)
+                return jpsCore.Step();
+            if (eKind == eSearchKind.JPSPlus)
+                return jpsPlusCore.Step();
             return bfsCore.Step();
         }
 
@@ -941,6 +1072,10 @@ namespace PathfindingAlgorithm.Visualization
                 return wastarData.Current;
             if (eKind == eSearchKind.HPAStar)
                 return hpaData.Current;
+            if (eKind == eSearchKind.ThetaStar)
+                return thetaData.Current;
+            if (IsJumpKind)
+                return JumpData.Current;
             return bfsData.Current;
         }
 
@@ -962,6 +1097,10 @@ namespace PathfindingAlgorithm.Visualization
                 return wastarData.Found;
             if (eKind == eSearchKind.HPAStar)
                 return hpaData.Found;
+            if (eKind == eSearchKind.ThetaStar)
+                return thetaData.Found;
+            if (IsJumpKind)
+                return JumpData.Found;
             return bfsData.Found;
         }
 
@@ -983,6 +1122,10 @@ namespace PathfindingAlgorithm.Visualization
                 return wastarData.OpenList.Count == 0;
             if (eKind == eSearchKind.HPAStar)
                 return hpaData.OpenList.Count == 0;
+            if (eKind == eSearchKind.ThetaStar)
+                return thetaData.OpenList.Count == 0;
+            if (IsJumpKind)
+                return JumpData.OpenList.Count == 0 && !JumpData.Expanding;
             return bfsData.Queue.Count == 0;
         }
 
@@ -1004,6 +1147,10 @@ namespace PathfindingAlgorithm.Visualization
                 return wastarData.PathList.Count;
             if (eKind == eSearchKind.HPAStar)
                 return hpaData.PathList.Count;
+            if (eKind == eSearchKind.ThetaStar)
+                return thetaData.PathList.Count;
+            if (IsJumpKind)
+                return JumpData.PathList.Count;
             return bfsData.PathList.Count;
         }
 
@@ -1025,6 +1172,10 @@ namespace PathfindingAlgorithm.Visualization
                 return wastarData.PathList[index];
             if (eKind == eSearchKind.HPAStar)
                 return hpaData.PathList[index];
+            if (eKind == eSearchKind.ThetaStar)
+                return thetaData.PathList[index];
+            if (IsJumpKind)
+                return JumpData.PathList[index];
             return bfsData.PathList[index];
         }
 
@@ -1046,6 +1197,10 @@ namespace PathfindingAlgorithm.Visualization
                 return wastarData.ParentIndexList[wastarData.ToIndex(cell)];
             if (eKind == eSearchKind.HPAStar)
                 return hpaData.ParentIndexList[hpaData.ToIndex(cell)];
+            if (eKind == eSearchKind.ThetaStar)
+                return thetaData.ParentIndexList[thetaData.ToIndex(cell)];
+            if (IsJumpKind)
+                return JumpData.ParentIndexList[JumpData.ToIndex(cell)];
             return bfsData.ParentIndexList[bfsData.ToIndex(cell)];
         }
 
@@ -1067,6 +1222,10 @@ namespace PathfindingAlgorithm.Visualization
                 return wastarData.ToCell(index);
             if (eKind == eSearchKind.HPAStar)
                 return hpaData.ToCell(index);
+            if (eKind == eSearchKind.ThetaStar)
+                return thetaData.ToCell(index);
+            if (IsJumpKind)
+                return JumpData.ToCell(index);
             return bfsData.ToCell(index);
         }
 
@@ -1088,6 +1247,10 @@ namespace PathfindingAlgorithm.Visualization
                 return wastarData.PopCount;
             if (eKind == eSearchKind.HPAStar)
                 return hpaData.PopCount;
+            if (eKind == eSearchKind.ThetaStar)
+                return thetaData.PopCount;
+            if (IsJumpKind)
+                return JumpData.PopCount;
             return bfsData.PopCount;
         }
 
@@ -1109,6 +1272,10 @@ namespace PathfindingAlgorithm.Visualization
                 return wastarData.PeakOpenCount;
             if (eKind == eSearchKind.HPAStar)
                 return hpaData.PeakOpenCount;
+            if (eKind == eSearchKind.ThetaStar)
+                return thetaData.PeakOpenCount;
+            if (IsJumpKind)
+                return JumpData.PeakOpenCount;
             return bfsData.PeakOpenCount;
         }
     }

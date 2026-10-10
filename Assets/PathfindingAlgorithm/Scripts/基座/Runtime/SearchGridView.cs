@@ -71,6 +71,26 @@ namespace PathfindingAlgorithm.Visualization
         private readonly List<Image> entranceMarkList = new List<Image>();
 
         /// <summary>
+        /// 跳点蓝框
+        /// </summary>
+        private readonly List<Image> jumpFrameList = new List<Image>();
+
+        /// <summary>
+        /// 强迫邻居橙点
+        /// </summary>
+        private readonly List<Image> forcedMarkList = new List<Image>();
+
+        /// <summary>
+        /// 跳距数字
+        /// </summary>
+        private readonly List<Text> distanceLabelList = new List<Text>();
+
+        /// <summary>
+        /// 跳距用的内置字体
+        /// </summary>
+        private static Font distanceFont;
+
+        /// <summary>
         /// 框线白图
         /// </summary>
         private static Sprite whiteSprite;
@@ -111,6 +131,7 @@ namespace PathfindingAlgorithm.Visualization
 
             ClearClusterLines();
             ClearEntranceMarks();
+            ClearJumpOverlay();
             cellSize = size;
             gridRect.sizeDelta = new Vector2(columns * cellSize, rows * cellSize);
             for (int index = 0; index < cellList.Count; index++)
@@ -181,6 +202,8 @@ namespace PathfindingAlgorithm.Visualization
                 cell.SetState(eCellState.Empty);
                 cell.SetDirection(Vector2.zero, arrowsVisible);
             }
+
+            ClearJumpOverlay();
         }
 
         #endregion
@@ -344,6 +367,172 @@ namespace PathfindingAlgorithm.Visualization
             }
 
             entranceMarkList.Clear();
+        }
+
+        #endregion
+
+        #region 跳点标记
+
+        /// <summary>
+        /// 蓝框是跳点 橙点是强迫邻居 数字是落到该格的步数 空表则清掉
+        /// </summary>
+        public void SetJumpOverlay(List<Vector2Int> jumpPoints, List<Vector2Int> forcedCells, List<Vector2Int> distanceCells, List<int> distances)
+        {
+            ClearJumpOverlay();
+            if (columns < 1 || rows < 1 || cellSize <= 0f)
+                return;
+
+            if (jumpPoints != null)
+            {
+                for (int i = 0; i < jumpPoints.Count; i++)
+                    AddJumpFrame(jumpPoints[i]);
+            }
+
+            if (forcedCells != null)
+            {
+                for (int i = 0; i < forcedCells.Count; i++)
+                    AddForcedMark(forcedCells[i]);
+            }
+
+            if (distanceCells != null && distances != null)
+            {
+                int count = distanceCells.Count < distances.Count ? distanceCells.Count : distances.Count;
+                for (int i = 0; i < count; i++)
+                    AddDistanceLabel(distanceCells[i], distances[i]);
+            }
+        }
+
+        /// <summary>
+        /// 清掉跳点 强迫邻居和跳距
+        /// </summary>
+        public void ClearJumpOverlay()
+        {
+            ClearImages(jumpFrameList);
+            ClearImages(forcedMarkList);
+            for (int i = 0; i < distanceLabelList.Count; i++)
+            {
+                if (distanceLabelList[i] == null)
+                    continue;
+                if (Application.isPlaying)
+                    Destroy(distanceLabelList[i].gameObject);
+                else
+                    DestroyImmediate(distanceLabelList[i].gameObject);
+            }
+
+            distanceLabelList.Clear();
+        }
+
+        /// <summary>
+        /// 沿格子内缘画一圈蓝框
+        /// </summary>
+        private void AddJumpFrame(Vector2Int cell)
+        {
+            if (!InGrid(cell))
+                return;
+            float visual = cellSize - lineWidth;
+            float thick = Mathf.Max(2f, visual * 0.08f);
+            float x = cell.x * cellSize;
+            float y = -cell.y * cellSize;
+            var color = new Color32(25, 118, 210, 255);
+            AddOverlayBar(new Vector2(x, y), new Vector2(visual, thick), color, jumpFrameList);
+            AddOverlayBar(new Vector2(x, y - visual + thick), new Vector2(visual, thick), color, jumpFrameList);
+            AddOverlayBar(new Vector2(x, y), new Vector2(thick, visual), color, jumpFrameList);
+            AddOverlayBar(new Vector2(x + visual - thick, y), new Vector2(thick, visual), color, jumpFrameList);
+        }
+
+        /// <summary>
+        /// 在格子右上角画强迫邻居橙点
+        /// </summary>
+        private void AddForcedMark(Vector2Int cell)
+        {
+            if (!InGrid(cell))
+                return;
+            float visual = cellSize - lineWidth;
+            float mark = Mathf.Max(6f, visual * 0.28f);
+            float x = cell.x * cellSize + visual - mark - 1f;
+            float y = -cell.y * cellSize - 1f;
+            AddOverlayBar(new Vector2(x, y), Vector2.one * mark, new Color32(230, 126, 34, 255), forcedMarkList);
+        }
+
+        /// <summary>
+        /// 在格子底部写下跳距
+        /// </summary>
+        private void AddDistanceLabel(Vector2Int cell, int steps)
+        {
+            if (!InGrid(cell) || steps <= 0)
+                return;
+            Font font = DistanceFont();
+            if (font == null)
+                return;
+
+            float visual = cellSize - lineWidth;
+            int fontSize = Mathf.RoundToInt(Mathf.Clamp(visual * 0.34f, 10f, 18f));
+            var labelObject = new GameObject("JumpDistance", typeof(RectTransform), typeof(CanvasRenderer), typeof(Text), typeof(Outline));
+            labelObject.transform.SetParent(gridRect, false);
+            var rect = (RectTransform)labelObject.transform;
+            rect.anchorMin = rect.anchorMax = rect.pivot = new Vector2(0f, 1f);
+            rect.anchoredPosition = new Vector2(cell.x * cellSize, -cell.y * cellSize - visual + fontSize + 2f);
+            rect.sizeDelta = new Vector2(visual, fontSize + 2f);
+            var text = labelObject.GetComponent<Text>();
+            text.font = font;
+            text.fontSize = fontSize;
+            text.alignment = TextAnchor.MiddleCenter;
+            text.color = new Color32(16, 36, 72, 255);
+            text.raycastTarget = false;
+            text.horizontalOverflow = HorizontalWrapMode.Overflow;
+            text.verticalOverflow = VerticalWrapMode.Overflow;
+            text.text = steps.ToString();
+            var outline = labelObject.GetComponent<Outline>();
+            outline.effectColor = new Color32(255, 255, 255, 230);
+            outline.effectDistance = new Vector2(1f, -1f);
+            rect.SetAsLastSibling();
+            distanceLabelList.Add(text);
+        }
+
+        private void AddOverlayBar(Vector2 position, Vector2 size, Color color, List<Image> store)
+        {
+            var bar = new GameObject("JumpMark", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+            bar.transform.SetParent(gridRect, false);
+            var rect = (RectTransform)bar.transform;
+            rect.anchorMin = rect.anchorMax = rect.pivot = new Vector2(0f, 1f);
+            rect.anchoredPosition = position;
+            rect.sizeDelta = size;
+            var image = bar.GetComponent<Image>();
+            image.sprite = WhiteSprite();
+            image.color = color;
+            image.raycastTarget = false;
+            rect.SetAsLastSibling();
+            store.Add(image);
+        }
+
+        private bool InGrid(Vector2Int cell)
+        {
+            return cell.x >= 0 && cell.x < columns && cell.y >= 0 && cell.y < rows;
+        }
+
+        private static Font DistanceFont()
+        {
+            if (distanceFont != null)
+                return distanceFont;
+            distanceFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            if (distanceFont == null)
+                distanceFont = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            return distanceFont;
+        }
+
+        private static void ClearImages(List<Image> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] == null)
+                    continue;
+                if (Application.isPlaying)
+                    Object.Destroy(list[i].gameObject);
+                else
+                    Object.DestroyImmediate(list[i].gameObject);
+            }
+
+            list.Clear();
         }
 
         #endregion
