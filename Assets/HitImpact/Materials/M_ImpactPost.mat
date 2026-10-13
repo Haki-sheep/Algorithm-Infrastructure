@@ -34,12 +34,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _BlurInnerRadius: 0.05
-    - _BlurStrength: 0.3717374
+    - _BlurStrength: 0.27213335
     - _Contrast: 1.9
     - _Invert: 0
     - _KeepThreshold: 0.18
     - _Mono: 1
     m_Colors:
-    - _Center: {r: 0.5196875, g: 0.25, b: 0, a: 0}
+    - _Center: {r: 0.5718311, g: 0.58126366, b: 0, a: 0}
     - _KeepColor: {r: 0.16, g: 0.32, b: 0.95, a: 1}
   m_BuildTextureStacks: []

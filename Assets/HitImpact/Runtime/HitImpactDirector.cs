@@ -67,6 +67,31 @@ namespace HitImpact
         [SerializeField]
         private float shakeDuration = 0.28f;
 
+        /// <summary> 顿帧开关 </summary>
+        [Header("Toggles")]
+        [SerializeField]
+        private bool enableHitStop = true;
+
+        /// <summary> 径向模糊开关 </summary>
+        [SerializeField]
+        private bool enableBlur = true;
+
+        /// <summary> 黑白化开关 </summary>
+        [SerializeField]
+        private bool enableMono = true;
+
+        /// <summary> 反色闪帧开关 </summary>
+        [SerializeField]
+        private bool enableInvert = true;
+
+        /// <summary> 震屏开关 </summary>
+        [SerializeField]
+        private bool enableShake = true;
+
+        /// <summary> 水墨粒子开关 </summary>
+        [SerializeField]
+        private bool enableInkFx = true;
+
         /// <summary> 距离上次命中的真实秒 </summary>
         private float impactElapsed = float.MaxValue;
 
@@ -79,6 +104,29 @@ namespace HitImpact
         /// <summary> 顿帧前的 timeScale 结束时恢复 </summary>
         private float cachedTimeScale = 1f;
 
+        public bool HitStopEnabled
+        {
+            get => enableHitStop;
+            set
+            {
+                enableHitStop = value;
+                if (!value)
+                {
+                    ReleaseHitStop();
+                }
+            }
+        }
+
+        public bool BlurEnabled { get => enableBlur; set => enableBlur = value; }
+
+        public bool MonoEnabled { get => enableMono; set => enableMono = value; }
+
+        public bool InvertEnabled { get => enableInvert; set => enableInvert = value; }
+
+        public bool ShakeEnabled { get => enableShake; set => enableShake = value; }
+
+        public bool InkFxEnabled { get => enableInkFx; set => enableInkFx = value; }
+
         private void Update()
         {
             TickHitStop();
@@ -87,11 +135,7 @@ namespace HitImpact
 
         private void OnDisable()
         {
-            if (hitStopRemaining > 0f)
-            {
-                Time.timeScale = cachedTimeScale;
-                hitStopRemaining = 0f;
-            }
+            ReleaseHitStop();
             postEffect.SetImpact(impactScreenUV, 0f, 0f, 0f);
         }
 
@@ -104,22 +148,43 @@ namespace HitImpact
             impactScreenUV = new Vector2(viewportPoint.x, viewportPoint.y);
             impactElapsed = 0f;
 
-            if (hitStopRemaining <= 0f)
+            if (enableHitStop)
             {
-                cachedTimeScale = Time.timeScale;
+                if (hitStopRemaining <= 0f)
+                {
+                    cachedTimeScale = Time.timeScale;
+                }
+                hitStopRemaining = hitStopDuration;
+                Time.timeScale = hitStopTimeScale;
             }
-            hitStopRemaining = hitStopDuration;
-            Time.timeScale = hitStopTimeScale;
 
-            Vector3 shakeDirection = targetCamera.transform.InverseTransformDirection(hitDirection);
-            shakeDirection.z = 0f;
-            cameraShaker.Shake(shakeAmplitude, shakeDuration, shakeDirection.normalized);
-
-            impactFxRoot.position = hitPoint;
-            foreach (ParticleSystem particle in impactParticleList)
+            if (enableShake)
             {
-                particle.Clear(true);
-                particle.Play(true);
+                Vector3 shakeDirection = targetCamera.transform.InverseTransformDirection(hitDirection);
+                shakeDirection.z = 0f;
+                cameraShaker.Shake(shakeAmplitude, shakeDuration, shakeDirection.normalized);
+            }
+
+            if (enableInkFx)
+            {
+                impactFxRoot.position = hitPoint;
+                foreach (ParticleSystem particle in impactParticleList)
+                {
+                    particle.Clear(true);
+                    particle.Play(true);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 立即结束顿帧并恢复原 timeScale
+        /// </summary>
+        private void ReleaseHitStop()
+        {
+            if (hitStopRemaining > 0f)
+            {
+                Time.timeScale = cachedTimeScale;
+                hitStopRemaining = 0f;
             }
         }
 
@@ -146,8 +211,10 @@ namespace HitImpact
 
             impactElapsed += Time.unscaledDeltaTime;
             float normalizedTime = Mathf.Clamp01(impactElapsed / impactDuration);
-            float invert = impactElapsed < invertDuration ? 1f : 0f;
-            postEffect.SetImpact(impactScreenUV, blurCurve.Evaluate(normalizedTime) * blurMultiplier, monoCurve.Evaluate(normalizedTime), invert);
+            float blur = enableBlur ? blurCurve.Evaluate(normalizedTime) * blurMultiplier : 0f;
+            float mono = enableMono ? monoCurve.Evaluate(normalizedTime) : 0f;
+            float invert = enableInvert && impactElapsed < invertDuration ? 1f : 0f;
+            postEffect.SetImpact(impactScreenUV, blur, mono, invert);
         }
     }
 }
