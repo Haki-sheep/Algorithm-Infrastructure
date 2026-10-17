@@ -1,5 +1,6 @@
 #pragma kernel InitDrops
 #pragma kernel SimulateDrops
+#pragma kernel AccumulateLocalTime
 
 #include "LocalTimeField.hlsl"
 
@@ -25,15 +26,53 @@ float3 _EmitterExtents;
 float _GroundHeight;
 float _DeltaTime;
 float _FrameSeed;
-float3 _FallVelocity;
+// 风速 米每秒 含阵风 每帧更新
+float3 _Wind;
+// 0 雨 按直径取终端速度 1 雪 使用 _SnowFallSpeed
+float _IsSnow;
+float _SnowFallSpeed;
 float _SpeedJitter;
 float _SplashDuration;
 // 水平摆动幅度 米每秒 雨为 0 雪大于 0
 float _Flutter;
 
+// 俯视遮挡高度图 由 RainEnvironment 每帧绘制 记录每个格子最高表面世界高度
+Texture2D<float> _OcclusionHeightTex;
+SamplerState point_clamp_sampler;
+// xy 世界 xz 最小角 zw 覆盖尺寸 米 与局部时间图共用
+float4 _EnvironmentRect;
+float _OcclusionEnabled;
+
+// 每个像素累计所在地面位置经历的局部时间 秒 地面涟漪与积水流动按此推进
+RWTexture2D<float> _LocalTimeTex;
+uint _LocalTimeSize;
+// 局部时间回卷周期 秒 需为所有涟漪频率周期的整数倍 防止浮点精度随运行时间下降
+float _LocalTimeWrap;
+
 float Hash(float n)
 {
     return frac(sin(n) * 43758.5453);
+}
+
+float DropDiameterMm(float seed)
+{
+    return lerp(0.8, 4.5, pow(seed, 2.2));
+}
+
+float TerminalSpeed(float diameterMm)
+{
+    return 9.65 - 10.3 * exp(-0.6 * diameterMm);
+}
+
+// 输入世界 xz 输出该处最高遮挡面高度 无遮挡数据时返回地面高度
+float SurfaceHeight(float2 worldXZ)
+{
+    float2 uv = (worldXZ - _EnvironmentRect.xy) / _EnvironmentRect.zw;
+    if (_OcclusionEnabled < 0.5 || any(uv < 0.0) || any(uv > 1.0))
+    {
+        return _GroundHeight;
+    }
+    return max(_OcclusionHeightTex.SampleLevel(point_clamp_sampler, uv, 0), _GroundHeight);
 }
 
 void Respawn(inout RainDrop drop, uint id, float heightRandom)
@@ -45,10 +84,12 @@ void Respawn(inout RainDrop drop, uint id, float heightRandom)
     drop.position = float3(_EmitterCenter.x + rx * _EmitterExtents.x,
                            _GroundHeight + lerp(1.0, ry, heightRandom) * _EmitterExtents.y,
                            _EmitterCenter.z + rz * _EmitterExtents.z);
-    drop.velocity = _FallVelocity * (1.0 + (Hash(s + 13.7) - 0.5) * _SpeedJitter);
+    drop.seed = Hash(s + 21.9);
+    float jitter = 1.0 + (Hash(s + 13.7) - 0.5) * _SpeedJitter;
+    float fallSpeed = _IsSnow > 0.5 ? _SnowFallSpeed : TerminalSpeed(DropDiameterMm(drop.seed));
+    drop.velocity = float3(0, -fallSpeed * jitter, 0);
     drop.splash = -1.0;
     drop.timeScale = 1.0;
-    drop.seed = Hash(s + 21.9);
 }
 
 [numthreads(256, 1, 1)]
@@ -95,10 +136,17 @@ void SimulateDrops(uint3 id : SV_DispatchThreadID)
         drop.localTime += localDelta;
         float phase = drop.localTime * (1.2 + drop.seed) + drop.seed * 6.28;
         float3 sway = float3(sin(phase), 0, cos(phase * 0.8)) * _Flutter;
+        // 风对小雨滴影响更大 速度向风速松弛 时间常数随直径增长
+        float response = _IsSnow > 0.5 ? 1.5 : lerp(3.0, 0.8, drop.seed);
+        float3 horizontal = float3(drop.velocity.x, 0, drop.velocity.z);
+        horizontal = lerp(horizontal, _Wind, saturate(localDelta * response));
+        drop.velocity.xz = horizontal.xz;
         drop.position += (drop.velocity + sway) * localDelta;
-        if (drop.position.y <= _GroundHeight)
+
+        float surface = SurfaceHeight(drop.position.xz);
+        if (drop.position.y <= surface)
         {
-            drop.position.y = _GroundHeight + 0.01;
+            drop.position.y = surface + 0.005;
             drop.splash = 0.0;
         }
         else if (scale > 0.999)
@@ -112,4 +160,19 @@ void SimulateDrops(uint3 id : SV_DispatchThreadID)
     }
 
     _DropBuffer[id.x] = drop;
+}
+
+[numthreads(8, 8, 1)]
+void AccumulateLocalTime(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _LocalTimeSize || id.y >= _LocalTimeSize)
+    {
+        return;
+    }
+
+    float2 uv = (id.xy + 0.5) / _LocalTimeSize;
+    float2 worldXZ = _EnvironmentRect.xy + uv * _EnvironmentRect.zw;
+    float scale = SampleTimeScale(float3(worldXZ.x, _GroundHeight + 0.05, worldXZ.y));
+    float accumulated = _LocalTimeTex[id.xy] + _DeltaTime * scale;
+    _LocalTimeTex[id.xy] = accumulated >= _LocalTimeWrap ? accumulated - _LocalTimeWrap : accumulated;
 }

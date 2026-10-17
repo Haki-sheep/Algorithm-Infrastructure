@@ -27,7 +27,7 @@ Material:
     m_Floats:
     - _FlakeSize: 0.035
     - _FrozenGlow: 0.6
-    - _SplashDuration: 0.8
+    - _SplashDuration: 1.2
     m_Colors:
     - _SnowColor: {r: 1, g: 1, b: 1, a: 0.9}
   m_BuildTextureStacks: []

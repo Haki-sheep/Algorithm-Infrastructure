@@ -2,12 +2,12 @@ Shader "Hidden/RaindropStop/TimeStopPost"
 {
     Properties
     {
-        _Desaturate ("Desaturate", Range(0, 1)) = 0.85
-        _Tint ("Inside Tint", Color) = (0.72, 0.86, 1.0, 1)
-        _EdgeColor ("Edge Color", Color) = (0.55, 0.85, 1.0, 1)
-        _EdgeWidth ("Edge Width (m)", Float) = 0.35
-        _Distortion ("Edge Distortion", Float) = 0.025
-        _Chromatic ("Edge Chromatic", Float) = 0.006
+        _Desaturate ("Desaturate", Range(0, 1)) = 0.15
+        _Darken ("Darken", Range(0, 1)) = 0.08
+        _EdgeColor ("Edge Color", Color) = (0.35, 0.55, 0.75, 1)
+        _EdgeWidth ("Edge Width (m)", Float) = 0.25
+        _Distortion ("Edge Distortion", Float) = 0.012
+        _Chromatic ("Edge Chromatic", Float) = 0.003
     }
 
     SubShader
@@ -31,7 +31,7 @@ Shader "Hidden/RaindropStop/TimeStopPost"
             #include "LocalTimeField.hlsl"
 
             float _Desaturate;
-            float4 _Tint;
+            float _Darken;
             float4 _EdgeColor;
             float _EdgeWidth;
             float _Distortion;
@@ -85,7 +85,7 @@ Shader "Hidden/RaindropStop/TimeStopPost"
                 // 边界折射与色散 边界带越强偏移越大 冲击波期间加倍
                 float2 fromCenter = uv - 0.5;
                 float2 offsetDir = normalize(fromCenter + 1e-5);
-                float distortAmount = zone.y * (1.0 + zone.z * 2.0);
+                float distortAmount = zone.y * (0.25 + zone.z * 2.0);
                 float2 offset = offsetDir * _Distortion * distortAmount * sin(zone.y * 3.14159);
                 float2 chroma = offsetDir * _Chromatic * distortAmount;
                 half r = SAMPLE_TEXTURE2D_X(_BlitTexture, sampler_LinearClamp, uv + offset + chroma).r;
@@ -94,9 +94,11 @@ Shader "Hidden/RaindropStop/TimeStopPost"
                 half3 color = half3(r, g, b);
 
                 half luma = dot(color, half3(0.299, 0.587, 0.114));
-                half3 graded = lerp(color, luma.xxx, _Desaturate) * _Tint.rgb;
+                // 区域内只做轻微去饱和压暗 主要表现交给定格的世界本身
+                half3 graded = lerp(color, luma.xxx, _Desaturate) * (1.0 - _Darken);
                 color = lerp(color, graded, zone.x);
-                color += _EdgeColor.rgb * pow(zone.y, 3.0) * (0.6 + zone.z * 1.5);
+                // 边界只在展开收回的冲击波期间可见 稳定后几乎消失
+                color += _EdgeColor.rgb * pow(zone.y, 4.0) * zone.z * 0.8;
                 return half4(color, 1.0);
             }
             ENDHLSL

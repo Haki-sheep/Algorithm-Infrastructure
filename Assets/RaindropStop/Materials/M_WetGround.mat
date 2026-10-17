@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_WetGround
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 4989790f5fc2a7246aa88b02ad2c57da, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -17,8 +17,7 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -100,23 +99,33 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
+    - _NebulaIntensity: 0.9
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _PuddleCoverage: 0.45
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _RedTileRatio: 0.18
+    - _RippleDensity: 6
+    - _RippleStrength: 0.35
     - _Smoothness: 0.85
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _Wetness: 1
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.09, g: 0.1, b: 0.12, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.089999996, g: 0.09999997, b: 0.11999995, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GroutColor: {r: 0.11999995, g: 0.11999995, b: 0.11999995, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _TileColorA: {r: 0.41999996, g: 0.39999998, b: 0.37999994, a: 1}
+    - _TileColorB: {r: 0.47999996, g: 0.23999995, b: 0.19999996, a: 1}
+    - _TileSize: {r: 0.6, g: 0.3, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5426128143248836240
 MonoBehaviour:

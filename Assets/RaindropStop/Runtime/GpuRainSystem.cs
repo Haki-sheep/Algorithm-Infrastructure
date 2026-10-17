@@ -23,24 +23,32 @@ namespace RaindropStop
         [SerializeField]
         private float groundHeight = 0f;
 
-        /// <summary> 基准下落速度 米每秒 </summary>
+        /// <summary> 雪的下落速度 米每秒 雨按雨滴直径取终端速度 不使用此值 </summary>
         [SerializeField]
-        private float fallSpeed = 9f;
+        private float fallSpeed = 1.2f;
+
+        /// <summary> 雪模式 下落速度固定 带摆动 </summary>
+        [SerializeField]
+        private bool isSnow;
+
+        /// <summary> 每滴雨占用的四边形数 主体加溅射水珠 雪为 1 与 RainDrop.shader SPLASH_DROPLET_COUNT 加 1 一致 </summary>
+        [SerializeField]
+        private int quadsPerDrop = 7;
 
         /// <summary> 下落速度随机幅度 比例 </summary>
         [SerializeField]
         [Range(0f, 0.5f)]
         private float speedJitter = 0.2f;
 
-        /// <summary> 风向速度 米每秒 叠加到下落速度 </summary>
+        /// <summary> 风速倍率 乘 RainEnvironment 当前风速 雪受风影响更大 </summary>
         [SerializeField]
-        private Vector3 wind = new Vector3(0.8f, 0f, 0.3f);
+        private float windMultiplier = 1f;
 
         /// <summary> 水平摆动幅度 米每秒 雨为 0 雪花约 0.6 </summary>
         [SerializeField]
         private float flutter = 0f;
 
-        /// <summary> 溅射圆环持续时长 秒 </summary>
+        /// <summary> 落地溅射持续时长 秒 </summary>
         [SerializeField]
         private float splashDuration = 0.28f;
 
@@ -58,10 +66,6 @@ namespace RaindropStop
         private int simulateKernel;
 
         private Transform followTarget;
-
-        private readonly Vector4[] gpuCenterRadiusList = new Vector4[LocalTimeField.MaxGpuFieldCount];
-
-        private readonly Vector4[] gpuParamList = new Vector4[LocalTimeField.MaxGpuFieldCount];
 
         /// <summary>
         /// 与 RainSimulation.compute 和 RainDrop.shader 的 RainDrop 结构逐字节一致
@@ -104,16 +108,20 @@ namespace RaindropStop
             rainCompute.SetFloat("_DeltaTime", Time.deltaTime);
             rainCompute.SetFloat("_FrameSeed", Time.time % 1000f);
 
-            int fieldCount = LocalTimeField.FillGpuData(gpuCenterRadiusList, gpuParamList);
-            rainCompute.SetInt("_TimeFieldCount", fieldCount);
-            rainCompute.SetVectorArray("_TimeFieldCenterRadius", gpuCenterRadiusList);
-            rainCompute.SetVectorArray("_TimeFieldParam", gpuParamList);
+            var Environment = RainEnvironment.Instance;
+            rainCompute.SetInt("_TimeFieldCount", Environment.TimeFieldCount);
+            rainCompute.SetVectorArray("_TimeFieldCenterRadius", Environment.TimeFieldCenterRadiusList);
+            rainCompute.SetVectorArray("_TimeFieldParam", Environment.TimeFieldParamList);
+            rainCompute.SetVector("_Wind", Environment.CurrentWind * windMultiplier);
+            rainCompute.SetVector("_EnvironmentRect", Environment.EnvironmentRect);
+            rainCompute.SetTexture(simulateKernel, "_OcclusionHeightTex", Environment.OcclusionTexture);
+            rainCompute.SetFloat("_OcclusionEnabled", isSnow ? 0f : 1f);
             rainCompute.Dispatch(simulateKernel, ThreadGroupCount(), 1, 1);
 
             Vector3 center = EmitterCenter();
             var DrawBounds = new Bounds(center, new Vector3(emitterExtents.x * 2f, emitterExtents.y + 2f, emitterExtents.z * 2f));
-            // 每个雨滴展开为一个四边形 共 6 个顶点 顶点着色器按 SV_VertexID 读取缓冲
-            Graphics.DrawProcedural(rainMaterial, DrawBounds, MeshTopology.Triangles, dropCount * 6, 1, null, null, ShadowCastingMode.Off, false, gameObject.layer);
+            // 每个雨滴展开为若干四边形 每个 6 个顶点 顶点着色器按 SV_VertexID 读取缓冲
+            Graphics.DrawProcedural(rainMaterial, DrawBounds, MeshTopology.Triangles, dropCount * quadsPerDrop * 6, 1, null, null, ShadowCastingMode.Off, false, gameObject.layer);
         }
 
         /// <summary>
@@ -135,7 +143,8 @@ namespace RaindropStop
             rainCompute.SetVector("_EmitterCenter", EmitterCenter());
             rainCompute.SetVector("_EmitterExtents", emitterExtents);
             rainCompute.SetFloat("_GroundHeight", groundHeight);
-            rainCompute.SetVector("_FallVelocity", Vector3.down * fallSpeed + wind);
+            rainCompute.SetFloat("_SnowFallSpeed", fallSpeed);
+            rainCompute.SetFloat("_IsSnow", isSnow ? 1f : 0f);
             rainCompute.SetFloat("_SpeedJitter", speedJitter);
             rainCompute.SetFloat("_Flutter", flutter);
         }

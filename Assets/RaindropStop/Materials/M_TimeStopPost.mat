@@ -26,6 +26,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Chromatic: 0.006
+    - _Darken: 0.08
     - _Desaturate: 0.85
     - _Distortion: 0.025
     - _EdgeWidth: 0.35

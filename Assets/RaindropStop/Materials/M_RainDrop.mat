@@ -25,12 +25,22 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _BeadMinPixels: 4
+    - _BeadRim: 1.5
+    - _BeadThreshold: 0.9
     - _DropRadius: 0.022
+    - _FrozenScale: 5
+    - _MotionBlurShutter: 0.04
+    - _Opacity: 0.8
     - _Refraction: 0.035
+    - _SpecularIntensity: 6
     - _SplashAlpha: 0.5
-    - _SplashDuration: 0.28
+    - _SplashDuration: 0.6
     - _SplashRadius: 0.16
+    - _SplashSpeed: 1.6
+    - _StreakBackgroundBoost: 1.25
     - _StreakLength: 0.55
+    - _StreakMinLight: 0.08
     - _StreakWidth: 0.008
     m_Colors:
     - _RainColor: {r: 0.78, g: 0.8399999, b: 0.95, a: 0.32}
