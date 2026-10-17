@@ -28,6 +28,10 @@ namespace HitImpact
         [SerializeField]
         private float response = 30f;
 
+        /// <summary> 拖影开关 </summary>
+        [SerializeField]
+        private bool enableSmear = true;
+
         /// <summary> 写入渲染器的属性块 </summary>
         private MaterialPropertyBlock propertyBlock;
 
@@ -39,6 +43,19 @@ namespace HitImpact
 
         /// <summary> 着色器属性 ID _SmearVector </summary>
         private static readonly int SmearVectorId = Shader.PropertyToID("_SmearVector");
+
+        public bool SmearEnabled
+        {
+            get => enableSmear;
+            set
+            {
+                enableSmear = value;
+                if (!value)
+                {
+                    smearVector = Vector3.zero;
+                }
+            }
+        }
 
         private void Start()
         {
@@ -58,10 +75,17 @@ namespace HitImpact
             lastPosition = position;
 
             float speed = velocity.magnitude;
-            Vector3 targetSmear = speed > minSpeed ? velocity * velocityToLength : Vector3.zero;
+            Vector3 targetSmear = enableSmear && speed > minSpeed ? velocity * velocityToLength : Vector3.zero;
             targetSmear = Vector3.ClampMagnitude(targetSmear, maxLength);
             smearVector = Vector3.Lerp(smearVector, targetSmear, 1f - Mathf.Exp(-response * deltaTime));
+            ApplySmear();
+        }
 
+        /// <summary>
+        /// 把当前拖影向量写入所有渲染器
+        /// </summary>
+        private void ApplySmear()
+        {
             propertyBlock.SetVector(SmearVectorId, smearVector);
             foreach (Renderer smearRenderer in smearRendererList)
             {

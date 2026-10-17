@@ -3,8 +3,10 @@ using System.IO;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace HitImpact.Editor
 {
@@ -402,6 +404,8 @@ namespace HitImpact.Editor
                 ("torso", torso),
                 ("receiver", receiver));
 
+            BuildTogglePanel(director, smear);
+
             EditorSceneManager.SaveScene(scene, Scene3DPath);
         }
 
@@ -462,6 +466,145 @@ namespace HitImpact.Editor
             primitive.transform.localScale = localScale;
             primitive.GetComponent<Renderer>().sharedMaterial = material;
             return primitive;
+        }
+
+        #endregion
+
+        #region Toggle Panel
+
+        /// <summary> 开关面板每行高度 </summary>
+        private const float ToggleRowHeight = 32f;
+
+        /// <summary> 开关面板标签字体 需含中文字形 </summary>
+        private const string ToggleFontPath = RootFolder + "/Art/Fonts/NotoSansSC.ttf";
+
+        /// <summary> 开关面板行 字段名对应 HitImpactTogglePanel 的序列化字段 </summary>
+        private static readonly (string Name, string Label)[] ToggleRowList =
+        {
+            ("hitStopToggle", "顿帧"),
+            ("blurToggle", "模糊"),
+            ("monoToggle", "黑白"),
+            ("invertToggle", "反色"),
+            ("shakeToggle", "震屏"),
+            ("inkFxToggle", "水墨"),
+            ("smearToggle", "拖影"),
+        };
+
+        /// <summary>
+        /// 构建左上角效果开关面板
+        /// </summary>
+        private static HitImpactTogglePanel BuildTogglePanel(HitImpactDirector director, SmearMotion smear)
+        {
+            Font labelFont = AssetDatabase.LoadAssetAtPath<Font>(ToggleFontPath);
+            if (labelFont == null)
+            {
+                throw new System.InvalidOperationException($"找不到字体 {ToggleFontPath}");
+            }
+
+            if (Object.FindObjectOfType<EventSystem>() == null)
+            {
+                var eventSystemObject = new GameObject("EventSystem");
+                eventSystemObject.AddComponent<EventSystem>();
+                eventSystemObject.AddComponent<StandaloneInputModule>();
+            }
+
+            var canvasObject = new GameObject("EffectToggles");
+            var canvas = canvasObject.AddComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            var scaler = canvasObject.AddComponent<CanvasScaler>();
+            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            scaler.referenceResolution = new Vector2(1920f, 1080f);
+            scaler.matchWidthOrHeight = 0.5f;
+            canvasObject.AddComponent<GraphicRaycaster>();
+
+            var panelObject = new GameObject("Panel", typeof(RectTransform));
+            panelObject.transform.SetParent(canvasObject.transform, false);
+            RectTransform panelRect = panelObject.GetComponent<RectTransform>();
+            panelRect.anchorMin = new Vector2(0f, 1f);
+            panelRect.anchorMax = new Vector2(0f, 1f);
+            panelRect.pivot = new Vector2(0f, 1f);
+            panelRect.anchoredPosition = new Vector2(16f, -16f);
+            panelRect.sizeDelta = new Vector2(168f, 0f);
+            panelObject.AddComponent<Image>().color = new Color(0f, 0f, 0f, 0.45f);
+
+            var layout = panelObject.AddComponent<VerticalLayoutGroup>();
+            layout.padding = new RectOffset(10, 10, 8, 8);
+            layout.spacing = 2f;
+            layout.childAlignment = TextAnchor.UpperLeft;
+            layout.childControlWidth = true;
+            layout.childControlHeight = true;
+            layout.childForceExpandWidth = true;
+            layout.childForceExpandHeight = false;
+            panelObject.AddComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+
+            var fieldList = new List<(string name, object value)>
+            {
+                ("director", director),
+                ("smear", smear),
+            };
+            foreach ((string name, string label) in ToggleRowList)
+            {
+                fieldList.Add((name, CreateToggleRow(panelObject.transform, label, labelFont)));
+            }
+
+            var panel = panelObject.AddComponent<HitImpactTogglePanel>();
+            SetFields(panel, fieldList.ToArray());
+            return panel;
+        }
+
+        /// <summary>
+        /// 构建一行开关 返回 Toggle 供面板绑定
+        /// </summary>
+        private static Toggle CreateToggleRow(Transform parent, string label, Font labelFont)
+        {
+            var rowObject = new GameObject($"Toggle_{label.Replace(" ", string.Empty)}", typeof(RectTransform));
+            rowObject.transform.SetParent(parent, false);
+            var rowLayout = rowObject.AddComponent<HorizontalLayoutGroup>();
+            rowLayout.spacing = 8f;
+            rowLayout.childAlignment = TextAnchor.MiddleLeft;
+            rowLayout.childControlWidth = true;
+            rowLayout.childControlHeight = true;
+            rowLayout.childForceExpandWidth = false;
+            rowLayout.childForceExpandHeight = false;
+            var rowElement = rowObject.AddComponent<LayoutElement>();
+            rowElement.minHeight = ToggleRowHeight;
+            rowElement.preferredHeight = ToggleRowHeight;
+
+            var backgroundObject = new GameObject("Background", typeof(RectTransform));
+            backgroundObject.transform.SetParent(rowObject.transform, false);
+            var backgroundElement = backgroundObject.AddComponent<LayoutElement>();
+            backgroundElement.minWidth = 18f;
+            backgroundElement.preferredWidth = 18f;
+            backgroundElement.minHeight = 18f;
+            backgroundElement.preferredHeight = 18f;
+            Image background = backgroundObject.AddComponent<Image>();
+            background.color = new Color(0.16f, 0.18f, 0.22f, 1f);
+
+            var checkmarkObject = new GameObject("Checkmark", typeof(RectTransform));
+            checkmarkObject.transform.SetParent(backgroundObject.transform, false);
+            RectTransform checkmarkRect = checkmarkObject.GetComponent<RectTransform>();
+            checkmarkRect.anchorMin = Vector2.zero;
+            checkmarkRect.anchorMax = Vector2.one;
+            checkmarkRect.offsetMin = new Vector2(3f, 3f);
+            checkmarkRect.offsetMax = new Vector2(-3f, -3f);
+            Image checkmark = checkmarkObject.AddComponent<Image>();
+            checkmark.color = new Color(0.55f, 0.75f, 1f, 1f);
+
+            var labelObject = new GameObject("Label", typeof(RectTransform));
+            labelObject.transform.SetParent(rowObject.transform, false);
+            var text = labelObject.AddComponent<Text>();
+            text.font = labelFont;
+            text.fontSize = 18;
+            text.alignment = TextAnchor.MiddleLeft;
+            text.horizontalOverflow = HorizontalWrapMode.Overflow;
+            text.color = new Color(0.93f, 0.94f, 0.96f, 1f);
+            text.text = label;
+
+            var toggle = rowObject.AddComponent<Toggle>();
+            toggle.targetGraphic = background;
+            toggle.graphic = checkmark;
+            toggle.isOn = true;
+            return toggle;
         }
 
         #endregion

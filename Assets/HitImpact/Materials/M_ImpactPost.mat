@@ -40,6 +40,6 @@ Material:
     - _KeepThreshold: 0.18
     - _Mono: 0.003350079
     m_Colors:
-    - _Center: {r: 0.5196875, g: 0.25, b: 0, a: 0}
+    - _Center: {r: 0.5718311, g: 0.58126366, b: 0, a: 0}
     - _KeepColor: {r: 0.16, g: 0.32, b: 0.95, a: 1}
   m_BuildTextureStacks: []
