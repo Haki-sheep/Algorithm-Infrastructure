@@ -1,0 +1,115 @@
+#pragma kernel InitDrops
+#pragma kernel SimulateDrops
+
+#include "LocalTimeField.hlsl"
+
+// 与 GpuRainSystem.RainDrop 内存布局一致 48 字节
+struct RainDrop
+{
+    float3 position;
+    float splash;
+    float3 velocity;
+    float timeScale;
+    float seed;
+    // 局部时间累计 驱动雪花摆动相位
+    float localTime;
+    float2 padding;
+};
+
+RWStructuredBuffer<RainDrop> _DropBuffer;
+uint _DropCount;
+// xyz 发射盒中心 底面在地面
+float3 _EmitterCenter;
+// x z 半宽 y 高度
+float3 _EmitterExtents;
+float _GroundHeight;
+float _DeltaTime;
+float _FrameSeed;
+float3 _FallVelocity;
+float _SpeedJitter;
+float _SplashDuration;
+// 水平摆动幅度 米每秒 雨为 0 雪大于 0
+float _Flutter;
+
+float Hash(float n)
+{
+    return frac(sin(n) * 43758.5453);
+}
+
+void Respawn(inout RainDrop drop, uint id, float heightRandom)
+{
+    float s = drop.seed * 17.13 + id * 0.731 + _FrameSeed;
+    float rx = Hash(s + 1.7) * 2.0 - 1.0;
+    float rz = Hash(s + 5.3) * 2.0 - 1.0;
+    float ry = Hash(s + 9.1);
+    drop.position = float3(_EmitterCenter.x + rx * _EmitterExtents.x,
+                           _GroundHeight + lerp(1.0, ry, heightRandom) * _EmitterExtents.y,
+                           _EmitterCenter.z + rz * _EmitterExtents.z);
+    drop.velocity = _FallVelocity * (1.0 + (Hash(s + 13.7) - 0.5) * _SpeedJitter);
+    drop.splash = -1.0;
+    drop.timeScale = 1.0;
+    drop.seed = Hash(s + 21.9);
+}
+
+[numthreads(256, 1, 1)]
+void InitDrops(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _DropCount)
+    {
+        return;
+    }
+
+    RainDrop drop = (RainDrop)0;
+    drop.seed = Hash(id.x * 0.123 + 0.5);
+    drop.padding = 0;
+    drop.localTime = drop.seed * 10.0;
+    Respawn(drop, id.x, 1.0);
+    _DropBuffer[id.x] = drop;
+}
+
+[numthreads(256, 1, 1)]
+void SimulateDrops(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _DropCount)
+    {
+        return;
+    }
+
+    RainDrop drop = _DropBuffer[id.x];
+    float scale = SampleTimeScale(drop.position);
+    // 局部 dt 同时推进位移和溅射寿命 时间场内二者一起定格
+    float localDelta = _DeltaTime * scale;
+    drop.timeScale = scale;
+
+    if (drop.splash >= 0.0)
+    {
+        drop.splash += localDelta;
+        if (drop.splash > _SplashDuration)
+        {
+            // 落地重生只补顶部 避免雨幕整体同步出现空档
+            Respawn(drop, id.x, 0.15);
+        }
+    }
+    else
+    {
+        drop.localTime += localDelta;
+        float phase = drop.localTime * (1.2 + drop.seed) + drop.seed * 6.28;
+        float3 sway = float3(sin(phase), 0, cos(phase * 0.8)) * _Flutter;
+        drop.position += (drop.velocity + sway) * localDelta;
+        if (drop.position.y <= _GroundHeight)
+        {
+            drop.position.y = _GroundHeight + 0.01;
+            drop.splash = 0.0;
+        }
+        else if (scale > 0.999)
+        {
+            // 相机移动时把出界雨滴卷回发射盒 仅在正常流速处执行 防止定格的雨滴瞬移
+            float2 extents = _EmitterExtents.xz;
+            float2 rel = drop.position.xz - _EmitterCenter.xz;
+            rel = (frac((rel + extents) / (2.0 * extents)) * 2.0 - 1.0) * extents;
+            drop.position.xz = _EmitterCenter.xz + rel;
+        }
+    }
+
+    _DropBuffer[id.x] = drop;
+}

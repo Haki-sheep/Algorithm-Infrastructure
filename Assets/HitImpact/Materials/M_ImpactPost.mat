@@ -34,11 +34,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _BlurInnerRadius: 0.05
-    - _BlurStrength: 0.3717374
+    - _BlurStrength: 0.00020085872
     - _Contrast: 1.9
     - _Invert: 0
     - _KeepThreshold: 0.18
-    - _Mono: 1
+    - _Mono: 0.003350079
     m_Colors:
     - _Center: {r: 0.5196875, g: 0.25, b: 0, a: 0}
     - _KeepColor: {r: 0.16, g: 0.32, b: 0.95, a: 1}
