@@ -1,0 +1,42 @@
+{
+  "name": "com.unity.pipeline",
+  "displayName": "Unity Pipeline Compatibility",
+  "version": "0.8.0-exp.1+truecli.2",
+  "unity": "2022.3",
+  "category": "Pipeline",
+  "description": "This package allows application (cli, agent or other) to connect to the editor or a running game and execute commands (build, run_tests, play/pause, codereload)",
+  "keywords": [
+    "pipeline",
+    "connected",
+    "authoring",
+    "codereload"
+  ],
+  "dependencies": {
+    "com.unity.test-framework": "1.1.33",
+    "com.unity.modules.jsonserialize": "1.0.0",
+    "com.unity.nuget.newtonsoft-json": "3.0.2",
+    "com.unity.nuget.mono-cecil": "1.11.6",
+    "com.unity.modules.uielements": "1.0.0",
+    "com.unity.modules.screencapture": "1.0.0",
+    "com.unity.inputsystem": "1.7.0"
+  },
+  "relatedPackages": {
+    "com.unity.pipeline.tests": "0.0.0"
+  },
+  "repository": {
+    "revision": "dde7080264d32a1091171d4b358351279fa10ddb",
+    "type": "git",
+    "url": "https://github.cds.internal.unity3d.com/unity/com.unity.pipeline.git"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.pipeline@0.8/manual/index.html",
+  "trueCliCompatibility": {
+    "upstreamVersion": "0.8.0-exp.1",
+    "upstreamRevision": "dde7080264d32a1091171d4b358351279fa10ddb",
+    "revision": 2,
+    "editorSeries": [
+      "2022.3",
+      "6000.0",
+      "6000.3"
+    ]
+  }
+}
